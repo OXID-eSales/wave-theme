@@ -1,0 +1,31 @@
+.currencies {
+  &-menu {
+    .dropdown {
+      &-item {
+        font-size: .75rem;
+
+        &.active,
+        &.selected,
+        &:hover {
+          background-color: $brand-primary;
+
+          > .dropdown-link {
+            color: $white;
+          }
+        }
+      }
+
+      &-link {
+        display: block;
+        padding: 3px $grid-gutter-width/2;
+
+        .active &,
+        .selected &,
+        &:hover {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import 'inc/compareitem';
+
+.compare {
+  &-products {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &-item-wrapper {
+    width: 280px;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: center;
+  }
+
+  .table-responsive {
+    &.shadowed {
+      box-shadow: inset 3px 0 7px 1px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

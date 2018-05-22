@@ -1,0 +1,37 @@
+.pagination {
+  margin: 0 0 5px 0;
+
+  &-options {
+    .options {
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        width: auto;
+      }
+    }
+
+    .btn-group {
+      width: 100%;
+      margin-bottom: 5px;
+
+      @include media-breakpoint-up(md) {
+        width: auto;
+        margin-bottom: 0;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+          width: auto;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.btn-sm {
+  font-size: 12px;
+}

@@ -1,0 +1,176 @@
+/**
+ * This file is part of OXID eSales Flow theme.
+ *
+ * OXID eSales Flow theme is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * OXID eSales Flow theme is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @link      http://www.oxid-esales.com
+ * @copyright (C) OXID eSales AG 2003-2016
+ */
+
+@media (max-width: @screen-md-max) {
+    .control-label.col-xs-12 {
+        text-align: left;
+    }
+}
+
+@media ( max-width: @screen-sm-max ) {
+
+    //
+    // Body
+    // --------------------------------------------------
+    body {
+        &.cl- {
+            &details {
+                #zoom1 img {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    //
+    // Header
+    // --------------------------------------------------
+    #header .header-box {
+        padding-bottom: 10px;
+    }
+
+}
+
+@media ( max-width: @screen-xs-max ) {
+
+    //
+    // Header
+    // --------------------------------------------------
+    #header .header-box {
+        .menus-col .menu-dropdowns .languages-menu .dropdown-menu {
+            float: right;
+        }
+    }
+
+    //
+    // Body
+    // --------------------------------------------------
+    body {
+        &.fixed-header {
+            #header #mainnav {
+                &.fadeIn {
+                    width: 100%;
+                }
+
+                a .fa-angle-down {
+                    display: none;
+                }
+            }
+        }
+
+        &.cl- {
+            &basket {
+                #basketVoucher .input-group {
+                    width: 100%;
+                }
+            }
+
+            &details {
+                #detailsItemsPager {
+                    font-size: 70%;
+
+                    .pager-current-page {
+                        line-height: 24px;
+                    }
+                }
+
+            }
+
+            &account_order .panel-heading {
+                font-size: 70%;
+            }
+        }
+
+        &.cl-thankyou,
+        &.is-checkout {
+            ol.checkoutSteps {
+                height: 20px;
+
+                .text {
+                    display: none;
+                }
+            }
+
+            #basketSummary {
+                width: 100%!important;
+            }
+        }
+    }
+
+    .boxwrapper {
+        .list-container {
+            // 4 cols list view
+            .gridView {
+                text-align: center;
+            }
+
+            // 2 cols list view
+            .infogridView {
+                text-align: center;
+
+                .productBox .picture {
+                    border-bottom: 1px dashed @gray-lighter;
+                    margin-bottom: @ox-listitem-grid-picture-padding;
+                }
+            }
+
+            .lineView {
+                .productBox {
+                    .functions {
+                        input.amount {
+                            width: 45px;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //
+    // Footer
+    // --------------------------------------------------
+
+    #footer {
+        text-align: center;
+
+        .footer-box {
+            margin-bottom: @grid-gutter-width;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    #header .header-box {
+        .logo-col {
+            .make-xs-column(12);
+            .text-center;
+        }
+        .menus-col {
+            .make-xs-column(12);
+
+            .menu-dropdowns {
+                .text-center;
+                margin: 20px auto;
+                float: none!important;
+            }
+        }
+    }
+}

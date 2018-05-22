@@ -1,0 +1,31 @@
+#manufacturerSlider {
+  margin-bottom: 0;
+}
+
+.manufacturer-slider {
+  border-top: 2px solid $ox-start-manufacturerslider-border;
+  border-bottom: 2px solid $ox-start-manufacturerslider-border;
+  background-color: $ox-start-manufacturerslider-bg;
+  padding-bottom: $line-height-computed * 2;
+
+  .flexslider {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin-bottom: 15px;
+
+    .flexslider-item {
+      text-align: center;
+    }
+
+    &-item {
+      .flexslider-link {
+        .flexslider-img {
+          width: auto;
+          max-width: 100px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

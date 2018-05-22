@@ -1,0 +1,80 @@
+@import 'list/listitem-grid';
+@import 'list/listitem-infogrid';
+@import 'list/listitem-line';
+
+.boxwrapper {
+  margin-top: 15px;
+
+  .cl-start & {
+    margin: 0 0 50px 0;
+  }
+}
+
+.page-header {
+  padding-bottom: 10px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid $gray-300;
+
+  .boxwrapper & {
+    color: $gray-600;
+    text-align: center;
+  }
+
+  .content & {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h2.h2 {
+    font-weight: 400;
+  }
+
+  h1.h1 {
+    font-size: 2em;
+    font-weight: 200;
+
+    @include media-breakpoint-up(md){
+      font-size: $h1-font-size;
+    }
+  }
+
+  .rss {
+    font-size: .7em;
+    color: orange;
+  }
+}
+
+.list-container {
+  .cl-start & {
+    margin-top: 50px;
+  }
+}
+
+.img-responsive {
+  max-width: 100%;
+  max-height: 275px;
+  margin: 0 auto;
+}
+
+.filter {
+  &-item {
+    &.active,
+    &.selected,
+    &:hover  {
+      background-color: $brand-primary;
+    }
+  }
+
+  &-link {
+    display: block;
+    padding: 3px $grid-gutter-width/2;
+
+    .active &,
+    .selected &,
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

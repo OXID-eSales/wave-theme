@@ -2,4 +2,4 @@
 
 ## General Information
 
-*Wave* is a theme for all OXID eShop editions.
+*Wave* is a responsive theme for all OXID eShop editions.

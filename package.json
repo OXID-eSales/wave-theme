@@ -1,0 +1,44 @@
+{
+  "name": "WaveTheme",
+  "version": "1.0.0",
+  "description": "Add Description",
+  "main": "index.js",
+  "author": "OXID eSales AG",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "1.0.6",
+    "ajv": "^5.2.5",
+    "bootstrap": "4.1.0",
+    "grunt": "1.0.2",
+    "grunt-combine-mq": "^0.9.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-force-task": "^2.0.0",
+    "grunt-ftp-deploy": "^0.2.0",
+    "grunt-jslint": "^1.1.14",
+    "grunt-pixrem": "^0.1.2",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-stylelint": "^0.9.0",
+    "grunt-uncss": "^0.6.1",
+    "jquery": "3.3.1",
+    "matchdep": "^1.0.1",
+    "pixrem": "^3.0.2",
+    "popper.js": "^1.12.6",
+    "stylelint": "^8.0.0",
+    "stylelint-scss": "^1.4.1",
+    "time-grunt": "^1.4.0",
+    "uglify": "^0.1.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "//TODO add Git Repo URL"
+  },
+  "license": "ISC"
+}

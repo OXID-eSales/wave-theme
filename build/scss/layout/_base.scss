@@ -1,0 +1,82 @@
+body {
+  font-family: $font-family-base;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: $gray-dark;
+  padding-top: 0;
+
+  &.fixed-header {
+    #header #mainnav {
+      &.fadeIn {
+        width: 100%;
+      }
+
+      a .fa-angle-down {
+        display: none;
+      }
+    }
+  }
+}
+
+.main-row {
+  margin: 0 (-$grid-gutter-width/2);
+}
+
+#wrapper {
+  background-color: $white;
+}
+
+.img-thumbnail {
+  border: none;
+}
+
+#jumptotop {
+  position: fixed;
+  display: block;
+  right: 35px;
+  bottom: 40px;
+  color: $brand-primary;
+  font-size: 45px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1000;
+
+  &.show {
+    opacity: 0.5;
+    visibility: visible;
+
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.card {
+  margin-bottom: 30px;
+
+  &-title {
+    font-size: $h4-font-size;
+    margin: 0;
+  }
+
+  &-deck {
+    margin-bottom: 30px;
+  }
+}
+
+.btn-tertiary {
+  @include button-variant($white, $gray-400)
+}
+
+.btn-warning {
+  color: $white;
+
+  &:hover {
+    color: darken($white, .5);
+  }
+}

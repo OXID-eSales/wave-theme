@@ -1,0 +1,22 @@
+.form-horizontal {
+  .form-group {
+    @include make-row();
+
+    .control-label {
+      @include media-breakpoint-up(md){
+        text-align: right;
+      }
+
+      &.req {
+        font-weight: bold;
+      }
+    }
+
+    .help-block {
+      display: block;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      color: $gray-600;
+    }
+  }
+}

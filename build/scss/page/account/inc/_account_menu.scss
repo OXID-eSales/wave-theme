@@ -1,0 +1,20 @@
+.account-menu {
+  .list-group {
+    padding-bottom: 15px;
+    &-item {
+
+      &.active {
+        color: $white;
+        &:hover, &:focus {
+          color: $white;
+          background-color: $primary;
+        }
+      }
+    }
+
+    &-link {
+      color:inherit;
+      display: block;
+    }
+  }
+}

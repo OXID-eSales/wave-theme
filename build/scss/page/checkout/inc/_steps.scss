@@ -1,0 +1,58 @@
+.checkout-steps {
+  border-top: 3px solid $primary;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  margin: 15px 0;
+  list-style: none;
+
+  @include media-breakpoint-up(md) {
+    margin: 15px 0 30px 0;
+  }
+
+  .step {
+    width: 20%;
+    max-width: 20%;
+    text-align: center;
+    position: relative;
+    padding-top: 16px;
+
+    &.active {
+      .num {
+        background-color: $secondary;
+      }
+    }
+
+    &.passed {
+      .num {
+        background-color: $success;
+      }
+    }
+  }
+
+  .num {
+    border: 2px solid $white;
+    border-radius: 50%;
+    background-color: $primary;
+    width: 30px;
+    height: 30px;
+    padding-top: 1px;
+    margin-left: -16px;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .text {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+}

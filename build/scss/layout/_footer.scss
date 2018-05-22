@@ -1,0 +1,123 @@
+//
+// Footer
+// --------------------------------------------------
+// Import footer modules
+@import '../widget/footer/categorylist';
+@import '../widget/footer/info';
+@import '../widget/footer/manufacturerlist';
+@import '../widget/footer/services';
+@import '../widget/footer/newsletter';
+
+// General footer styles
+
+.footer {
+  text-align: center;
+  border-top: 2px solid $ox-footer-border;
+  border-bottom: 2px solid $ox-footer-border;
+  background-color: $ox-footer-bg;
+  color: $ox-footer-color;
+  padding: $grid-gutter-width 0;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
+
+  &-box {
+    margin-bottom: $grid-gutter-width;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: inherit;
+    }
+
+    &-title {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    &-content {
+      font-weight: 400;
+    }
+
+    &-facebook {
+      margin-top: $line-height-computed / 2;
+    }
+  }
+
+  .social-links {
+    text-align: center;
+
+    &-list {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    &-item {
+      margin: 0 10px;
+      font-size: 16px;
+      display: inline-block;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    &-link {
+      text-decoration: none;
+      transition: color 0.2s;
+
+      .fab {
+        font-size: 25px;
+        vertical-align: middle;
+        transition: color 0.2s;
+
+        &:before {
+          // Antialising for icons
+          -webkit-text-stroke: .3px transparent;
+          font-smooth: auto;
+        }
+      }
+
+      .fa-facebook-f {
+        color: $ox-footer-color-facebook;
+      }
+      .fa-google-plus-square {
+        color: $ox-footer-color-google-plus;
+      }
+      .fa-twitter {
+        color: $ox-footer-color-twitter;
+      }
+      .fa-youtube {
+        color: $ox-footer-color-youtube;
+      }
+      .fa-wordpress {
+        color: $ox-footer-color-blog;
+      }
+
+      &:hover {
+        .fa-facebook-f {
+          color: darken($ox-footer-color-facebook, 15%);
+        }
+        .fa-google-plus-square {
+          color: darken($ox-footer-color-google-plus, 15%);
+        }
+        .fa-twitter {
+          color: darken($ox-footer-color-twitter, 15%);
+        }
+        .fa-youtube {
+          color: darken($ox-footer-color-youtube, 15%);
+        }
+        .fa-wordpress {
+          color: darken($ox-footer-color-blog, 15%);
+        }
+      }
+    }
+  }
+}
+
+
+.vat-info {
+  float: right;
+}
+
+.legal {
+  background-color: $white;
+  padding: $grid-gutter-width 0;
+}

@@ -1,0 +1,16 @@
+.ratings {
+  margin-top: 5px;
+  margin-bottom: 20px;
+
+  .fa-star {
+    font-size: 22px;
+  }
+
+  &-star-filled {
+    color: $ox-page-details-rating-star-filled-color;
+  }
+
+  &-star-empty {
+    color: $ox-page-details-rating-star-empty-color;
+  }
+}

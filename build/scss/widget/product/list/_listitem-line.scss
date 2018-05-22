@@ -1,0 +1,34 @@
+.line-view {
+  &-item {
+    border-bottom: 1px dashed $gray-300;
+    padding-bottom: 15px;
+
+    .title {
+      font-weight: 600;
+    }
+
+    .img-responsive {
+      max-height: 150px;
+    }
+
+    .form-group {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    .price {
+      margin-bottom: 20px;
+      font-size: 1rem;
+      line-height: 1.4;
+
+      @include media-breakpoint-up(md){
+        font-size: 1.3rem;
+        margin-bottom: 0;
+      }
+
+      .lead {
+        font-weight: 400;
+      }
+    }
+  }
+}

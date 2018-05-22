@@ -1,0 +1,48 @@
+.grid-view {
+
+  .boxwrapper & {
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+
+  .picture {
+    border-bottom: 1px dashed #eee;
+    width: 100%;
+    height: 205px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .img-responsive {
+      max-height: 190px;
+    }
+  }
+
+  .title {
+    height: 50px;
+    font-weight: 600;
+  }
+
+  .price {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.4;
+
+    @include media-breakpoint-up(md){
+      font-size: 1.3rem;
+      margin-bottom: 0;
+    }
+
+    .lead {
+      font-weight: 400;
+    }
+  }
+}
+
+.productBox {
+  margin-bottom: 40px;
+}

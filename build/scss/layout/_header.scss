@@ -1,0 +1,300 @@
+//
+// Header
+// --------------------------------------------------
+// Import header modules
+@import '../widget/header/betanote';
+@import '../widget/header/categorylist';
+@import '../widget/header/cookienote';
+@import '../widget/header/currencies';
+@import '../widget/header/languages';
+@import '../widget/header/loginbox';
+@import '../widget/header/menubasket';
+@import '../widget/header/minibasket';
+@import '../widget/header/search';
+@import '../widget/header/servicebox';
+@import '../widget/header/servicemenu';
+
+.header {
+  background-color: $ox-container-header-background-color;
+
+  .fixed-header & {
+    position: relative;
+    padding-bottom: 42px;
+  }
+
+  .logo {
+    &-link {
+      display: block;
+      width: 100%;
+    }
+    &-img {
+      display: block;
+      margin: 0 auto;
+
+      @include media-breakpoint-up(md) {
+        margin: 0;
+      }
+    }
+  }
+
+  &-box {
+    padding: $grid-gutter-width 0 10px;
+
+    @include media-breakpoint-up(lg) {
+      padding: $grid-gutter-width 0;
+    }
+  }
+  .menu {
+    &s-col {
+
+    }
+    &-dropdowns {
+      margin: 20px auto;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        text-align: right;
+        margin: 0;
+      }
+
+      .dropdown-toggle {
+        &::after {
+          display: none;
+        }
+      }
+
+      > .btn-group {
+        &.open > .dropdown-toggle,
+        > .btn.active,
+        > .btn:active {
+          box-shadow: 0 0 0;
+        }
+
+        > .btn {
+          background-color: transparent;
+          font-size: 11px;
+          color: $gray-700;
+          border: 0;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    padding: 0 0 .5rem 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+      border-bottom: 1px solid $ox-listfilter-border;
+    }
+
+    &-collapse {
+      justify-content: space-between;
+    }
+
+    .fixed-header & {
+      position: fixed;
+      top: 0;
+      z-index: 1030;
+      margin-top: -42px;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+      &.fadeIn {
+        background-color: rgba(255, 255, 255, 0.95);
+        margin-top: 0;
+        transition: all .2s;
+      }
+    }
+
+    &-toggler {
+      padding: 5px 8px;
+
+      &-icon {
+        width: 1.2em;
+        height: 1.2em;
+      }
+    }
+
+    &-header {
+      padding: 15px;
+
+      @include media-breakpoint-up(lg){
+        display: none;
+      }
+    }
+
+    &-nav {
+      margin: 0;
+      border-top: 1px solid $ox-listfilter-border;
+
+      @include media-breakpoint-up(lg) {
+        margin: 0;
+        border: 0;
+      }
+
+      .fixed-header & {
+        margin: 0;
+      }
+    }
+
+    .nav {
+      &-item {
+        font-size: 1.2em;
+        font-weight: 200;
+        line-height: 20px;
+        padding: 10px 15px;
+        border-bottom: 1px solid $ox-listfilter-border;
+
+        @include media-breakpoint-up(lg) {
+          border-bottom: 0;
+          line-height: inherit;
+          padding: inherit;
+        }
+
+        &.active,
+        &:focus,
+        &:hover {
+          > .nav-link {
+            color: $brand-secondary;
+          }
+        }
+
+        .dropdown {
+          &-menu {
+            position: static;
+            float: none;
+            width: auto;
+            margin-top: 0;
+            background-color: transparent;
+            border: 0;
+            box-shadow: none;
+            margin-left: -15px;
+            margin-right: -15px;
+            font-size: 1rem;
+
+            @include media-breakpoint-up(lg) {
+              margin-left: inherit;
+              margin-right: inherit;
+              position: absolute;
+              background-color: $white;
+              box-shadow: inherit;
+              border: 1px solid rgba(0, 0, 0, 0.15);
+              border-radius: 0.25rem;
+              float: left;
+              font-size: 1rem;
+              margin-top: 0;
+              border-top-right-radius: 0;
+              border-top-left-radius: 0;
+            }
+          }
+
+          &-item {
+            border-bottom: 1px solid $ox-listfilter-border;
+            padding-left: 0;
+            padding-right: 0;
+
+            @include media-breakpoint-up(lg) {
+              padding: 0;
+              font-size: 14px;
+            }
+
+            &.active,
+            &:focus,
+            &:hover {
+              background-color: transparent;
+              transition: background-color .2s;
+              text-decoration: none;
+
+              @include media-breakpoint-up(lg) {
+                background-color: $brand-primary;
+                transition: background-color .2s;
+              }
+
+              > .dropdown-link {
+                color: $brand-secondary;
+                transition: color .2s;
+                text-decoration: none;
+
+                @include media-breakpoint-up(lg) {
+                  color: $white;
+                  transition: color .2s;
+                }
+              }
+            }
+          }
+
+          &-link {
+            color: $brand-primary;
+            padding: 5px 15px 5px 25px;
+            display: block;
+            text-decoration: none;
+
+            @include media-breakpoint-up(lg) {
+              color: $gray-900;
+            }
+
+            &.current,
+            &:focus,
+            &:hover {
+              color: $brand-secondary;
+              transition: color .2s;
+
+              @include media-breakpoint-up(lg) {
+                color: $white;
+                transition: color .2s;
+              }
+            }
+          }
+        }
+      }
+
+      &-link {
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+.fixed-header {
+  &-actions {
+    display: none;
+
+    .fixed-header & {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+
+      @include media-breakpoint-up(lg){
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
+  &-item {
+    font-size: 1.2em;
+    font-weight: 200;
+    line-height: 20px;
+    padding: 10px 15px;
+    border-bottom: 1px solid $ox-header-border;
+    display: block;
+    width: 100%;
+
+    @include media-breakpoint-up(lg){
+      padding: 10px 0.5rem;
+      border-bottom: 0;
+      display: inline-block;
+      width: auto;
+    }
+  }
+
+  &-link {
+    color: $primary;
+
+    &:hover {
+      color: $secondary;
+      text-decoration: none;
+    }
+  }
+}

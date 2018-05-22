@@ -1,0 +1,22 @@
+.breadcrumb {
+  font-size: 12px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 4px;
+
+  &-item {
+    &:before {
+      content: "/\00a0";
+      padding: 0 5px;
+      color: $gray-500;
+    }
+  }
+
+  &-link {
+    .active & {
+      color: $brand-secondary;
+    }
+  }
+}

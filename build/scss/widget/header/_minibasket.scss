@@ -1,0 +1,71 @@
+.minibasket {
+  font-size: 14px;
+  margin-bottom: 20px;
+
+  &-item {
+    &-row {
+      background-color: $gray-100;
+      border-style: solid;
+      border-color: $gray-400;
+      border-width: 1px 0 0 1px;
+    }
+    &-col {
+      border-style: solid;
+      border-color: $gray-400;
+      border-width: 0 1px 0 0;
+      padding: 8px;
+    }
+  }
+
+  &-total {
+    &-row {
+      background-color: $white;
+      border-style: solid;
+      border-color: $gray-400;
+      border-width: 1px 0 0 1px;
+    }
+    &-col {
+      border-style: solid;
+      border-color: $gray-400;
+      border-width: 0 1px 1px 0;
+      padding: 8px;
+    }
+  }
+
+  &-menu {
+    &-box {
+      margin: 0 15px;
+
+    }
+
+    .dropdown {
+      &-menu {
+        min-width: 400px;
+        padding: 15px;
+
+        .title {
+          margin: 0 0 10px;
+        }
+
+        .alert {
+          margin-bottom: 0;
+        }
+
+        .badge {
+          background-color: $secondary;
+          position: absolute;
+          top: 3px;
+          right: 3px;
+          font-weight: 500;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $white;
+        }
+      }
+    }
+  }
+}

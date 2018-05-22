@@ -1,0 +1,77 @@
+.flexslider {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  margin-bottom: 15px;
+
+  .item {
+    position: relative;
+  }
+
+  .flex-direction-nav {
+    .flex-next,
+    .flex-prev {
+      background-color: $black;
+      opacity: .6;
+      border-radius: 50%;
+
+      &:before {
+        font-family: 'Font Awesome 5 Free';
+        color: $white;
+        font-size: 30px;
+        text-shadow: none;
+        transition: color .3s;
+      }
+    }
+
+    .flex-next {
+      right: 15px;
+
+      &:before {
+        padding-right: 11px;
+      }
+    }
+
+    .flex-prev {
+      left: 15px;
+
+      &:before {
+        padding-right: 14px;
+        padding-left: 11px;
+      }
+    }
+  }
+  .flex-control-paging {
+    display: none;
+  }
+
+  .flex-caption {
+    background: $black;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: $white;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: all .3s ease-in-out;
+
+    &-link {
+      color: $white;
+      text-decoration: none;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+  }
+
+  &:hover {
+    .flex-caption {
+      opacity: .7;
+      filter: alpha(opacity=70);
+    }
+  }
+}
