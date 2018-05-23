@@ -9,15 +9,15 @@
 
     <div class="page-header">
         [{block name="search_header"}]
-            <h1 class="pull-left">[{$search_head}]</h1>
+            <h1 class="float-left">[{$search_head}]</h1>
             [{assign var='rsslinks' value=$oView->getRssLinks()}]
             [{if $rsslinks.searchArticles}]
                 [{assign var="imgUrl" value=$oViewConf->getImageUrl('rss.png')}]
-                <small class="pull-right">
+                <span class="pop-search float-right">
                     <a class="rss" id="rssSearchProducts" target="_blank" href="[{$rsslinks.searchArticles.link}]" title="[{$rsslinks.searchArticles.title}]">
                         <i class="fas fa-rss"></i> [{$rsslinks.searchArticles.title}]
                     </a>
-                </small>
+                </span>
             [{/if}]
             <div class="clearfix"></div>
         [{/block}]

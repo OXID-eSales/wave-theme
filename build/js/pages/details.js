@@ -56,9 +56,9 @@ Flow.initDetailsEvents = function () {
             function () {
                 var $this = $(this),
                     $oParent = $this.parent();
-                $oParent.prevAll().find('i').removeClass('fa-star-o').addClass('fa-star');
-                $oParent.nextAll().find('i').removeClass('fa-star').addClass('fa-star-o');
-                $this.find('i').removeClass('fa-star-o').addClass('fa-star');
+                $oParent.prevAll().find('i').removeClass('far').addClass('fas');
+                $oParent.nextAll().find('i').removeClass('fas').addClass('far');
+                $this.find('i').removeClass('far').addClass('fas');
 
                 $oRatingForm.find('#recommListRating, #productRating').val($oParent.attr('data-rate-value'));
             }

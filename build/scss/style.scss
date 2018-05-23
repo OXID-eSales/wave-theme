@@ -3,6 +3,7 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import '../vendor/fontawesome-free-webfonts/scss/fontawesome';
 @import '../vendor/fontawesome-free-webfonts/scss/fa-solid';
+@import '../vendor/fontawesome-free-webfonts/scss/fa-regular';
 @import '../vendor/fontawesome-free-webfonts/scss/fa-brands';
 @import "../vendor/photoswipe/scss/photoswipe";
 
@@ -10,8 +11,8 @@
 @import 'layout/header';
 @import 'layout/footer';
 
-@import 'tpl/form/fieldset/user_shipping';
-@import 'tpl/form/wishlist_publish';
+@import 'form/fieldset/user_shipping';
+@import 'form/wishlist_publish';
 
 @import 'page/details/details';
 @import 'page/checkout/order';
@@ -27,3 +28,4 @@
 @import 'widget/reviews/rating';
 @import 'widget/reviews/reviews';
 @import 'widget/minibasket/minibasket';
+@import 'widget/sidebar/recommendation';

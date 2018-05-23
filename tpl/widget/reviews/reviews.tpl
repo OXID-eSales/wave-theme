@@ -18,7 +18,7 @@
                     <div class="card-body">
                         [{block name="widget_reviews_form"}]
                             <form action="[{$oViewConf->getSelfActionLink()}]" method="post" id="rating" class="form-horizontal" novalidate="novalidate">
-                                <div id="writeReview">
+                                <div id="writeReview" class="product-review">
                                     <div class="hidden">
                                         [{if $oView->canRate()}]
                                             <input id="productRating" type="hidden" name="artrating" value="0">
@@ -45,9 +45,9 @@
                                         [{if $oView->canRate()}]
                                             <ul id="reviewRating" class="rating list-inline">
                                                 [{section name=star start=1 loop=6}]
-                                                    <li class="s[{$smarty.section.star.index}]" data-rate-value="[{$smarty.section.star.index}]">
+                                                    <li class="rating-star s[{$smarty.section.star.index}]" data-rate-value="[{$smarty.section.star.index}]">
                                                         <a class="ox-write-review ox-rateindex-[{$smarty.section.star.index}] text-warning" title="[{$smarty.section.star.index}] [{if $smarty.section.star.index==1}][{oxmultilang ident="STAR"}][{else}][{oxmultilang ident="STARS"}][{/if}]">
-                                                            <i class="fa fa-star-o"></i>
+                                                            <i class="far fa-star"></i>
                                                         </a>
                                                     </li>
                                                 [{/section}]
@@ -100,12 +100,12 @@
                                 </div>
                                 <div class="col-md-6 rating">
                                     [{if $review->oxreviews__oxrating->value}]
-                                        <div class="pull-right text-warning" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                                        <div class="float-right text-warning" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                                             [{section name="starRatings" start=0 loop=5}]
                                                 [{if $review->oxreviews__oxrating->value >= $smarty.section.starRatings.iteration}]
-                                                    <i class="fa fa-star"></i>
+                                                    <i class="fas fa-star"></i>
                                                 [{else}]
-                                                    <i class="fa fa-star-o"></i>
+                                                    <i class="far fa-star"></i>
                                                 [{/if}]
                                             [{/section}]
                                             <div class="hidden">

@@ -33,7 +33,7 @@
                         [{/block}]
                     [{else}]
                         [{if $oView->showOrderButtonOnTop()}]
-                            <div class="well well-sm">
+                            <div class="card">
                                 <a href="[{oxgetseourl ident=$oViewConf->getPaymentLink()}]" class="btn btn-outline-dark prevStep submitButton largeButton">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
                             </div>
                         [{/if}]

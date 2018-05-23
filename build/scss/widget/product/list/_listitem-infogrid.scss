@@ -10,26 +10,25 @@
   }
 
   .title {
-    min-height: 40px;
     font-weight: 600;
   }
 
-  .shortdesc {
-    margin-bottom: 20px;
-  }
-
   .price {
+    margin-top: 20px;
     margin-bottom: 20px;
     font-size: 1rem;
     line-height: 1.4;
 
     @include media-breakpoint-up(md){
-      font-size: 1.3rem;
-      margin-bottom: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
 
     .lead {
       font-weight: 400;
+      @include media-breakpoint-up(md){
+        font-size: 1.3rem;
+      }
     }
   }
 
@@ -46,12 +45,9 @@
       }
     }
 
-    .img-responsive {
-      max-width: 100%;
+    .img-fluid {
+      max-height: 205px;
     }
   }
 }
 
-.productBox {
-  margin-bottom: 40px;
-}

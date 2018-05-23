@@ -14,3 +14,10 @@
     color: $ox-page-details-rating-star-empty-color;
   }
 }
+
+.rating {
+  &-star {
+    display: inline-block;
+    padding-right: 5px;
+  }
+}

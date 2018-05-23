@@ -5,7 +5,7 @@
 [{block name="sidebar"}]
     [{block name="sidebar_categoriestree"}]
         [{if $oView->getClassName() == 'alist' }]
-            <div class="box well well-sm categorytree">
+            <div class="box card categorytree">
                 <section>
                     <div class="page-header h3">
                         <div class="pull-right visible-xs visible-sm">

@@ -1,6 +1,6 @@
 [{block name="widget_locator_paging"}]
     [{if $pages->changePage}]
-    <ul class="pagination pagination-sm[{if $place eq "bottom"}] lineBox[{/if}]" id="itemsPager[{$place}]">
+    <ul class="pagination pagination-sm[{if $place eq "bottom"}] lineBox justify-content-center[{/if}]" id="itemsPager[{$place}]">
 
         <li class="page-item [{if !$pages->previousPage}] disabled[{/if}]">
             [{if $pages->previousPage}]
