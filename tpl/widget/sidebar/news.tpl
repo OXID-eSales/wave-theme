@@ -1,5 +1,5 @@
 [{block name="dd_widget_sidebar_news"}]
-    <div id="newsBox" class="box well well-sm">
+    <div id="newsBox" class="box card">
         <section>
             <div class="page-header h3">[{oxmultilang ident="NEWS"}]</div>
             [{block name="dd_widget_sidebar_news_inner"}]

@@ -1,5 +1,5 @@
 [{block name="dd_widget_sidebar_shoplupe_ratings"}]
-    <div class="box well well-sm">
+    <div class="box card">
         <section>
             <div class="page-header h3">[{oxmultilang ident="SHOPLUPE"}]</div>
             [{block name="dd_widget_sidebar_shoplupe_ratings_inner"}]

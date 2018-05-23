@@ -80,3 +80,9 @@ body {
     color: darken($white, .5);
   }
 }
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}

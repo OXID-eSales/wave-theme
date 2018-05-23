@@ -38,7 +38,7 @@
                                 [{assign var="icounter" value="0"}]
                                 [{assign var="basketitemlist" value=$oView->getBasketArticles()}]
                                 [{foreach key=basketindex from=$oxcmp_basket->getContents() item=basketitem name=wrappArt}]
-                                    <div class="well well-sm">
+                                    <div class="card">
                                         <div class="row">
                                             [{block name="checkout_wrapping_item"}]
                                                 [{assign var="basketproduct" value=$basketitemlist.$basketindex}]
@@ -107,7 +107,7 @@
                                 [{block name="checkout_wrapping_cards"}]
                                     <h3 class="page-header blockHead">[{oxmultilang ident="GREETING_CARD"}]</h3>
                                     <div class="wrappingCard clear" id="wrappCard">
-                                        <div class="well well-sm">
+                                        <div class="card">
                                             <div class="row">
                                                 <div class="col-sm-9 offset-sm-3">
                                                     <div class="form-group">
@@ -124,7 +124,7 @@
                                         [{counter start=0 print=false}]
                                         [{assign var="icounter" value="0"}]
                                         [{foreach from=$oCardList item=card name=GreetCards}]
-                                            <div class="well well-sm">
+                                            <div class="card">
                                                 <div class="row">
                                                     [{if $card->oxwrapping__oxpic->value}]
                                                         <div class="col-3">

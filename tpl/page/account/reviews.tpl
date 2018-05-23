@@ -30,9 +30,9 @@
                                                 <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                                                     [{section name="starRatings" start=0 loop=5}]
                                                         [{if $review->getRating() >= $smarty.section.starRatings.iteration}]
-                                                            <i class="fa fa-star"></i>
+                                                            <i class="fas fa-star"></i>
                                                         [{else}]
-                                                            <i class="fa fa-star-o"></i>
+                                                            <i class="far fa-star"></i>
                                                         [{/if}]
                                                     [{/section}]
                                                 </div>
