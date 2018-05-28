@@ -21,10 +21,10 @@
                                         <input type="hidden" name="fnc" value="editList">
                                         <input type="hidden" name="recommid" value="[{$recommlist->getId()}]">
                                     </div>
-                                    <button class="btn btn-warning btn-xs hasTooltip" type="submit" name="editList" title="[{oxmultilang ident="EDIT"}]">
+                                    <button class="btn btn-warning btn-sm hasTooltip" type="submit" name="editList" title="[{oxmultilang ident="EDIT"}]">
                                         <i class="fas fa-pencil-alt"></i>
                                     </button>
-                                    <button class="btn btn-danger btn-xs hasTooltip" type="submit" name="deleteList" value="1" title="[{oxmultilang ident="REMOVE"}]">
+                                    <button class="btn btn-danger btn-sm hasTooltip" type="submit" name="deleteList" value="1" title="[{oxmultilang ident="REMOVE"}]">
                                         <i class="fa fa-times"></i>
                                     </button>
                                 </form>

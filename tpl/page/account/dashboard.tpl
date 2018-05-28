@@ -15,7 +15,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a id="linkAccountPassword" href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_password"}]">[{oxmultilang ident="CHANGE_PASSWORD"}]</a>
-                            <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_password"}]" class="btn btn-outline-dark btn-xs float-right edit-button">
+                            <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_password"}]" class="btn btn-outline-dark btn-sm float-right edit-button">
                                 <i class="fa fa-arrow-right"></i>
                             </a>
                         </div>
@@ -24,7 +24,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a id="linkAccountNewsletter" href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_newsletter"}]">[{oxmultilang ident="NEWSLETTER_SETTINGS"}]</a>
-                            <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_newsletter"}]" class="btn btn-outline-dark btn-xs float-right edit-button">
+                            <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_newsletter"}]" class="btn btn-outline-dark btn-sm float-right edit-button">
                                 <i class="fa fa-arrow-right"></i>
                             </a>
                         </div>
@@ -33,7 +33,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a id="linkAccountBillship" href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_user"}]">[{oxmultilang ident="BILLING_SHIPPING_SETTINGS"}]</a>
-                            <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_user"}]" class="btn btn-outline-dark btn-xs float-right edit-button">
+                            <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_user"}]" class="btn btn-outline-dark btn-sm float-right edit-button">
                                 <i class="fa fa-arrow-right"></i>
                             </a>
                         </div>
@@ -42,7 +42,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a id="linkAccountOrder" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_order"}]">[{oxmultilang ident="ORDER_HISTORY"}]</a>
-                            <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_order"}]" class="btn btn-outline-dark btn-xs float-right edit-button">
+                            <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_order"}]" class="btn btn-outline-dark btn-sm float-right edit-button">
                                 <i class="fa fa-arrow-right"></i>
                             </a>
                         </div>
@@ -52,7 +52,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <a id="linkAccountDownloads" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_downloads"}]">[{oxmultilang ident="MY_DOWNLOADS"}]</a>
-                                <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_downloads"}]" class="btn btn-outline-dark btn-xs float-right edit-button">
+                                <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_downloads"}]" class="btn btn-outline-dark btn-sm float-right edit-button">
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -66,7 +66,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_noticelist"}]">[{oxmultilang ident="MY_WISH_LIST"}]</a>
-                            <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_noticelist"}]" class="btn btn-outline-dark btn-xs float-right edit-button">
+                            <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_noticelist"}]" class="btn btn-outline-dark btn-sm float-right edit-button">
                                 <i class="fa fa-arrow-right"></i>
                             </a>
                         </div>
@@ -76,7 +76,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_wishlist"}]">[{oxmultilang ident="MY_GIFT_REGISTRY"}]</a>
-                                <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_wishlist"}]" class="btn btn-outline-dark btn-xs float-right edit-button">
+                                <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_wishlist"}]" class="btn btn-outline-dark btn-sm float-right edit-button">
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=compare"}]">[{oxmultilang ident="MY_PRODUCT_COMPARISON"}]</a>
-                                <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=compare"}]" class="btn btn-outline-dark btn-xs float-right edit-button">
+                                <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=compare"}]" class="btn btn-outline-dark btn-sm float-right edit-button">
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -98,7 +98,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_recommlist"}]">[{oxmultilang ident="MY_LISTMANIA"}]</a>
-                                <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_recommlist"}]" class="btn btn-outline-dark btn-xs float-right edit-button">
+                                <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_recommlist"}]" class="btn btn-outline-dark btn-sm float-right edit-button">
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -109,7 +109,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_reviewlist"}]">[{oxmultilang ident="MY_REVIEWS"}]</a>
-                                <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_reviewlist"}]" class="btn btn-outline-dark btn-xs float-right edit-button">
+                                <a href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=account_reviewlist"}]" class="btn btn-outline-dark btn-sm float-right edit-button">
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>

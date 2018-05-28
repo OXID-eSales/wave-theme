@@ -17,12 +17,14 @@
 
       &:before {
         font-family: 'Font Awesome 5 Free';
+        font-weight: 600;
         color: $white;
         font-size: 30px;
         text-shadow: none;
         transition: color .3s;
       }
     }
+
 
     .flex-next {
       right: 15px;

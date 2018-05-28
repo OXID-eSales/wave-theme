@@ -1,4 +1,4 @@
-<ul id="basket_list" class="list-unstyled[{if $oViewConf->getActiveClassName() == 'order'}] orderBasketItems[{/if}]">
+<ul id="basket_list" class="cart_item-list list-unstyled[{if $oViewConf->getActiveClassName() == 'order'}] orderBasketItems[{/if}]">
     [{* basket items *}]
     [{assign var="basketitemlist" value=$oView->getBasketArticles()}]
     [{foreach key=basketindex from=$oxcmp_basket->getContents() item=basketitem name=basketContents}]
@@ -96,14 +96,14 @@
                                 <div class="wrapping">
                                     [{if !$basketitem->getWrappingId()}]
                                         [{if $editable}]
-                                            <a href="#" class="btn btn-outline-dark btn-xs" title="[{oxmultilang ident="ADD"}]" data-toggle="modal" data-target="#giftoptions">[{oxmultilang ident="WRAPPING"}] [{oxmultilang ident="ADD"}]</a>
+                                            <a href="#" class="btn btn-outline-dark btn-sm" title="[{oxmultilang ident="ADD"}]" data-toggle="modal" data-target="#giftoptions">[{oxmultilang ident="WRAPPING"}] [{oxmultilang ident="ADD"}]</a>
                                         [{else}]
                                             <small>[{oxmultilang ident="WRAPPING"}]: [{oxmultilang ident="NONE"}]</small>
                                         [{/if}]
                                     [{else}]
                                         [{assign var="oWrap" value=$basketitem->getWrapping()}]
                                         [{if $editable}]
-                                            <small>[{oxmultilang ident="WRAPPING"}]:</small> <a class="btn btn-outline-dark btn-xs" href="#" title="[{oxmultilang ident="ADD"}]" data-toggle="modal" data-target="#giftoptions"><i class="fas fa-pencil-alt"></i> [{$oWrap->oxwrapping__oxname->value}]</a>
+                                            <small>[{oxmultilang ident="WRAPPING"}]:</small> <a class="btn btn-outline-dark btn-sm" href="#" title="[{oxmultilang ident="ADD"}]" data-toggle="modal" data-target="#giftoptions"><i class="fas fa-pencil-alt"></i> [{$oWrap->oxwrapping__oxname->value}]</a>
                                         [{else}]
                                             <small>[{oxmultilang ident="WRAPPING"}]: [{$oWrap->oxwrapping__oxname->value}]</small>
                                         [{/if}]
@@ -177,16 +177,16 @@
                                     [{if !$basketitem->isBundle() || !$basketitem->isDiscountArticle()}]
                                         <div class="input-group input-group-sm">
                                             <input id="am_[{$smarty.foreach.basketContents.iteration}]" type="number" class="textbox form-control text-center" name="aproducts[[{$basketindex}]][am]" value="[{$basketitem->getAmount()}]" size="3" min="0" style="width:60px;float:right;"[{if $oConfig->getConfigParam('blAllowUnevenAmounts')}] step="any"[{/if}]>
-                                            <span class="input-group-addon">
-                                                [{if $basketitem->oxarticles__oxunitname->value}]
-                                                    [{$basketitem->oxarticles__oxunitname->value}]
-                                                [{else}]
-                                                    [{oxmultilang ident="PCS"}]
-                                                [{/if}]
-                                            </span>
                                             <span class="input-group-append">
+                                                <span class="input-group-text">
+                                                    [{if $basketitem->oxarticles__oxunitname->value}]
+                                                        [{$basketitem->oxarticles__oxunitname->value}]
+                                                    [{else}]
+                                                        [{oxmultilang ident="PCS"}]
+                                                    [{/if}]
+                                                </span>
                                                 <button class="btn btn-sm btn-warning pull-right" id="basketUpdate" type="submit" name="updateBtn" title="[{oxmultilang ident="UPDATE"}]">
-                                                    <i class="fa fa-refresh"></i>
+                                                    <i class="fas fa-sync"></i>
                                                 </button>
                                             </span>
                                         </div>
