@@ -1,7 +1,7 @@
 [{* basket contents *}]
-[{oxscript include="js/widgets/oxbasketchecks.min.js" priority=10}]
+[{*oxscript include="js/widgets/oxbasketchecks.min.js" priority=10*}]
 [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
-[{oxscript add="$('#checkAll, #basketRemoveAll').oxBasketChecks();"}]
+[{*oxscript add="$('#checkAll, #basketRemoveAll').oxBasketChecks();"*}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 [{assign var="currency" value=$oView->getActCurrency()}]
 
@@ -11,14 +11,10 @@
     <input type="hidden" name="fnc" value="changebasket">
     <input type="hidden" name="CustomError" value="basket">
 
-    [{* Nur für Mobilgeräte <768px sichtbar *}]
-    <div class="visible-xs" id="basketcontents_list">
+    <div class="basket" id="basketcontents_list">
         [{include file="page/checkout/inc/basketcontents_list.tpl"}]
     </div>
-    [{* Für alle Geräte >=768px sichtbar *}]
-    <div class="hidden-xs" id="basketcontents_table">
-        [{include file="page/checkout/inc/basketcontents_table.tpl"}]
-    </div>
+
 </form>
 <div class="row">
 [{if $oViewConf->getShowVouchers() && $oViewConf->getActiveClassName() == 'basket'}]
@@ -34,9 +30,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="req sr-only" for="input_voucherNr">[{oxmultilang ident="ENTER_COUPON_NUMBER"}]</label>
+                        <label class="req sr-only voucher-label" for="input_voucherNr">[{oxmultilang ident="ENTER_COUPON_NUMBER"}]</label>
                         <div class="input-group">
-                            <input type="text" name="voucherNr" size="30" class="form-control js-oxValidate js-oxValidate_notEmpty" id="input_voucherNr" placeholder="[{oxmultilang ident="ENTER_COUPON_NUMBER"}]" required="required">
+                            <input type="text" name="voucherNr" size="30" class="form-control voucher-code js-oxValidate js-oxValidate_notEmpty" id="input_voucherNr" placeholder="[{oxmultilang ident="ENTER_COUPON_NUMBER"}]" required="required">
                             <span class="input-group-append">
                                 <button type="submit" class="btn btn-primary submitButton"><i class="fa fa-gift"></i> [{oxmultilang ident="REDEEM_COUPON"}]</button>
                             </span>
@@ -68,7 +64,7 @@
             [{if !$oxcmp_basket->getDiscounts()}]
                 [{block name="checkout_basketcontents_nodiscounttotalnet"}]
                     <tr>
-                        <th>[{oxmultilang ident="TOTAL_NET"}]</th>
+                        <th class="text-right">[{oxmultilang ident="TOTAL_NET"}]</th>
                         <td id="basketTotalProductsNetto">[{$oxcmp_basket->getProductsNetPrice()}]&nbsp;[{$currency->sign}]</td>
                     </tr>
                 [{/block}]
@@ -76,7 +72,7 @@
                 [{block name="checkout_basketcontents_nodiscountproductvats"}]
                     [{foreach from=$oxcmp_basket->getProductVats() item=VATitem key=key}]
                         <tr>
-                            <th>[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</th>
+                            <th class="text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</th>
                             <td>[{$VATitem}]&nbsp;[{$currency->sign}]</td>
                         </tr>
                     [{/foreach}]
@@ -84,7 +80,7 @@
 
                 [{block name="checkout_basketcontents_nodiscounttotalgross"}]
                     <tr>
-                        <th>[{oxmultilang ident="TOTAL_GROSS" suffix="COLON"}]</th>
+                        <th class="text-right">[{oxmultilang ident="TOTAL_GROSS" suffix="COLON"}]</th>
                         <td id="basketTotalProductsGross">[{$oxcmp_basket->getFProductsPrice()}]&nbsp;[{$currency->sign}]</td>
                     </tr>
                 [{/block}]
@@ -92,14 +88,14 @@
                 [{if $oxcmp_basket->isPriceViewModeNetto()}]
                     [{block name="checkout_basketcontents_discounttotalnet"}]
                         <tr>
-                            <th>[{oxmultilang ident="TOTAL_NET"}]</th>
+                            <th class="text-right">[{oxmultilang ident="TOTAL_NET"}]</th>
                             <td id="basketTotalProductsNetto">[{$oxcmp_basket->getProductsNetPrice()}]&nbsp;[{$currency->sign}]</td>
                         </tr>
                     [{/block}]
                 [{else}]
                      [{block name="checkout_basketcontents_discounttotalgross"}]
                         <tr>
-                            <th>[{oxmultilang ident="TOTAL_GROSS" suffix="COLON"}]</th>
+                            <th class="text-right">[{oxmultilang ident="TOTAL_GROSS" suffix="COLON"}]</th>
                             <td id="basketTotalProductsGross">[{$oxcmp_basket->getFProductsPrice()}]&nbsp;[{$currency->sign}]</td>
                         </tr>
                     [{/block}]
@@ -108,7 +104,7 @@
                 [{block name="checkout_basketcontents_discounts"}]
                     [{foreach from=$oxcmp_basket->getDiscounts() item=oDiscount name=test_Discounts}]
                         <tr>
-                            <th>
+                            <th class="text-right">
                                 <b>[{if $oDiscount->dDiscount < 0}][{oxmultilang ident="SURCHARGE"}][{else}][{oxmultilang ident="DISCOUNT"}][{/if}]&nbsp;</b>
                                 [{$oDiscount->sDiscount}]
                             </th>
@@ -122,7 +118,7 @@
                 [{if !$oxcmp_basket->isPriceViewModeNetto()}]
                     [{block name="checkout_basketcontents_totalnet"}]
                         <tr>
-                            <th>[{oxmultilang ident="TOTAL_NET"}]</th>
+                            <th class="text-right">[{oxmultilang ident="TOTAL_NET"}]</th>
                             <td id="basketTotalNetto">[{$oxcmp_basket->getProductsNetPrice()}]&nbsp;[{$currency->sign}]</td>
                         </tr>
                     [{/block}]
@@ -131,7 +127,7 @@
                 [{block name="checkout_basketcontents_productvats"}]
                     [{foreach from=$oxcmp_basket->getProductVats() item=VATitem key=key}]
                         <tr>
-                            <th>[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</th>
+                            <th class="text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</th>
                             <td>[{$VATitem}]&nbsp;[{$currency->sign}]</td>
                         </tr>
                     [{/foreach}]
@@ -140,7 +136,7 @@
                 [{if $oxcmp_basket->isPriceViewModeNetto()}]
                     [{block name="checkout_basketcontents_totalgross"}]
                         <tr>
-                            <th>[{oxmultilang ident="TOTAL_GROSS" suffix="COLON"}]</th>
+                            <th class="text-right">[{oxmultilang ident="TOTAL_GROSS" suffix="COLON"}]</th>
                             <td id="basketTotalGross">[{$oxcmp_basket->getFProductsPrice()}]&nbsp;[{$currency->sign}]</td>
                         </tr>
                     [{/block}]
@@ -151,7 +147,7 @@
                 [{if $oViewConf->getShowVouchers() && $oxcmp_basket->getVoucherDiscValue()}]
                     [{foreach from=$oxcmp_basket->getVouchers() item=sVoucher key=key name=Voucher}]
                         <tr class="couponData">
-                            <th><span><strong>[{oxmultilang ident="COUPON"}]</strong>&nbsp;([{oxmultilang ident="NUMBER"}] [{$sVoucher->sVoucherNr}])</span>
+                            <th class="text-right"><span><strong>[{oxmultilang ident="COUPON"}]</strong>&nbsp;([{oxmultilang ident="NUMBER"}] [{$sVoucher->sVoucherNr}])</span>
                             [{if $editable}]
                                 <a href="[{$oViewConf->getSelfLink()}]&amp;cl=basket&amp;fnc=removeVoucher&amp;voucherId=[{$sVoucher->sVoucherId}]&amp;CustomError=basket" class="removeFn">[{oxmultilang ident="REMOVE"}]</a>
                             [{/if}]
@@ -167,7 +163,7 @@
                 [{if $deliveryCost && ($oxcmp_basket->getBasketUser() || $oViewConf->isFunctionalityEnabled('blCalculateDelCostIfNotLoggedIn') ) }]
                     [{if $oViewConf->isFunctionalityEnabled('blShowVATForDelivery') }]
                         <tr>
-                            <th>[{ oxmultilang ident="SHIPPING_NET" suffix="COLON" }]</th>
+                            <th class="text-right">[{ oxmultilang ident="SHIPPING_NET" suffix="COLON" }]</th>
                             <td id="basketDeliveryNetto">[{oxprice price=$deliveryCost->getNettoPrice() currency=$currency }]</td>
                         </tr>
                         [{if $deliveryCost->getVatValue()}]
@@ -182,7 +178,7 @@
                         [{/if}]
                     [{else}]
                     <tr>
-                        <th>[{ oxmultilang ident="SHIPPING_COST" suffix="COLON" }]</th>
+                        <th class="text-right">[{ oxmultilang ident="SHIPPING_COST" suffix="COLON" }]</th>
                         <td id="basketDeliveryGross">[{oxprice price=$deliveryCost->getBruttoPrice() currency=$currency}]</td>
                     </tr>
                     [{/if}]
@@ -194,22 +190,22 @@
                 [{if $paymentCost && $paymentCost->getPrice() }]
                     [{if $oViewConf->isFunctionalityEnabled('blShowVATForPayCharge') }]
                         <tr>
-                            <th>[{if $paymentCost->getPrice() >= 0}][{ oxmultilang ident="SURCHARGE" }][{else}][{ oxmultilang ident="DEDUCTION" }][{/if}] [{ oxmultilang ident="PAYMENT_METHOD" suffix="COLON"}]</th>
+                            <th class="text-right">[{if $paymentCost->getPrice() >= 0}][{ oxmultilang ident="SURCHARGE" }][{else}][{ oxmultilang ident="DEDUCTION" }][{/if}] [{ oxmultilang ident="PAYMENT_METHOD" suffix="COLON"}]</th>
                             <td id="basketPaymentNetto">[{oxprice price=$paymentCost->getNettoPrice() currency=$currency }]</td>
                         </tr>
                         [{if $paymentCost->getVatValue()}]
                             <tr>
                                 [{if $oxcmp_basket->isProportionalCalculationOn() }]
-                                    <th>[{ oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT" suffix="COLON" }]</th>
+                                    <th class="text-right">[{ oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT" suffix="COLON" }]</th>
                                 [{else}]
-                                    <th>[{ oxmultilang ident="SURCHARGE_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$paymentCost->getVat() }]</th>
+                                    <th class="text-right">[{ oxmultilang ident="SURCHARGE_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$paymentCost->getVat() }]</th>
                                 [{/if}]
                                 <td id="basketPaymentVat">[{oxprice price=$paymentCost->getVatValue() currency=$currency }]</td>
                             </tr>
                         [{/if}]
                     [{else}]
                         <tr>
-                            <th>[{if $paymentCost->getPrice() >= 0}][{ oxmultilang ident="SURCHARGE" }][{else}][{ oxmultilang ident="DEDUCTION" }][{/if}] [{ oxmultilang ident="PAYMENT_METHOD" suffix="COLON" }]</th>
+                            <th class="text-right">[{if $paymentCost->getPrice() >= 0}][{ oxmultilang ident="SURCHARGE" }][{else}][{ oxmultilang ident="DEDUCTION" }][{/if}] [{ oxmultilang ident="PAYMENT_METHOD" suffix="COLON" }]</th>
                             <td id="basketPaymentGross">[{oxprice price=$paymentCost->getBruttoPrice() currency=$currency }]</td>
                         </tr>
                     [{/if}]
@@ -223,18 +219,18 @@
                     [{if $wrappingCost && $wrappingCost->getPrice() > 0 }]
                         [{if $oViewConf->isFunctionalityEnabled('blShowVATForWrapping') }]
                             <tr>
-                                <th>[{ oxmultilang ident="BASKET_TOTAL_WRAPPING_COSTS_NET" suffix="COLON" }]</th>
+                                <th class="text-right">[{ oxmultilang ident="BASKET_TOTAL_WRAPPING_COSTS_NET" suffix="COLON" }]</th>
                                 <td id="basketWrappingNetto">[{oxprice price=$wrappingCost->getNettoPrice() currency=$currency}]</td>
                             </tr>
                             [{if $oxcmp_basket->getWrappCostVat() }]
                                 <tr>
-                                    <th>[{ oxmultilang ident="PLUS_VAT" suffix="COLON" }]</th>
+                                    <th class="text-right">[{ oxmultilang ident="PLUS_VAT" suffix="COLON" }]</th>
                                     <td id="basketWrappingVat">[{oxprice price=$wrappingCost->getVatValue() currency=$currency}]</td>
                                 </tr>
                             [{/if}]
                         [{else}]
                             <tr>
-                                <th>[{ oxmultilang ident="GIFT_WRAPPING" suffix="COLON" }]</th>
+                                <th class="text-right">[{ oxmultilang ident="GIFT_WRAPPING" suffix="COLON" }]</th>
                                 <td id="basketWrappingGross">[{oxprice price=$wrappingCost->getBruttoPrice() currency=$currency }]</td>
                             </tr>
                         [{/if}]
@@ -244,12 +240,12 @@
                     [{if $giftCardCost && $giftCardCost->getPrice() > 0 }]
                         [{if $oViewConf->isFunctionalityEnabled('blShowVATForWrapping') }]
                             <tr>
-                                <th>[{ oxmultilang ident="BASKET_TOTAL_GIFTCARD_COSTS_NET" suffix="COLON" }]</th>
+                                <th class="text-right">[{ oxmultilang ident="BASKET_TOTAL_GIFTCARD_COSTS_NET" suffix="COLON" }]</th>
                                 <td id="basketGiftCardNetto">[{oxprice price=$giftCardCost->getNettoPrice() currency=$currency }]</td>
                             </tr>
                             <tr>
                                 [{if $oxcmp_basket->isProportionalCalculationOn() }]
-                                    <th>[{ oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT" suffix="COLON" }]</th>
+                                    <th class="text-right">[{ oxmultilang ident="BASKET_TOTAL_PLUS_PROPORTIONAL_VAT" suffix="COLON" }]</th>
                                 [{else}]
                                     <th>[{ oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$giftCardCost->getVat() }] </th>
                                 [{/if}]
@@ -257,7 +253,7 @@
                             </tr>
                         [{else}]
                             <tr>
-                                <th>[{ oxmultilang ident="GREETING_CARD" suffix="COLON" }]</th>
+                                <th class="text-right">[{ oxmultilang ident="GREETING_CARD" suffix="COLON" }]</th>
                                 <td id="basketGiftCardGross">[{oxprice price=$giftCardCost->getBruttoPrice() currency=$currency}]</td>
                             </tr>
                         [{/if}]
@@ -267,14 +263,14 @@
 
             [{block name="checkout_basketcontents_grandtotal"}]
                 <tr>
-                    <th class="lead"><strong>[{oxmultilang ident="GRAND_TOTAL" suffix="COLON"}]</strong></th>
+                    <th class="lead text-right"><strong>[{oxmultilang ident="GRAND_TOTAL" suffix="COLON"}]</strong></th>
                     <td id="basketGrandTotal" class="lead"><strong>[{oxprice price=$oxcmp_basket->getPrice() currency=$currency}]</strong></td>
                 </tr>
             [{/block}]
 
             [{if $oxcmp_basket->hasSkipedDiscount()}]
                 <tr>
-                    <th><span class="note">**</span> [{oxmultilang ident="MESSAGE_COUPON_NOT_APPLIED_FOR_ARTICLES"}]</span></th>
+                    <th class="text-right"><span class="note">**</span> [{oxmultilang ident="MESSAGE_COUPON_NOT_APPLIED_FOR_ARTICLES"}]</span></th>
                     <td></td>
                 </tr>
             [{/if}]

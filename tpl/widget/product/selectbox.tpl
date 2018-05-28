@@ -9,9 +9,9 @@
             <button type="button" class="btn btn-outline-dark btn-sm dropdown-toggle" data-toggle="dropdown">
                 [{assign var="oActiveSelection" value=$oSelectionList->getActiveSelection()}]
                 [{if $oActiveSelection}]
-                    <span class="pull-left">[{$oActiveSelection->getName()}]</span>
+                    <span class="float-left">[{$oActiveSelection->getName()}]</span>
                 [{elseif !$blHideDefault}]
-                    <span class="pull-left">
+                    <span class="float-left">
                         [{if $sFieldName == "sel"}]
                             [{oxmultilang ident="PLEASE_CHOOSE"}]
                         [{else}]

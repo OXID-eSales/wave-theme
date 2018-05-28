@@ -39,7 +39,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12 col-md-6">
-                                <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-outline-dark pull-left prevStep submitButton largeButton" id="userBackStepTop"><i class="fa fa-caret-left"></i> [{oxmultilang ident="PREVIOUS_STEP"}]</a>
+                                <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-outline-dark float-left prevStep submitButton largeButton" id="userBackStepTop"><i class="fa fa-caret-left"></i> [{oxmultilang ident="PREVIOUS_STEP"}]</a>
                             </div>
                             <div class="col-12 col-md-6 text-right">
                                 <button id="userNextStepTop" class="btn btn-primary pull-right submitButton largeButton nextStep" name="userform" type="submit">[{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}] <i class="fa fa-caret-right"></i></button>
@@ -56,7 +56,7 @@
                             [{block name="user_checkout_billing_head"}]
                                 <h3 class="card-title">
                                     [{oxmultilang ident="BILLING_ADDRESS"}]
-                                    <button id="userChangeAddress" class="btn btn-xs btn-warning float-right submitButton largeButton edit-button" name="changeBillAddress" type="submit" title="[{oxmultilang ident="CHANGE"}]">
+                                    <button id="userChangeAddress" class="btn btn-sm btn-warning float-right submitButton largeButton edit-button" name="changeBillAddress" type="submit" title="[{oxmultilang ident="CHANGE"}]">
                                         <i class="fas fa-pencil-alt"></i>
                                     </button>
                                 </h3>
@@ -85,7 +85,7 @@
                                 <h3 class="card-title">
                                     [{oxmultilang ident="SHIPPING_ADDRESS"}]
                                     [{if $oView->showShipAddress() and $oxcmp_user->getSelectedAddress()}]
-                                        <button id="userChangeShippingAddress" class="btn btn-xs btn-warning float-right submitButton largeButton edit-button" name="changeShippingAddress" type="submit" [{if !$oView->showShipAddress() and $oxcmp_user->getSelectedAddress()}] style="display: none;" [{/if}] title="[{oxmultilang ident="CHANGE"}]">
+                                        <button id="userChangeShippingAddress" class="btn btn-sm btn-warning float-right submitButton largeButton edit-button" name="changeShippingAddress" type="submit" [{if !$oView->showShipAddress() and $oxcmp_user->getSelectedAddress()}] style="display: none;" [{/if}] title="[{oxmultilang ident="CHANGE"}]">
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
                                     [{/if}]
@@ -125,7 +125,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12 col-md-6">
-                                <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-outline-dark pull-left prevStep submitButton largeButton" id="userBackStepBottom"><i class="fa fa-caret-left"></i> [{oxmultilang ident="PREVIOUS_STEP"}]</a>
+                                <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-outline-dark float-left prevStep submitButton largeButton" id="userBackStepBottom"><i class="fa fa-caret-left"></i> [{oxmultilang ident="PREVIOUS_STEP"}]</a>
                             </div>
                             <div class="col-12 col-md-6 text-right">
                                 <button id="userNextStepBottom" class="btn btn-primary pull-right submitButton largeButton nextStep" name="userform" type="submit">[{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}] <i class="fa fa-caret-right"></i></button>

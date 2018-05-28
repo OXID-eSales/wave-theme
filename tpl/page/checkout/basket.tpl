@@ -30,18 +30,18 @@
                         <div class="col-12 col-md-6">
                     [{block name="checkout_basket_backtoshop_top"}]
                         [{if $oView->showBackToShop()}]
-                            <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="pull-left">
+                            <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="float-left">
                                 <div class="hidden">
                                     [{$oViewConf->getHiddenSid()}]
                                     <input type="hidden" name="cl" value="basket">
                                     <input type="hidden" name="fnc" value="backtoshop">
                                 </div>
-                                <button type="submit" class="btn btn-outline-dark submitButton largeButton pull-left">
+                                <button type="submit" class="btn btn-outline-dark submitButton largeButton float-left">
                                     <i class="fa fa-caret-left"></i> [{oxmultilang ident="CONTINUE_SHOPPING"}]
                                 </button>
                             </form>
                         [{else}]
-                            <a href="[{$oViewConf->getHomeLink()}]" class="btn btn-outline-dark submitButton largeButton pull-left">
+                            <a href="[{$oViewConf->getHomeLink()}]" class="btn btn-outline-dark submitButton largeButton float-left">
                                 <i class="fa fa-caret-left"></i> [{oxmultilang ident="CONTINUE_SHOPPING"}]
                             </a>
                         [{/if}]
@@ -80,18 +80,18 @@
 
                     [{block name="checkout_basket_backtoshop_bottom"}]
                         [{if $oView->showBackToShop()}]
-                            <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="pull-left">
+                            <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="float-left">
                                 <div class="backtoshop">
                                     [{$oViewConf->getHiddenSid()}]
                                     <input type="hidden" name="cl" value="basket">
                                     <input type="hidden" name="fnc" value="backtoshop">
-                                    <button type="submit" class="btn btn-outline-dark submitButton largeButton pull-left">
+                                    <button type="submit" class="btn btn-outline-dark submitButton largeButton float-left">
                                         <i class="fa fa-caret-left"></i> [{oxmultilang ident="CONTINUE_SHOPPING"}]
                                     </button>
                                 </div>
                             </form>
                         [{else}]
-                            <a href="[{$oViewConf->getHomeLink()}]" class="btn btn-outline-dark submitButton largeButton pull-left">
+                            <a href="[{$oViewConf->getHomeLink()}]" class="btn btn-outline-dark submitButton largeButton float-left">
                                 <i class="fa fa-caret-left"></i> [{oxmultilang ident="CONTINUE_SHOPPING"}]
                             </a>
                         [{/if}]

@@ -17,7 +17,7 @@
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
  */
-$( window ).load( function()
+$(window).on('load', function()
 {
     var $window = $( this ),
         $oManufacturerSlider = $( '#manufacturerSlider .flexslider' ),

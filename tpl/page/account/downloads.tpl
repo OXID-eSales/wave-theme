@@ -14,7 +14,7 @@
                                 </div>
                                 <div class="col-3">
                                     [{if $oOrderFile->isPaid() || !$oOrderFile->oxorderfiles__oxpurchasedonly->value }]
-                                        <a class="btn btn-success btn-xs pull-right" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=download" params="sorderfileid="|cat:$oOrderFile->getId()}]" title="[{$oOrderFile->oxorderfiles__oxfilename->value}] [{oxmultilang ident="DD_DOWNLOADS_DOWNLOAD_TOOLTIP"}]">
+                                        <a class="btn btn-success btn-sm pull-right" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=download" params="sorderfileid="|cat:$oOrderFile->getId()}]" title="[{$oOrderFile->oxorderfiles__oxfilename->value}] [{oxmultilang ident="DD_DOWNLOADS_DOWNLOAD_TOOLTIP"}]">
                                             <i class="fa fa-download"></i> [{oxmultilang ident="DD_DOWNLOADS_DOWNLOAD_TOOLTIP"}]
                                         </a>
                                     [{/if}]

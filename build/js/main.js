@@ -317,17 +317,17 @@ $(function () {
                 }
             );
 
-            $oBasketList.find('.toggle-actions').click(function (e) {
-                    e.preventDefault();
-                    var $this = $(this),
-                        $oToggable = $this.parents('li').first().find('.row.toggable');
+            if ($window.width() <= 996) {
+                $oBasketList.find('.toggle-actions').click(function (e) {
+                        e.preventDefault();
+                        var $this = $(this),
+                        $oToggable = $this.parents('li').first().find('.row.collapse');
+                        $this.find('i').attr('class', ($oToggable.hasClass('.show') ? 'fa fa-chevron-up' : 'fa fa-chevron-down'));
+                    }
+                );
+            } else {
 
-                    $oToggable.slideToggle(150, function () {
-                            $this.find('i').attr('class', ($oToggable.is(':visible') ? 'fa fa-chevron-up' : 'fa fa-chevron-down'));
-                        }
-                    );
-                }
-            );
+            }
         }
 
         // Auswahllisten im Warenkorb

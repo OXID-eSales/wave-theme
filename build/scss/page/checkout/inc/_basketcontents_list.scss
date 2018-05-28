@@ -1,0 +1,22 @@
+.cart_item-list {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .quantity {
+    .textbox {
+      max-width: 60px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  .row {
+    &.collapse {
+      &:not(.show) {
+
+        @include media-breakpoint-up(md){
+          display: flex;
+        }
+      }
+    }
+  }
+}

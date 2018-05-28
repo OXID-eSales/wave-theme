@@ -225,7 +225,6 @@
 
         [{oxscript include="js/javascript.js" priority=1}]
         [{oxscript include="js/libs/jquery-ui.min.js" priority=1}]
-        [{oxscript include="js/scripts.min.js" priority=1}]
 
     [{/block}]
 
