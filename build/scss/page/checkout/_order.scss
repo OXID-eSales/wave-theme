@@ -1,4 +1,3 @@
-@import 'inc/basketcontents_table';
 @import 'inc/basketcontents_list';
 @import 'inc/payments';
 @import 'inc/steps';
@@ -25,4 +24,7 @@
       }
     }
   }
+}
+.voucher-code {
+  max-width: 250px;
 }

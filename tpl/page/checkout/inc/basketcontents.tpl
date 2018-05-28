@@ -1,7 +1,7 @@
 [{* basket contents *}]
-[{oxscript include="js/widgets/oxbasketchecks.min.js" priority=10}]
+[{*oxscript include="js/widgets/oxbasketchecks.min.js" priority=10*}]
 [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
-[{oxscript add="$('#checkAll, #basketRemoveAll').oxBasketChecks();"}]
+[{*oxscript add="$('#checkAll, #basketRemoveAll').oxBasketChecks();"*}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 [{assign var="currency" value=$oView->getActCurrency()}]
 
@@ -11,14 +11,10 @@
     <input type="hidden" name="fnc" value="changebasket">
     <input type="hidden" name="CustomError" value="basket">
 
-    [{* Nur für Mobilgeräte <768px sichtbar *}]
-    <div class="d-md-none basket-mobile" id="basketcontents_list">
+    <div class="basket" id="basketcontents_list">
         [{include file="page/checkout/inc/basketcontents_list.tpl"}]
     </div>
-    [{* Für alle Geräte >=768px sichtbar *}]
-    <div class="d-none d-md-block basket-desktop" id="basketcontents_table">
-        [{include file="page/checkout/inc/basketcontents_table.tpl"}]
-    </div>
+
 </form>
 <div class="row">
 [{if $oViewConf->getShowVouchers() && $oViewConf->getActiveClassName() == 'basket'}]
@@ -34,9 +30,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="req sr-only" for="input_voucherNr">[{oxmultilang ident="ENTER_COUPON_NUMBER"}]</label>
+                        <label class="req sr-only voucher-label" for="input_voucherNr">[{oxmultilang ident="ENTER_COUPON_NUMBER"}]</label>
                         <div class="input-group">
-                            <input type="text" name="voucherNr" size="30" class="form-control js-oxValidate js-oxValidate_notEmpty" id="input_voucherNr" placeholder="[{oxmultilang ident="ENTER_COUPON_NUMBER"}]" required="required">
+                            <input type="text" name="voucherNr" size="30" class="form-control voucher-code js-oxValidate js-oxValidate_notEmpty" id="input_voucherNr" placeholder="[{oxmultilang ident="ENTER_COUPON_NUMBER"}]" required="required">
                             <span class="input-group-append">
                                 <button type="submit" class="btn btn-primary submitButton"><i class="fa fa-gift"></i> [{oxmultilang ident="REDEEM_COUPON"}]</button>
                             </span>

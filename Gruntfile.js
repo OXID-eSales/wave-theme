@@ -63,10 +63,13 @@ module.exports = function (grunt) {
                     '<%= project.out %><%= project.theme %>/src/js/javascript.async.js': [
                         '<%= project.dev %>build/js/**/*.js'
                     ],
-                    "<%= project.out %><%= project.theme %>/src/js/pages/compare.min.js": "<%= project.dev %>build/js/pages/compare.js",
-                    "<%= project.out %><%= project.theme %>/src/js/pages/details.min.js": "<%= project.dev %>build/js/pages/details.js",
-                    "<%= project.out %><%= project.theme %>/src/js/pages/review.min.js":  "<%= project.dev %>build/js/pages/review.js",
-                    "<%= project.out %><%= project.theme %>/src/js/pages/start.min.js":   "<%= project.dev %>build/js/pages/start.js"
+                    "<%= project.out %><%= project.theme %>/src/js/pages/compare.min.js":   "<%= project.dev %>build/js/pages/compare.js",
+                    "<%= project.out %><%= project.theme %>/src/js/pages/details.min.js":   "<%= project.dev %>build/js/pages/details.js",
+                    "<%= project.out %><%= project.theme %>/src/js/pages/review.min.js":    "<%= project.dev %>build/js/pages/review.js",
+                    "<%= project.out %><%= project.theme %>/src/js/pages/start.min.js":     "<%= project.dev %>build/js/pages/start.js",
+
+                    "<%= project.out %><%= project.theme %>/src/js/libs/jquery-ui.min.js":  "<%= project.dev %>build/vendor/jquery-ui/js/jquery-ui.js",
+
                 }
             }
         },
