@@ -97,12 +97,26 @@
       top: 0;
       z-index: 1030;
       margin-top: -42px;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid #ddd;
+      padding: 0;
+
+      @include media-breakpoint-up(md) {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        border: none;
+      }
+
+      .navbar-header {
+        padding: 5px 15px;
+      }
 
       &.fadeIn {
-        background-color: rgba(255, 255, 255, 0.95);
         margin-top: 0;
-        transition: all .2s;
+        transition: margin-top .2s;
+        background-color: #fff;
+
+        @include media-breakpoint-up(md) {
+          background-color: rgba(255, 255, 255, 0.95);
+        }
       }
     }
 
