@@ -77,5 +77,11 @@
   .actions {
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
+
+    .infogrid-view & {
+      left: $grid-gutter-width/2;
+    }
   }
 }

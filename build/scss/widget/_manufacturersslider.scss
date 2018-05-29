@@ -1,12 +1,10 @@
-#manufacturerSlider {
-  margin-bottom: 0;
-}
-
 .manufacturer-slider {
   border-top: 2px solid $ox-start-manufacturerslider-border;
   border-bottom: 2px solid $ox-start-manufacturerslider-border;
   background-color: $ox-start-manufacturerslider-bg;
-  padding-bottom: $line-height-computed * 2;
+  padding: $line-height-computed * 2 0;
+  margin-bottom: 20px;
+
 
   .flexslider {
     background-color: transparent;
