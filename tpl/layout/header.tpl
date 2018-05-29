@@ -3,9 +3,10 @@
 [{/if}]
 [{block name="header_main"}]
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
+<div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
     <header id="header" class="header">
             <div class="header-box">
-                <div class="[{if $blFullwidth}]fullwidth-container[{else}]container[{/if}]">
+                <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
                     <div class="row">
                     <div class="col-12 col-md-6 col-lg-4 order-lg-0 logo-col">
                         [{block name="layout_header_logo"}]
@@ -65,7 +66,7 @@
             [{/block}]
 
     </header>
-
+</div>
 [{/block}]
 
 [{insert name="oxid_newbasketitem" tpl="widget/minibasket/newbasketitemmsg.tpl" type="message"}]

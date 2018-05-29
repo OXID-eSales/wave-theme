@@ -8,7 +8,7 @@
         [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
 
         <nav id="mainnav" class="navbar navbar-expand-lg navbar-light[{if $blFullwidth}] fullviewlayout[{/if}]" role="navigation">
-            <div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
+            <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
 
                 [{block name="dd_widget_header_categorylist_navbar"}]
                     [{block name="dd_widget_header_categorylist_navbar_header"}]

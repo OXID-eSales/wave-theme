@@ -6,9 +6,9 @@
     [{if $oxcmp_user}]
     [{assign var="force_sid" value=$oView->getSidForWidget()}]
     [{/if}]
-
+<div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
     <footer class="footer">
-        <div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
+        <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
             <div class="row mb-4">
                 <div class="col-12 col-lg-8">
                     <div class="row">
@@ -141,7 +141,7 @@
         [{block name="layout_page_vatinclude"}]
         [{block name="footer_deliveryinfo"}]
         [{oxifcontent ident="oxdeliveryinfo" object="oCont"}]
-        <div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
+        <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
             <div class="vat-info">
                 [{if $oView->isVatIncluded()}]
                 <span class="vat-info-text">* [{oxmultilang ident="PLUS_SHIPPING"}]<a
@@ -160,7 +160,7 @@
     </footer>
 
     <div class="legal">
-        <div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
+        <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
             <section class="legal-box">
                 [{block name="dd_footer_copyright"}]
                     [{oxifcontent ident="oxstdfooter" object="oCont"}]
@@ -177,3 +177,4 @@
             [{include file="form/privatesales/basketexcl.tpl"}]
         </div>
     [{/if}]
+</div>

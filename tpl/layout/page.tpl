@@ -8,7 +8,7 @@
     [{/block}]
 
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
-<div class="[{if $blFullwidth}]fullwidth-container[{else}]container[{/if}]">
+<div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
 
     <div id="wrapper" class="main-row[{if $sidebar}]class="sidebar[{$sidebar}][{/if}]">
 
