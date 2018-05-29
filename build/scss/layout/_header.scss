@@ -16,6 +16,7 @@
 
 .header {
   background-color: $ox-container-header-background-color;
+  margin: 0 -15px;
 
   .fixed-header & {
     position: relative;

@@ -1,20 +1,21 @@
 [{assign var="currency" value=$oView->getActCurrency()}]
 
-<div class="modal fade" id="giftoptions" tabindex="-1" role="dialog" aria-labelledby="giftoptions_modal_label" aria-hidden="true">
-    <div class="modal-dialog">
+<div class="modal fade gift-options" id="giftoptions" tabindex="-1" role="dialog" aria-labelledby="giftoptions_modal_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 [{block name="checkout_wrapping_header"}]
-                    <span class="h4 modal-title" id="giftoptions_modal_label">[{oxmultilang ident="GIFT_OPTION"}]</span>
+                <span class="h4 modal-title float-left" id="giftoptions_modal_label">[{oxmultilang ident="GIFT_OPTION"}]</span>
                 [{/block}]
+
+                <button type="button" class="close float-right" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <img src="[{$oViewConf->getImageUrl('gift-wrapping.jpg')}]" alt="[{oxmultilang ident="ADD_WRAPPING"}]" class="img-thumbnail">
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-8">
                         <p>[{oxmultilang ident="WRAPPING_DESCRIPTION"}]</p>
                     </div>
                 </div>
@@ -39,7 +40,8 @@
                                 [{assign var="basketitemlist" value=$oView->getBasketArticles()}]
                                 [{foreach key=basketindex from=$oxcmp_basket->getContents() item=basketitem name=wrappArt}]
                                     <div class="card">
-                                        <div class="row">
+                                        <div class="card-header">
+                                            <div class="row">
                                             [{block name="checkout_wrapping_item"}]
                                                 [{assign var="basketproduct" value=$basketitemlist.$basketindex}]
 
@@ -52,28 +54,29 @@
                                                 </div>
 
                                         </div>
-
-
-                                        <div id="wrapp_[{$smarty.foreach.wrappArt.iteration}]" class="row">
-                                            <div class="col-md-12">
-                                                <div class="col-3">
-                                                </div>
-                                                <div class="col-9 offset-sm-3">
-                                                    <div class="form-group">
-                                                        <div class="radio">
-                                                            <label>
-                                                                <input class="radiobox" type="radio" name="wrapping[[{$basketindex}]]" id="wrapping_[{$basketindex}]" value="0" [{if !$basketitem->getWrappingId()}]CHECKED[{/if}]>
-                                                                [{oxmultilang ident="NONE"}] <strong>0,00 [{$currency->sign}]</strong>
-                                                            </label>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="wrapp_[{$smarty.foreach.wrappArt.iteration}]" class="row">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                <div class="col-3"></div>
+                                                    <div class="col-9 offset-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input class="radiobox" type="radio" name="wrapping[[{$basketindex}]]" id="wrapping_[{$basketindex}]" value="0" [{if !$basketitem->getWrappingId()}]CHECKED[{/if}]>
+                                                                    [{oxmultilang ident="NONE"}] <strong>0,00 [{$currency->sign}]</strong>
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
                                             [{assign var="ictr" value="1"}]
                                             [{foreach from=$oView->getWrappingList() item=wrapping name=Wraps}]
                                                 <div class="col-md-12">
                                                     [{if $wrapping->oxwrapping__oxpic->value}]
+                                                    <div class="row">
                                                         <div class="col-3">
                                                             <img src="[{$wrapping->getPictureUrl()}]" alt="[{$wrapping->oxwrapping__oxname->value}]" class="img-thumbnail">
                                                         </div>
@@ -81,12 +84,13 @@
                                                     [{else}]
                                                         <div class="col-12">
                                                     [{/if}]
-                                                        <div class="form-group">
-                                                            <div class="radio">
-                                                                <label>
-                                                                    <input class="radiobox" type="radio" name="wrapping[[{$basketindex}]]" id="wrapping_[{$wrapping->oxwrapping__oxid->value}]" value="[{$wrapping->oxwrapping__oxid->value}]" [{if $basketitem->getWrappingId() == $wrapping->oxwrapping__oxid->value}]CHECKED[{/if}]>
-                                                                    [{$wrapping->oxwrapping__oxname->value}] <strong>[{$wrapping->getFPrice()}] [{$currency->sign}]</strong>
-                                                                </label>
+                                                            <div class="form-group">
+                                                                <div class="radio">
+                                                                    <label>
+                                                                        <input class="radiobox" type="radio" name="wrapping[[{$basketindex}]]" id="wrapping_[{$wrapping->oxwrapping__oxid->value}]" value="[{$wrapping->oxwrapping__oxid->value}]" [{if $basketitem->getWrappingId() == $wrapping->oxwrapping__oxid->value}]CHECKED[{/if}]>
+                                                                        [{$wrapping->oxwrapping__oxname->value}] <strong>[{$wrapping->getFPrice()}] [{$currency->sign}]</strong>
+                                                                    </label>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -99,6 +103,7 @@
                                                 [{assign var="icounter" value="`$icounter+1`"}]
                                             [{/block}]
                                         </div>
+                                        </div>
                                 [{/foreach}]
                             [{/if}]
 
@@ -108,13 +113,15 @@
                                     <h3 class="page-header blockHead">[{oxmultilang ident="GREETING_CARD"}]</h3>
                                     <div class="wrappingCard clear" id="wrappCard">
                                         <div class="card">
-                                            <div class="row">
-                                                <div class="col-sm-9 offset-sm-3">
-                                                    <div class="form-group">
-                                                        <div class="radio">
-                                                            <label>
-                                                                <input type="radio" class="radiobox" name="chosencard" id="chosencard" value="0" [{if !$oxcmp_basket->getCardId()}]CHECKED[{/if}]> [{oxmultilang ident="NO_GREETING_CARD"}]
-                                                            </label>
+                                            <div class="card-header">
+                                                <div class="row">
+                                                    <div class="col-sm-9 offset-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="radio">
+                                                                <label>
+                                                                    <input type="radio" class="radiobox" name="chosencard" id="chosencard" value="0" [{if !$oxcmp_basket->getCardId()}]CHECKED[{/if}]> [{oxmultilang ident="NO_GREETING_CARD"}]
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -125,7 +132,8 @@
                                         [{assign var="icounter" value="0"}]
                                         [{foreach from=$oCardList item=card name=GreetCards}]
                                             <div class="card">
-                                                <div class="row">
+                                                <div class="card-header">
+                                                    <div class="row">
                                                     [{if $card->oxwrapping__oxpic->value}]
                                                         <div class="col-3">
                                                             <img src="[{$card->getPictureUrl()}]" alt="[{$card->oxwrapping__oxname->value}]" class="img-thumbnail">
@@ -144,6 +152,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                                </div>
                                             [{assign var="icounter" value="`$icounter+1`"}]
                                         [{/foreach}]
                                         [{oxscript add="$( '#wrappCard img' ).click(function(){ $(this).parent().siblings().find('input').click(); });"}]
