@@ -16,7 +16,7 @@
 
 .header {
   position: relative;
-  z-index: 10;
+  z-index: 20;
 
   .logo {
     &-link {
@@ -59,14 +59,15 @@
           display: none;
         }
       }
+
       .btn-group {
         &.open > .dropdown-toggle,
-        .btn.active,
-        .btn:active {
+        > .btn.active,
+        > .btn:active {
           box-shadow: 0 0 0;
         }
 
-        .btn {
+        > .btn {
           background-color: transparent;
           font-size: 11px;
           color: #fff;

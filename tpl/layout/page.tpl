@@ -8,30 +8,28 @@
             [{include file="layout/header.tpl"}]
         [{/block}]
 
-        [{if $oView->getClassName() != "start" && !$blHideBreadcrumb}]
-            [{block name="layout_breadcrumb"}]
-            [{include file="widget/breadcrumb.tpl"}]
-            [{/block}]
-        [{/if}]
+        [{block name="layout_breadcrumb"}]
+        [{include file="widget/breadcrumb.tpl"}]
+        [{/block}]
 
         [{if $actCategory->oxcategories__oxthumb->value && $actCategory->getThumbUrl()}]
         <div class="global-header-bg">
             <img class="global-header-bg-img" src="([{$actCategory->getThumbUrl()}]">
         </div>
         [{/if}]
+
+        [{if $oView->getClassName()=='start' && $oView->getBanners()|@count > 0}]
+        <div class="global-header-bg">
+            [{include file="widget/promoslider.tpl"}]
+        </div>
+        [{/if}]
+
     </div>
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
 
 <div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
 
     <div id="wrapper" class="main-row[{if $sidebar}]class="sidebar[{$sidebar}][{/if}]">
-
-
-        [{if $oView->getClassName()=='start' && $oView->getBanners()|@count > 0}]
-        <div class="row">
-            [{include file="widget/promoslider.tpl"}]
-        </div>
-        [{/if}]
 
         <div class="content-box">
             [{$smarty.capture.loginErrors}]

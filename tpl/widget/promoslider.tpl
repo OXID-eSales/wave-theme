@@ -19,7 +19,7 @@
                                     <a href="[{$sBannerLink}]" title="[{$oBanner->oxactions__oxtitle->value}]">
                                 [{/if}]
 
-                                <img src="[{$sBannerPictureUrl}]" alt="[{$oBanner->oxactions__oxtitle->value}]" title="[{$oBanner->oxactions__oxtitle->value}]">
+                                <img class="global-header-bg-img" src="[{$sBannerPictureUrl}]" alt="[{$oBanner->oxactions__oxtitle->value}]" title="[{$oBanner->oxactions__oxtitle->value}]">
 
                                 [{if $sBannerLink}]
                                     </a>

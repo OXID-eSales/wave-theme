@@ -4,16 +4,23 @@
         <div class="breadcrumb-wrapper">
             [{assign var='rsslinks' value=$oView->getRssLinks()}]
             <div class="h1">
-                [{if $oView->getClassName()=='details'}]
-                    [{$oDetailsProduct->oxarticles__oxtitle}]
+                [{if $oView->getClassName() == "start"}]
+                    <h1 class="h1">Willkommen bei Race WEAR Twenty Four</h1>
                 [{else}]
-                    [{foreach from=$oView->getBreadCrumb() item="sCrum" name="breadcrumb"}]
-                        [{if $smarty.foreach.breadcrumb.last}]
-                            [{$sCrum.title}]
-                        [{/if}]
-                    [{/foreach}]
+                    [{if $oView->getClassName()=='details'}]
+                        [{$oDetailsProduct->oxarticles__oxtitle}]
+                    [{else}]
+                        [{foreach from=$oView->getBreadCrumb() item="sCrum" name="breadcrumb"}]
+                            [{if $smarty.foreach.breadcrumb.last}]
+                                [{$sCrum.title}]
+                            [{/if}]
+                        [{/foreach}]
+                    [{/if}]
                 [{/if}]
+
             </div>
+
+            [{if $oView->getClassName() != "start" && !$blHideBreadcrumb}]
             <ol id="breadcrumb" class="breadcrumb">
                 [{block name="dd_widget_breadcrumb_list"}]
                 [{foreach from=$oView->getBreadCrumb() item="sCrum" name="breadcrumb"}]
@@ -25,6 +32,7 @@
                 [{/foreach}]
                 [{/block}]
             </ol>
+            [{/if}]
         </div>
         [{/block}]
     [{/strip}]

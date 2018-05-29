@@ -48,15 +48,27 @@
     text-align: center;
     color: #fff;
     position: relative;
-    margin-bottom: 30px;
+    min-height: 100px;
+
+    @include media-breakpoint-up(md) {
+      min-height: 200px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      min-height: 350px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      min-height: 500px;
+    }
 
     &:before {
       left: 0;
       transform: skewY(4.5deg);
       position: absolute;
-      bottom: -4vw;
+      bottom: -100px;
       width: 50.01%;
-      height: 8vw;
+      height: 200px;
       background-color: #f5f5f5;
       z-index: 31;
       content: '';
@@ -66,9 +78,9 @@
       right: 0;
       transform: skewY(-4.5deg);
       position: absolute;
-      bottom: -4vw;
+      bottom: -100px;
       width: 50.01%;
-      height: 8vw;
+      height: 200px;
       background-color: #f5f5f5;
       z-index: 31;
       content: '';
