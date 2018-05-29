@@ -8,7 +8,7 @@
         [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
 
         <nav id="mainnav" class="navbar navbar-expand-lg navbar-light[{if $blFullwidth}] fullviewlayout[{/if}]" role="navigation">
-            <div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
+
 
                 [{block name="dd_widget_header_categorylist_navbar"}]
                     [{block name="dd_widget_header_categorylist_navbar_header"}]
@@ -64,33 +64,9 @@
                             [{/block}]
                         </ul>
 
-                        <ul class="fixed-header-actions">
-
-                            [{block name="categorylist_navbar_minibasket"}]
-                                [{include file="widget/header/menubasket.tpl"}]
-                            [{/block}]
-
-                            <li class="fixed-header-item">
-                                <a href="javascript:void(null)" class="search-toggle fixed-header-link" rel="nofollow">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </li>
-
-                        </ul>
-
-                        [{if $oView->isDemoShop()}]
-
-                            <a href="[{$oViewConf->getBaseDir()}]admin/" class="btn btn-sm btn-danger navbar-btn navbar-right visible-lg">
-                                [{oxmultilang ident="DD_DEMO_ADMIN_TOOL"}]
-                                <i class="fa fa-external-link" style="font-size: 80%;"></i>
-                            </a>
-
-                        [{/if}]
-
                     </div>
                 [{/block}]
 
-            </div>
         </nav>
     [{/if}]
 [{/block}]

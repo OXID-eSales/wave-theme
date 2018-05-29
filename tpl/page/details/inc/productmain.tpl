@@ -53,6 +53,7 @@
 <div class="details-info" itemscope itemtype="http://schema.org/Product">
     <div class="row">
         <div class="col-12 col-md-4 details-col-left">
+            <div class="details-images">
             [{* article picture with zoom *}]
             [{block name="details_productmain_zoom"}]
                 [{oxscript include="js/libs/photoswipe.min.js" priority=8}]
@@ -88,9 +89,11 @@
             [{block name="details_productmain_morepics"}]
                 [{include file="page/details/inc/morepics.tpl"}]
             [{/block}]
+            </div>
         </div>
 
         <div class="col-12 col-sm-8 col-md-5 col-lg-6 details-col-middle">
+            <div class="details-content">
             [{block name="details_productmain_title"}]
                 <h1 id="productTitle" class="details-title" itemprop="name">
                     [{$oDetailsProduct->oxarticles__oxtitle->value}] [{$oDetailsProduct->oxarticles__oxvarselect->value}]
@@ -252,7 +255,9 @@
                                     <div class="input-group tobasket-input-group">
                                         <input id="amountToBasket" type="text" name="am" value="1" autocomplete="off" class="form-control">
                                         <div class="input-group-append">
-                                            <button id="toBasket" type="submit" [{if !$blCanBuy}]disabled="disabled"[{/if}] class="btn btn-primary submitButton"><i class="fa fa-shopping-cart"></i> [{oxmultilang ident="TO_CART"}]</button>
+                                            <button id="toBasket" type="submit" [{if !$blCanBuy}]disabled="disabled"[{/if}] class="btn btn-primary btn-hover submitButton">
+                                                <span class="btn-text"><i class="fa fa-shopping-cart"></i> [{oxmultilang ident="TO_CART"}]</span>
+                                            </button>
                                         </div>
                                     </div>
                                 [{/if}]
@@ -307,77 +312,80 @@
                     [{block name="details_productmain_social"}]
                     [{/block}]
                 </div>
+            </div>
         </div>
 
 
         <div class="col-12 col-sm-4 col-md-3 col-lg-2 details-col-right">
-            [{if $oManufacturer}]
+            <div class="details-actions">
+                [{if $oManufacturer}]
                 <div class="brandLogo">
                     [{block name="details_productmain_manufacturersicon"}]
-                        <a href="[{$oManufacturer->getLink()}]" title="[{$oManufacturer->oxmanufacturers__oxtitle->value}]">
-                            [{if $oManufacturer->oxmanufacturers__oxicon->value}]
-                                <img src="[{$oManufacturer->getIconUrl()}]" alt="[{$oManufacturer->oxmanufacturers__oxtitle->value}]">
-                            [{/if}]
-                        </a>
-                        <span itemprop="brand" class="d-none">[{$oManufacturer->oxmanufacturers__oxtitle->value}]</span>
+                    <a href="[{$oManufacturer->getLink()}]" title="[{$oManufacturer->oxmanufacturers__oxtitle->value}]">
+                        [{if $oManufacturer->oxmanufacturers__oxicon->value}]
+                    <img src="[{$oManufacturer->getIconUrl()}]" alt="[{$oManufacturer->oxmanufacturers__oxtitle->value}]">
+                        [{/if}]
+                    </a>
+                    <span itemprop="brand" class="d-none">[{$oManufacturer->oxmanufacturers__oxtitle->value}]</span>
                     [{/block}]
                 </div>
-            [{/if}]
+                [{/if}]
 
-            [{assign var="oSession" value=$oConfig->getSession()}]
+                [{assign var="oSession" value=$oConfig->getSession()}]
 
-            [{block name="details_productmain_productlinksselector"}]
+                [{block name="details_productmain_productlinksselector"}]
                 [{block name="details_productmain_productlinks"}]
-                    <ul class="list-unstyled details-action-links">
+                <ul class="list-unstyled details-action-links">
 
-                        [{if $oViewConf->getShowCompareList()}]
-                            <li>
-                                [{oxid_include_dynamic file="page/details/inc/compare_links.tpl" testid="" type="compare" aid=$oDetailsProduct->oxarticles__oxid->value anid=$oDetailsProduct->oxarticles__oxnid->value in_list=$oDetailsProduct->isOnComparisonList() page=$oView->getActPage() text_to_id="COMPARE" text_from_id="REMOVE_FROM_COMPARE_LIST"}]
-                            </li>
+                    [{if $oViewConf->getShowCompareList()}]
+                    <li>
+                        [{oxid_include_dynamic file="page/details/inc/compare_links.tpl" testid="" type="compare" aid=$oDetailsProduct->oxarticles__oxid->value anid=$oDetailsProduct->oxarticles__oxnid->value in_list=$oDetailsProduct->isOnComparisonList() page=$oView->getActPage() text_to_id="COMPARE" text_from_id="REMOVE_FROM_COMPARE_LIST"}]
+                    </li>
+                    [{/if}]
+
+
+                    [{if $oViewConf->getShowSuggest()}]
+                    <li>
+                        <a id="suggest" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=suggest" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="RECOMMEND"}]</a>
+                    </li>
+                    [{/if}]
+
+
+                    [{if $oViewConf->getShowListmania()}]
+                    <li>
+                        [{if $oxcmp_user}]
+                        <a id="recommList" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=recommadd" params="aid=`$oDetailsProduct->oxarticles__oxnid->value`&amp;anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:$oViewConf->getNavUrlParams()|cat:"&amp;stoken="|cat:$oSession->getSessionChallengeToken()}]">[{oxmultilang ident="ADD_TO_LISTMANIA_LIST"}]</a>
+                        [{else}]
+                        <a id="loginToRecommlist" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:"&amp;sourcecl="|cat:$oViewConf->getTopActiveClassName()|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="ADD_TO_LISTMANIA_LIST"}]</a>
                         [{/if}]
+                    </li>
+                    [{/if}]
 
-
-                        [{if $oViewConf->getShowSuggest()}]
-                            <li>
-                                <a id="suggest" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=suggest" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="RECOMMEND"}]</a>
-                            </li>
+                    <li>
+                        [{if $oxcmp_user}]
+                        <a id="linkToNoticeList" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl="|cat:$oViewConf->getTopActiveClassName() params="aid=`$oDetailsProduct->oxarticles__oxnid->value`&amp;anid=`$oDetailsProduct->oxarticles__oxnid->value`&amp;fnc=tonoticelist&amp;am=1"|cat:$oViewConf->getNavUrlParams()|cat:"&amp;stoken="|cat:$oSession->getSessionChallengeToken()}]">[{oxmultilang ident="ADD_TO_WISH_LIST"}]</a>
+                        [{else}]
+                        <a id="loginToNotice" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:"&amp;sourcecl="|cat:$oViewConf->getTopActiveClassName()|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="ADD_TO_WISH_LIST"}]</a>
                         [{/if}]
+                    </li>
 
-
-                        [{if $oViewConf->getShowListmania()}]
-                            <li>
-                                [{if $oxcmp_user}]
-                                    <a id="recommList" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=recommadd" params="aid=`$oDetailsProduct->oxarticles__oxnid->value`&amp;anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:$oViewConf->getNavUrlParams()|cat:"&amp;stoken="|cat:$oSession->getSessionChallengeToken()}]">[{oxmultilang ident="ADD_TO_LISTMANIA_LIST"}]</a>
-                                [{else}]
-                                    <a id="loginToRecommlist" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:"&amp;sourcecl="|cat:$oViewConf->getTopActiveClassName()|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="ADD_TO_LISTMANIA_LIST"}]</a>
-                                [{/if}]
-                            </li>
+                    [{if $oViewConf->getShowWishlist()}]
+                    <li>
+                        [{if $oxcmp_user}]
+                        <a id="linkToWishList" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl="|cat:$oViewConf->getTopActiveClassName() params="aid=`$oDetailsProduct->oxarticles__oxnid->value`&anid=`$oDetailsProduct->oxarticles__oxnid->value`&amp;fnc=towishlist&amp;am=1"|cat:$oViewConf->getNavUrlParams()|cat:"&amp;stoken="|cat:$oSession->getSessionChallengeToken()}]">[{oxmultilang ident="ADD_TO_GIFT_REGISTRY"}]</a>
+                        [{else}]
+                        <a id="loginToWish" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:"&amp;sourcecl="|cat:$oViewConf->getTopActiveClassName()|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="ADD_TO_GIFT_REGISTRY"}]</a>
                         [{/if}]
+                    </li>
+                    [{/if}]
 
-                        <li>
-                            [{if $oxcmp_user}]
-                                <a id="linkToNoticeList" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl="|cat:$oViewConf->getTopActiveClassName() params="aid=`$oDetailsProduct->oxarticles__oxnid->value`&amp;anid=`$oDetailsProduct->oxarticles__oxnid->value`&amp;fnc=tonoticelist&amp;am=1"|cat:$oViewConf->getNavUrlParams()|cat:"&amp;stoken="|cat:$oSession->getSessionChallengeToken()}]">[{oxmultilang ident="ADD_TO_WISH_LIST"}]</a>
-                            [{else}]
-                                <a id="loginToNotice" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:"&amp;sourcecl="|cat:$oViewConf->getTopActiveClassName()|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="ADD_TO_WISH_LIST"}]</a>
-                            [{/if}]
-                        </li>
-
-                        [{if $oViewConf->getShowWishlist()}]
-                            <li>
-                                [{if $oxcmp_user}]
-                                    <a id="linkToWishList" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl="|cat:$oViewConf->getTopActiveClassName() params="aid=`$oDetailsProduct->oxarticles__oxnid->value`&anid=`$oDetailsProduct->oxarticles__oxnid->value`&amp;fnc=towishlist&amp;am=1"|cat:$oViewConf->getNavUrlParams()|cat:"&amp;stoken="|cat:$oSession->getSessionChallengeToken()}]">[{oxmultilang ident="ADD_TO_GIFT_REGISTRY"}]</a>
-                                [{else}]
-                                    <a id="loginToWish" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:"&amp;sourcecl="|cat:$oViewConf->getTopActiveClassName()|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="ADD_TO_GIFT_REGISTRY"}]</a>
-                                [{/if}]
-                            </li>
-                        [{/if}]
-
-                        <li>
-                            [{mailto extra='id="questionMail"' address=$oDetailsProduct->oxarticles__oxquestionemail->value|default:$oxcmp_shop->oxshops__oxinfoemail->value subject='QUESTIONS_ABOUT_THIS_PRODUCT'|oxmultilangassign|cat:" "|cat:$oDetailsProduct->oxarticles__oxartnum->value text='QUESTIONS_ABOUT_THIS_PRODUCT'|oxmultilangassign}]
-                        </li>
-                    </ul>
+                    <li>
+                        [{mailto extra='id="questionMail"' address=$oDetailsProduct->oxarticles__oxquestionemail->value|default:$oxcmp_shop->oxshops__oxinfoemail->value subject='QUESTIONS_ABOUT_THIS_PRODUCT'|oxmultilangassign|cat:" "|cat:$oDetailsProduct->oxarticles__oxartnum->value text='QUESTIONS_ABOUT_THIS_PRODUCT'|oxmultilangassign}]
+                    </li>
+                </ul>
                 [{/block}]
-            [{/block}]
+                [{/block}]
+            </div>
         </div>
     </div>
 </div>

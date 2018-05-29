@@ -22,7 +22,7 @@
 // Theme Variables
 // --------------------------------------------------
 
-$font-family-base: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-size-base: 1rem;
 $line-height-base: 1.5;
 
@@ -32,7 +32,7 @@ $line-height-base: 1.5;
 
 $fa-font-path : '/out/flow/src/fonts/';
 
-$brand-primary:   #009EC0;
+$brand-primary:   #f33544;
 $brand-secondary: #FC6621;
 $brand-tertiary: #fff;
 
@@ -57,7 +57,7 @@ $ox-footer-border: $ox-border;
 
 $ox-bg: $gray-100;
 $ox-header-bg: $ox-bg;
-$ox-footer-bg: $ox-bg;
+$ox-footer-bg: $gray-800;
 
 $ox-color: $gray-600;
 $ox-footer-color: $ox-color;
@@ -73,9 +73,9 @@ $secondary:     $brand-secondary;
 //$dark:          $gray-800 !default;
 
 
-$ox-container-base-background-color:    $white;
-$ox-container-header-background-color:  $ox-container-base-background-color;
-$ox-container-wrapper-background-color: $ox-container-base-background-color;
+$body-bg:    #f5f5f5;
+$ox-container-header-background-color:  #000;
+$ox-container-wrapper-background-color: $body-bg;
 $ox-footer-color-facebook:              #428BCA;
 $ox-footer-color-google-plus:           #d73d32;
 $ox-footer-color-twitter:               #1AB2E8;
@@ -86,6 +86,9 @@ $ox-footer-color-blog:                  #333333;
 //$ox-footer-border:                      #E7E7E7;
 //$ox-footer-color:                       #666666;
 
+$border-radius:               0;
+$border-radius-lg:            0;
+$border-radius-sm:            0;
 
 //== Boxed layout
 //

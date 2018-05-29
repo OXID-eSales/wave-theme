@@ -5,12 +5,6 @@
 
   &-attributes {
     .list-filter {
-      border-top: 1px solid $ox-listfilter-border;
-      border-bottom: 1px solid $ox-listfilter-border;
-      background-color: $ox-listfilter-bg;
-      padding: 20px $grid-gutter-width / 2;
-      margin: $grid-gutter-width / 2 0 0 0;
-
       .btn-group {
         width: 100%;
         margin-bottom: 5px;

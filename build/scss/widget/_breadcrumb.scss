@@ -1,22 +1,77 @@
 .breadcrumb {
   font-size: 12px;
   margin: 0;
-  padding: 8px 0;
+  padding: 10px 0;
   list-style: none;
+  justify-content: center;
   background-color: transparent;
-  border-radius: 4px;
+  text-transform: uppercase;
 
   &-item {
+    color: $gray-500;
+
     &:before {
       content: "/\00a0";
-      padding: 0 5px;
       color: $gray-500;
+    }
+
+    &:first-child:before {
+      display: none;
     }
   }
 
   &-link {
+    color: $gray-500;
+
     .active & {
-      color: $brand-secondary;
+      color: $gray-500;
+    }
+  }
+
+  .h1 {
+    font-weight: 400;
+    font-size: $h1-font-size;
+    text-transform: uppercase;
+    position: relative;
+
+
+  }
+
+  .rss {
+    font-size: $h1-font-size*0.7;
+    color: orange;
+  }
+
+  &-wrapper {
+    z-index: 10;
+    padding: 40px 0 120px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-bottom: 30px;
+
+    &:before {
+      left: 0;
+      transform: skewY(4.5deg);
+      position: absolute;
+      bottom: -4vw;
+      width: 50.01%;
+      height: 8vw;
+      background-color: #f5f5f5;
+      z-index: 31;
+      content: '';
+    }
+
+    &:after {
+      right: 0;
+      transform: skewY(-4.5deg);
+      position: absolute;
+      bottom: -4vw;
+      width: 50.01%;
+      height: 8vw;
+      background-color: #f5f5f5;
+      z-index: 31;
+      content: '';
     }
   }
 }

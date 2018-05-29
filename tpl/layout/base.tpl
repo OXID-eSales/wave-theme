@@ -137,7 +137,7 @@
         [{/block}]
 
         [{block name="base_fonts"}]
-            <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,700,600' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
         [{/block}]
 
         [{assign var='rsslinks' value=$oView->getRssLinks()}]
@@ -202,7 +202,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]"[{if $sStyle}] style="[{$sStyle}]"[{/if}]>
+    <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]">
 
     [{* Theme SVG icons block *}]
     [{block name="theme_svg_icons"}][{/block}]

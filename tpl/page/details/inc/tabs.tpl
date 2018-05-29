@@ -71,12 +71,22 @@
                     <li class="nav-item">[{$tab}]</li>
                 [{/foreach}]
                 [{block name="details_tabs_social_navigation"}][{/block}]
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviews" data-toggle="tab">
+                        Bewertungen</a>
+                </li>
             </ul>
             <div class="tab-content">
                 [{foreach from=$tabsContent item="tabContent" name="tabsContent"}]
                     [{$tabContent}]
                 [{/foreach}]
                 [{block name="details_tabs_social_content"}][{/block}]
+
+                [{if $oView->isReviewActive()}]
+                <div id="reviews" class="reviews tab-pane">
+                    [{include file="widget/reviews/reviews.tpl"}]
+                </div>
+                [{/if}]
             </div>
         </div>
     [{/if}]

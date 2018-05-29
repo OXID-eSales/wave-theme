@@ -11,15 +11,49 @@
 // General footer styles
 
 .footer {
+  margin-top: 100px;
   text-align: center;
-  border-top: 2px solid $ox-footer-border;
-  border-bottom: 2px solid $ox-footer-border;
   background-color: $ox-footer-bg;
-  color: $ox-footer-color;
+  color: $gray-500;
   padding: $grid-gutter-width 0;
+  position: relative;
+  z-index: 50;
+
+  &:before {
+    left: 0;
+    transform: skewY(4.5deg);
+    position: absolute;
+    top: -3vw;
+    width: 50.01%;
+    height: 8vw;
+    background-color: $ox-footer-bg;
+    z-index: 31;
+    content: '';
+  }
+
+  &:after {
+    right: 0;
+    transform: skewY(-4.5deg);
+    position: absolute;
+    top: -3vw;
+    width: 50.01%;
+    height: 8vw;
+    background-color: $ox-footer-bg;
+    z-index: 31;
+    content: '';
+  }
+
+  &-wrapper {
+    position: relative;
+    z-index: 50;
+  }
 
   @include media-breakpoint-up(md) {
     text-align: left;
+  }
+
+  a {
+    color: $gray-300;
   }
 
   &-box {

@@ -26,7 +26,6 @@
         [{assign var="_statusMessage2" value="MESSAGE_VERIFY_YOUR_EMAIL"|oxmultilangassign}]
         [{include file="message/error.tpl" statusMessage=`$_statusMessage1``$_statusMessage2`}]
     [{/if}]
-
     <div id="details" class="details">
         [{if $oView->getSearchTitle()}]
             [{assign var="detailsLocation" value=$oView->getSearchTitle()}]
@@ -48,6 +47,7 @@
             </div>
             <div class="col-3  details-pager-prev">
                 [{if $actCategory->prevProductLink}]
+
                 <a id="linkPrevArticle" class="details-pager-link" href="[{$actCategory->prevProductLink}]">
                     <i class="fa fa-angle-left"></i>
                     [{oxmultilang ident="PREVIOUS_PRODUCT"}]
@@ -67,7 +67,6 @@
                 [{/if}]
             </div>
         </div>
-
         [{* RDFa offering*}]
         <div class="details-product-info" id="productinfo">
             [{include file="page/details/inc/fullproductinfo.tpl"}]

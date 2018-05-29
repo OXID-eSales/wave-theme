@@ -2,13 +2,18 @@
     <div class="col-12 pagination-options">
         [{if $locator}]
             [{if $place != "bottom"}]
-                <div class="float-left">
-            [{/if}]
+            [{else}]
                 [{include file="widget/locator/paging.tpl" pages=$locator place=$place}]
+            [{/if}]
             [{if $place != "bottom"}]
                 </div>
             [{/if}]
         [{/if}]
+    [{if $place != "bottom"}]
+    <div class="float-left">
+        [{include file="widget/locator/attributes.tpl"}]
+    </div>
+    [{/if}]
 
         [{if $listDisplayType || $sort || $itemsPerPage}]
             <div class="float-right options">
@@ -25,10 +30,5 @@
                     [{/if}]
             </div>
         [{/if}]
-        <div class="clearfix"></div>
     </div>
 </div>
-
-[{if $place != "bottom"}]
-    [{include file="widget/locator/attributes.tpl"}]
-[{/if}]

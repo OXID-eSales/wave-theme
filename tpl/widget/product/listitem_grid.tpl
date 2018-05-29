@@ -15,7 +15,7 @@
     [{if $blDisableToCart || $product->isNotBuyable() || ($aVariantSelections&&$aVariantSelections.selections) || $product->hasMdVariants() || ($oViewConf->showSelectListsInList() && $product->getSelections(1)) || $product->getVariants()}]
         [{assign var="blShowToBasket" value=false}]
     [{/if}]
-
+    <div class="product-box-wrapper">
     <form name="tobasket[{$testid}]" [{if $blShowToBasket}]action="[{$oViewConf->getSelfActionLink()}]" method="post"[{else}]action="[{$_productLink}]" method="get"[{/if}]>
         <div class="hidden">
             [{$oViewConf->getNavFormParams()}]
@@ -127,13 +127,16 @@
                                     <i class="fa fa-shopping-cart"></i>
                                 </button>
                             [{/oxhasrights}]
-                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="MORE_INFO"}]</a>
+                            <a class="btn btn-primary btn-hover" href="[{$_productLink}]" >
+                                <span class="btn-text">[{oxmultilang ident="MORE_INFO"}]</span></a>
                         [{else}]
-                            <a class="btn btn-primary" href="[{$_productLink}]" >[{oxmultilang ident="MORE_INFO"}]</a>
+                            <a class="btn btn-primary btn-hover" href="[{$_productLink}]" >
+                                <span class="btn-text">[{oxmultilang ident="MORE_INFO"}]</span></a>
                         [{/if}]
                     </div>
                 </div>
             [{/block}]
         </div>
     </form>
+    </div>
 [{/block}]

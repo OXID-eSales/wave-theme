@@ -15,21 +15,20 @@
 @import '../widget/header/servicemenu';
 
 .header {
-  background-color: $ox-container-header-background-color;
-
-  .fixed-header & {
-    position: relative;
-    padding-bottom: 42px;
-  }
+  position: relative;
+  z-index: 10;
 
   .logo {
     &-link {
       display: block;
       width: 100%;
     }
+
     &-img {
       display: block;
       margin: 0 auto;
+      width: 70px;
+      height: 70px;
 
       @include media-breakpoint-up(md) {
         margin: 0;
@@ -38,16 +37,14 @@
   }
 
   &-box {
-    padding: $grid-gutter-width 0 10px;
+    padding: 10px 0;
 
     @include media-breakpoint-up(lg) {
-      padding: $grid-gutter-width 0;
+      padding: 20px 0;
     }
   }
-  .menu {
-    &s-col {
 
-    }
+  .menu {
     &-dropdowns {
       margin: 20px auto;
       text-align: center;
@@ -62,18 +59,17 @@
           display: none;
         }
       }
-
-      > .btn-group {
+      .btn-group {
         &.open > .dropdown-toggle,
-        > .btn.active,
-        > .btn:active {
+        .btn.active,
+        .btn:active {
           box-shadow: 0 0 0;
         }
 
-        > .btn {
+        .btn {
           background-color: transparent;
           font-size: 11px;
-          color: $gray-700;
+          color: #fff;
           border: 0;
         }
       }
@@ -84,40 +80,12 @@
     padding: 0 0 .5rem 0;
 
     @include media-breakpoint-up(lg) {
-      padding: 0;
-      border-bottom: 1px solid $ox-listfilter-border;
+      text-align: right;
+      padding: 20px 0 0 0;
     }
 
     &-collapse {
       justify-content: space-between;
-    }
-
-    .fixed-header & {
-      position: fixed;
-      top: 0;
-      z-index: 1030;
-      margin-top: -42px;
-      border-bottom: 1px solid #ddd;
-      padding: 0;
-
-      @include media-breakpoint-up(md) {
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-        border: none;
-      }
-
-      .navbar-header {
-        padding: 5px 15px;
-      }
-
-      &.fadeIn {
-        margin-top: 0;
-        transition: margin-top .2s;
-        background-color: #fff;
-
-        @include media-breakpoint-up(md) {
-          background-color: rgba(255, 255, 255, 0.95);
-        }
-      }
     }
 
     &-toggler {
@@ -142,21 +110,18 @@
       border-top: 1px solid $ox-listfilter-border;
 
       @include media-breakpoint-up(lg) {
-        margin: 0;
+        margin: 0 0 0 auto;
         border: 0;
-      }
-
-      .fixed-header & {
-        margin: 0;
       }
     }
 
     .nav {
       &-item {
-        font-size: 1.2em;
-        font-weight: 200;
+        font-size: 13px;
+        font-weight: 500;
         line-height: 20px;
         padding: 10px 15px;
+        text-transform: uppercase;
         border-bottom: 1px solid $ox-listfilter-border;
 
         @include media-breakpoint-up(lg) {
@@ -192,13 +157,21 @@
               position: absolute;
               background-color: $white;
               box-shadow: inherit;
-              border: 1px solid rgba(0, 0, 0, 0.15);
-              border-radius: 0.25rem;
-              float: left;
               font-size: 1rem;
               margin-top: 0;
-              border-top-right-radius: 0;
-              border-top-left-radius: 0;
+              top: 150px;
+              opacity: 0;
+              transition: opacity 200ms, top 200ms;
+              display: block;
+              height: 0;
+              overflow: hidden;
+              padding: 0;
+
+              &.show {
+                height: auto;
+                opacity: 1;
+                top: 100%;
+              }
             }
           }
 
@@ -238,7 +211,7 @@
           }
 
           &-link {
-            color: $brand-primary;
+            color: #fff;
             padding: 5px 15px 5px 25px;
             display: block;
             text-decoration: none;
@@ -250,7 +223,7 @@
             &.current,
             &:focus,
             &:hover {
-              color: $brand-secondary;
+              color: $brand-primary;
               transition: color .2s;
 
               @include media-breakpoint-up(lg) {
@@ -263,52 +236,51 @@
       }
 
       &-link {
-        color: $brand-primary;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: #fff;
       }
     }
   }
 }
 
-.fixed-header {
-  &-actions {
-    display: none;
+.meta-header {
+  border-bottom: 1px solid #333;
+  color: #fff;
+  min-height: 40px;
+}
 
-    .fixed-header & {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-      flex-wrap: wrap;
+.hotline {
+  line-height: 40px;
+  color: $gray-500;
+  float: left;
 
-      @include media-breakpoint-up(lg){
-        flex-wrap: nowrap;
-      }
-    }
-  }
-
-  &-item {
-    font-size: 1.2em;
-    font-weight: 200;
-    line-height: 20px;
-    padding: 10px 15px;
-    border-bottom: 1px solid $ox-header-border;
-    display: block;
-    width: 100%;
-
-    @include media-breakpoint-up(lg){
-      padding: 10px 0.5rem;
-      border-bottom: 0;
-      display: inline-block;
-      width: auto;
-    }
-  }
-
-  &-link {
-    color: $primary;
+  a {
+    color: $gray-300;
 
     &:hover {
-      color: $secondary;
       text-decoration: none;
+    }
+  }
+}
+
+.global-header {
+  background: $ox-container-header-background-color;
+  overflow: hidden;
+  position: relative;
+
+  &-bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
     }
   }
 }
