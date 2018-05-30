@@ -6,7 +6,16 @@
     margin-bottom: 20px;
 
     &-link {
-      color: $primary;
+      color: $gray-700;
+      transition: $color-transition;
+
+      .fa {
+        color: $primary;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
@@ -20,6 +29,8 @@
     margin-bottom: 10px;
 
     &-more {
+      padding: 0 15px;
+
       &-list {
         padding-left: 0;
         list-style: none;
@@ -75,12 +86,23 @@
 
   &-action-links {
     a {
-      color: $gray-500;
+      color: $gray-700;
       transition: color 200ms;
+      padding-left: 15px;
+      position: relative;
 
       &:hover {
         color: $primary;
         text-decoration: none;
+      }
+
+      &:before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: "\f105";
+        color: $primary;
+        position: absolute;
+        left: 0;
       }
     }
   }
@@ -116,5 +138,22 @@
   .tab-content {
     background: #fff;
     padding: 30px;
+  }
+}
+
+.content-box {
+  .dropdown-menu {
+    margin-top: 0;
+
+    a {
+      display: block;
+      padding: 3px 10px;
+
+      &:hover {
+        text-decoration: none;
+        background: $primary;
+        color: #fff;
+      }
+    }
   }
 }

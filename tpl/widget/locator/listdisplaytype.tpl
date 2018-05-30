@@ -4,7 +4,7 @@
 
 [{if $oView->canSelectDisplayType()}]
     <div class="btn-group d-none d-md-inline-flex">
-        <button type="button" class="btn btn-outline-dark btn-sm dropdown-toggle" data-toggle="dropdown">
+        <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown">
             <strong>[{oxmultilang ident="LIST_DISPLAY_TYPE"}]</strong> [{oxmultilang ident=$listType}] <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">

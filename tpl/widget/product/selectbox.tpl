@@ -6,7 +6,7 @@
             <p class="variant-label"><strong>[{$oSelectionList->getLabel()}][{oxmultilang ident="COLON"}]</strong></p>
         [{/if}]
         <div class="dropdown">
-            <button type="button" class="btn btn-outline-dark btn-sm dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown">
                 [{assign var="oActiveSelection" value=$oSelectionList->getActiveSelection()}]
                 [{if $oActiveSelection}]
                     <span class="float-left">[{$oActiveSelection->getName()}]</span>

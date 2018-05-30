@@ -71,6 +71,11 @@ body {
   }
 }
 
+.btn,
+.btn:focus {
+  box-shadow: 0 0 0 #fff !important;
+}
+
 .hidden {
   visibility: hidden;
   height: 0;

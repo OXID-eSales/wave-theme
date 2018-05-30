@@ -12,18 +12,19 @@
         [{include file="widget/breadcrumb.tpl"}]
         [{/block}]
 
-        [{if $actCategory->oxcategories__oxthumb->value && $actCategory->getThumbUrl()}]
-        <div class="global-header-bg">
-            <img class="global-header-bg-img" src="([{$actCategory->getThumbUrl()}]">
-        </div>
-        [{/if}]
-
         [{if $oView->getClassName()=='start' && $oView->getBanners()|@count > 0}]
         <div class="global-header-bg">
             [{include file="widget/promoslider.tpl"}]
         </div>
+        [{elseif $oView->getClassName()=='details'}]
+        <div class="global-header-bg">
+            <img class="global-header-bg-img" src="[{$oView->getActPicture()}]">
+        </div>
+        [{elseif $actCategory->oxcategories__oxthumb->value && $actCategory->getThumbUrl()}]
+        <div class="global-header-bg">
+            <img class="global-header-bg-img" src="[{$actCategory->getThumbUrl()}]">
+        </div>
         [{/if}]
-
     </div>
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
 

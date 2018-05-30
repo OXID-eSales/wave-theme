@@ -16,7 +16,7 @@
                     [{foreach from=$attributes item=oFilterAttr key=sAttrID name=attr}]
                         [{assign var="sActiveValue" value=$oFilterAttr->getActiveValue()}]
                         <div class="btn-group">
-                            <button type="button" class="btn btn-outline-dark btn-sm dropdown-toggle" data-toggle="dropdown">
+                            <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown">
                                 <strong>[{$oFilterAttr->getTitle()}]:</strong>
                                 [{if $sActiveValue}]
                                     [{$sActiveValue}]

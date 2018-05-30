@@ -7,7 +7,7 @@
         [{assign var="_sortDirectionVarName" value=$oView->getSortOrderParameterName()}]
 
         <div class="btn-group">
-            <button type="button" class="btn btn-outline-dark btn-sm dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown">
                 <strong>[{oxmultilang ident="SORT_BY"}]:</strong>
                 [{if $oView->getListOrderBy()}]
                     [{oxmultilang ident=$oView->getListOrderBy()|upper }]
