@@ -88,12 +88,6 @@ $(function () {
             }
         );
 
-        // Fix um Eingabefelder in Bootstrap Dropdown-Menüs fokussieren zu können.
-        $('#header .dropdown-menu input, #header .dropdown-menu label, #header .dropdown-menu button, #header .dropdown-menu').click(function (e) {
-                e.stopPropagation();
-            }
-        );
-
         $('.nav').on('mouseenter', '.nav-item.dropdown', function (e) {
                 if ($window.width() >= 760) {
                     $(e).addClass('show');
@@ -226,7 +220,7 @@ $(function () {
                 $oBasketList.find('.toggle-actions').click(function (e) {
                         e.preventDefault();
                         var $this = $(this),
-                        $oToggable = $this.parents('li').first().find('.row.collapse');
+                            $oToggable = $this.parents('li').first().find('.row.collapse');
                         $this.find('i').attr('class', ($oToggable.hasClass('.show') ? 'fa fa-chevron-up' : 'fa fa-chevron-down'));
                     }
                 );
@@ -276,6 +270,32 @@ $(function () {
                 $('#private-sales-login button.submitButton').attr("disabled", "disabled");
             }
         });
+
+        $(".animsition").animsition({
+            inClass: 'fade-in',
+            outClass: 'fade-out',
+            inDuration: 1500,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+            loading: true,
+            loadingParentElement: 'body', //animsition wrapper element
+            loadingClass: 'animsition-loading',
+            loadingInner: '', // e.g '<img src="loading.svg" />'
+            timeout: false,
+            timeoutCountdown: 5000,
+            onLoadEvent: true,
+            browser: ['animation-duration', '-webkit-animation-duration'],
+            // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+            // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+            overlay: false,
+            overlayClass: 'animsition-overlay-slide',
+            overlayParentElement: 'body',
+            transition: function (url) {
+                window.location.href = url;
+            }
+        });
+        AOS.init();
     }
 );
 

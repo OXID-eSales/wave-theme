@@ -203,7 +203,7 @@
         <![endif]-->
     </head>
     <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]">
-
+    <div class="animsition">
     [{* Theme SVG icons block *}]
     [{block name="theme_svg_icons"}][{/block}]
 
@@ -242,6 +242,6 @@
     [{foreach from=$oxidBlock_pageScript item="_block"}]
         [{$_block}]
     [{/foreach}]
-
+    </div>
     </body>
 </html>

@@ -54,6 +54,12 @@
 
   a {
     color: $gray-300;
+    transition: color 200ms;
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
   }
 
   &-box {

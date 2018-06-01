@@ -15,7 +15,7 @@
     [{if $blDisableToCart || $product->isNotBuyable() || ($aVariantSelections&&$aVariantSelections.selections) || $product->hasMdVariants() || ($oViewConf->showSelectListsInList() && $product->getSelections(1)) || $product->getVariants()}]
         [{assign var="blShowToBasket" value=false}]
     [{/if}]
-    <div class="product-box-wrapper">
+    <div class="product-box-wrapper" data-aos="zoom-in">
     <form name="tobasket[{$testid}]" [{if $blShowToBasket}]action="[{$oViewConf->getSelfActionLink()}]" method="post"[{else}]action="[{$_productLink}]" method="get"[{/if}]>
         <div class="hidden">
             [{$oViewConf->getNavFormParams()}]

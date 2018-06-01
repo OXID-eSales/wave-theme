@@ -23,7 +23,7 @@
                         <ul id="navigation" class="navbar-nav nav">
                             [{block name="dd_widget_header_categorylist_navbar_list"}]
                                 <li class="nav-item[{if $homeSelected == 'true'}] active[{/if}]">
-                                    <a class="nav-link" href="[{$oViewConf->getHomeLink()}]">[{oxmultilang ident="HOME"}]</a>
+                                    <a class="nav-link animsition-link" href="[{$oViewConf->getHomeLink()}]">[{oxmultilang ident="HOME"}]</a>
                                 </li>
 
                                 [{foreach from=$oxcmp_categories item="ocat" key="catkey" name="root"}]
@@ -35,7 +35,7 @@
                                         [{/foreach}]
 
                                         <li class="nav-item[{if $homeSelected == 'false' && $ocat->expanded}] active[{/if}][{if $ocat->getSubCats()}] dropdown[{/if}]">
-                                            <a class="nav-link" href="[{$ocat->getLink()}]"[{if $ocat->getSubCats()}] class="dropdown-toggle" data-toggle="dropdown"[{/if}]>
+                                            <a class="nav-link animsition-link" href="[{$ocat->getLink()}]"[{if $ocat->getSubCats()}] class="dropdown-toggle" data-toggle="dropdown"[{/if}]>
                                                 [{$ocat->oxcategories__oxtitle->value}][{if $ocat->getSubCats()}] <i class="fa fa-angle-down"></i>[{/if}]
                                             </a>
 
@@ -45,13 +45,13 @@
                                                         [{if $osubcat->getIsVisible()}]
                                                             [{foreach from=$osubcat->getContentCats() item=ocont name=MoreCms}]
                                                                 <li class="dropdown-item">
-                                                                    <a class="dropdown-link" href="[{$ocont->getLink()}]">[{$ocont->oxcontents__oxtitle->value}]</a>
+                                                                    <a class="dropdown-link animsition-link" href="[{$ocont->getLink()}]">[{$ocont->oxcontents__oxtitle->value}]</a>
                                                                 </li>
                                                             [{/foreach}]
 
                                                             [{if $osubcat->getIsVisible()}]
                                                                 <li class="dropdown-item[{if $homeSelected == 'false' && $osubcat->expanded}] active[{/if}]">
-                                                                    <a class="dropdown-link[{if $homeSelected == 'false' && $osubcat->expanded}] current[{/if}]" href="[{$osubcat->getLink()}]">[{$osubcat->oxcategories__oxtitle->value}]</a>
+                                                                    <a class="dropdown-link animsition-link[{if $homeSelected == 'false' && $osubcat->expanded}] current[{/if}]" href="[{$osubcat->getLink()}]">[{$osubcat->oxcategories__oxtitle->value}]</a>
                                                                 </li>
                                                             [{/if}]
                                                         [{/if}]
