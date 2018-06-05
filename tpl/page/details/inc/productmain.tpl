@@ -57,7 +57,7 @@
             [{block name="details_productmain_zoom"}]
                 [{oxscript include="js/libs/photoswipe.min.js" priority=8}]
                 [{oxscript include="js/libs/photoswipe-ui-default.min.js" priority=8}]
-                [{oxscript add="$( document ).ready( function() { Flow.initDetailsEvents(); });"}]
+                    [{oxscript add="$( document ).ready( function() { Flow.initDetailsEvents(); });"}]
 
                 [{* Wird ausgeführt, wenn es sich um einen AJAX-Request handelt *}]
                 [{if $blWorkaroundInclude}]
@@ -73,13 +73,13 @@
                         [{assign var="aPictureInfo" value=$oConfig->getMasterPicturePath("product/1/`$sPictureName`")|@getimagesize}]
                     [{/if}]
 
-                    <div class="details-picture">
+                    <div class="picture details-picture">
                         <a class="details-picture-link" href="[{$oPictureProduct->getMasterZoomPictureUrl(1)}]" id="zoom1"[{if $aPictureInfo}] data-width="[{$aPictureInfo.0}]" data-height="[{$aPictureInfo.1}]"[{/if}]>
                             <img src="[{$oView->getActPicture()}]" alt="[{$oPictureProduct->oxarticles__oxtitle->value|strip_tags}] [{$oPictureProduct->oxarticles__oxvarselect->value|strip_tags}]" itemprop="image" class="img-fluid">
                         </a>
                     </div>
                 [{else}]
-                    <div class="details-picture">
+                    <div class="picture details-picture">
                         <img src="[{$oView->getActPicture()}]" alt="[{$oPictureProduct->oxarticles__oxtitle->value|strip_tags}] [{$oPictureProduct->oxarticles__oxvarselect->value|strip_tags}]" itemprop="image" class="img-fluid">
                     </div>
                 [{/if}]

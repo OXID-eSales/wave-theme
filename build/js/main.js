@@ -97,7 +97,6 @@ $(function () {
                         $oSearchInput.focus();
                     }
                 );
-
             }
         );
 
@@ -226,7 +225,7 @@ $(function () {
             $('.hasTooltip').tooltip();
 
             // Globale PopOver-Klasse
-            $('.hasPopover').popover();
+             $('.hasPopover').popover();
         };
         Flow.initEvents();
 
