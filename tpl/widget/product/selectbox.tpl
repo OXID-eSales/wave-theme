@@ -1,7 +1,7 @@
 [{assign var="oSelections" value=$oSelectionList->getSelections()}]
 
 [{if $oSelections}]
-    <div class="form-group">
+    <div class="form-group dropDown">
         [{if !$blHideLabel}]
             <p class="variant-label"><strong>[{$oSelectionList->getLabel()}][{oxmultilang ident="COLON"}]</strong></p>
         [{/if}]
