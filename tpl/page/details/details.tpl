@@ -27,7 +27,7 @@
         [{include file="message/error.tpl" statusMessage=`$_statusMessage1``$_statusMessage2`}]
     [{/if}]
 
-    <div id="details" class="details">
+    <div id="details_container" class="details">
         [{if $oView->getSearchTitle()}]
             [{assign var="detailsLocation" value=$oView->getSearchTitle()}]
         [{else}]
