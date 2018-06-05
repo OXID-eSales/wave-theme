@@ -55,7 +55,6 @@ module.exports = function (grunt) {
                         '<%= project.dev %>node_modules/jquery/dist/jquery.min.js',
                         '<%= project.dev %>node_modules/popper.js/dist/umd/popper.min.js',
                         '<%= project.dev %>node_modules/bootstrap/dist/js/bootstrap.js',
-                        '<%= project.dev %>node_modules/animsition/dist/js/animsition.js',
                         '<%= project.dev %>node_modules/aos/dist/aos.js',
                         "<%= project.dev %>build/vendor/bootstrap-select/js/bootstrap-select.js",
                         "<%= project.dev %>build/vendor/jquery-bootstrap-validation/js/jqBootstrapValidation.js",
