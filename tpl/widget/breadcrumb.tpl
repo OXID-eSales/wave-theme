@@ -5,7 +5,7 @@
             [{assign var='rsslinks' value=$oView->getRssLinks()}]
             <div class="h1">
                 [{if $oView->getClassName() == "start"}]
-                    <h1 class="h1">Willkommen bei Race WEAR Twenty Four</h1>
+                    <h1 class="h1">Willkommen bei RACE WEAR</h1>
                 [{else}]
                     [{if $oView->getClassName()=='details'}]
                         [{$oDetailsProduct->oxarticles__oxtitle}]

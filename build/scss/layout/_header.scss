@@ -18,15 +18,28 @@
   position: relative;
   z-index: 20;
 
+  .row {
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+  }
+
   .logo {
     &-link {
       display: block;
       width: 100%;
+      position: absolute;
+      top: 0;
+
+      @include media-breakpoint-up(md) {
+        position: static;
+      }
     }
 
     &-img {
       display: block;
-      margin: 0 auto;
       width: 70px;
       height: 70px;
 
@@ -45,6 +58,13 @@
   }
 
   .menu {
+    &s-col {
+      padding-top: 70px;
+
+      @include media-breakpoint-up(md) {
+        padding: 0;
+      }
+    }
     &-dropdowns {
       margin: 20px auto;
       text-align: center;
@@ -91,6 +111,7 @@
 
     &-toggler {
       padding: 5px 8px;
+      background: #fff;
 
       &-icon {
         width: 1.2em;
@@ -99,7 +120,8 @@
     }
 
     &-header {
-      padding: 15px;
+      padding: 15px 0;
+      color: #fff;
 
       @include media-breakpoint-up(lg){
         display: none;
