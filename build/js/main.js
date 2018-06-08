@@ -190,7 +190,7 @@ $(function () {
             $('.hasTooltip').tooltip();
 
             // Globale PopOver-Klasse
-             $('.hasPopover').popover();
+            $('.hasPopover').popover();
         };
         Flow.initEvents();
 
@@ -271,8 +271,30 @@ $(function () {
         });
 
         AOS.init();
+
+        $('body').on('click', '.btn-search', function (e) {
+            e.preventDefault;
+            $('.hidden-search').fadeIn('fast');
+            $('html').addClass('search');
+            $('#searchParam').focus();
+        });
+
+        $('body').on('click', '.hidden-search .close', function (e) {
+            e.preventDefault;
+            $('.hidden-search').fadeOut('fast');
+            $('html').removeClass('search');
+        });
     }
 );
+
+$(document).on('keyup',function(evt) {
+    if($('html').hasClass('search')) {
+        if (evt.keyCode == 27) {
+            $('.hidden-search').fadeOut('fast');
+            $('html').removeClass('search');
+        }
+    }
+});
 
 $(window).on('load', function () {
         // Bugfix für das Nachladen von Bildern, wenn man die

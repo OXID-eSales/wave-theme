@@ -6,9 +6,6 @@
     <header id="header" class="header">
         <div class="meta-header">
             <div class="container">
-                <div class="hotline">
-                    Telefon-Hotline <a href="call:+49224490003">0 22 44 - 9 00 03</a>
-                </div>
                 [{block name="layout_header_top"}]
                 <div class="menu-dropdowns float-right">
                     [{block name="dd_layout_page_header_icon_menu_languages"}]
@@ -41,28 +38,30 @@
                     [{/if}]
                     [{oxid_include_widget cl="oxwMiniBasket" nocookie=$blAnon force_sid=$force_sid}]
                     [{/block}]
+
+                    <a class="btn btn-search" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
                 </div>
                 [{/block}]
             </div>
         </div>
         <div class="header-box">
             <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-4 col-lg-3 logo-col">
-                        [{block name="layout_header_logo"}]
-                            [{assign var="slogoImg" value=$oViewConf->getViewThemeParam('sLogoFile')}]
-                            [{assign var="sLogoWidth" value=$oViewConf->getViewThemeParam('sLogoWidth')}]
-                            [{assign var="sLogoHeight" value=$oViewConf->getViewThemeParam('sLogoHeight')}]
-                            <a href="[{$oViewConf->getHomeLink()}]" title="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" class="logo-link">
-                                <img src="[{$oViewConf->getImageUrl($slogoImg)}]" alt="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" class="logo-img">
-                            </a>
-                        [{/block}]
-                    </div>
-                    <div class="col-12 col-md-8 col-lg-9 menus-col">
-                        [{block name="layout_header_bottom"}]
-                        [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
-                        [{/block}]
-                    </div>
+                <div class="logo-col">
+                    [{block name="layout_header_logo"}]
+                        [{assign var="slogoImg" value=$oViewConf->getViewThemeParam('sLogoFile')}]
+                        [{assign var="sLogoWidth" value=$oViewConf->getViewThemeParam('sLogoWidth')}]
+                        [{assign var="sLogoHeight" value=$oViewConf->getViewThemeParam('sLogoHeight')}]
+                        <a href="[{$oViewConf->getHomeLink()}]" title="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" class="logo-link">
+                            <img src="[{$oViewConf->getImageUrl($slogoImg)}]" alt="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" class="logo-img">
+                        </a>
+                    [{/block}]
+                </div>
+                <div class="menus-col">
+                    [{block name="layout_header_bottom"}]
+                    [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
+                    [{/block}]
                 </div>
             </div>
         </div>
@@ -70,8 +69,9 @@
 
     </header>
 
-    <div class="hidden-search hidden">
+    <div class="hidden-search">
         [{include file="widget/header/search.tpl"}]
+        <a href="#" class="close">x </a>
     </div>
 [{/block}]
 

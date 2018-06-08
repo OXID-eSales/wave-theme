@@ -5,8 +5,8 @@
             [{else}]
                 [{include file="widget/locator/paging.tpl" pages=$locator place=$place}]
             [{/if}]
-            [{if $place != "bottom"}]
-                </div>
+            [{if $place != "bottom" && $search!=true}]
+            </div>
             [{/if}]
         [{/if}]
     [{if $place != "bottom"}]
@@ -17,17 +17,17 @@
 
         [{if $listDisplayType || $sort || $itemsPerPage}]
             <div class="float-right options">
-                    [{if $listDisplayType}]
-                        [{include file="widget/locator/listdisplaytype.tpl"}]
-                    [{/if}]
+                [{if $listDisplayType}]
+                    [{include file="widget/locator/listdisplaytype.tpl"}]
+                [{/if}]
 
-                    [{if $sort}]
-                        [{include file="widget/locator/sort.tpl"}]
-                    [{/if}]
+                [{if $sort}]
+                    [{include file="widget/locator/sort.tpl"}]
+                [{/if}]
 
-                    [{if $itemsPerPage}]
-                        [{include file="widget/locator/itemsperpage.tpl"}]
-                    [{/if}]
+                [{if $itemsPerPage}]
+                    [{include file="widget/locator/itemsperpage.tpl"}]
+                [{/if}]
             </div>
         [{/if}]
     </div>
