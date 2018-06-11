@@ -160,7 +160,7 @@
                                     [{assign var="blCanBuy" value=true}]
                                 [{/if}]
                             [{/if}]
-                            <div id="variants" class="selectorsBox js-fnSubmit">
+                            <div id="variants" class="selectorsBox variant-dropdown js-fnSubmit">
                                 [{assign var="blHasActiveSelections" value=false}]
                                 [{foreach from=$aVariantSelections.selections item=oList key=iKey}]
                                     [{if $oList->getActiveSelection()}]
