@@ -155,7 +155,7 @@
 
                     [{block name="widget_product_listitem_line_selections"}]
                         [{if $aVariantSelections && $aVariantSelections.selections }]
-                            <div id="variantselector_[{$iIndex}]" class="selectorsBox js-fnSubmit clear">
+                            <div id="variantselector_[{$iIndex}]" class="selectorsBox variant-dropdown js-fnSubmit clear">
                                 [{foreach from=$aVariantSelections.selections item=oSelectionList key=iKey}]
                                     [{include file="widget/product/selectbox.tpl" oSelectionList=$oSelectionList sJsAction="js-fnSubmit" blHideLabel=true}]
                                 [{/foreach}]

@@ -24,8 +24,8 @@
                 <input type="hidden" name="[{$sFieldName|default:"varselid"}][[{$iKey}]]" value="[{if $oActiveSelection}][{$oActiveSelection->getValue()}][{/if}]">
                 <ul class="dropdown-menu [{$sJsAction}][{if $sFieldName != "sel"}] vardrop[{/if}]" role="menu">
                     [{if $oActiveSelection && !$blHideDefault}]
-                        <li>
-                            <a href="#" rel="">
+                        <li class="dropdown-menu-item">
+                            <a href="#" rel="" class="dropdown-menu-link">
                                 [{if $sFieldName == "sel"}]
                                     [{oxmultilang ident="PLEASE_CHOOSE"}]
                                 [{else}]
@@ -35,8 +35,8 @@
                         </li>
                     [{/if}]
                     [{foreach from=$oSelections item=oSelection}]
-                        <li class="[{if $oSelection->isDisabled()}]disabled js-disabled[{/if}]">
-                            <a href="[{$oSelection->getLink()}]" data-selection-id="[{$oSelection->getValue()}]" class="[{if $oSelection->isActive()}]active[{/if}]">[{$oSelection->getName()}]</a>
+                        <li class="dropdown-menu-item[{if $oSelection->isDisabled()}] disabled js-disabled[{/if}]">
+                            <a href="[{$oSelection->getLink()}]" data-selection-id="[{$oSelection->getValue()}]" class="dropdown-menu-link[{if $oSelection->isActive()}] active[{/if}]">[{$oSelection->getName()}]</a>
                         </li>
                     [{/foreach}]
                 </ul>

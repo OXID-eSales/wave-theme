@@ -58,7 +58,11 @@
     }
 
     &-input-group {
-      width: 250px;
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        width: 250px;
+      }
     }
   }
 
@@ -77,5 +81,27 @@
     border-bottom: 1px solid #ddd;
     border-left: 1px solid #ddd;
     padding: 10px 15px;
+  }
+}
+
+.variant {
+  &-label {
+    margin-bottom: 0;
+  }
+}
+
+.btn-staffel {
+  margin-bottom: 5px;
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: 250px;
+  }
+}
+
+.staffel {
+  &-dt {
+    float: left;
+    padding-right: 15px;
   }
 }

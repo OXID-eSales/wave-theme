@@ -85,3 +85,28 @@
     }
   }
 }
+
+.variant-dropdown {
+  margin-top: $grid-gutter-width/2;
+
+  .dropdown-menu {
+    &-item {
+      transition: background-color .3s;
+      padding: 5px 0;
+
+      &:nth-child(even) {
+        background-color: $gray-200;
+      }
+
+      &:hover {
+        background-color: $gray-200;
+      }
+    }
+
+    &-link {
+      display: block;
+      padding: 0 $grid-gutter-width/2;
+      text-decoration: none;
+    }
+  }
+}
