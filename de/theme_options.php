@@ -1,19 +1,19 @@
 <?php
 /**
- * This file is part of OXID eSales Flow theme.
+ * This file is part of OXID eSales Wave theme.
  *
- * OXID eSales Flow theme is free software: you can redistribute it and/or modify
+ * OXID eSales Wave theme is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * OXID eSales Flow theme is distributed in the hope that it will be useful,
+ * OXID eSales Wave theme is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OXID eSales Wave theme.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
@@ -122,17 +122,17 @@ $aLang = array(
     'SHOP_THEME_blGAAnonymizeIPs'                   => 'IP-Adressen anonymisieren (in DE Pflicht!)',
 
     'SHOP_THEME_sLogoFile'                          => 'Dateiname des Logos im Header',
-    'HELP_SHOP_THEME_sLogoFile'                     => 'Relativ zu dem Pfad <code>/out/flow/img/</code>.',
+    'HELP_SHOP_THEME_sLogoFile'                     => 'Relativ zu dem Pfad <code>/out/wave/img/</code>.',
     'SHOP_THEME_sLogoWidth'                         => 'Breite des Header-Logos',
     'HELP_SHOP_THEME_sLogoWidth'                    => 'Angaben in Pixel.',
     'SHOP_THEME_sLogoHeight'                        => 'Höhe des Header-Logos',
     'HELP_SHOP_THEME_sLogoHeight'                   => 'Angaben in Pixel.',
 
     'SHOP_THEME_sEmailLogo'                         => 'Dateiname des Logos im E-Mail-Kopf',
-    'HELP_SHOP_THEME_sEmailLogo'                    => 'Relativ zu dem Pfad <code>/out/flow/img/</code>.',
+    'HELP_SHOP_THEME_sEmailLogo'                    => 'Relativ zu dem Pfad <code>/out/wave/img/</code>.',
 
     'SHOP_THEME_sFaviconFile'                       => 'Dateiname des Favicons',
-    'HELP_SHOP_THEME_sFaviconFile'                  => 'Hiermit ist das Favicon gemeint, welches im Browser auch beim Tab angezeigt wird.<br>In der Regel handelt es sich hier um eine .ico-Datei.<br>Relativ zu dem Pfad <code>/out/flow/img/favicons/</code>.',
+    'HELP_SHOP_THEME_sFaviconFile'                  => 'Hiermit ist das Favicon gemeint, welches im Browser auch beim Tab angezeigt wird.<br>In der Regel handelt es sich hier um eine .ico-Datei.<br>Relativ zu dem Pfad <code>/out/wave/img/favicons/</code>.',
     'SHOP_THEME_sFavicon16File'                     => 'Dateiname des Favicons mit den Maßen 16*16px.',
     'SHOP_THEME_sFavicon32File'                     => 'Dateiname des Favicons mit den Maßen 32*32px.',
     'SHOP_THEME_sFavicon48File'                     => 'Dateiname des Favicons mit den Maßen 48*48px.',
@@ -146,7 +146,7 @@ $aLang = array(
     'SHOP_THEME_sBackgroundColor'                   => 'Hintergrundfarbe des Shops',
     'HELP_SHOP_THEME_sBackgroundColor'              => 'Angabe als HEX-Wert.<br>Bsp.: #D83434',
     'SHOP_THEME_sBackgroundPath'                    => 'Dateiname des Hintergrundbildes',
-    'HELP_SHOP_THEME_sBackgroundPath'               => 'Relativ zu dem Pfad <code>/out/flow/img/backgrounds/</code>.',
+    'HELP_SHOP_THEME_sBackgroundPath'               => 'Relativ zu dem Pfad <code>/out/wave/img/backgrounds/</code>.',
     'SHOP_THEME_sBackgroundRepeat'                  => 'Soll sich das Hintergrundbild wiederholen?',
     'SHOP_THEME_sBackgroundRepeat_no-repeat'        => 'Nein',
     'SHOP_THEME_sBackgroundRepeat_repeat-x'         => 'Ja, horizontal',
