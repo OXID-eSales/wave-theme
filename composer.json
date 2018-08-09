@@ -1,6 +1,6 @@
 {
     "name": "oxid-esales/wave-theme",
-    "description": "This is Flow Theme for OXID eShop.",
+    "description": "This is Wave Theme for OXID eShop.",
     "type": "oxideshop-theme",
     "keywords": [
         "oxid",
@@ -15,8 +15,8 @@
     "minimum-stability": "dev",
     "extra": {
         "oxideshop": {
-            "target-directory": "flow",
-            "assets-directory": "out/flow"
+            "target-directory": "wave",
+            "assets-directory": "out/wave"
         }
     }
 }
