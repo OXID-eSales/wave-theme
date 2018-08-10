@@ -6,19 +6,19 @@ module.exports = {
                 expand: true,
                 src: '*',
                 cwd: 'build/vendor/font-awesome/fonts/',
-                dest: 'out/flow/src/fonts/'
+                dest: 'out/wave/src/fonts/'
             },
             {
                 expand: true,
                 src: '*',
                 cwd: 'build/vendor/jquery-flexslider2/fonts/',
-                dest: 'out/flow/src/fonts/'
+                dest: 'out/wave/src/fonts/'
             },
             {
                 expand: true,
                 src: '*',
                 cwd: 'build/vendor/photoswipe/img/',
-                dest: 'out/flow/src/bg/'
+                dest: 'out/wave/src/bg/'
             }
         ]
     }

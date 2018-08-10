@@ -11,7 +11,7 @@ module.exports = function (grunt) {
          * Set project object
          */
         project: {
-            theme: 'flow',
+            theme: 'wave',
             dev: './',
             out: './../../../out/',
             tmp: './../../../tmp/',
