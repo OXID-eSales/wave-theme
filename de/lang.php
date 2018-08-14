@@ -67,6 +67,11 @@ $aLang = array(
     'CNC_CONTACT_ADDRESS_HEADING'                            => 'Adresse',
     'CNC_CONTACT_THANKYOU1'                                  => "Vielen Dank für Ihre Nachricht an",
     'CNC_CONTACT_THANKYOU2'                                  => ".",
+    'CNC_CONTACT_PAGE_HEADING'                               => 'Kontaktieren Sie uns!',
+    'CNC_CONTACT_FORM_HEADING'                               => 'Kontaktformular',
+    'CNC_CONTACT_ADDRESS_HEADING'                            => 'Adresse',
+    'CNC_CONTACT_THANKYOU1'                                  => "Vielen Dank für Ihre Nachricht an",
+    'CNC_CONTACT_THANKYOU2'                                  => ".",
     'CNC_CONTACT_SELECT_SALUTATION'                          => 'Bitte auswählen ...',
 
     // Link-Seite

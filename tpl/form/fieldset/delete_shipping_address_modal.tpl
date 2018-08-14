@@ -14,8 +14,8 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         [{block name="delete_shipping_address_modal_header"}]
-                            <span class="h4 modal-title" id="delete_shipping_address_modal_label_[{$shippingAddressNumber}]">[{oxmultilang ident="DD_DELETE_SHIPPING_ADDRESS"}]</span>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <span class="h4 modal-title" id="delete_shipping_address_modal_label_[{$shippingAddressNumber}]">[{oxmultilang ident="CNC_DELETE_SHIPPING_ADDRESS"}]</span>
                         [{/block}]
                     </div>
                     <div class="modal-body">
