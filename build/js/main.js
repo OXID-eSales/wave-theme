@@ -28,7 +28,7 @@
     }
 })();
 
-Flow = {};
+Wave = {};
 
 // Short-Handle for document.ready
 $(function () {
@@ -215,7 +215,7 @@ $(function () {
         /* *********************************
          * Details page
          * *********************************/
-        Flow.initEvents = function () {
+        Wave.initEvents = function () {
             // Lazy Loading für Bilder
             $("img").unveil();
 
@@ -227,7 +227,7 @@ $(function () {
             // Globale PopOver-Klasse
              $('.hasPopover').popover();
         };
-        Flow.initEvents();
+        Wave.initEvents();
 
         function reRenderMainNav() {
             var $oMainNav = $('#mainnav').find('.navbar-collapse'),

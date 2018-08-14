@@ -18,9 +18,9 @@
  * @copyright (C) OXID eSales AG 2003-2016
  */
 
-Flow = Flow || {};
+Wave = Wave || {};
 
-Flow.initDetailsEvents = function () {
+Wave.initDetailsEvents = function () {
     var $oDetailsWrapper = $('#details'),
         $oReviewRating = $('#reviewRating'),
         $oMorePicsSlider = $('#morePicsContainer'),
@@ -100,7 +100,7 @@ Flow.initDetailsEvents = function () {
     }
 };
 
-Flow.setPhotoSwipe = function () {
+Wave.setPhotoSwipe = function () {
     var obj = {},
         $oMorePicsContainer = $('#morePicsContainer');
     obj.pswp = $('.pswp')[0];
