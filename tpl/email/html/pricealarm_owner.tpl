@@ -3,7 +3,7 @@
 [{assign var="currency"  value=$oEmailView->getCurrency()}]
 [{assign var="user"      value=$oEmailView->getUser()}]
 
-[{include file="email/html/header.tpl" title="DD_PRICEALARM_HEADING"|oxmultilangassign}]
+[{include file="email/html/header.tpl" title="CNC_PRICEALARM_HEADING"|oxmultilangassign}]
 
 [{oxcontent ident="oxpricealarmemail"}]<br/>
 

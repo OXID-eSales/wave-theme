@@ -1,10 +1,10 @@
 [{capture append="oxidBlock_content"}]
     [{if $oView->getContactSendStatus()}]
-        [{assign var="_statusMessage" value="DD_CONTACT_THANKYOU1"|oxmultilangassign|cat:" "|cat:$oxcmp_shop->oxshops__oxname->value}]
-        [{assign var="_statusMessageSuffix" value="DD_CONTACT_THANKYOU2"|oxmultilangassign}]
+        [{assign var="_statusMessage" value="CNC_CONTACT_THANKYOU1"|oxmultilangassign|cat:" "|cat:$oxcmp_shop->oxshops__oxname->value}]
+        [{assign var="_statusMessageSuffix" value="CNC_CONTACT_THANKYOU2"|oxmultilangassign}]
         [{include file="message/notice.tpl" statusMessage=$_statusMessage|cat:$_statusMessageSuffix}]
     [{/if}]
-    <h1 class="page-header">[{oxmultilang ident="DD_CONTACT_PAGE_HEADING"}]</h1>
+    <h1 class="page-header">[{oxmultilang ident="CNC_CONTACT_PAGE_HEADING"}]</h1>
 
     [{assign var="sGoogleMapsAddr" value=$oViewConf->getViewThemeParam('sGoogleMapsAddr')}]
     [{if $sGoogleMapsAddr}]
@@ -23,7 +23,7 @@
 
     <div class="row">
         <div class="col-12 col-lg-3 pull-right">
-            <h2 class="page-header">[{oxmultilang ident="DD_CONTACT_ADDRESS_HEADING"}]</h2>
+            <h2 class="page-header">[{oxmultilang ident="CNC_CONTACT_ADDRESS_HEADING"}]</h2>
             <div itemscope itemtype="http://schema.org/Organization">
                 <address>
                     <strong itemprop="name">[{$oxcmp_shop->oxshops__oxcompany->value}]</strong><br>
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-9">
-            <h2 class="page-header">[{oxmultilang ident="DD_CONTACT_FORM_HEADING"}]</h2>
+            <h2 class="page-header">[{oxmultilang ident="CNC_CONTACT_FORM_HEADING"}]</h2>
             [{include file="form/contact.tpl"}]
         </div>
     </div>

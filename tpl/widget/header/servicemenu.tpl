@@ -11,7 +11,7 @@
 
 <div class="btn-group service-menu [{if !$oxcmp_user}]showLogin[{/if}]">
     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" data-href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account"}]">
-        [{block name="dd_layout_page_header_icon_menu_account_button"}]
+        [{block name="cnc_layout_page_header_icon_menu_account_button"}]
             [{if !$oxcmp_user}]
                 [{oxmultilang ident="LOGIN"}]
             [{else}]
@@ -24,7 +24,7 @@
         [{/block}]
     </button>
     <ul class="dropdown-menu dropdown-menu-right login-menu" role="menu">
-        [{block name="dd_layout_page_header_icon_menu_account_list"}]
+        [{block name="cnc_layout_page_header_icon_menu_account_list"}]
             <li>
                 <div class="row">
                     <div class="[{if !$oxcmp_user}]col-12 col-sm-5[{else}]col-12[{/if}] order-1 order-md-2">

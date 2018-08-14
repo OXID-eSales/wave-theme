@@ -4,7 +4,7 @@
                                                 <table class="six columns">
                                                     <tr>
                                                         <td class="left-text-pad">
-                                                            <h5>[{oxmultilang ident="DD_FOOTER_CONTACT_INFO"}]</h5>
+                                                            <h5>[{oxmultilang ident="CNC_FOOTER_CONTACT_INFO"}]</h5>
                                                             [{oxcontent ident="oxemailfooter"}]
                                                         </td>
                                                         <td class="expander"></td>
@@ -17,7 +17,7 @@
                                                         <tr>
                                                             <td class="right-text-pad">
 
-                                                                <h5>[{oxmultilang ident="DD_FOOTER_FOLLOW_US"}]</h5>
+                                                                <h5>[{oxmultilang ident="CNC_FOOTER_FOLLOW_US"}]</h5>
 
                                                                 [{if $oViewConf->getViewThemeParam('sFacebookUrl')}]
                                                                     <table class="tiny-button facebook">

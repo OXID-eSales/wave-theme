@@ -14,7 +14,7 @@
                             <div class="card-header">
                                 <div class="row">
                                     <div class="col-3">
-                                        <strong>[{oxmultilang ident="DD_ORDER_ORDERDATE"}]</strong>
+                                        <strong>[{oxmultilang ident="CNC_ORDER_ORDERDATE"}]</strong>
                                         <span id="accOrderDate_[{$order->oxorder__oxordernr->value}]">[{$order->oxorder__oxorderdate->value|date_format:"%d.%m.%Y"}]</span>
                                         <span>[{$order->oxorder__oxorderdate->value|date_format:"%H:%M:%S"}]</span>
                                     </div>

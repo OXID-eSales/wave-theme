@@ -53,7 +53,7 @@
                     </div>
                     <div class="modal-body">[{$oContent->oxcontents__oxcontent->value}]</div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">[{oxmultilang ident="DD_CLOSE_MODAL"}]</button>
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">[{oxmultilang ident="CNC_CLOSE_MODAL"}]</button>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="modal-body">[{$oContent->oxcontents__oxcontent->value}]</div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">[{oxmultilang ident="DD_CLOSE_MODAL"}]</button>
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">[{oxmultilang ident="CNC_CLOSE_MODAL"}]</button>
                     </div>
                 </div>
             </div>
