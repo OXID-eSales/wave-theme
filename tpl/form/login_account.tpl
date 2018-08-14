@@ -2,7 +2,7 @@
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 
 [{if $oView->getAccountDeletionStatus() == true}]
-    [{assign var="statusMessage" value="DD_DELETE_MY_ACCOUNT_SUCCESS"|oxmultilangassign}]
+    [{assign var="statusMessage" value="CNC_DELETE_MY_ACCOUNT_SUCCESS"|oxmultilangassign}]
     [{include file="message/success.tpl" statusMessage=$statusMessage}]
 [{/if}]
 
