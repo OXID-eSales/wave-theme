@@ -1,6 +1,6 @@
 <script>
-    var oFlow = oFlow || [];
-    oFlow.i18n =
+    var oWave = oWave || [];
+    oWave.i18n =
         {
             CNC_FORM_VALIDATION_VALIDEMAIL:     "[{oxmultilang ident="CNC_FORM_VALIDATION_VALIDEMAIL"}]",
             CNC_FORM_VALIDATION_PASSWORDAGAIN:  "[{oxmultilang ident="CNC_FORM_VALIDATION_PASSWORDAGAIN"}]",
