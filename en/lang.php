@@ -67,6 +67,7 @@ $aLang = array(
     'CNC_CONTACT_ADDRESS_HEADING'                            => 'Address',
     'CNC_CONTACT_THANKYOU1'                                  => "Thank you.",
     'CNC_CONTACT_THANKYOU2'                                  => " appreciates your comments.",
+    'CNC_CONTACT_SELECT_SALUTATION'                          => 'Please choose ...',
 
     // Link list
     'CNC_LINKS_NO_ENTRIES'                                   => 'Unfortunately, there are no links available.',
@@ -154,6 +155,9 @@ $aLang = array(
     'CNC_DELETE_REVIEW_AND_RATING'                           => 'Delete review and star rating',
     'CNC_REVIEWS_NOT_AVAILABLE'                              => 'No reviews available',
     'CNC_DELETE_REVIEW_CONFIRMATION_QUESTION'                => 'Are you sure you want to delete the review?',
+
+    // Contact page
+    'CNC_SELECT_SALUTATION'                                  => 'Please choose',
 );
 
 /*
