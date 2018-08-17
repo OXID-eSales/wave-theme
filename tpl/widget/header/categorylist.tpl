@@ -30,7 +30,7 @@
                                     [{if $ocat->getIsVisible()}]
                                         [{foreach from=$ocat->getContentCats() item="oTopCont" name="MoreTopCms"}]
                                             <li class="nav-item">
-                                                <a class="nav-link" href="[{$oTopCont->getLink()}]">[{$oTopCont->oxcontents__oxtitle->value}]</a>
+                                                <a class="nav-link[{if $oContent->oxcontents__oxloadid->value === $oTopCont->oxcontents__oxloadid->value}] active[{/if}]" href="[{$oTopCont->getLink()}]">[{$oTopCont->oxcontents__oxtitle->value}]</a>
                                             </li>
                                         [{/foreach}]
 
