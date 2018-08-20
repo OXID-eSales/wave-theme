@@ -5716,7 +5716,7 @@
             //                                                     EMAIL
             // ---------------------------------------------------------
             if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "email") {
-              message = oFlow.i18n.DD_FORM_VALIDATION_VALIDEMAIL;
+              message = oWave.i18n.CNC_FORM_VALIDATION_VALIDEMAIL;
               if ($this.data("validationValidemailMessage")) {
                 message = $this.data("validationValidemailMessage");
               } else if ($this.data("validationEmailMessage")) {
@@ -6324,13 +6324,13 @@
 				name: "Validemail",
 				type: "regex",
 				regex: "^(.+?)\@(.+)\.(.+)$",
-				message: oFlow.i18n.DD_FORM_VALIDATION_VALIDEMAIL
+				message: oWave.i18n.CNC_FORM_VALIDATION_VALIDEMAIL
 			},
 			passwordagain: {
 				name: "Passwordagain",
 				type: "match",
 				match: "password",
-				message: oFlow.i18n.DD_FORM_VALIDATION_PASSWORDAGAIN
+				message: oWave.i18n.CNC_FORM_VALIDATION_PASSWORDAGAIN
 			},
 			positive: {
 				name: "Positive",
@@ -6346,36 +6346,36 @@
 				name: "Number",
 				type: "regex",
 				regex: "([+-]?\\\d+(\\\.\\\d*)?([eE][+-]?[0-9]+)?)?",
-				message: oFlow.i18n.DD_FORM_VALIDATION_NUMBER
+				message: oWave.i18n.CNC_FORM_VALIDATION_NUMBER
 			},
 			integer: {
 				name: "Integer",
 				type: "regex",
 				regex: "[+-]?\\\d+",
-				message: oFlow.i18n.DD_FORM_VALIDATION_INTEGER
+				message: oWave.i18n.CNC_FORM_VALIDATION_INTEGER
 			},
 			positivenumber: {
 				name: "Positivenumber",
 				type: "min",
 				min: 0,
-				message: oFlow.i18n.DD_FORM_VALIDATION_POSITIVENUMBER
+				message: oWave.i18n.CNC_FORM_VALIDATION_POSITIVENUMBER
 			},
 			negativenumber: {
 				name: "Negativenumber",
 				type: "max",
 				max: 0,
-				message: oFlow.i18n.DD_FORM_VALIDATION_NEGATIVENUMBER
+				message: oWave.i18n.CNC_FORM_VALIDATION_NEGATIVENUMBER
 			},
 			required: {
 				name: "Required",
 				type: "required",
-				message: oFlow.i18n.DD_FORM_VALIDATION_REQUIRED
+				message: oWave.i18n.CNC_FORM_VALIDATION_REQUIRED
 			},
 			checkone: {
 				name: "Checkone",
 				type: "minchecked",
 				minchecked: 1,
-				message: oFlow.i18n.DD_FORM_VALIDATION_CHECKONE
+				message: oWave.i18n.CNC_FORM_VALIDATION_CHECKONE
 			}
 		}
 	};
@@ -6501,20 +6501,20 @@
 
 })(window.jQuery || window.Zepto);;
 /**
- * This file is part of OXID eSales Flow theme.
+ * This file is part of OXID eSales Wave theme.
  *
- * OXID eSales Flow theme is free software: you can redistribute it and/or modify
+ * OXID eSales Wave theme is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * OXID eSales Flow theme is distributed in the hope that it will be useful,
+ * OXID eSales Wave theme is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OXID eSales Wave theme.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
@@ -6530,7 +6530,7 @@
     }
 })();
 
-Flow = {};
+Wave = {};
 
 // Short-Handle for document.ready
 $(function () {
@@ -6717,7 +6717,7 @@ $(function () {
         /* *********************************
          * Details page
          * *********************************/
-        Flow.initEvents = function () {
+        Wave.initEvents = function () {
             // Lazy Loading für Bilder
             $("img").unveil();
 
@@ -6729,7 +6729,7 @@ $(function () {
             // Globale PopOver-Klasse
              $('.hasPopover').popover();
         };
-        Flow.initEvents();
+        Wave.initEvents();
 
         function reRenderMainNav() {
             var $oMainNav = $('#mainnav').find('.navbar-collapse'),

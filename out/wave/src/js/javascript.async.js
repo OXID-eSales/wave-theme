@@ -1,18 +1,18 @@
 /**
- * This file is part of OXID eSales Flow theme.
+ * This file is part of OXID eSales Wave theme.
  *
- * OXID eSales Flow theme is free software: you can redistribute it and/or modify
+ * OXID eSales Wave theme is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * OXID eSales Flow theme is distributed in the hope that it will be useful,
+ * OXID eSales Wave theme is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OXID eSales Wave theme.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
@@ -28,7 +28,7 @@
     }
 })();
 
-Flow = {};
+Wave = {};
 
 // Short-Handle for document.ready
 $(function () {
@@ -215,7 +215,7 @@ $(function () {
         /* *********************************
          * Details page
          * *********************************/
-        Flow.initEvents = function () {
+        Wave.initEvents = function () {
             // Lazy Loading für Bilder
             $("img").unveil();
 
@@ -227,7 +227,7 @@ $(function () {
             // Globale PopOver-Klasse
              $('.hasPopover').popover();
         };
-        Flow.initEvents();
+        Wave.initEvents();
 
         function reRenderMainNav() {
             var $oMainNav = $('#mainnav').find('.navbar-collapse'),
@@ -383,20 +383,20 @@ $(window).on('load', function () {
 );
 ;
 /**
- * This file is part of OXID eSales Flow theme.
+ * This file is part of OXID eSales Wave theme.
  *
- * OXID eSales Flow theme is free software: you can redistribute it and/or modify
+ * OXID eSales Wave theme is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * OXID eSales Flow theme is distributed in the hope that it will be useful,
+ * OXID eSales Wave theme is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OXID eSales Wave theme.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
@@ -419,28 +419,28 @@ $( function ()
     }
 } );;
 /**
- * This file is part of OXID eSales Flow theme.
+ * This file is part of OXID eSales Wave theme.
  *
- * OXID eSales Flow theme is free software: you can redistribute it and/or modify
+ * OXID eSales Wave theme is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * OXID eSales Flow theme is distributed in the hope that it will be useful,
+ * OXID eSales Wave theme is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OXID eSales Wave theme.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
  */
 
-Flow = Flow || {};
+Wave = Wave || {};
 
-Flow.initDetailsEvents = function () {
+Wave.initDetailsEvents = function () {
     var $oDetailsWrapper = $('#details'),
         $oReviewRating = $('#reviewRating'),
         $oMorePicsSlider = $('#morePicsContainer'),
@@ -520,7 +520,7 @@ Flow.initDetailsEvents = function () {
     }
 };
 
-Flow.setPhotoSwipe = function () {
+Wave.setPhotoSwipe = function () {
     var obj = {},
         $oMorePicsContainer = $('#morePicsContainer');
     obj.pswp = $('.pswp')[0];
@@ -606,58 +606,22 @@ function getAjaxLoader() {
     oLayerElem.appendChild(oSpinnerElem);
 
     return oLayerElem;
-}
-
-$(document).ready(function () {
-
-        if (window.isMobileDevice()) {
-            var $oBody = $('body'),
-                $oSwipeOverlay = $('#swipe-overlay'),
-                carousel = new Carousel('#swipe-overlay');
-
-            $oSwipeOverlay.appendTo($oBody);
-
-            carousel.init();
-
-            $('#zoom1, #morePicsContainer a').on('click touch', function (e) {
-                    e.preventDefault();
-                    $oSwipeOverlay.addClass('open');
-
-                    // Lazy Loading
-                    $oSwipeOverlay.find('img').each(function () {
-                            var $this = $(this),
-                                sSrc = $this.data('src');
-
-                            if (sSrc) {
-                                $this.attr('src', sSrc);
-                            }
-                        }
-                    );
-                }
-            );
-
-            $oSwipeOverlay.find('.close-btn').on('click touch', function () {
-                    $oSwipeOverlay.removeClass('open');
-                }
-            );
-        }
-    }
-);;
+};
 /**
- * This file is part of OXID eSales Flow theme.
+ * This file is part of OXID eSales Wave theme.
  *
- * OXID eSales Flow theme is free software: you can redistribute it and/or modify
+ * OXID eSales Wave theme is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * OXID eSales Flow theme is distributed in the hope that it will be useful,
+ * OXID eSales Wave theme is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OXID eSales Wave theme.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
@@ -686,20 +650,20 @@ $( document ).ready( function()
     }
 );;
 /**
- * This file is part of OXID eSales Flow theme.
+ * This file is part of OXID eSales Wave theme.
  *
- * OXID eSales Flow theme is free software: you can redistribute it and/or modify
+ * OXID eSales Wave theme is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * OXID eSales Flow theme is distributed in the hope that it will be useful,
+ * OXID eSales Wave theme is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OXID eSales Wave theme.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
