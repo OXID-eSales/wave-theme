@@ -87,7 +87,7 @@ $aLang = array(
     'CNC_USER_BILLING_LABEL_STATE'                           => 'Bundesland:',
     'CNC_USER_SHIPPING_LABEL_STATE'                          => 'Bundesland:',
     'CNC_USER_SHIPPING_SELECT_ADDRESS'                       => 'auswählen',
-    'CNC_USER_SHIPPING_ACNC_DELIVERY_ADDRESS'                 => 'neue Adresse hinzufügen',
+    'CNC_USER_SHIPPING_ADD_DELIVERY_ADDRESS'                 => 'neue Adresse hinzufügen',
     'CNC_DELETE_SHIPPING_ADDRESS'                            => 'Lieferadresse löschen',
 
     // Bestellhistorie

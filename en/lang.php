@@ -87,7 +87,7 @@ $aLang = array(
     'CNC_USER_BILLING_LABEL_STATE'                           => 'State:',
     'CNC_USER_SHIPPING_LABEL_STATE'                          => 'State:',
     'CNC_USER_SHIPPING_SELECT_ADDRESS'                       => 'select',
-    'CNC_USER_SHIPPING_ACNC_DELIVERY_ADDRESS'                 => 'add delivery address',
+    'CNC_USER_SHIPPING_ADD_DELIVERY_ADDRESS'                 => 'add delivery address',
     'CNC_DELETE_SHIPPING_ADDRESS'                            => 'Delete shipping address',
 
     // Order history
