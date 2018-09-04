@@ -10,15 +10,7 @@
     <div class="page-header">
         [{block name="search_header"}]
             <h1 class="float-left">[{$search_head}]</h1>
-            [{assign var='rsslinks' value=$oView->getRssLinks()}]
-            [{if $rsslinks.searchArticles}]
-                [{assign var="imgUrl" value=$oViewConf->getImageUrl('rss.png')}]
-                <span class="pop-search float-right">
-                    <a class="rss" id="rssSearchProducts" target="_blank" href="[{$rsslinks.searchArticles.link}]" title="[{$rsslinks.searchArticles.title}]">
-                        <i class="fas fa-rss"></i> [{$rsslinks.searchArticles.title}]
-                    </a>
-                </span>
-            [{/if}]
+
             <div class="clearfix"></div>
         [{/block}]
     </div>
@@ -45,4 +37,4 @@
 [{/capture}]
 [{assign var="template_title" value="SEARCH"|oxmultilangassign}]
 
-[{include file="layout/page.tpl" title=$template_title location="SEARCH"|oxmultilangassign sidebar="Left"}]
+[{include file="layout/page.tpl" title=$template_title location="SEARCH"|oxmultilangassign}]
