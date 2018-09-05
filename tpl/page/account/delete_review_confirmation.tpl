@@ -8,8 +8,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     [{block name="delete_review_confirmation_modal_header"}]
+                        <span class="h4 modal-title">[{oxmultilang ident="DD_DELETE_REVIEW_CONFIRMATION_QUESTION"}]</span>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <span class="h4 modal-title">[{oxmultilang ident="CNC_DELETE_REVIEW_CONFIRMATION_QUESTION"}]</span>
                     [{/block}]
                 </div>
                 <div class="modal-body">
@@ -32,7 +32,7 @@
                                         [{block name="delete_review_confirmation_modal_buttons_set"}]
                                             <div class="text-right">
                                                 <button type="submit" class="btn btn-danger">
-                                                    [{oxmultilang ident="CNC_DELETE"}]
+                                                    [{oxmultilang ident="DD_DELETE"}]
                                                 </button>
                                                 <button type="button" class="btn btn-outline-dark" data-dismiss="modal">
                                                     [{oxmultilang ident="CANCEL"}]

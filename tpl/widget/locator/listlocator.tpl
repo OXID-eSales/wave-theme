@@ -9,14 +9,9 @@
     </div>
     [{/if}]
     [{/if}]
-    [{if $place != "bottom"}]
-    <div class="float-left">
-        [{include file="widget/locator/attributes.tpl"}]
-    </div>
-    [{/if}]
 
     [{if $listDisplayType || $sort || $itemsPerPage}]
-    <div class="float-right options">
+    <div class="col-12 text-right options">
         [{if $listDisplayType}]
         [{include file="widget/locator/listdisplaytype.tpl"}]
         [{/if}]
@@ -30,5 +25,13 @@
         [{/if}]
     </div>
     [{/if}]
+
+    [{if $place != "bottom"}]
+    <div class="col-12 text-right">
+        [{include file="widget/locator/attributes.tpl"}]
+    </div>
+    [{/if}]
+
+
 </div>
 </div>

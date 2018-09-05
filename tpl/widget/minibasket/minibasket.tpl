@@ -13,11 +13,11 @@
                         <div class="modal-content">
                             [{block name="widget_minibasket_modal_header"}]
                             <div class="modal-header">
+                                <h4 class="modal-title" id="basketModalLabel">[{$oxcmp_basket->getItemsCount()}] [{oxmultilang ident="ITEMS_IN_BASKET"}]</h4>
                                 <button type="button" class="close" data-dismiss="modal">
                                     <span aria-hidden="true">&times;</span>
                                     <span class="sr-only">[{oxmultilang ident="CLOSE"}]</span>
                                 </button>
-                                <h4 class="modal-title" id="basketModalLabel">[{$oxcmp_basket->getItemsCount()}] [{oxmultilang ident="ITEMS_IN_BASKET"}]</h4>
                             </div>
                             [{/block}]
                             [{block name="widget_minibasket_modal_content"}]

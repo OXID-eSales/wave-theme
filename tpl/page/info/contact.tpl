@@ -27,7 +27,7 @@
             <div itemscope itemtype="http://schema.org/Organization">
                 <address>
                     <strong itemprop="name">[{$oxcmp_shop->oxshops__oxcompany->value}]</strong><br>
-                    <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <span class="d-block" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                         <span itemprop="streetAddress">[{$oxcmp_shop->oxshops__oxstreet->value}]</span><br>
                         <span itemprop="postalCode">[{$oxcmp_shop->oxshops__oxzip->value}]</span> [{$oxcmp_shop->oxshops__oxcity->value}]<br>
                         [{$oxcmp_shop->oxshops__oxcountry->value}]<br>
