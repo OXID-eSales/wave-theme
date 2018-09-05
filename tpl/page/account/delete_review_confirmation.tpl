@@ -8,8 +8,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     [{block name="delete_review_confirmation_modal_header"}]
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <span class="h4 modal-title">[{oxmultilang ident="DD_DELETE_REVIEW_CONFIRMATION_QUESTION"}]</span>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     [{/block}]
                 </div>
                 <div class="modal-body">

@@ -10,7 +10,7 @@
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
 <div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
 
-    <div id="wrapper" class="main-row[{if $sidebar}]class="sidebar[{$sidebar}][{/if}]">
+    <div id="wrapper" class="main-row[{if $sidebar}] sidebar[{$sidebar}][{/if}]">
 
         <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
 
@@ -45,7 +45,7 @@
 
                         <div class="col-12 [{if $sidebar}]col-md-9[{/if}]">
 
-                            <div class="content" id="content">
+                            <div class="content mb-3" id="content">
                                 [{block name="content_main"}]
                                     [{include file="message/errors.tpl"}]
 

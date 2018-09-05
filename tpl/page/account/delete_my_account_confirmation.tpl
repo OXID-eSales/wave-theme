@@ -10,10 +10,10 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     [{block name="account_delete_my_account_confirmation_header_message"}]
                         <span class="h4 modal-title">[{oxmultilang ident="DD_DELETE_MY_ACCOUNT_CONFIRMATION_QUESTION"}]</span>
                     [{/block}]
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="row">

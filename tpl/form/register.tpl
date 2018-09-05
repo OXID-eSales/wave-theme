@@ -48,8 +48,8 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <span class="h4 modal-title" id="popup1Label">[{$oContent->oxcontents__oxtitle->value}]</span>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">[{$oContent->oxcontents__oxcontent->value}]</div>
                     <div class="modal-footer">
@@ -65,8 +65,8 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <span class="h4 modal-title" id="popup2Label">[{$oContent->oxcontents__oxtitle->value}]</span>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">[{$oContent->oxcontents__oxcontent->value}]</div>
                     <div class="modal-footer">
