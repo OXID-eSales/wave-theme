@@ -11,8 +11,8 @@
                 <input type="hidden" name="cl" value="details">
                 <input type="hidden" name="anid" value="[{$product->oxarticles__oxid->value}]">
             </div>
-            <ul class="form">
-                <li>
+            <ul class="form listmania-add list-unstyled">
+                <li class="listmania-select-list">
                     <label>[{oxmultilang ident="SELECT_LISTMANIA_LIST"}]:</label>
                     <select name="recomm">
                         [{foreach from=$oView->getRecommLists() item=oList}]
@@ -20,12 +20,12 @@
                         [{/foreach}]
                     </select>
                 </li>
-                <li>
+                <li class="listmania-desc-add">
                     <label>Description:</label>
                     <textarea cols="102" rows="7" name="recomm_txt" class="areabox"></textarea><br>
                 </li>
-                <li class="formSubmit">
-                    <button class="submitButton largeButton" type="submit">[{oxmultilang ident="ADD_TO_LISTMANIA_LIST"}]</button>
+                <li class="formSubmit listmania-submit">
+                    <button class="btn btn-primary submitButton largeButton" type="submit">[{oxmultilang ident="ADD_TO_LISTMANIA_LIST"}]</button>
                 </li>
             </ul>
       </form>
