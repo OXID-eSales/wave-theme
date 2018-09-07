@@ -57,11 +57,11 @@
             [{block name="details_productmain_zoom"}]
                 [{oxscript include="js/libs/photoswipe.min.js" priority=8}]
                 [{oxscript include="js/libs/photoswipe-ui-default.min.js" priority=8}]
-                    [{oxscript add="$( document ).ready( function() { Flow.initDetailsEvents(); });"}]
+                    [{oxscript add="$( document ).ready( function() { Wave.initDetailsEvents(); });"}]
 
                 [{* Wird ausgeführt, wenn es sich um einen AJAX-Request handelt *}]
                 [{if $blWorkaroundInclude}]
-                    [{oxscript add="$( document ).ready( function() { Flow.initEvents();});"}]
+                    [{oxscript add="$( document ).ready( function() { Wave.initEvents();});"}]
                 [{/if}]
 
                 [{if $oView->showZoomPics()}]
@@ -296,11 +296,9 @@
 
                     [{oxhasrights ident="TOBASKET"}]
                         [{if $oDetailsProduct->isBuyable()}]
-                            <span class="deliverytime">
-                                [{block name="details_productmain_deliverytime"}]
-                                    [{include file="page/details/inc/deliverytime.tpl"}]
-                                [{/block}]
-                            </span>
+                            [{block name="details_productmain_deliverytime"}]
+                                [{include file="page/details/inc/deliverytime.tpl"}]
+                            [{/block}]
                         [{/if}]
                     [{/oxhasrights}]
 

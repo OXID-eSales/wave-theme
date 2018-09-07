@@ -2,13 +2,13 @@
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 
 [{if $oView->getAccountDeletionStatus() == true}]
-    [{assign var="statusMessage" value="DD_DELETE_MY_ACCOUNT_SUCCESS"|oxmultilangassign}]
+    [{assign var="statusMessage" value="CNC_DELETE_MY_ACCOUNT_SUCCESS"|oxmultilangassign}]
     [{include file="message/success.tpl" statusMessage=$statusMessage}]
 [{/if}]
 
 <div class="card-deck">
     <div class="card">
-        <div class="card-header">[{oxmultilang ident="DD_LOGIN_ACCOUNT_PANEL_LOGIN_TITLE"}]</div>
+        <div class="card-header">[{oxmultilang ident="CNC_LOGIN_ACCOUNT_PANEL_LOGIN_TITLE"}]</div>
         <div class="card-body">
             <form name="login" class="js-oxValidate" action="[{$oViewConf->getSslSelfLink()}]" method="post" novalidate="novalidate">
                 <div class="hidden">
@@ -60,9 +60,9 @@
         </div>
     </div>
     <div class="card">
-        <div class="card-header">[{oxmultilang ident="DD_LOGIN_ACCOUNT_PANEL_CREATE_TITLE"}]</div>
+        <div class="card-header">[{oxmultilang ident="CNC_LOGIN_ACCOUNT_PANEL_CREATE_TITLE"}]</div>
         <div class="card-body">
-            <p>[{oxmultilang ident="DD_LOGIN_ACCOUNT_PANEL_CREATE_BODY"}]</p>
+            <p>[{oxmultilang ident="CNC_LOGIN_ACCOUNT_PANEL_CREATE_BODY"}]</p>
             <a id="openAccountLink" href="[{oxgetseourl ident=$oViewConf->getSslSelfLink()|cat:"cl=register"}]" class="btn btn-primary" role="button">[{oxmultilang ident="OPEN_ACCOUNT"}]</a><br />
         </div>
     </div>

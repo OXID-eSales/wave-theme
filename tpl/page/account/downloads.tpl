@@ -14,8 +14,8 @@
                                 </div>
                                 <div class="col-3">
                                     [{if $oOrderFile->isPaid() || !$oOrderFile->oxorderfiles__oxpurchasedonly->value }]
-                                        <a class="btn btn-success btn-sm pull-right" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=download" params="sorderfileid="|cat:$oOrderFile->getId()}]" title="[{$oOrderFile->oxorderfiles__oxfilename->value}] [{oxmultilang ident="DD_DOWNLOADS_DOWNLOAD_TOOLTIP"}]">
-                                            <i class="fa fa-download"></i> [{oxmultilang ident="DD_DOWNLOADS_DOWNLOAD_TOOLTIP"}]
+                                        <a class="btn btn-success btn-sm pull-right" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=download" params="sorderfileid="|cat:$oOrderFile->getId()}]" title="[{$oOrderFile->oxorderfiles__oxfilename->value}] [{oxmultilang ident="CNC_DOWNLOADS_DOWNLOAD_TOOLTIP"}]">
+                                            <i class="fa fa-download"></i> [{oxmultilang ident="CNC_DOWNLOADS_DOWNLOAD_TOOLTIP"}]
                                         </a>
                                     [{/if}]
                                 </div>
@@ -24,7 +24,7 @@
                         <div class="card-body">
                             [{if $oOrderFile->isPaid() || !$oOrderFile->oxorderfiles__oxpurchasedonly->value }]
                                 [{if $oOrderFile->isValid()}]
-                                    <strong>[{oxmultilang ident="DD_FILE_ATTRIBUTES_FILENAME"}]</strong> [{$oOrderFile->oxorderfiles__oxfilename->value}]<br>
+                                    <strong>[{oxmultilang ident="CNC_FILE_ATTRIBUTES_FILENAME"}]</strong> [{$oOrderFile->oxorderfiles__oxfilename->value}]<br>
                                     [{include file="page/account/inc/file_attributes.tpl"}]
                                 [{else}]
                                     [{$oOrderFile->oxorderfiles__oxfilename->value}]

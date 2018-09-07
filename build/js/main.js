@@ -1,18 +1,18 @@
 /**
- * This file is part of OXID eSales Flow theme.
+ * This file is part of OXID eSales Wave theme.
  *
- * OXID eSales Flow theme is free software: you can redistribute it and/or modify
+ * OXID eSales Wave theme is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * OXID eSales Flow theme is distributed in the hope that it will be useful,
+ * OXID eSales Wave theme is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OXID eSales Wave theme.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
@@ -28,7 +28,7 @@
     }
 })();
 
-Flow = {};
+Wave = {};
 
 // Short-Handle for document.ready
 $(function () {
@@ -215,7 +215,7 @@ $(function () {
         /* *********************************
          * Details page
          * *********************************/
-        Flow.initEvents = function () {
+        Wave.initEvents = function () {
             // Lazy Loading für Bilder
             $("img").unveil();
 
@@ -227,7 +227,7 @@ $(function () {
             // Globale PopOver-Klasse
              $('.hasPopover').popover();
         };
-        Flow.initEvents();
+        Wave.initEvents();
 
         function reRenderMainNav() {
             var $oMainNav = $('#mainnav').find('.navbar-collapse'),

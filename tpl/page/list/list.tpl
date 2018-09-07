@@ -32,7 +32,7 @@
         <div class="page-header">
             [{assign var='rsslinks' value=$oView->getRssLinks()}]
             <h1 class="h1">
-                [{$oView->getTitle()}]
+                [{$actCategory->getTitle()}]
                 [{if $rsslinks.activeCategory}]
                     <a class="rss" id="rssActiveCategory" href="[{$rsslinks.activeCategory.link}]" title="[{$rsslinks.activeCategory.title}]" target="_blank">
                         <i class="fas fa-rss"></i>
@@ -86,7 +86,7 @@
                                                 <img src="[{$oViewConf->getImageUrl('spinner.gif')}]" data-src="[{$category->getIconUrl()}]" alt="[{$category->oxcategories__oxtitle->value}]" class="img-fluid subcat-icon">
                                             </a>
                                         [{else}]
-                                            <a href="[{$category->getLink()}]" class="btn btn-block btn-info">[{oxmultilang ident="DD_LIST_SHOW_MORE"}]</a>
+                                            <a href="[{$category->getLink()}]" class="btn btn-block btn-info">[{oxmultilang ident="CNC_LIST_SHOW_MORE"}]</a>
                                         [{/if}]
 
                                         [{if $category->getHasVisibleSubCats()}]

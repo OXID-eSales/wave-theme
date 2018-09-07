@@ -1,20 +1,21 @@
 [{block name="widget_locator_attributes"}]
     [{if $attributes}]
         <div class="row filter-attributes">
-            <form method="get" action="[{$oViewConf->getSelfActionLink()}]" name="_filterlist" id="filterList" class="filter-form">
-                <div class="hidden">
-                    [{$oViewConf->getHiddenSid()}]
-                    [{$oViewConf->getNavFormParams()}]
-                    <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
-                    <input type="hidden" name="tpl" value="[{$oViewConf->getActTplName()}]">
-                    <input type="hidden" name="oxloadid" value="[{$oViewConf->getActContentLoadId()}]">
-                    <input type="hidden" name="fnc" value="executefilter">
-                    <input type="hidden" name="fname" value="">
-                </div>
+            <div class="col-xs-12">
+                <form method="get" action="[{$oViewConf->getSelfActionLink()}]" name="_filterlist" id="filterList" class="filter-form">
+                    <div class="hidden">
+                        [{$oViewConf->getHiddenSid()}]
+                        [{$oViewConf->getNavFormParams()}]
+                        <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
+                        <input type="hidden" name="tpl" value="[{$oViewConf->getActTplName()}]">
+                        <input type="hidden" name="oxloadid" value="[{$oViewConf->getActContentLoadId()}]">
+                        <input type="hidden" name="fnc" value="executefilter">
+                        <input type="hidden" name="fname" value="">
+                    </div>
 
                 <div class="list-filter">
                     [{if $oView->getClassName() == 'alist'}]
-                        <strong>[{oxmultilang ident="DD_LISTLOCATOR_FILTER_ATTRIBUTES"}]</strong>
+                        <strong>[{oxmultilang ident="CNC_LISTLOCATOR_FILTER_ATTRIBUTES"}]</strong>
                     [{/if}]
                         [{foreach from=$attributes item=oFilterAttr key=sAttrID name=attr}]
                             [{assign var="sActiveValue" value=$oFilterAttr->getActiveValue()}]

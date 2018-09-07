@@ -4,7 +4,7 @@
 [{capture append="oxidBlock_content"}]
     <div class="accountLoginView" style="margin-top: 25px;">
 
-        [{block name="dd_layout_page_header_logo"}]
+        [{block name="cnc_layout_page_header_logo"}]
             [{assign var="slogoImg" value=$oViewConf->getViewThemeParam('sLogoFile')}]
             [{assign var="sLogoWidth" value=$oViewConf->getViewThemeParam('sLogoWidth')}]
             [{assign var="sLogoHeight" value=$oViewConf->getViewThemeParam('sLogoHeight')}]
@@ -18,7 +18,7 @@
             [{include file="form/privatesales/accept_terms.tpl"}]
         [{else}]
             [{include file="widget/header/languages.tpl"}]
-            <p>[{oxmultilang ident="LOGIN_ALREADY_CUSTOMER"}]</p>
+            [{include file="message/errors.tpl"}]
             [{include file="form/login_account.tpl"}]
         [{/if}]
     </div>

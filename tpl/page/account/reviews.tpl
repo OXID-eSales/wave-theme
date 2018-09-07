@@ -45,7 +45,7 @@
                                                         <button
                                                                 type="submit"
                                                                 class="btn btn-danger btn-block hasTooltip"
-                                                                title="[{oxmultilang ident="DD_DELETE_REVIEW_AND_RATING"}]"
+                                                                title="[{oxmultilang ident="CNC_DELETE_REVIEW_AND_RATING"}]"
                                                                 data-toggle="modal"
                                                                 data-target="#delete_review_[{$smarty.foreach.ReviewsCounter.iteration}]"
                                                         >
@@ -74,7 +74,7 @@
             [{else}]
                 [{block name="account_reviewlist_no_reviews_available"}]
                     <div class="alert alert-info">
-                        [{oxmultilang ident="DD_REVIEWS_NOT_AVAILABLE"}]
+                        [{oxmultilang ident="CNC_REVIEWS_NOT_AVAILABLE"}]
                     </div>
                 [{/block}]
             [{/if}]

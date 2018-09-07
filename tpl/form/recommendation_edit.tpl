@@ -31,8 +31,8 @@
         <div class="offset-lg-3 col-lg-9">
             <button class="btn btn-primary" type="submit">[{oxmultilang ident="SAVE"}]</button>
             [{if $_actvrecommlist}]
-                <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_recommlist"}]" class="btn btn-outline-dark" title="[{oxmultilang ident="DD_RECOMMENDATION_EDIT_BACK_TO_LIST"}]">
-                    <i class="fa fa-list"></i> [{oxmultilang ident="DD_RECOMMENDATION_EDIT_BACK_TO_LIST"}]
+                <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=account_recommlist"}]" class="btn btn-outline-dark" title="[{oxmultilang ident="CNC_RECOMMENDATION_EDIT_BACK_TO_LIST"}]">
+                    <i class="fa fa-list"></i> [{oxmultilang ident="CNC_RECOMMENDATION_EDIT_BACK_TO_LIST"}]
                 </a>
             [{/if}]
         </div>

@@ -1,13 +1,13 @@
-[{block name="dd_widget_sidebar_categorytree"}]
+[{block name="cnc_widget_sidebar_categorytree"}]
     [{if $oxcmp_categories}]
         [{assign var="categories" value=$oxcmp_categories->getClickRoot()}]
         [{assign var="act" value=$oxcmp_categories->getClickCat()}]
         [{if $categories}]
             [{assign var="deepLevel" value=$oView->getDeepLevel()}]
             <div class="categoryBox hidden-xs hidden-sm">
-                [{block name="dd_widget_sidebar_categorytree_inner"}]
+                [{block name="cnc_widget_sidebar_categorytree_inner"}]
                     <ol class="nav nav-pills nav-stacked cat-tree">
-                        [{block name="dd_widget_sidebar_categorytree_list"}]
+                        [{block name="cnc_widget_sidebar_categorytree_list"}]
                             [{defun name="tree" categories=$categories}]
                                 [{assign var="deepLevel" value=$deepLevel+1}]
                                 [{assign var="oContentCat" value=$oView->getContentCategory()}]

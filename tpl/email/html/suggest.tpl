@@ -2,7 +2,7 @@
 [{assign var="oViewConf" value=$oEmailView->getViewConfig()}]
 [{assign var="userInfo"      value=$oEmailView->getUser()}]
 
-[{include file="email/html/header.tpl" title="DD_SUGGEST_HEADING"|oxmultilangassign}]
+[{include file="email/html/header.tpl" title="CNC_SUGGEST_HEADING"|oxmultilangassign}]
 
 <table border="0" width="100%" cellspacing="10" cellpadding="0">
     <tr>

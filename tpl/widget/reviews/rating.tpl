@@ -52,6 +52,6 @@
             href="#review" data-toggle="collapse" data-target="#review_form"
         [{/if}]
        title="[{$_star_title}]">
-        <small>([{$oView->getRatingCount()}] [{oxmultilang ident="DD_RATING_CUSTOMERRATINGS"}])</small>
+        <small>([{$oView->getRatingCount()}] [{oxmultilang ident="CNC_RATING_CUSTOMERRATINGS"}])</small>
     </a>
 </div>

@@ -2,7 +2,7 @@
 [{assign var="oViewConf" value=$oEmailView->getViewConfig()}]
 [{assign var="userinfo"  value=$oEmailView->getUser()}]
 
-[{include file="email/html/header.tpl" title="DD_INVITE_HEADING"|oxmultilangassign}]
+[{include file="email/html/header.tpl" title="CNC_INVITE_HEADING"|oxmultilangassign}]
 
 <table border="0" width="100%" cellspacing="10" cellpadding="0" bgcolor="#FFFFFF">
     <tr>
@@ -27,7 +27,7 @@
         <td colspan="2">&nbsp;</td>
     </tr>
     <tr>
-        <td colspan="2">[{oxmultilang ident="DD_INVITE_LINK"}]: <a href="[{$sHomeUrl}]">[{$shop->oxshops__oxname->value}]</a></td>
+        <td colspan="2">[{oxmultilang ident="CNC_INVITE_LINK"}]: <a href="[{$sHomeUrl}]">[{$shop->oxshops__oxname->value}]</a></td>
     </tr>
     <tr>
         <td colspan="2">&nbsp;</td>
