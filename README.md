@@ -8,18 +8,14 @@
 
 ### Step 1: Get the source code
 
-Check out the branch for your OXID eShop version into the shop's ``Application/views`` directory:
-
 ```
-cd DOCUMENT_ROOT/Application/views/
-git clone -b BRANCH_NAME https://github.com/OXID-eSales/wave_theme.git wave
+composer config repositories.oxid-esales/wave-theme vcs https://github.com/OXID-eSales/wave-theme
+composer require oxid-esales/wave-theme
 ```
-
-You should now have a new folder ``DOCUMENT_ROOT/Application/views/wave``.
 
 ### Step 2: Prepare the database (< version 6.0 only)
 
-In order to install the theme options, import the ``setup.sql`` into your database.
+In order to install the theme options, import the ``setup.sql`` (to be found in ``DOCUMENT_ROOT/source/Application/views/wave``) into your database.
 
 #### Option 1: Console
 
@@ -29,27 +25,9 @@ In order to install the theme options, import the ``setup.sql`` into your databa
 
 If you have a local copy of wave files, go to Service -> Tools in Shop Admin, upload wave/setup.sql and click "start update" button
 
-### Step 3: Prepare the ``out`` folder
+### Step 3: Activate theme 
 
-The ``out`` folder can be prepared in two possible ways. The first option is to use symbolic links, the second is to copy. Using a symbolic link is strongly recommended, as otherwise you would have do the copying everytime *Wave* is updated.
-
-#### Option 1: Symbolic Linking
-
-Link the theme's ``out`` directory to the ``out`` directory of the shop:
-
-``ln -s ../Application/views/wave/out/wave ../../out/wave``
-
-#### Option 2: Copying
-
-Copy theme's ``out`` directory to shop:
-
-``cp -r wave/out/wave ../../out/wave``
-
-You now should be able to do ``cd ../../out/wave``.
-
-### Step 4: Activate theme 
-
-Log into the admin panel, go to *Extensions → Themes → Wave* and press the *Activate* button. Clean the cache and off you go, my friend!
+Log into the admin panel, go to *Extensions → Themes → Wave* and press the *Activate* button. Clean the cache and off you go!
 
 ## Development
 
