@@ -1,8 +1,8 @@
-[{block name="cnc_widget_breadcrumb"}]
+[{block name="dd_widget_breadcrumb"}]
     [{strip}]
-        [{block name="cnc_widget_breadcrumb_list_inner"}]
+        [{block name="dd_widget_breadcrumb_list_inner"}]
             <ol id="breadcrumb" class="breadcrumb">
-                [{block name="cnc_widget_breadcrumb_list"}]
+                [{block name="dd_widget_breadcrumb_list"}]
                     <li class="text-muted">[{oxmultilang ident="YOU_ARE_HERE"}]:</li>
 
                     [{foreach from=$oView->getBreadCrumb() item="sCrum" name="breadcrumb"}]

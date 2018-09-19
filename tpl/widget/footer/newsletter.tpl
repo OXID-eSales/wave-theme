@@ -1,9 +1,9 @@
-[{block name="cnc_footer_newsletter_form"}]
+[{block name="dd_footer_newsletter_form"}]
 <div class="row">
     <div class="col-12 mx-auto col-md-8 mx-md-0 col-lg-12">
         <form class="newsletter-form" role="form" action="[{$oViewConf->getSslSelfLink()}]" method="post">
             <div class="form-group">
-                [{block name="cnc_footer_newsletter_form_inner"}]
+                [{block name="dd_footer_newsletter_form_inner"}]
                     <div class="hidden">
                         [{$oViewConf->getHiddenSid()}]
                         <input type="hidden" name="fnc" value="fill">
@@ -14,7 +14,7 @@
                         [{/if}]
                     </div>
 
-                    [{block name="cnc_footer_newsletter_form_inner_group"}]
+                    [{block name="dd_footer_newsletter_form_inner_group"}]
                         <label class="sr-only" for="footer_newsletter_oxusername">[{oxmultilang ident="NEWSLETTER"}]</label>
                         <div class="input-group">
                             <input type="text" class="form-control" type="email" name="editval[oxuser__oxusername]" placeholder="[{oxmultilang ident="EMAIL"}]" aria-label="[{oxmultilang ident="EMAIL"}]" aria-describedby="basic-addon2">

@@ -1,4 +1,4 @@
-[{block name="cnc_widget_header_categorylist"}]
+[{block name="dd_widget_header_categorylist"}]
     [{if $oxcmp_categories}]
         [{assign var="homeSelected" value="false"}]
         [{if $oViewConf->getTopActionClassName() == 'start'}]
@@ -10,8 +10,8 @@
         <nav id="mainnav" class="navbar navbar-expand-lg navbar-light[{if $blFullwidth}] fullviewlayout[{/if}]" role="navigation">
             <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
 
-                [{block name="cnc_widget_header_categorylist_navbar"}]
-                    [{block name="cnc_widget_header_categorylist_navbar_header"}]
+                [{block name="dd_widget_header_categorylist_navbar"}]
+                    [{block name="dd_widget_header_categorylist_navbar_header"}]
                         <div class="navbar-header justify-content-start">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
                     [{/block}]
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul id="navigation" class="navbar-nav nav">
-                            [{block name="cnc_widget_header_categorylist_navbar_list"}]
+                            [{block name="dd_widget_header_categorylist_navbar_list"}]
                                 <li class="nav-item[{if $homeSelected == 'true'}] active[{/if}]">
                                     <a class="nav-link" href="[{$oViewConf->getHomeLink()}]">[{oxmultilang ident="HOME"}]</a>
                                 </li>

@@ -1,8 +1,8 @@
-[{block name="cnc_widget_sidebar_shoplupe_ratings"}]
+[{block name="dd_widget_sidebar_shoplupe_ratings"}]
     <div class="box card">
         <section>
             <div class="page-header h3">[{oxmultilang ident="SHOPLUPE"}]</div>
-            [{block name="cnc_widget_sidebar_shoplupe_ratings_inner"}]
+            [{block name="dd_widget_sidebar_shoplupe_ratings_inner"}]
                 <div class="content">
                     <p class="shoplupe">
                         <a href="http://www.shoplupe.com" target="_blank" title="[{oxmultilang ident="SHOPLUPE"}]">

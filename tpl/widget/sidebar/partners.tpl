@@ -1,4 +1,4 @@
-[{block name="cnc_widget_sidebar_partners"}]
+[{block name="dd_widget_sidebar_partners"}]
     <div class="box card">
         <section>
             <div class="page-header h3"></div>

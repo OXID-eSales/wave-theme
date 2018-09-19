@@ -1,7 +1,7 @@
 [{if $oxcmp_basket->getProductsCount() && $_newitem}]
     [{oxhasrights ident="TOBASKET"}]
         <div class="alert alert-success" id="newItemMsg">
-            [{block name="cnc_widget_minibasket_new_item_msg"}]
+            [{block name="dd_widget_minibasket_new_item_msg"}]
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=basket"}]" class="btn btn-outline-dark btn-sm pull-right" style="margin-right:15px;">
                     <i class="fa fa-shopping-cart"></i> [{oxmultilang ident="DISPLAY_BASKET"}]

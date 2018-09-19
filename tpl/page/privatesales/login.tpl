@@ -4,7 +4,7 @@
 [{capture append="oxidBlock_content"}]
     <div class="accountLoginView" style="margin-top: 25px;">
 
-        [{block name="cnc_layout_page_header_logo"}]
+        [{block name="dd_layout_page_header_logo"}]
             [{assign var="slogoImg" value=$oViewConf->getViewThemeParam('sLogoFile')}]
             [{assign var="sLogoWidth" value=$oViewConf->getViewThemeParam('sLogoWidth')}]
             [{assign var="sLogoHeight" value=$oViewConf->getViewThemeParam('sLogoHeight')}]

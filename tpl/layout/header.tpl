@@ -21,16 +21,16 @@
                     <div class="col-12 col-md-6 col-lg-4 order-lg-3 menus-col">
                         [{block name="layout_header_top"}]
                             <div class="menu-dropdowns">
-                                [{block name="cnc_layout_page_header_icon_menu_languages"}]
+                                [{block name="dd_layout_page_header_icon_menu_languages"}]
                                     [{* Language Dropdown*}]
                                     [{oxid_include_widget cl="oxwLanguageList" lang=$oViewConf->getActLanguageId() _parent=$oView->getClassName() nocookie=1 _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
                                 [{/block}]
-                                [{block name="cnc_layout_page_header_icon_menu_currencies"}]
+                                [{block name="dd_layout_page_header_icon_menu_currencies"}]
                                     [{* Currency Dropdown*}]
                                     [{oxid_include_widget cl="oxwCurrencyList" cur=$oViewConf->getActCurrency() _parent=$oView->getClassName() nocookie=1 _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
                                 [{/block}]
 
-                                [{block name="cnc_layout_page_header_icon_menu_account"}]
+                                [{block name="dd_layout_page_header_icon_menu_account"}]
                                     [{if $oxcmp_user || $oView->getCompareItemCount() || $Errors.loginBoxErrors}]
                                         [{assign var="blAnon" value=0}]
                                         [{assign var="force_sid" value=$oViewConf->getSessionId()}]
@@ -41,7 +41,7 @@
                                     [{oxid_include_widget cl="oxwServiceMenu" _parent=$oView->getClassName() force_sid=$force_sid nocookie=$blAnon _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
                                 [{/block}]
 
-                                [{block name="cnc_layout_page_header_icon_menu_minibasket"}]
+                                [{block name="dd_layout_page_header_icon_menu_minibasket"}]
                                     [{* Minibasket Dropdown *}]
                                     [{if $oxcmp_basket->getProductsCount()}]
                                         [{assign var="blAnon" value=0}]

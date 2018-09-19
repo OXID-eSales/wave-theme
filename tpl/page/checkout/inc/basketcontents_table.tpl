@@ -54,7 +54,7 @@
                                 </div>
                             [{/block}]
                             <div class="basketItemDesc cart_item-shortdesc">
-                                [{block name="cnc_checkout_inc_basketcontents_table_item_desc"}]
+                                [{block name="dd_checkout_inc_basketcontents_table_item_desc"}]
                                     [{if $editable}]<a rel="nofllow" href="[{$basketitem->getLink()}]">[{/if}]
                                         <b>[{$basketitem->getTitle()}]</b>
                                         [{if $editable}]</a>[{/if}]

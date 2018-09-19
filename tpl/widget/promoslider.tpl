@@ -1,4 +1,4 @@
-[{block name="cnc_widget_promoslider"}]
+[{block name="dd_widget_promoslider"}]
     [{assign var="oBanners" value=$oView->getBanners()}]
     [{assign var="currency" value=$oView->getActCurrency()}]
 
@@ -8,7 +8,7 @@
 
         <div id="promo-carousel" class="flexslider">
             <ul class="slides">
-                [{block name="cnc_widget_promoslider_list"}]
+                [{block name="dd_widget_promoslider_list"}]
                     [{foreach from=$oBanners key="iPicNr" item="oBanner" name="promoslider"}]
                         [{assign var="oArticle" value=$oBanner->getBannerArticle()}]
                         [{assign var="sBannerPictureUrl" value=$oBanner->getBannerPictureUrl()}]

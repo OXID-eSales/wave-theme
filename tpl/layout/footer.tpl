@@ -12,44 +12,44 @@
             <div class="row mb-4">
                 <div class="col-12 col-lg-8">
                     <div class="row">
-                        [{block name="cnc_footer_servicelist"}]
+                        [{block name="dd_footer_servicelist"}]
                         <section
                                 class="col-12 [{if $blShowFullFooter}]col-md-6 col-lg-3[{else}]col-lg-6[{/if}] footer-box footer-box-service">
                             <div class="h4 footer-box-title">[{oxmultilang ident="SERVICES"}]</div>
                             <div class="footer-box-content">
-                                [{block name="cnc_footer_servicelist_inner"}]
+                                [{block name="dd_footer_servicelist_inner"}]
                                 [{oxid_include_widget cl="oxwServiceList" noscript=1 nocookie=1 force_sid=$force_sid}]
                                 [{/block}]
                             </div>
                         </section>
                         [{/block}]
-                        [{block name="cnc_footer_information"}]
+                        [{block name="dd_footer_information"}]
                         <section
                                 class="col-12 [{if $blShowFullFooter}]col-md-6 col-lg-3[{else}]col-lg-6[{/if}] footer-box footer-box-information">
                             <div class="h4 footer-box-title">[{oxmultilang ident="INFORMATION"}]</div>
                             <div class="footer-box-content">
-                                [{block name="cnc_footer_information_inner"}]
+                                [{block name="dd_footer_information_inner"}]
                                 [{oxid_include_widget cl="oxwInformation" noscript=1 nocookie=1 force_sid=$force_sid}]
                                 [{/block}]
                             </div>
                         </section>
                         [{/block}]
                         [{if $blShowFullFooter}]
-                        [{block name="cnc_footer_manufacturerlist"}]
+                        [{block name="dd_footer_manufacturerlist"}]
                         <section class="col-12 col-md-6 col-lg-3 footer-box footer-box-manufacturers">
                             <div class="h4 footer-box-title">[{oxmultilang ident="OUR_BRANDS"}]</div>
                             <div class="footer-box-content">
-                                [{block name="cnc_footer_manufacturerlist_inner"}]
+                                [{block name="dd_footer_manufacturerlist_inner"}]
                                 [{oxid_include_widget cl="oxwManufacturerList" _parent=$oView->getClassName() noscript=1 nocookie=1}]
                                 [{/block}]
                             </div>
                         </section>
                         [{/block}]
-                        [{block name="cnc_footer_categorytree"}]
+                        [{block name="dd_footer_categorytree"}]
                         <section class="col-12 col-md-6 col-lg-3 footer-box footer-box-categories">
                             <div class="h4 footer-box-title">[{oxmultilang ident="CATEGORIES"}]</div>
                             <div class="footer-box-content">
-                                [{block name="cnc_footer_categorytree_inner"}]
+                                [{block name="dd_footer_categorytree_inner"}]
                                 [{oxid_include_widget cl="oxwCategoryTree" _parent=$oView->getClassName() sWidgetType="footer" noscript=1 nocookie=1}]
                                 [{/block}]
                             </div>
@@ -65,7 +65,7 @@
                             <section class="footer-box footer-box-newsletter">
                                 <div class="h4 footer-box-title">[{oxmultilang ident="NEWSLETTER"}]</div>
                                 <div class="footer-box-content">
-                                    [{block name="cnc_footer_newsletter"}]
+                                    [{block name="dd_footer_newsletter"}]
                                     <p class="small">[{oxmultilang ident="FOOTER_NEWSLETTER_INFO"}]</p>
                                     [{include file="widget/footer/newsletter.tpl"}]
                                     [{/block}]
@@ -82,12 +82,12 @@
 
 
             [{* <<START>> Social Links *}]
-            [{block name="cnc_footer_social_links"}]
+            [{block name="dd_footer_social_links"}]
             [{if $oViewConf->getViewThemeParam('sFacebookUrl') || $oViewConf->getViewThemeParam('sGooglePlusUrl') || $oViewConf->getViewThemeParam('sTwitterUrl') || $oViewConf->getViewThemeParam('sYouTubeUrl') || $oViewConf->getViewThemeParam('sBlogUrl')}]
             <div class="social-links">
-                [{block name="cnc_footer_social_links_inner"}]
+                [{block name="dd_footer_social_links_inner"}]
                 <ul class="social-links-list ">
-                    [{block name="cnc_footer_social_links_list"}]
+                    [{block name="dd_footer_social_links_list"}]
                     [{if $oViewConf->getViewThemeParam('sFacebookUrl')}]
                     <li class="social-links-item">
                         <a target="_blank" class="social-links-link"
@@ -162,7 +162,7 @@
     <div class="legal">
         <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
             <section class="legal-box">
-                [{block name="cnc_footer_copyright"}]
+                [{block name="dd_footer_copyright"}]
                     [{oxifcontent ident="oxstdfooter" object="oCont"}]
                         [{$oCont->oxcontents__oxcontent->value}]
                     [{/oxifcontent}]

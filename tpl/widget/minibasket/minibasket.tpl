@@ -93,14 +93,14 @@
                 </div>
                 [{oxscript add="$('#basketModal').modal('show');"}]
             [{else}]
-                [{block name="cnc_layout_page_header_icon_menu_minibasket_title"}]
+                [{block name="dd_layout_page_header_icon_menu_minibasket_title"}]
                     <p class="title">
                         <strong>[{$oxcmp_basket->getItemsCount()}] [{oxmultilang ident="ITEMS_IN_BASKET"}]</strong>
                     </p>
                 [{/block}]
 
                 <div id="[{$_prefix}]basketFlyout" class="basketFlyout[{if $blScrollable}] scrollable[{/if}]">
-                    [{block name="cnc_layout_page_header_icon_menu_minibasket_table"}]
+                    [{block name="dd_layout_page_header_icon_menu_minibasket_table"}]
 
                     <div class="minibasket">
                         [{foreach from=$oxcmp_basket->getContents() name=miniBasketList item=_product}]
@@ -148,7 +148,7 @@
 
                 [{include file="widget/minibasket/countdown.tpl"}]
 
-                [{block name="cnc_layout_page_header_icon_menu_minibasket_functions"}]
+                [{block name="dd_layout_page_header_icon_menu_minibasket_functions"}]
                     <p class="functions clear text-right">
                         [{if $oxcmp_user}]
                             <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=payment"}]" class="btn btn-primary">[{oxmultilang ident="CHECKOUT"}]</a>
@@ -161,7 +161,7 @@
             [{/if}]
         [{/oxhasrights}]
     [{else}]
-        [{block name="cnc_layout_page_header_icon_menu_minibasket_alert_empty"}]
+        [{block name="dd_layout_page_header_icon_menu_minibasket_alert_empty"}]
             <div class="alert alert-info">[{oxmultilang ident="BASKET_EMPTY"}]</div>
         [{/block}]
     [{/if}]

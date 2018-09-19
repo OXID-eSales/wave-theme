@@ -2,12 +2,12 @@
     <div class="btn-group languages-menu">
         <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
             [{assign var="sLangImg" value="lang/"|cat:$oViewConf->getActLanguageAbbr()|cat:".png"}]
-            [{block name="cnc_layout_page_header_icon_menu_languages_button"}]
+            [{block name="dd_layout_page_header_icon_menu_languages_button"}]
                 <img src="[{$oViewConf->getImageUrl($sLangImg)}]" alt=""/> <i class="fa fa-angle-down"></i>
             [{/block}]
         </button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
-            [{block name="cnc_layout_page_header_icon_menu_languages_list"}]
+            [{block name="dd_layout_page_header_icon_menu_languages_list"}]
                 [{foreach from=$oxcmp_lang item=_lng}]
                     [{assign var="sLangImg" value="lang/"|cat:$_lng->abbr|cat:".png"}]
                     [{if $_lng->selected}]

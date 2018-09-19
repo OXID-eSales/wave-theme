@@ -1,10 +1,10 @@
-[{block name="cnc_widget_sidebar_news"}]
+[{block name="dd_widget_sidebar_news"}]
     <div id="newsBox" class="box card">
         <section>
             <div class="page-header h3">[{oxmultilang ident="NEWS"}]</div>
-            [{block name="cnc_widget_sidebar_news_inner"}]
+            [{block name="dd_widget_sidebar_news_inner"}]
                 <ul class="content">
-                    [{block name="cnc_widget_sidebar_news_list"}]
+                    [{block name="dd_widget_sidebar_news_list"}]
                         [{foreach from=$oNews item="_oNewsItem" name="_sNewsList"}]
                             <li>
                                 [{$_oNewsItem->getLongDesc()|strip_tags|oxtruncate:100}]<br>
