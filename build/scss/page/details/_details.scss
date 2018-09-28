@@ -105,3 +105,25 @@
     padding-right: 15px;
   }
 }
+
+.price-wrapper {
+  clear: both;
+  overflow: hidden;
+}
+
+
+.tobasket {
+  #paypalExpressCheckoutDetailsBox {
+    &.paypalExpressCheckoutBox {
+      width: 210px;
+      float: right!important;
+      clear: both;
+      margin: 0 !important;
+      padding: 0 !important;
+
+      .paypalHelpIcon {
+        left: -30px;
+      }
+    }
+  }
+}
