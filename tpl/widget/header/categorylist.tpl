@@ -8,7 +8,7 @@
         [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
 
         <nav id="mainnav" class="navbar navbar-expand-lg navbar-light[{if $blFullwidth}] fullviewlayout[{/if}]" role="navigation">
-            <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
+            <div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
 
                 [{block name="dd_widget_header_categorylist_navbar"}]
                     [{block name="dd_widget_header_categorylist_navbar_header"}]
@@ -16,7 +16,7 @@
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <span class="visible-xs-inline d-lg-none">[{oxmultilang ident="CNC_ROLES_BEMAIN_UIROOTHEADER"}]</span>
+                            <span class="d-lg-none">[{oxmultilang ident="CNC_ROLES_BEMAIN_UIROOTHEADER"}]</span>
                         </div>
                     [{/block}]
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -89,7 +89,6 @@
 
                     </div>
                 [{/block}]
-
             </div>
         </nav>
     [{/if}]

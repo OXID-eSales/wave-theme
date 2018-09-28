@@ -164,7 +164,18 @@ module.exports = function (grunt) {
                         dest: '<%= project.out %><%= project.theme %>/src/fonts/'
                     }
                 ]
-            }
+            },
+            vendor: {
+                files: {
+                    "<%= project.out %><%= project.theme %>/src/js/libs/jquery.min.js":                "build/vendor/jquery/js/jquery.js",
+                    "<%= project.out %><%= project.theme %>/src/js/libs/jquery.cookie.min.js":         "build/vendor/jquery-cookie/js/jquery.cookie.js",
+                    "<%= project.out %><%= project.theme %>/src/js/libs/jquery.flexslider.min.js":     "build/vendor/jquery-flexslider2/js/jquery.flexslider.js",
+                    "<%= project.out %><%= project.theme %>/src/js/libs/jquery-ui.min.js":             "build/vendor/jquery-ui/js/jquery-ui.js",
+                    "<%= project.out %><%= project.theme %>/src/js/libs/jqBootstrapValidation.min.js": "build/vendor/jquery-bootstrap-validation/js/jqBootstrapValidation.js",
+                    "<%= project.out %><%= project.theme %>/src/js/libs/photoswipe.min.js":            "build/vendor/photoswipe/js/photoswipe.js",
+                    "<%= project.out %><%= project.theme %>/src/js/libs/photoswipe-ui-default.min.js": "build/vendor/photoswipe/js/photoswipe-ui-default.js"
+                }
+            },
         }
     });
 

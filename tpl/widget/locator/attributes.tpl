@@ -1,7 +1,7 @@
 [{block name="widget_locator_attributes"}]
     [{if $attributes}]
         <div class="row filter-attributes">
-            <div class="col-xs-12">
+            <div class="col-12 text-left">
                 <form method="get" action="[{$oViewConf->getSelfActionLink()}]" name="_filterlist" id="filterList" class="filter-form">
                     <div class="hidden">
                         [{$oViewConf->getHiddenSid()}]
