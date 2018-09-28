@@ -1,6 +1,3 @@
-[{oxscript include="js/widgets/oxequalizer.min.js" priority=10}]
-[{oxscript add="$(window).on('load', function(){ if( !isMobileDevice() ) { oxEqualizer.equalHeight( $( '#content .subcatList .row .card-body' ) ); } });"}]
-
 [{assign var="actCategory" value=$oView->getActiveCategory()}]
 
 [{capture append="oxidBlock_sidebar"}]
@@ -76,36 +73,38 @@
                             [{assign var="iSubCategoriesCount" value=$iSubCategoriesCount+1}]
                             [{assign var="iconUrl" value=$category->getIconUrl()}]
                             <div class="col-12 col-sm-3">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <a id="moreSubCat_[{$smarty.foreach.MoreSubCat.iteration}]" href="[{$category->getLink()}]">[{$category->oxcategories__oxtitle->value}]</a>[{if $oView->showCategoryArticlesCount() && ($category->getNrOfArticles() > 0)}] ([{$category->getNrOfArticles()}])[{/if}]
-                                    </div>
-                                    <div class="card-body">
-                                        [{if $iconUrl}]
-                                            <a href="[{$category->getLink()}]">
-                                                <img src="[{$oViewConf->getImageUrl('spinner.gif')}]" data-src="[{$category->getIconUrl()}]" alt="[{$category->oxcategories__oxtitle->value}]" class="img-fluid subcat-icon">
-                                            </a>
-                                        [{else}]
-                                            <a href="[{$category->getLink()}]" class="btn btn-block btn-info">[{oxmultilang ident="CNC_LIST_SHOW_MORE"}]</a>
-                                        [{/if}]
+                                <div class="card-wrapper">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a id="moreSubCat_[{$smarty.foreach.MoreSubCat.iteration}]" href="[{$category->getLink()}]">[{$category->oxcategories__oxtitle->value}]</a>[{if $oView->showCategoryArticlesCount() && ($category->getNrOfArticles() > 0)}] ([{$category->getNrOfArticles()}])[{/if}]
+                                        </div>
+                                        <div class="card-body">
+                                            [{if $iconUrl}]
+                                                <a href="[{$category->getLink()}]">
+                                                    <img src="[{$oViewConf->getImageUrl('spinner.gif')}]" data-src="[{$category->getIconUrl()}]" alt="[{$category->oxcategories__oxtitle->value}]" class="img-fluid subcat-icon">
+                                                </a>
+                                            [{else}]
+                                                <a href="[{$category->getLink()}]" class="btn btn-block btn-info">[{oxmultilang ident="CNC_LIST_SHOW_MORE"}]</a>
+                                            [{/if}]
 
-                                        [{if $category->getHasVisibleSubCats()}]
-                                            <hr/>
-                                            <ul class="list-unstyled">
-                                                [{foreach from=$category->getSubCats() item=subcategory}]
-                                                    [{if $subcategory->getIsVisible()}]
-                                                        [{foreach from=$subcategory->getContentCats() item=ocont name=MoreCms}]
+                                            [{if $category->getHasVisibleSubCats()}]
+                                                <hr/>
+                                                <ul class="list-unstyled">
+                                                    [{foreach from=$category->getSubCats() item=subcategory}]
+                                                        [{if $subcategory->getIsVisible()}]
+                                                            [{foreach from=$subcategory->getContentCats() item=ocont name=MoreCms}]
+                                                                <li>
+                                                                    <a href="[{$ocont->getLink()}]"><strong>[{$ocont->oxcontents__oxtitle->value}]</strong></a>
+                                                                </li>
+                                                            [{/foreach}]
                                                             <li>
-                                                                <a href="[{$ocont->getLink()}]"><strong>[{$ocont->oxcontents__oxtitle->value}]</strong></a>
+                                                                <a href="[{$subcategory->getLink()}]">[{$subcategory->oxcategories__oxtitle->value}]</a>[{if $oView->showCategoryArticlesCount() && ($subcategory->getNrOfArticles() > 0)}]&nbsp;([{$subcategory->getNrOfArticles()}])[{/if}]
                                                             </li>
-                                                        [{/foreach}]
-                                                        <li>
-                                                            <a href="[{$subcategory->getLink()}]">[{$subcategory->oxcategories__oxtitle->value}]</a>[{if $oView->showCategoryArticlesCount() && ($subcategory->getNrOfArticles() > 0)}]&nbsp;([{$subcategory->getNrOfArticles()}])[{/if}]
-                                                        </li>
-                                                    [{/if}]
-                                                [{/foreach}]
-                                            </ul>
-                                        [{/if}]
+                                                        [{/if}]
+                                                    [{/foreach}]
+                                                </ul>
+                                            [{/if}]
+                                        </div>
                                     </div>
                                 </div>
                             </div>
