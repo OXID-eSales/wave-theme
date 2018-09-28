@@ -133,7 +133,7 @@
     &-header {
       padding: 15px;
 
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         display: none;
       }
     }
@@ -204,7 +204,6 @@
           }
 
           &-item {
-            border-bottom: 1px solid $ox-listfilter-border;
             padding-left: 0;
             padding-right: 0;
 
@@ -281,7 +280,7 @@
       padding: 0;
       flex-wrap: wrap;
 
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         flex-wrap: nowrap;
       }
     }
@@ -296,7 +295,7 @@
     display: block;
     width: 100%;
 
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
       padding: 10px 0.5rem;
       border-bottom: 0;
       display: inline-block;
