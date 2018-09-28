@@ -173,7 +173,7 @@
     [{/block}]
 
     [{if $oView->isRootCatChanged()}]
-        <div id="scRootCatChanged" class="popupBox corners FXgradGreyLight glowShadow">
+        <div id="scRootCatChanged" class="popupBox corners FXgradGreyLight glowShadow" style="display: none;">
             [{include file="form/privatesales/basketexcl.tpl"}]
         </div>
     [{/if}]

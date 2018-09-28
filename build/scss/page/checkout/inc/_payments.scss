@@ -1,3 +1,21 @@
 .payment-option {
   display: none;
 }
+
+.popupBox {
+  display: none;
+  position: absolute;
+  padding: 5px;
+  background: #fff;
+  left: 0;
+  text-align: left;
+  z-index: 100;
+}
+.paypalExpressCheckoutBox {
+  text-align: right;
+  margin-bottom: 10px;
+  .popupBox {
+    left: auto;
+    right: 0;
+  }
+}
