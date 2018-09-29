@@ -27,42 +27,42 @@
                 <div class="card bg-light cart-buttons">
                     <div class="card-body">
                         <div class="row">
-                        <div class="col-12 col-md-6">
-                    [{block name="checkout_basket_backtoshop_top"}]
-                        [{if $oView->showBackToShop()}]
-                            <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="float-left">
-                                <div class="hidden">
-                                    [{$oViewConf->getHiddenSid()}]
-                                    <input type="hidden" name="cl" value="basket">
-                                    <input type="hidden" name="fnc" value="backtoshop">
-                                </div>
-                                <button type="submit" class="btn btn-outline-dark submitButton largeButton float-left">
+                            <div class="col-12 col-md-6">
+                        [{block name="checkout_basket_backtoshop_top"}]
+                            [{if $oView->showBackToShop()}]
+                                <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="float-left">
+                                    <div class="hidden">
+                                        [{$oViewConf->getHiddenSid()}]
+                                        <input type="hidden" name="cl" value="basket">
+                                        <input type="hidden" name="fnc" value="backtoshop">
+                                    </div>
+                                    <button type="submit" class="btn btn-outline-dark submitButton largeButton float-left">
+                                        <i class="fa fa-caret-left"></i> [{oxmultilang ident="CONTINUE_SHOPPING"}]
+                                    </button>
+                                </form>
+                            [{else}]
+                                <a href="[{$oViewConf->getHomeLink()}]" class="btn btn-outline-dark submitButton largeButton float-left">
                                     <i class="fa fa-caret-left"></i> [{oxmultilang ident="CONTINUE_SHOPPING"}]
-                                </button>
-                            </form>
-                        [{else}]
-                            <a href="[{$oViewConf->getHomeLink()}]" class="btn btn-outline-dark submitButton largeButton float-left">
-                                <i class="fa fa-caret-left"></i> [{oxmultilang ident="CONTINUE_SHOPPING"}]
-                            </a>
-                        [{/if}]
-                    [{/block}]
-                        </div>
-                        <div class="col-12 col-md-6 text-right">
-                    [{if !$oView->isLowOrderPrice()}]
-                        [{block name="basket_btn_next_top"}]
-                            <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="pull-right">
-                                <div class="hidden">
-                                    [{$oViewConf->getHiddenSid()}]
-                                    <input type="hidden" name="cl" value="user">
-                                </div>
-                                <button type="submit" class="btn btn-primary submitButton largeButton nextStep pull-right">
-                                    [{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}] <i class="fa fa-caret-right"></i>
-                                </button>
-                            </form>
+                                </a>
+                            [{/if}]
                         [{/block}]
-                    [{/if}]
+                            </div>
+                            <div class="col-12 col-md-6 text-right">
+                        [{if !$oView->isLowOrderPrice()}]
+                            [{block name="basket_btn_next_top"}]
+                                <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="float-right">
+                                    <div class="hidden">
+                                        [{$oViewConf->getHiddenSid()}]
+                                        <input type="hidden" name="cl" value="user">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary submitButton largeButton nextStep float-right">
+                                        [{oxmultilang ident="CONTINUE_TO_NEXT_STEP"}] <i class="fa fa-caret-right"></i>
+                                    </button>
+                                </form>
+                            [{/block}]
+                        [{/if}]
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             [{/block}]
@@ -100,7 +100,7 @@
                             <div class="col-12 col-md-6 text-right">
                     [{if !$oView->isLowOrderPrice()}]
                         [{block name="basket_btn_next_bottom"}]
-                            <form action="[{$oViewConf->getSslSelfLink()}]" method="post">
+                            <form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="float-right">
                                 <div class="hidden">
                                     [{$oViewConf->getHiddenSid()}]
                                     <input type="hidden" name="cl" value="user">
