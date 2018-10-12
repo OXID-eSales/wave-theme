@@ -32,7 +32,7 @@
     }
 [{/capture}]
 
-[{include file="email/html/header.tpl" title="CNC_ORDER_CUST_HEADING"|oxmultilangassign|cat:" #"|cat:$order->oxorder__oxordernr->value style=$style}]
+[{include file="email/html/header.tpl" title="PAGE_TITLE_ORDER"|oxmultilangassign|cat:" #"|cat:$order->oxorder__oxordernr->value style=$style}]
 
 [{block name="email_html_order_owner_orderemail"}]
     <p>

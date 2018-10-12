@@ -18,7 +18,7 @@
             [{block name="checkout_basket_emptyshippingcart"}]
                 <div class="spacer"></div>
                 <div class="alert alert-danger" id="empty-basket-warning">
-                    <a href="[{$oViewConf->getHomeLink()}]" title="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" class="btn btn-outline-dark"><i class="fa fa-caret-left"></i> [{oxmultilang ident="CNC_BASKET_BACK_TO_SHOP"}]</a>
+                    <a href="[{$oViewConf->getHomeLink()}]" title="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" class="btn btn-outline-dark"><i class="fa fa-caret-left"></i> [{oxmultilang ident="DD_BASKET_BACK_TO_SHOP"}]</a>
                     [{oxmultilang ident="BASKET_EMPTY"}]
                 </div>
             [{/block}]

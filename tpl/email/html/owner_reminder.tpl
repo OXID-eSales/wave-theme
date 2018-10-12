@@ -18,7 +18,7 @@
     }
 [{/capture}]
 
-[{include file="email/html/header.tpl" title="CNC_OWNER_REMINDER_HEADING"|oxmultilangassign style=$style}]
+[{include file="email/html/header.tpl" title="STOCK_LOW"|oxmultilangassign style=$style}]
 
 <p>[{oxmultilang ident="MESSAGE_STOCK_LOW"}]</p>
 

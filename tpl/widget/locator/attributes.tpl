@@ -15,7 +15,7 @@
 
                 <div class="list-filter">
                     [{if $oView->getClassName() == 'alist'}]
-                        <strong>[{oxmultilang ident="CNC_LISTLOCATOR_FILTER_ATTRIBUTES"}]</strong>
+                        <strong>[{oxmultilang ident="DD_LISTLOCATOR_FILTER_ATTRIBUTES" suffix="COLON"}]</strong>
                     [{/if}]
                         [{foreach from=$attributes item=oFilterAttr key=sAttrID name=attr}]
                             [{assign var="sActiveValue" value=$oFilterAttr->getActiveValue()}]

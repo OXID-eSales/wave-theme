@@ -16,7 +16,7 @@
             [{/foreach}]
         </ul>
     [{else}]
-        <p class="alert alert-info">[{oxmultilang ident="CNC_LINKS_NO_ENTRIES"}]</p>
+        <p class="alert alert-info">[{oxmultilang ident="DD_LINKS_NO_ENTRIES"}]</p>
     [{/if}]
     [{insert name="oxid_tracker" title=$template_title}]
 [{/capture}]

@@ -30,7 +30,7 @@
                 </dl>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">[{oxmultilang ident="CNC_CLOSE_MODAL"}]</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">[{oxmultilang ident="CLOSE"}]</button>
             </div>
         </div>
     </div>

@@ -21,7 +21,7 @@
     }
 [{/capture}]
 
-[{include file="email/html/header.tpl" title="CNC_ORDERSHIPPED_HEADING"|oxmultilangassign|cat:" #"|cat:$order->oxorder__oxordernr->value style=$style}]
+[{include file="email/html/header.tpl" title="DD_ORDERSHIPPED_HEADING"|oxmultilangassign|cat:" #"|cat:$order->oxorder__oxordernr->value style=$style}]
 
     [{block name="email_html_ordershipped_sendemail"}]
        [{oxcontent ident="oxordersendemail"}]

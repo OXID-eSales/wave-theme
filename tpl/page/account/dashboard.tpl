@@ -5,7 +5,7 @@
             "[{$oxcmp_user->oxuser__oxusername->value}]"</h1>
 
         [{if $oView->getAccountDeletionStatus() === false}]
-            [{assign var="statusMessage" value="CNC_DELETE_MY_ACCOUNT_ERROR"|oxmultilangassign}]
+            [{assign var="statusMessage" value="DD_DELETE_MY_ACCOUNT_ERROR"|oxmultilangassign}]
             [{include file="message/error.tpl" statusMessage=$statusMessage}]
         [{/if}]
 
@@ -131,7 +131,7 @@
                         data-target="#delete_my_account_confirmation"
                 >
                     <i class="fa fa-trash"></i>
-                    [{oxmultilang ident="CNC_DELETE_MY_ACCOUNT"}]
+                    [{oxmultilang ident="DD_DELETE_MY_ACCOUNT"}]
                 </button>
                 [{include file="page/account/delete_my_account_confirmation.tpl"}]
                 [{/if}]

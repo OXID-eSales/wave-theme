@@ -36,7 +36,7 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
                                         <button class="btn btn-danger btn-sm hasTooltip float-right dd-action dd-delete-shipping-address edit-button"
-                                                title="[{oxmultilang ident="CNC_DELETE"}]"
+                                                title="[{oxmultilang ident="DD_DELETE"}]"
                                                 data-toggle="modal"
                                                 data-target="#delete_shipping_address_[{$smarty.foreach.shippingAdresses.iteration}]">
                                             <i class="fa fa-trash"></i>
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="card-footer" >
                                     <label class="btn btn-outline-dark btn-block[{if $address->isSelected()}] active[{/if}]">
-                                        <input type="radio" name="oxaddressid" value="[{$address->oxaddress__oxid->value}]" class="hidden" autocomplete="off" [{if $address->isSelected()}]checked[{/if}]><i class="fa fa-check"></i> [{oxmultilang ident="CNC_USER_SHIPPING_SELECT_ADDRESS"}]
+                                        <input type="radio" name="oxaddressid" value="[{$address->oxaddress__oxid->value}]" class="hidden" autocomplete="off" [{if $address->isSelected()}]checked[{/if}]><i class="fa fa-check"></i> [{oxmultilang ident="DD_USER_SHIPPING_SELECT_ADDRESS"}]
                                     </label>
                                 </div>
                             </div>
@@ -57,11 +57,11 @@
                         <div class="card dd-add-delivery-address">
                             <div class="card-body text-center">
                                 <i class="fa fa-plus-circle"></i><br/>
-                                [{oxmultilang ident="CNC_USER_SHIPPING_ADD_DELIVERY_ADDRESS"}]
+                                [{oxmultilang ident="DD_USER_SHIPPING_ADD_DELIVERY_ADDRESS"}]
                             </div>
                             <div class="card-footer" >
                                 <label class="btn btn-outline-dark btn-block">
-                                    <input type="radio" name="oxaddressid" value="-1" class="hidden" autocomplete="off"><i class="fa fa-check"></i> [{oxmultilang ident="CNC_USER_SHIPPING_SELECT_ADDRESS"}]
+                                    <input type="radio" name="oxaddressid" value="-1" class="hidden" autocomplete="off"><i class="fa fa-check"></i> [{oxmultilang ident="DD_USER_SHIPPING_SELECT_ADDRESS"}]
                                 </label>
                             </div>
                         </div>
@@ -184,7 +184,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-lg-3" for="[{$countrySelectId}]">[{oxmultilang ident="CNC_USER_SHIPPING_LABEL_STATE"}]</label>
+            <label class="control-label col-lg-3" for="[{$countrySelectId}]">[{oxmultilang ident="DD_USER_LABEL_STATE" suffix="COLON"}]</label>
             <div class="col-lg-9">
                 [{include file="form/fieldset/state.tpl"
                     countrySelectId="delCountrySelect"

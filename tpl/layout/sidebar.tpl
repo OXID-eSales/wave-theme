@@ -11,7 +11,7 @@
                         <div class="pull-right visible-xs visible-sm">
                             <i class="fa fa-caret-down toggleTree"></i>
                         </div>
-                        [{oxmultilang ident="CNC_SIDEBAR_CATEGORYTREE"}]
+                        [{oxmultilang ident="CATEGORIES"}]
                     </div>
                     [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() deepLevel=0 noscript=1 nocookie=1}]
                 </section>
