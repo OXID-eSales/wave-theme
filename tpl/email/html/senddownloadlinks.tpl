@@ -3,7 +3,7 @@
 [{assign var="sOrderId"       value=$order->getId()}]
 [{assign var="oOrderFileList" value=$oEmailView->getOrderFileList($sOrderId)}]
 
-[{include file="email/html/header.tpl" title="CNC_DOWNLOADLINKS_HEADING"|oxmultilangassign|cat:" #"|cat:$order->oxorder__oxordernr->value}]
+[{include file="email/html/header.tpl" title="DD_DOWNLOADLINKS_HEADING"|oxmultilangassign|cat:" #"|cat:$order->oxorder__oxordernr->value}]
 
 [{block name="email_html_senddownloadlinks_infoheader"}]
     [{oxmultilang ident="EMAIL_SENDDOWNLOADS_GREETING"}] [{$order->oxorder__oxbillsal->value|oxmultilangsal}] [{$order->oxorder__oxbillfname->value}] [{$order->oxorder__oxbilllname->value}],<br>

@@ -29,8 +29,8 @@
                                                 <table class="table table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>[{oxmultilang ident="CNC_MINIBASKET_MODAL_TABLE_TITLE"}]</th>
-                                                            <th class="text-right">[{oxmultilang ident="CNC_MINIBASKET_MODAL_TABLE_PRICE"}]</th>
+                                                            <th>[{oxmultilang ident="PRODUCT"}]</th>
+                                                            <th class="text-right">[{oxmultilang ident="DD_MINIBASKET_MODAL_TABLE_PRICE"}]</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -82,7 +82,7 @@
                             [{/block}]
                             [{block name="widget_minibasket_modal_footer"}]
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">[{oxmultilang ident="CNC_MINIBASKET_CONTINUE_SHOPPING"}]</button>
+                                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">[{oxmultilang ident="DD_MINIBASKET_CONTINUE_SHOPPING"}]</button>
                                 <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=basket"}]" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="[{oxmultilang ident="DISPLAY_BASKET"}]">
                                     <i class="fa fa-shopping-cart"></i>
                                 </a>

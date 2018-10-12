@@ -11,7 +11,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     [{block name="account_delete_my_account_confirmation_header_message"}]
-                        <span class="h4 modal-title">[{oxmultilang ident="CNC_DELETE_MY_ACCOUNT_CONFIRMATION_QUESTION"}]</span>
+                        <span class="h4 modal-title">[{oxmultilang ident="DD_DELETE_MY_ACCOUNT_CONFIRMATION_QUESTION"}]</span>
                     [{/block}]
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
@@ -20,7 +20,7 @@
                         <div class="col-md-12">
                             [{block name="account_delete_my_account_confirmation_warning_message"}]
                                 <div class="alert alert-danger">
-                                    [{oxmultilang ident="CNC_DELETE_MY_ACCOUNT_WARNING"}]
+                                    [{oxmultilang ident="DD_DELETE_MY_ACCOUNT_WARNING"}]
                                 </div>
                             [{/block}]
                             [{block name="account_delete_my_account_confirmation_form"}]
@@ -33,10 +33,10 @@
                                     </div>
                                     [{block name="account_delete_my_account_confirmation_form_button_set"}]
                                         <button type="submit" class="btn btn-danger">
-                                            [{oxmultilang ident="CNC_DELETE_MY_ACCOUNT"}]
+                                            [{oxmultilang ident="DD_DELETE_MY_ACCOUNT"}]
                                         </button>
                                         <button type="button" class="btn btn-outline-dark" data-dismiss="modal">
-                                            [{oxmultilang ident="CNC_DELETE_MY_ACCOUNT_CANCEL"}]
+                                            [{oxmultilang ident="DD_DELETE_MY_ACCOUNT_CANCEL"}]
                                         </button>
                                     [{/block}]
                                 </form>

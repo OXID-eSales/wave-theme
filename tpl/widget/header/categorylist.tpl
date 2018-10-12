@@ -16,7 +16,7 @@
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <span class="d-lg-none">[{oxmultilang ident="CNC_ROLES_BEMAIN_UIROOTHEADER"}]</span>
+                            <span class="d-lg-none">[{oxmultilang ident="DD_ROLES_BEMAIN_UIROOTHEADER"}]</span>
                         </div>
                     [{/block}]
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -81,7 +81,7 @@
                         [{if $oView->isDemoShop()}]
 
                             <a href="[{$oViewConf->getBaseDir()}]admin/" class="btn btn-sm btn-danger navbar-btn navbar-right visible-lg">
-                                [{oxmultilang ident="CNC_DEMO_ADMIN_TOOL"}]
+                                [{oxmultilang ident="DD_DEMO_ADMIN_TOOL"}]
                                 <i class="fa fa-external-link" style="font-size: 80%;"></i>
                             </a>
 

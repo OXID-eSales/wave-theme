@@ -2,7 +2,7 @@
 [{assign var="oViewConf" value=$oEmailView->getViewConfig()}]
 [{assign var="userInfo"  value=$oEmailView->getUser()}]
 
-[{include file="email/html/header.tpl" title="CNC_WISHLIST_HEADING"|oxmultilangassign}]
+[{include file="email/html/header.tpl" title="DD_WISHLIST_HEADING"|oxmultilangassign}]
 
 <p>[{$userInfo->send_message|oxescape}]</p>
 <br/>
