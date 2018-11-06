@@ -1,5 +1,7 @@
 [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
+[{oxscript add="$('.ox-write-review').on('click', function () { $('html,body').animate({scrollTop: $('#review').offset().top*0.75}, 1000) })"}]
+
 <div id="review">
     <div class="panel-group" id="review_form_accordion">
         <div class="card">
