@@ -208,13 +208,14 @@
     [{block name="theme_svg_icons"}][{/block}]
 
 
-    [{foreach from=$oxidBlock_pageBody item="_block"}]
-        [{$_block}]
-    [{/foreach}]
+    <div class="[{if $blFullwidth}]fullwidth-container[{else}]container[{/if}]">
+        <div class="main-row">
+            [{foreach from=$oxidBlock_pageBody item="_block"}]
+            [{$_block}]
+            [{/foreach}]
+        </div>
+    </div>
 
-    [{foreach from=$oxidBlock_pagePopup item="_block"}]
-        [{$_block}]
-    [{/foreach}]
 
     [{if $oViewConf->getTopActiveClassName() == 'details' && $oView->showZoomPics()}]
         [{include file="page/details/inc/photoswipe.tpl"}]
