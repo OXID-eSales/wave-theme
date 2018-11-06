@@ -193,7 +193,7 @@
                             [{assign var=tprice value=$oDetailsProduct->getTPrice()}]
                             [{assign var=price  value=$oDetailsProduct->getPrice()}]
                             [{if $tprice && $tprice->getBruttoPrice() > $price->getBruttoPrice()}]
-                                <del class="price-old">[{$oDetailsProduct->getFTPrice()}] [{$currency->sign}]</del>
+                                <del class="price-old">[{$oDetailsProduct->getFTPrice()}] [{$currency->sign}]</del> <br />
                             [{/if}]
                         [{/oxhasrights}]
                     [{/block}]
