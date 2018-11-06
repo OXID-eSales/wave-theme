@@ -1,6 +1,6 @@
 [{block name="checkout_user_options"}]
     [{oxscript include="js/widgets/oxequalizer.min.js" priority=10}]
-    [{oxscript add="$(window).on('load', function(){ if( !isMobileDevice() ) { oxEqualizer.equalHeight( $( '.checkoutOptions .panel .card-body' ) ); } });"}]
+    [{oxscript add="$(window).on('load', function(){ if( !isMobileDevice() ) { oxEqualizer.equalHeight( $( '.checkoutOptions .card-body' ) ); } });"}]
 
     [{assign var="sColClass" value="col-lg-6"}]
     [{if $oView->getShowNoRegOption()}]
@@ -11,7 +11,8 @@
 		<div class="card-deck">
 			[{block name="checkout_options_noreg"}]
 				[{if $oView->getShowNoRegOption()}]
-						<form action="[{$oViewConf->getSslSelfLink()}]" method="post"  class="card" id="optionNoRegistration">
+					<div class="card">
+						<form action="[{$oViewConf->getSslSelfLink()}]" method="post" id="optionNoRegistration">
 							<div class="card-header">
 								<h3 class="card-title">[{oxmultilang ident="PURCHASE_WITHOUT_REGISTRATION"}]</h3>
 							</div>
@@ -34,11 +35,13 @@
 								<button class="btn btn-primary submitButton nextStep" type="submit">[{oxmultilang ident="NEXT"}] <i class="fa fa-caret-right"></i></button>
 							</div>
 						</form>
+					</div>
 				[{/if}]
 			[{/block}]
 
 			[{block name="checkout_options_reg"}]
-					<form action="[{$oViewConf->getSslSelfLink()}]" method="post" class="card" id="optionRegistration">
+				<div class="card">
+					<form action="[{$oViewConf->getSslSelfLink()}]" method="post" id="optionRegistration">
 
 						<div class="card-header">
 							<h3 class="card-title">[{oxmultilang ident="OPEN_ACCOUNT"}]</h3>
@@ -62,6 +65,7 @@
 							<button class="btn btn-primary submitButton nextStep" type="submit">[{oxmultilang ident="NEXT"}] <i class="fa fa-caret-right"></i></button>
 						</div>
 					</form>
+				</div>
 			[{/block}]
 
 			[{block name="checkout_options_login"}]
