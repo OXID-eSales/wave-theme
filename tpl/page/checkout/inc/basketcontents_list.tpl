@@ -140,6 +140,11 @@
                                         </small>
                                     </span>
                                 [{/block}]
+                                [{block name="checkout_basketcontents_basketitem_vat"}]
+                                    <div class="article-Vat">
+                                        <small>[{$basketitem->getVatPercent()}]% [{oxmultilang ident="VAT"}]</small>
+                                    </div>
+                                [{/block}]
                             </div>
                         </div>
                     </div>
@@ -157,7 +162,6 @@
                                 </button>
                             </div>
                         [{/if}]
-
                         [{block name="checkout_basketcontents_basketitem_totalprice"}]
                             [{* product quantity * price *}]
                             <div class="totalPrice text-right">
