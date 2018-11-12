@@ -33,8 +33,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     update: true,
-                    style: 'expanded', /* compressed */
-                    sourcemap: 'auto'
+                    style: 'compressed' /* compressed */
                 },
                 files: {
                     '<%= project.out %><%= project.theme %>/src/css/styles.css': [
@@ -43,41 +42,46 @@ module.exports = function (grunt) {
                 }
             }
         },
-
+        cssmin: {
+            options: {
+                mergeIntoShorthands: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    '<%= project.out %><%= project.theme %>/src/css/styles.min.css': ['<%= project.out %><%= project.theme %>/src/css/styles.css']
+                }
+            }
+        },
         concat: {
             js: {
                 options: {
                     separator: ';\n',
-                    sourcemap: true
+                    sourcemap: false
                 },
                 files: {
                     '<%= project.out %><%= project.theme %>/src/js/javascript.js': [
                         '<%= project.dev %>node_modules/jquery/dist/jquery.min.js',
+                        '<%= project.dev %>build/vendor/jquery-ui/js/jquery-ui.js',
                         '<%= project.dev %>node_modules/popper.js/dist/umd/popper.min.js',
                         '<%= project.dev %>node_modules/bootstrap/dist/js/bootstrap.js',
-                        "<%= project.dev %>build/vendor/bootstrap-select/js/bootstrap-select.js",
-                        "<%= project.dev %>build/vendor/jquery-bootstrap-validation/js/jqBootstrapValidation.js",
-                        "<%= project.dev %>build/vendor/jquery-unveil/js/jquery.unveil.js",
-                        '<%= project.dev %>build/js/main.js'
-                    ],
-                    '<%= project.out %><%= project.theme %>/src/js/javascript.async.js': [
-                        '<%= project.dev %>build/js/**/*.js'
-                    ],
-                    "<%= project.out %><%= project.theme %>/src/js/pages/compare.min.js":   "<%= project.dev %>build/js/pages/compare.js",
-                    "<%= project.out %><%= project.theme %>/src/js/pages/details.min.js":   "<%= project.dev %>build/js/pages/details.js",
-                    "<%= project.out %><%= project.theme %>/src/js/pages/review.min.js":    "<%= project.dev %>build/js/pages/review.js",
-                    "<%= project.out %><%= project.theme %>/src/js/pages/start.min.js":     "<%= project.dev %>build/js/pages/start.js",
-
-                    "<%= project.out %><%= project.theme %>/src/js/libs/jquery-ui.min.js":  "<%= project.dev %>build/vendor/jquery-ui/js/jquery-ui.js",
-
+                        '<%= project.dev %>build/vendor/jquery-unveil/js/jquery.unveil.js',
+                        '<%= project.dev %>build/vendor/jquery-flexslider2/js/jquery.flexslider.js',
+                        '<%= project.dev %>build/vendor/bootstrap-select/js/bootstrap-select.js',
+                        '<%= project.dev %>build/vendor/jquery-bootstrap-validation/js/jqBootstrapValidation.js',
+                        '<%= project.dev %>build/js/main.js',
+                        '<%= project.dev %>build/js/pages/compare.js',
+                        '<%= project.dev %>build/js/pages/details.js',
+                        '<%= project.dev %>build/js/pages/review.js',
+                        '<%= project.dev %>build/js/pages/start.js'
+                    ]
                 }
             }
         },
         postcss: {
             options: {
-                map: true,
                 processors: [
-                    require('autoprefixer')({browsers: ['last 2 versions', 'ie 10', 'ie 11']})
+                    require('autoprefixer')({browsers: ['last 2 versions', 'ie 11']})
                 ]
             },
             dist: {
@@ -92,9 +96,6 @@ module.exports = function (grunt) {
                 files: {
                     '<%= project.out %><%= project.theme %>/src/js/script.min.js': [
                         '<%= project.out %><%= project.theme %>/src/js/javascript.js'
-                    ],
-                    '<%= project.out %><%= project.theme %>/src/js/script.async.min.js': [
-                        '<%= project.out %><%= project.theme %>/src/js/javascript.async.js'
                     ]
                 }
             }
@@ -102,10 +103,11 @@ module.exports = function (grunt) {
         combine_mq: {
             new_filename: {
                 options: {
-                    beautify: true
+                    beautify: false,
+                    expand: false
                 },
                 src: '<%= project.out %><%= project.theme %>/src/css/styles.css',
-                dest: '<%= project.out %><%= project.theme %>/src/css/styles.min.css'
+                dest: '<%= project.out %><%= project.theme %>/src/css/styles.css'
             }
         },
         /**
@@ -126,18 +128,18 @@ module.exports = function (grunt) {
                 options:
                     {
                         spawn: false,
-                        livereload: true,
+                        livereload: true
                     }
             },
             sass: {
                 files: [
                     '<%= project.dev %>build/scss/**/*.scss','<%= project.dev %>tpl/**/*.tpl'],
                 tasks:
-                    ['sass', 'postcss', 'combine_mq'],
+                    ['sass', 'postcss', 'combine_mq', 'cssmin', 'clean'],
                 options:
                     {
                         spawn: false,
-                        livereload: true,
+                        livereload: true
                     }
             },
             js: {
@@ -150,7 +152,7 @@ module.exports = function (grunt) {
                 options:
                     {
                         spawn: false,
-                        livereload: true,
+                        livereload: true
                     }
             }
         },
@@ -167,15 +169,11 @@ module.exports = function (grunt) {
             },
             vendor: {
                 files: {
-                    "<%= project.out %><%= project.theme %>/src/js/libs/jquery.min.js":                "build/vendor/jquery/js/jquery.js",
                     "<%= project.out %><%= project.theme %>/src/js/libs/jquery.cookie.min.js":         "build/vendor/jquery-cookie/js/jquery.cookie.js",
-                    "<%= project.out %><%= project.theme %>/src/js/libs/jquery.flexslider.min.js":     "build/vendor/jquery-flexslider2/js/jquery.flexslider.js",
-                    "<%= project.out %><%= project.theme %>/src/js/libs/jquery-ui.min.js":             "build/vendor/jquery-ui/js/jquery-ui.js",
-                    "<%= project.out %><%= project.theme %>/src/js/libs/jqBootstrapValidation.min.js": "build/vendor/jquery-bootstrap-validation/js/jqBootstrapValidation.js",
                     "<%= project.out %><%= project.theme %>/src/js/libs/photoswipe.min.js":            "build/vendor/photoswipe/js/photoswipe.js",
                     "<%= project.out %><%= project.theme %>/src/js/libs/photoswipe-ui-default.min.js": "build/vendor/photoswipe/js/photoswipe-ui-default.js"
                 }
-            },
+            }
         }
     });
 
@@ -194,6 +192,7 @@ module.exports = function (grunt) {
         'sass',
         'postcss',
         'combine_mq',
+        'cssmin',
         'concat:js',
         'uglify',
         'clean',

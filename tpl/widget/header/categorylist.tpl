@@ -12,13 +12,13 @@
             [{block name="dd_widget_header_categorylist_navbar"}]
                 [{block name="dd_widget_header_categorylist_navbar_header"}]
                     <div class="navbar-header justify-content-start">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-main-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <span class="d-lg-none">[{oxmultilang ident="DD_ROLES_BEMAIN_UIROOTHEADER"}]</span>
                     </div>
                 [{/block}]
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="collapse navbar-collapse navbar-main-collapse" id="navbarSupportedContent">
                     <ul id="navigation" class="navbar-nav nav">
                         [{block name="dd_widget_header_categorylist_navbar_list"}]
                             <li class="nav-item[{if $homeSelected == 'true'}] active[{/if}]">

@@ -1,11 +1,16 @@
-// NEW PROJEXT
+// Wave Theme
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,600,700');
+
 @import 'variables';
+
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import '../vendor/fontawesome-free-webfonts/scss/fontawesome';
 @import '../vendor/fontawesome-free-webfonts/scss/fa-solid';
 @import '../vendor/fontawesome-free-webfonts/scss/fa-regular';
 @import '../vendor/fontawesome-free-webfonts/scss/fa-brands';
 @import "../vendor/photoswipe/scss/photoswipe";
+
+@import 'vendor/flexslider';
 
 @import 'layout/base';
 @import 'layout/header';
