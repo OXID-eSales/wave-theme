@@ -1,6 +1,6 @@
 [{if $oView->isLanguageLoaded()}]
     <div class="btn-group languages-menu">
-        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+        <button type="button" aria-label="Language" class="btn dropdown-toggle" data-toggle="dropdown">
             [{assign var="sLangImg" value="lang/"|cat:$oViewConf->getActLanguageAbbr()|cat:".png"}]
             [{block name="dd_layout_page_header_icon_menu_languages_button"}]
                 <img src="[{$oViewConf->getImageUrl($sLangImg)}]" alt=""/> <i class="fa fa-angle-down"></i>

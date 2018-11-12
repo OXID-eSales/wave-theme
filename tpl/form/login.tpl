@@ -19,13 +19,13 @@
             [{assign var="aErrors" value=$oView->getFieldValidationErrors()}]
             <div class="form-group [{if $aErrors}]oxInValid[{/if}]">
                 <label for="lgn_usr">[{oxmultilang ident="EMAIL_ADDRESS"}]</label>
-                <input type="text" id="lgn_usr" name="lgn_usr" class="form-control textbox js-oxValidate js-oxValidate_notEmpty" placeholder="[{oxmultilang ident="EMAIL_ADDRESS"}]" required="required">
+                <input type="text" id="lgn_usr" name="lgn_usr" autocomplete="email" class="form-control textbox js-oxValidate js-oxValidate_notEmpty" placeholder="[{oxmultilang ident="EMAIL_ADDRESS"}]" required="required">
                 <div class="help-block"></div>
             </div>
             <div class="form-group [{if $aErrors}]oxInValid[{/if}]">
                 <label for="lgn_pwd">[{oxmultilang ident="PASSWORD"}]</label>
                 <div class="input-group">
-                    <input type="password" id="lgn_pwd" name="lgn_pwd" class="form-control js-oxValidate js-oxValidate_notEmpty textbox stepsPasswordbox" placeholder="[{oxmultilang ident="PASSWORD"}]" required="required">
+                    <input type="password" id="lgn_pwd" name="lgn_pwd" autocomplete="current-password" class="form-control js-oxValidate js-oxValidate_notEmpty textbox stepsPasswordbox" placeholder="[{oxmultilang ident="PASSWORD"}]" required="required">
                     <div class="input-group-append">
                         <a class="btn btn-outline-dark forgotPasswordOpener" id="step2PswdOpener" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=forgotpwd"}]" title="[{oxmultilang ident="FORGOT_PASSWORD"}]">?</a>
                     </div>

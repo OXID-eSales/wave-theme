@@ -1,7 +1,7 @@
 [{if $oView->loadCurrency()}]
     [{assign var="currency" value=$oView->getActCurrency()}]
     <div class="btn-group currencies-menu">
-        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+        <button type="button" aria-label="Currencys" class="btn dropdown-toggle" data-toggle="dropdown">
             [{block name="dd_layout_page_header_icon_menu_currencies_button"}]
                 [{$currency->name}] <i class="fa fa-angle-down"></i>
             [{/block}]

@@ -2,7 +2,7 @@
 [{capture append="oxidBlock_pageHead"}]
     [{strip}]
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" id="Viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <meta name="viewport" id="Viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=[{$oView->getCharSet()}]">
 
         [{assign var=sPageTitle value=$oView->getPageTitle()}]
@@ -97,6 +97,7 @@
                 [{assign var="sFaviconMSTileColor" value=$oViewConf->getViewThemeParam('sFaviconMSTileColor')}]
                 [{if $sFaviconMSTileColor}]
                     <meta name="msapplication-TileColor" content="[{$sFaviconMSTileColor}]"> <!-- Kachel-Farbe -->
+                    <meta name="theme-color" content="[{$sFaviconMSTileColor}]"/>
                 [{/if}]
                 <meta name="msapplication-TileImage" content="[{$oViewConf->getImageUrl("favicons/`$sFavicon512File`")}]">
 
@@ -137,7 +138,6 @@
         [{/block}]
 
         [{block name="base_fonts"}]
-            <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,700,600' rel='stylesheet' type='text/css'>
         [{/block}]
 
         [{assign var='rsslinks' value=$oView->getRssLinks()}]
@@ -196,13 +196,16 @@
         [{/foreach}]
         [{oxstyle}]
 
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        [{if $sStyle}]
+            <style>
+                body {
+                    [{$sStyle}]
+                }
+            </style>
+        [{/if}]
     </head>
-    <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]"[{if $sStyle}] style="[{$sStyle}]"[{/if}]>
+
+    <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]">
 
     [{* Theme SVG icons block *}]
     [{block name="theme_svg_icons"}][{/block}]
@@ -223,10 +226,7 @@
 
     [{block name="base_js"}]
         [{include file="i18n/js_vars.tpl"}]
-
-        [{oxscript include="js/javascript.js" priority=1}]
-        [{oxscript include="js/libs/jquery-ui.min.js" priority=1}]
-
+        [{oxscript include="js/script.min.js" priority=1}]
     [{/block}]
 
     [{if $oViewConf->isTplBlocksDebugMode()}]
@@ -243,6 +243,5 @@
     [{foreach from=$oxidBlock_pageScript item="_block"}]
         [{$_block}]
     [{/foreach}]
-
     </body>
 </html>

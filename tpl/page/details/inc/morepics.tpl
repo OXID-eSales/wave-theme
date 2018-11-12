@@ -3,8 +3,6 @@
 [{if $oView->morePics()}]
     [{assign var="iMorePics" value=$oView->getIcons()|@count}]
     [{if $iMorePics > 4}]
-        [{oxscript include="js/libs/jquery.flexslider.min.js" priority=2}]
-        [{oxstyle include="css/libs/jquery.flexslider.min.css"}]
     [{/if}]
 
     <div class="details-picture-more[{if $iMorePics > 4}] flexslider[{/if}]" id="morePicsContainer">

@@ -29,7 +29,7 @@
                 <h2 class="h2">
                     [{$head}]
                     [{if $rsslink}]
-                        <a class="rss" id="[{$rssId}]" href="[{$rsslink.link}]" target="_blank">
+                        <a class="rss" id="[{$rssId}]" aria-label="RSS" href="[{$rsslink.link}]" target="_blank">
                             <i class="fas fa-rss"></i>
                         </a>
                     [{/if}]

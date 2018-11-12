@@ -1,4 +1,4 @@
-[{oxscript include="js/pages/details.min.js" priority=10}]
+[{*oxscript include="js/pages/details.min.js" priority=10*}]
 
 [{assign var="oConfig" value=$oViewConf->getConfig()}]
 [{assign var="oManufacturer" value=$oView->getManufacturer()}]
@@ -57,7 +57,7 @@
             [{block name="details_productmain_zoom"}]
                 [{oxscript include="js/libs/photoswipe.min.js" priority=8}]
                 [{oxscript include="js/libs/photoswipe-ui-default.min.js" priority=8}]
-                    [{oxscript add="$( document ).ready( function() { Wave.initDetailsEvents(); });"}]
+
 
                 [{* Wird ausgeführt, wenn es sich um einen AJAX-Request handelt *}]
                 [{if $blWorkaroundInclude}]
