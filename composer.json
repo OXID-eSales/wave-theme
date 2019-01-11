@@ -16,7 +16,17 @@
     "extra": {
         "oxideshop": {
             "target-directory": "wave",
-            "assets-directory": "out/wave"
+            "assets-directory": "out/wave",
+            "blacklist-filter": [
+                "build/**/*",
+                ".gitignore",
+                "CHANGELOG.md",
+                "composer.json",
+                "CONTRIBUTING.md",
+                "Gruntfile.js",
+                "package.json",
+                "package-lock.json"
+            ]
         }
     }
 }
