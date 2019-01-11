@@ -43,8 +43,8 @@
                                                 [{foreach from=$ocat->getSubCats() item="osubcat" key="subcatkey" name="SubCat"}]
                                                     [{if $osubcat->getIsVisible()}]
                                                         [{foreach from=$osubcat->getContentCats() item=ocont name=MoreCms}]
-                                                            <li class="dropdown-item[{if $oViewConf->getContentId() == $ocont->oxcontents__oxid->value}] class="active"[{/if}]">
-                                                                <a class="dropdown-link[{if $oViewConf->getContentId() == $ocont->oxcontents__oxid->value}] class="current"[{/if}]" href="[{$ocont->getLink()}]">[{$ocont->oxcontents__oxtitle->value}]</a>
+                                                            <li class="dropdown-item[{if $oViewConf->getContentId() == $ocont->getId()}] active[{/if}]">
+                                                                <a class="dropdown-link[{if $oViewConf->getContentId() == $ocont->getId()}] current[{/if}]" href="[{$ocont->getLink()}]">[{$ocont->oxcontents__oxtitle->value}]</a>
                                                             </li>
                                                         [{/foreach}]
 
