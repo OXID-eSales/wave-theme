@@ -190,10 +190,9 @@
                 <div class="price-wrapper">
                     [{block name="details_productmain_tprice"}]
                         [{oxhasrights ident="SHOWARTICLEPRICE"}]
-                            [{assign var=tprice value=$oDetailsProduct->getTPrice()}]
-                            [{assign var=price  value=$oDetailsProduct->getPrice()}]
-                            [{if $tprice && $tprice->getBruttoPrice() > $price->getBruttoPrice()}]
-                                <del class="price-old">[{$oDetailsProduct->getFTPrice()}] [{$currency->sign}]</del> <br />
+                            [{if $oDetailsProduct->getTPrice()}]
+                                <del class="price-old">[{oxprice price=$oDetailsProduct->getTPrice() currency=$currency}]</del>
+                                <br />
                             [{/if}]
                         [{/oxhasrights}]
                     [{/block}]
@@ -206,22 +205,21 @@
                                 [{if $oDetailsProduct->getFPrice()}]
                                     <label id="productPrice" class="price-label">
                                         [{assign var="sFrom" value=""}]
-                                        [{assign var="fPrice" value=$oDetailsProduct->getFPrice()}]
+                                        [{assign var="oPrice" value=$oDetailsProduct->getPrice()}]
                                         [{if $oDetailsProduct->isParentNotBuyable()}]
-                                            [{assign var="fPrice" value=$oDetailsProduct->getFVarMinPrice()}]
+                                            [{assign var="oPrice" value=$oDetailsProduct->getVarMinPrice()}]
                                             [{if $oDetailsProduct->isRangePrice()}]
                                                 [{assign var="sFrom" value="PRICE_FROM"|oxmultilangassign}]
                                             [{/if}]
                                         [{/if}]
-                                        <span[{if $tprice && $tprice->getBruttoPrice() > $price->getBruttoPrice()}] class="text-danger"[{/if}]>
+                                        <span[{if $oDetailsProduct->getTPrice()}] class="text-danger"[{/if}]>
                                             <span class="price-from">[{$sFrom}]</span>
-                                            <span class="price">[{$fPrice}]</span>
-                                            <span class="currency">[{$currency->sign}]</span>
+                                            <span class="price">[{oxprice price=$oPrice currency=$currency}]</span>
                                             [{if $oView->isVatIncluded()}]
                                                 <span class="price-markup">*</span>
                                             [{/if}]
                                             <span class="d-none">
-                                                <span itemprop="price">[{$fPrice}] [{$currency->sign}]</span>
+                                                <span itemprop="price">[{oxprice price=$oPrice currency=$currency}]</span>
                                             </span>
                                         </span>
                                     </label>

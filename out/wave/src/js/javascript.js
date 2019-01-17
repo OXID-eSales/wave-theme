@@ -24133,7 +24133,7 @@ $(function () {
             $(".selectpicker").selectpicker();
 
             // Globale Tooltip-Klasse
-            $('.hasTooltip').tooltip();
+            $('.hasTooltip').tooltip({container: 'body'});
 
             // Globale PopOver-Klasse
              $('.hasPopover').popover();
