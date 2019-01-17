@@ -17,7 +17,7 @@
   background-color: $ox-footer-bg;
   color: $ox-footer-color;
   padding: $grid-gutter-width 0;
-  margin: 0 (-$grid-gutter-width/2);
+  margin: 0;
 
   @include media-breakpoint-up(md) {
     text-align: left;
@@ -121,5 +121,5 @@
 .legal {
   background-color: $white;
   padding: $grid-gutter-width 0;
-  margin: 0 (-$grid-gutter-width/2);
+  margin: 0;
 }

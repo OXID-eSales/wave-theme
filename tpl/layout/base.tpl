@@ -212,11 +212,9 @@
 
 
     <div class="[{if $blFullwidth}]fullwidth-container[{else}]container[{/if}]">
-        <div class="main-row">
-            [{foreach from=$oxidBlock_pageBody item="_block"}]
+        [{foreach from=$oxidBlock_pageBody item="_block"}]
             [{$_block}]
-            [{/foreach}]
-        </div>
+        [{/foreach}]
     </div>
 
 
