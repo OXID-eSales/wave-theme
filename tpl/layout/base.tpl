@@ -211,10 +211,10 @@
     [{block name="theme_svg_icons"}][{/block}]
 
 
-    <div class="[{if $blFullwidth}]fullwidth-container[{else}]container[{/if}]">
+    <div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
         <div class="main-row">
             [{foreach from=$oxidBlock_pageBody item="_block"}]
-            [{$_block}]
+                [{$_block}]
             [{/foreach}]
         </div>
     </div>

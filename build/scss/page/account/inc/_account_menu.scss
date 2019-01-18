@@ -1,8 +1,8 @@
 .account-menu {
   .list-group {
     padding-bottom: 15px;
-    &-item {
 
+    &-item {
       &.active {
         color: $white;
         &:hover, &:focus {
@@ -17,4 +17,9 @@
       display: block;
     }
   }
+}
+
+.card {
+  height: auto;
+  margin-bottom: $grid-gutter-width;
 }
