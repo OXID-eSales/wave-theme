@@ -11,7 +11,6 @@
         </div>
     [{/if}]
 
-
     [{if $listDisplayType || $sort || $itemsPerPage}]
     <div class="col text-right options">
         [{if $listDisplayType}]
@@ -33,7 +32,4 @@
         [{include file="widget/locator/attributes.tpl"}]
     </div>
     [{/if}]
-
-
-</div>
 </div>

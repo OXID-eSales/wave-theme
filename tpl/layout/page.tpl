@@ -8,72 +8,69 @@
     [{/block}]
 
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
-<div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
 
-    <div id="wrapper" class="main-row[{if $sidebar}] sidebar[{$sidebar}][{/if}]">
+    <div id="wrapper" [{if $sidebar}]class="sidebar[{$sidebar}]"[{/if}]>
 
-        <div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
+        <div class="underdog">
 
-            <div class="underdog">
+            [{*//TODO Add option to switch between fullwidth slider and containered slider*}]
+            <div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
+                <div class="row">
+                [{if $oView->getClassName()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
+                    [{include file="widget/promoslider.tpl"}]
+                [{/if}]
+            </div>
+            </div>
+
+            <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
+                <div class="content-box">
+
+                [{if $oView->getClassName() != "start" && !$blHideBreadcrumb}]
+                    [{block name="layout_breadcrumb"}]
+                        [{include file="widget/breadcrumb.tpl"}]
+                    [{/block}]
+                [{/if}]
+
+                [{$smarty.capture.loginErrors}]
 
                 <div class="row">
-
-                    [{if $oView->getClassName()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
-                        [{include file="widget/promoslider.tpl"}]
+                    [{if $sidebar && $sidebar != "Right"}]
+                        <div class="col-12 col-md-3 [{$oView->getClassName()}]">
+                            <div id="sidebar">
+                                [{include file="layout/sidebar.tpl"}]
+                            </div>
+                        </div>
                     [{/if}]
 
-                </div>
-                <div class="container">
-                    <div class="content-box">
+                    <div class="col-12[{if $sidebar}] col-md-9[{/if}]">
 
-                        [{if $oView->getClassName() != "start" && !$blHideBreadcrumb}]
-                            [{block name="layout_breadcrumb"}]
-                                [{include file="widget/breadcrumb.tpl"}]
+                        <div class="content mb-3" id="content">
+                            [{block name="content_main"}]
+                                [{include file="message/errors.tpl"}]
+
+                                [{foreach from=$oxidBlock_content item="_block"}]
+                                    [{$_block}]
+                                [{/foreach}]
                             [{/block}]
-                        [{/if}]
-
-                        [{$smarty.capture.loginErrors}]
-
-                        <div class="row">
-                            [{if $sidebar && $sidebar != "Right"}]
-                                <div class="col-12 col-md-3 [{$oView->getClassName()}]">
-                                    <div id="sidebar">
-                                        [{include file="layout/sidebar.tpl"}]
-                                    </div>
-                                </div>
-                            [{/if}]
-
-                            <div class="col-12 [{if $sidebar}]col-md-9[{/if}]">
-
-                                <div class="content mb-3" id="content">
-                                    [{block name="content_main"}]
-                                        [{include file="message/errors.tpl"}]
-
-                                        [{foreach from=$oxidBlock_content item="_block"}]
-                                            [{$_block}]
-                                        [{/foreach}]
-                                    [{/block}]
-                                </div>
-
-                            </div>
-
-                            [{if $sidebar && $sidebar == "Right"}]
-                                <div class="col-12 col-md-3 [{$oView->getClassName()}]">
-                                    <div id="sidebar">
-                                        [{include file="layout/sidebar.tpl"}]
-                                    </div>
-                                </div>
-                            [{/if}]
                         </div>
 
                     </div>
-                </div>
-            </div>
 
+                    [{if $sidebar && $sidebar == "Right"}]
+                        <div class="col-12 col-md-3 [{$oView->getClassName()}]">
+                            <div id="sidebar">
+                                [{include file="layout/sidebar.tpl"}]
+                            </div>
+                        </div>
+                    [{/if}]
+                </div>
+
+            </div>
+            </div>
         </div>
 
     </div>
-</div>
+
     [{include file="layout/footer.tpl"}]
 
     [{block name="layout_init_social"}]

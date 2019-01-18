@@ -6,8 +6,8 @@
     [{if $oxcmp_user}]
     [{assign var="force_sid" value=$oView->getSidForWidget()}]
     [{/if}]
-<div class="[{if $blFullwidth}]container-fluid[{else}]container[{/if}]">
-    <footer class="footer">
+
+    <footer class="footer" id="footer">
         <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
             <div class="row mb-4">
                 <div class="col-12 col-lg-8">
@@ -80,64 +80,63 @@
                 </div>
             </div>
 
-
             [{* <<START>> Social Links *}]
             [{block name="dd_footer_social_links"}]
-            [{if $oViewConf->getViewThemeParam('sFacebookUrl') || $oViewConf->getViewThemeParam('sGooglePlusUrl') || $oViewConf->getViewThemeParam('sTwitterUrl') || $oViewConf->getViewThemeParam('sYouTubeUrl') || $oViewConf->getViewThemeParam('sBlogUrl')}]
-            <div class="social-links">
-                [{block name="dd_footer_social_links_inner"}]
-                <ul class="social-links-list ">
-                    [{block name="dd_footer_social_links_list"}]
-                    [{if $oViewConf->getViewThemeParam('sFacebookUrl')}]
-                    <li class="social-links-item">
-                        <a target="_blank" class="social-links-link"
-                           rel="noopener"
-                           href="[{$oViewConf->getViewThemeParam('sFacebookUrl')}]">
-                            <i class="fab fa-facebook-f"></i> <span>Facebook</span>
-                        </a>
-                    </li>
-                    [{/if}]
-                    [{if $oViewConf->getViewThemeParam('sGooglePlusUrl')}]
-                    <li class="social-links-item">
-                        <a target="_blank" class="social-links-link"
-                           rel="noopener"
-                           href="[{$oViewConf->getViewThemeParam('sGooglePlusUrl')}]">
-                            <i class="fab fa-google-plus-square"></i> <span>Google+</span>
-                        </a>
-                    </li>
-                    [{/if}]
-                    [{if $oViewConf->getViewThemeParam('sTwitterUrl')}]
-                    <li class="social-links-item">
-                        <a target="_blank" class="social-links-link"
-                           rel="noopener"
-                           href="[{$oViewConf->getViewThemeParam('sTwitterUrl')}]">
-                            <i class="fab fa-twitter"></i> <span>Twitter</span>
-                        </a>
-                    </li>
-                    [{/if}]
-                    [{if $oViewConf->getViewThemeParam('sYouTubeUrl')}]
-                    <li class="social-links-item">
-                        <a target="_blank" class="social-links-link"
-                           rel="noopener"
-                           href="[{$oViewConf->getViewThemeParam('sYouTubeUrl')}]">
-                            <i class="fab fa-youtube"></i> <span>YouTube</span>
-                        </a>
-                    </li>
-                    [{/if}]
-                    [{if $oViewConf->getViewThemeParam('sBlogUrl')}]
-                    <li class="social-links-item">
-                        <a target="_blank" class="social-links-link"
-                           rel="noopener"
-                           href="[{$oViewConf->getViewThemeParam('sBlogUrl')}]">
-                            <i class="fab fa-wordpress"></i> <span>Blog</span>
-                        </a>
-                    </li>
-                    [{/if}]
+                [{if $oViewConf->getViewThemeParam('sFacebookUrl') || $oViewConf->getViewThemeParam('sGooglePlusUrl') || $oViewConf->getViewThemeParam('sTwitterUrl') || $oViewConf->getViewThemeParam('sYouTubeUrl') || $oViewConf->getViewThemeParam('sBlogUrl')}]
+                    <div class="social-links">
+                    [{block name="dd_footer_social_links_inner"}]
+                    <ul class="social-links-list ">
+                        [{block name="dd_footer_social_links_list"}]
+                        [{if $oViewConf->getViewThemeParam('sFacebookUrl')}]
+                        <li class="social-links-item">
+                            <a target="_blank" class="social-links-link"
+                               rel="noopener"
+                               href="[{$oViewConf->getViewThemeParam('sFacebookUrl')}]">
+                                <i class="fab fa-facebook-f"></i> <span>Facebook</span>
+                            </a>
+                        </li>
+                        [{/if}]
+                        [{if $oViewConf->getViewThemeParam('sGooglePlusUrl')}]
+                        <li class="social-links-item">
+                            <a target="_blank" class="social-links-link"
+                               rel="noopener"
+                               href="[{$oViewConf->getViewThemeParam('sGooglePlusUrl')}]">
+                                <i class="fab fa-google-plus-square"></i> <span>Google+</span>
+                            </a>
+                        </li>
+                        [{/if}]
+                        [{if $oViewConf->getViewThemeParam('sTwitterUrl')}]
+                        <li class="social-links-item">
+                            <a target="_blank" class="social-links-link"
+                               rel="noopener"
+                               href="[{$oViewConf->getViewThemeParam('sTwitterUrl')}]">
+                                <i class="fab fa-twitter"></i> <span>Twitter</span>
+                            </a>
+                        </li>
+                        [{/if}]
+                        [{if $oViewConf->getViewThemeParam('sYouTubeUrl')}]
+                        <li class="social-links-item">
+                            <a target="_blank" class="social-links-link"
+                               rel="noopener"
+                               href="[{$oViewConf->getViewThemeParam('sYouTubeUrl')}]">
+                                <i class="fab fa-youtube"></i> <span>YouTube</span>
+                            </a>
+                        </li>
+                        [{/if}]
+                        [{if $oViewConf->getViewThemeParam('sBlogUrl')}]
+                        <li class="social-links-item">
+                            <a target="_blank" class="social-links-link"
+                               rel="noopener"
+                               href="[{$oViewConf->getViewThemeParam('sBlogUrl')}]">
+                                <i class="fab fa-wordpress"></i> <span>Blog</span>
+                            </a>
+                        </li>
+                        [{/if}]
+                        [{/block}]
+                    </ul>
                     [{/block}]
-                </ul>
-                [{/block}]
-            </div>
-            [{/if}]
+                </div>
+                [{/if}]
             [{/block}]
             [{* <<ENDE>> Social Links *}]
         </div>
@@ -182,4 +181,3 @@
             [{include file="form/privatesales/basketexcl.tpl"}]
         </div>
     [{/if}]
-</div>
