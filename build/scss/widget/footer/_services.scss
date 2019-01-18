@@ -1,0 +1,19 @@
+.services {
+  li {
+    position: relative;
+
+    .badge {
+      background-color: $secondary;
+      position: relative;
+      top: -2px;
+      font-weight: 500;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+    }
+  }
+}

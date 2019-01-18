@@ -1,4 +1,5 @@
-.service-menu {
+.service-menu,
+.services {
 
   .altLoginBox {
     margin-top: 10px;
@@ -9,19 +10,19 @@
   }
 
   .list-unstyled {
-
     li {
       position: relative;
 
       .badge {
         background-color: $secondary;
-        position: relative;
-        top: -2px;
+        position: absolute;
+        top: 3px;
+        right: 3px;
         font-weight: 500;
         border-radius: 50%;
         width: 20px;
         height: 20px;
-        display: inline-block;
+        display: flex;
         align-items: center;
         justify-content: center;
         color: $white;

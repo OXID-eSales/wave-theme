@@ -17,42 +17,44 @@
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
  */
-$(window).on('load', function()
-{
-    var $window = $( this ),
-        $oManufacturerSlider = $( '#manufacturerSlider .flexslider' ),
-        flexslider;
+$(window).on('load', function(){
+    if($('.cl-start').length >0 ){
 
-    function getGridSize()
-    {
-        return ( $oManufacturerSlider.width() < 600 ) ? 3 :
-               ( $oManufacturerSlider.width() < 900 ) ? 5 : 7;
+        var $window = $( this ),
+            $oManufacturerSlider = $( '#manufacturerSlider .flexslider' ),
+            flexslider;
+
+        function getGridSize()
+        {
+            return ( $oManufacturerSlider.width() < 600 ) ? 3 :
+                   ( $oManufacturerSlider.width() < 900 ) ? 5 : 7;
+        }
+
+
+        $( '#promo-carousel' ).flexslider(
+            {
+                animation: "slide"
+            }
+        );
+
+        flexslider = $oManufacturerSlider.flexslider(
+            {
+                animation: "slide",
+                itemWidth: 100,
+                itemMargin: 10,
+                minItems: getGridSize(), // use function to pull in initial value
+                maxItems: getGridSize() // use function to pull in initial value
+            }
+        );
+
+        // check grid size on resize event
+        $window.resize( function()
+            {
+                var gridSize = getGridSize();
+
+                flexslider.data().flexslider.vars.minItems = gridSize;
+                flexslider.data().flexslider.vars.maxItems = gridSize;
+            }
+        );
     }
-
-
-    $( '#promo-carousel' ).flexslider(
-        {
-            animation: "slide"
-        }
-    );
-
-    flexslider = $oManufacturerSlider.flexslider(
-        {
-            animation: "slide",
-            itemWidth: 100,
-            itemMargin: 10,
-            minItems: getGridSize(), // use function to pull in initial value
-            maxItems: getGridSize() // use function to pull in initial value
-        }
-    );
-
-    // check grid size on resize event
-    $window.resize( function()
-        {
-            var gridSize = getGridSize();
-
-            flexslider.data().flexslider.vars.minItems = gridSize;
-            flexslider.data().flexslider.vars.maxItems = gridSize;
-        }
-    );
-} );
+});
