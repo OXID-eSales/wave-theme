@@ -9,7 +9,6 @@
 ### Step 1: Get the source code
 
 ```
-composer config repositories.oxid-esales/wave-theme vcs https://github.com/OXID-eSales/wave-theme
 composer require oxid-esales/wave-theme
 ```
 
