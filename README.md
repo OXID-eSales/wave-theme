@@ -70,6 +70,7 @@ If you are interested in contributing of some changes, Please read [CONTRIBUTING
 
 1. Visual CMS
 - In the module settings you need to deacticvate the inclusion of Bootstrap and JQuery
+- Compatible with visual CMS 3.3.0 (https://github.com/OXID-eSales/visual_cms_module/commit/75bc2a8f05cd8f2b76b6383eb6213c994494a6ee)
 
 2. PayPal module
 - The PayPal module contains in a tpl file a check for the theme id ```[{if $oViewConf->getActiveTheme()=='flow'}]``` which should be adjusted to wave
