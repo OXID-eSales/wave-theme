@@ -5,14 +5,17 @@
 *Wave* is a responsive theme for all OXID eShop editions.
 
 ## Installation
+If you want to extend the theme you need to clone the repository (see section development) as some soures are ignored on composer installation. 
+
 
 ### Step 1: Get the source code
 
+This step is only required if the theme is not delivered with the OXID distribution.
 ```
 composer require oxid-esales/wave-theme
 ```
 
-### Step 2: Prepare the database (< version 6.0 only)
+### Step 2: Prepare the database 
 
 In order to install the theme options, import the ``setup.sql`` (to be found in ``DOCUMENT_ROOT/source/Application/views/wave``) into your database.
 
@@ -32,6 +35,11 @@ Log into the admin panel, go to *Extensions → Themes → Wave* and press the *
 
 All *Wave* theme related CSS/Javascript files can be found in theme's ``build`` directory. To regenerate the theme's assets, the ``grunt`` tasks should be used. Please install ``grunt`` and run ``grunt's`` default task to regenerate all minimized ``css`` and ``js`` files:
 
+To get the development files you need to clone the repository
+
+	cd DOCUMENT_ROOT/Application/views/
+	git clone -b BRANCH_NAME https://github.com/OXID-eSales/wave-theme.git wave
+	
 1. To use ``grunt``, ``npm`` is required. Check ``nodejs`` website for installation
 instructions (https://nodejs.org/en/download/package-manager/). Example of
 Installation on ubuntu system:
