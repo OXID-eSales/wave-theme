@@ -59,7 +59,7 @@ Installation on ubuntu system:
 
 	```
     cd DOCUMENT_ROOT/Application/views/wave/
-    sudo npm install
+    npm install
     ```
 
 4. Now its possible to regenerate "wave" theme assets by running ``grunt`` default
