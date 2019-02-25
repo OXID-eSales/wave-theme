@@ -179,7 +179,7 @@
                     [{else}]
                     <tr>
                         <th class="text-right">[{ oxmultilang ident="SHIPPING_COST" suffix="COLON" }]</th>
-                        <td id="basketDeliveryGross">[{oxprice price=$deliveryCost->getBruttoPrice() currency=$currency}]</td>
+                        <td id="basketDeliveryGross" class="text-right">[{oxprice price=$deliveryCost->getBruttoPrice() currency=$currency}]</td>
                     </tr>
                     [{/if}]
                 [{/if}]
