@@ -1,7 +1,7 @@
 
 
 <div class="row">
-    <div id="manufacturerSlider" class="manufacturer-slider boxwrapper">
+    <div id="manufacturerSlider" class="manufacturer-slider col-sm boxwrapper">
         <div class="page-header">
             <h3>[{oxmultilang ident="OUR_BRANDS"}]</h3>
             <span class="subhead">[{oxmultilang ident="MANUFACTURERSLIDER_SUBHEAD"}]</span>
