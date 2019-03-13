@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 ### Changed
+- Remove scheme from href of product external url [PR-142](https://github.com/OXID-eSales/flow_theme/pull/142)
 
 ## [1.0.1] -  2019-01-22
 
