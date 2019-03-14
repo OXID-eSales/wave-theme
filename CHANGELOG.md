@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 ### Fixed
+- Remove the unsupported font-smooth property [PR-144](https://github.com/OXID-eSales/flow_theme/pull/144)
 
 ### Changed
 - Remove scheme from href of product external url [PR-142](https://github.com/OXID-eSales/flow_theme/pull/142)
