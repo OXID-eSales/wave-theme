@@ -61,87 +61,89 @@
     <div id="basketSummary" class="col-12 col-md-6 summary[{if $oViewConf->getShowVouchers() && $oViewConf->getActiveClassName() != 'basket'}] offset-md-6[{/if}][{if $oViewConf->getActiveClassName() == 'order'}] orderSummary[{/if}]">
         [{*  basket summary  *}]
         <table class="table table-bordered table-striped">
-            [{if !$oxcmp_basket->getDiscounts()}]
-                [{block name="checkout_basketcontents_nodiscounttotalnet"}]
-                    <tr>
-                        <th class="text-right">[{oxmultilang ident="TOTAL_NET"}]</th>
-                        <td id="basketTotalProductsNetto" class="text-right">[{oxprice price=$oxcmp_basket->getNettoSum() currency=$currency}]</td>
-                    </tr>
-                [{/block}]
-
-                [{block name="checkout_basketcontents_nodiscountproductvats"}]
-                    [{foreach from=$oxcmp_basket->getProductVats(false) item=VATitem key=key}]
-                        <tr>
-                            <th class="text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</th>
-                            <td class="text-right">[{oxprice price=$VATitem currency=$currency}]</td>
-                        </tr>
-                    [{/foreach}]
-                [{/block}]
-
-                [{block name="checkout_basketcontents_nodiscounttotalgross"}]
-                    <tr>
-                        <th class="text-right">[{oxmultilang ident="TOTAL_GROSS" suffix="COLON"}]</th>
-                        <td id="basketTotalProductsGross" class="text-right">[{oxprice price=$oxcmp_basket->getBruttoSum() currency=$currency}]</td>
-                    </tr>
-                [{/block}]
-            [{else}]
-                [{if $oxcmp_basket->isPriceViewModeNetto()}]
-                    [{block name="checkout_basketcontents_discounttotalnet"}]
+            [{block name="checkout_basketcontents_summary_table_inner"}]
+                [{if !$oxcmp_basket->getDiscounts()}]
+                    [{block name="checkout_basketcontents_nodiscounttotalnet"}]
                         <tr>
                             <th class="text-right">[{oxmultilang ident="TOTAL_NET"}]</th>
                             <td id="basketTotalProductsNetto" class="text-right">[{oxprice price=$oxcmp_basket->getNettoSum() currency=$currency}]</td>
                         </tr>
                     [{/block}]
-                [{else}]
-                     [{block name="checkout_basketcontents_discounttotalgross"}]
+
+                    [{block name="checkout_basketcontents_nodiscountproductvats"}]
+                        [{foreach from=$oxcmp_basket->getProductVats(false) item=VATitem key=key}]
+                            <tr>
+                                <th class="text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</th>
+                                <td class="text-right">[{oxprice price=$VATitem currency=$currency}]</td>
+                            </tr>
+                        [{/foreach}]
+                    [{/block}]
+
+                    [{block name="checkout_basketcontents_nodiscounttotalgross"}]
                         <tr>
                             <th class="text-right">[{oxmultilang ident="TOTAL_GROSS" suffix="COLON"}]</th>
                             <td id="basketTotalProductsGross" class="text-right">[{oxprice price=$oxcmp_basket->getBruttoSum() currency=$currency}]</td>
                         </tr>
                     [{/block}]
-                [{/if}]
+                [{else}]
+                    [{if $oxcmp_basket->isPriceViewModeNetto()}]
+                        [{block name="checkout_basketcontents_discounttotalnet"}]
+                            <tr>
+                                <th class="text-right">[{oxmultilang ident="TOTAL_NET"}]</th>
+                                <td id="basketTotalProductsNetto" class="text-right">[{oxprice price=$oxcmp_basket->getNettoSum() currency=$currency}]</td>
+                            </tr>
+                        [{/block}]
+                    [{else}]
+                         [{block name="checkout_basketcontents_discounttotalgross"}]
+                            <tr>
+                                <th class="text-right">[{oxmultilang ident="TOTAL_GROSS" suffix="COLON"}]</th>
+                                <td id="basketTotalProductsGross" class="text-right">[{oxprice price=$oxcmp_basket->getBruttoSum() currency=$currency}]</td>
+                            </tr>
+                        [{/block}]
+                    [{/if}]
 
-                [{block name="checkout_basketcontents_discounts"}]
-                    [{foreach from=$oxcmp_basket->getDiscounts() item=oDiscount name=test_Discounts}]
-                        <tr>
-                            <th class="text-right">
-                                <b>[{if $oDiscount->dDiscount < 0}][{oxmultilang ident="SURCHARGE"}][{else}][{oxmultilang ident="DISCOUNT"}][{/if}]&nbsp;</b>
-                                [{$oDiscount->sDiscount}]
-                            </th>
-                            <td class="text-right">
-                                [{oxprice price=$oDiscount->dDiscount*-1 currency=$currency}]
-                            </td>
-                        </tr>
-                    [{/foreach}]
-                [{/block}]
-
-                [{if !$oxcmp_basket->isPriceViewModeNetto()}]
-                    [{block name="checkout_basketcontents_totalnet"}]
-                        <tr>
-                            <th class="text-right">[{oxmultilang ident="TOTAL_NET"}]</th>
-                            <td id="basketTotalNetto" class="text-right">[{oxprice price=$oxcmp_basket->getNettoSum() currency=$currency}]</td>
-                        </tr>
+                    [{block name="checkout_basketcontents_discounts"}]
+                        [{foreach from=$oxcmp_basket->getDiscounts() item=oDiscount name=test_Discounts}]
+                            <tr>
+                                <th class="text-right">
+                                    <b>[{if $oDiscount->dDiscount < 0}][{oxmultilang ident="SURCHARGE"}][{else}][{oxmultilang ident="DISCOUNT"}][{/if}]&nbsp;</b>
+                                    [{$oDiscount->sDiscount}]
+                                </th>
+                                <td class="text-right">
+                                    [{oxprice price=$oDiscount->dDiscount*-1 currency=$currency}]
+                                </td>
+                            </tr>
+                        [{/foreach}]
                     [{/block}]
-                [{/if}]
 
-                [{block name="checkout_basketcontents_productvats"}]
-                    [{foreach from=$oxcmp_basket->getProductVats(false) item=VATitem key=key}]
-                        <tr>
-                            <th class="text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</th>
-                            <td class="text-right">[{oxprice price=$VATitem currency=$currency}]</td>
-                        </tr>
-                    [{/foreach}]
-                [{/block}]
+                    [{if !$oxcmp_basket->isPriceViewModeNetto()}]
+                        [{block name="checkout_basketcontents_totalnet"}]
+                            <tr>
+                                <th class="text-right">[{oxmultilang ident="TOTAL_NET"}]</th>
+                                <td id="basketTotalNetto" class="text-right">[{oxprice price=$oxcmp_basket->getNettoSum() currency=$currency}]</td>
+                            </tr>
+                        [{/block}]
+                    [{/if}]
 
-                [{if $oxcmp_basket->isPriceViewModeNetto()}]
-                    [{block name="checkout_basketcontents_totalgross"}]
-                        <tr>
-                            <th class="text-right">[{oxmultilang ident="TOTAL_GROSS" suffix="COLON"}]</th>
-                            <td id="basketTotalGross" class="text-right">[{oxprice price=$oxcmp_basket->getBruttoSum() currency=$currency}]</td>
-                        </tr>
+                    [{block name="checkout_basketcontents_productvats"}]
+                        [{foreach from=$oxcmp_basket->getProductVats(false) item=VATitem key=key}]
+                            <tr>
+                                <th class="text-right">[{oxmultilang ident="VAT_PLUS_PERCENT_AMOUNT" suffix="COLON" args=$key}]</th>
+                                <td class="text-right">[{oxprice price=$VATitem currency=$currency}]</td>
+                            </tr>
+                        [{/foreach}]
                     [{/block}]
+
+                    [{if $oxcmp_basket->isPriceViewModeNetto()}]
+                        [{block name="checkout_basketcontents_totalgross"}]
+                            <tr>
+                                <th class="text-right">[{oxmultilang ident="TOTAL_GROSS" suffix="COLON"}]</th>
+                                <td id="basketTotalGross" class="text-right">[{oxprice price=$oxcmp_basket->getBruttoSum() currency=$currency}]</td>
+                            </tr>
+                        [{/block}]
+                    [{/if}]
                 [{/if}]
-            [{/if}]
+            [{/block}]
 
             [{block name="checkout_basketcontents_voucherdiscount"}]
                 [{if $oViewConf->getShowVouchers() && $oxcmp_basket->getVoucherDiscValue()}]
