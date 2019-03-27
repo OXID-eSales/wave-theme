@@ -28,5 +28,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 1.0.0 -  2019-01-21
 
-[1.0.2]: https://github.com/OXID-eSales/wave-theme/compare/v1.0.1...HEAD
+[1.1.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.0.1...HEAD
 [1.0.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.0.0...v1.0.1
