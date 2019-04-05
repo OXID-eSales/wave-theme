@@ -9,16 +9,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - New blocks:
   - `page/checkout/inc/basketcontents.tpl`
-    - checkout_basketcontents_summary_table_inner [PR-148](https://github.com/OXID-eSales/flow_theme/pull/148)
+    - checkout_basketcontents_summary_table_inner [Flow PR-148](https://github.com/OXID-eSales/flow_theme/pull/148)
   - `page/search/search.tpl`
-    - search_bottom_listlocator [PR-141](https://github.com/OXID-eSales/flow_theme/pull/141)
+    - search_bottom_listlocator [Flow PR-141](https://github.com/OXID-eSales/flow_theme/pull/141)
 
 ### Fixed
-- Remove the unsupported font-smooth property [PR-144](https://github.com/OXID-eSales/flow_theme/pull/144)
-- [0006958](https://bugs.oxid-esales.com/view.php?id=6958) Remove unnecessary closing "strong" tags [PR-147](https://github.com/OXID-eSales/flow_theme/pull/147)
+- Remove the unsupported font-smooth property [Flow PR-144](https://github.com/OXID-eSales/flow_theme/pull/144)
+- [0006958](https://bugs.oxid-esales.com/view.php?id=6958) Remove unnecessary closing "strong" tags [Flow PR-147](https://github.com/OXID-eSales/flow_theme/pull/147)
 
 ### Changed
-- Remove scheme from href of product external url [PR-142](https://github.com/OXID-eSales/flow_theme/pull/142)
+- Remove scheme from href of product external url [Flow PR-142](https://github.com/OXID-eSales/flow_theme/pull/142)
+- Update bootstrap to 4.1.3 [PR-36](https://github.com/OXID-eSales/wave-theme/pull/36)
 
 ## [1.0.1] -  2019-01-22
 
