@@ -178,7 +178,7 @@
                     [{if $oViewConf->showSelectLists()}]
                         [{assign var="oSelections" value=$oDetailsProduct->getSelections()}]
                         [{if $oSelections}]
-                            <div class="selectorsBox js-fnSubmit clear" id="productSelections">
+                            <div class="selectorsBox variant-dropdown js-fnSubmit clear" id="productSelections">
                                 [{foreach from=$oSelections item=oList name=selections}]
                                     [{include file="widget/product/selectbox.tpl" oSelectionList=$oList sFieldName="sel" iKey=$smarty.foreach.selections.index blHideDefault=true sSelType="seldrop"}]
                                 [{/foreach}]
