@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fix "sBackgroundPosVertical" config variable constraints [PR-33](https://github.com/OXID-eSales/wave-theme/pull/33)
 
 ### Changed
-- Use relative path to load font files [PR-30](https://github.com/OXID-eSales/wave-theme/pull/30)
+- Use relative path to load font files [#0006954](https://bugs.oxid-esales.com/view.php?id=6954) [PR-30](https://github.com/OXID-eSales/wave-theme/pull/30)
 
 ## [1.1.0] -  2019-04-12
 
