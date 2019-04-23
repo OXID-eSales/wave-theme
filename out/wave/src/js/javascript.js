@@ -24164,7 +24164,29 @@ $(function () {
             $('.hasTooltip').tooltip({container: 'body'});
 
             // Globale PopOver-Klasse
-             $('.hasPopover').popover();
+            $('.hasPopover').popover();
+
+            // Selectlisten Detail
+            var $oSelectionLists = $('#detailsMain .selectorsBox');
+
+            if ($oSelectionLists.length) {
+                $oSelectionLists.find('.dropdown-menu li').click(function (e) {
+                        e.preventDefault();
+                        var $this = $(this),
+                            $a = $this.children().first(),
+                            $ul = $this.parent();
+
+                        $ul.prev().val($a.data('selection-id'));
+
+                        // classes
+                        $ul.find('a.active').removeClass('active');
+                        $a.addClass('active');
+
+                        // label
+                        $ul.prev().prev().find('span').first().text($a.text());
+                    }
+                );
+            }
         };
         Wave.initEvents();
 
@@ -24259,7 +24281,7 @@ $(function () {
                 $oBasketList.find('.toggle-actions').click(function (e) {
                         e.preventDefault();
                         var $this = $(this),
-                        $oToggable = $this.parents('li').first().find('.row.collapse');
+                            $oToggable = $this.parents('li').first().find('.row.collapse');
                         $this.find('i').attr('class', ($oToggable.hasClass('.show') ? 'fa fa-chevron-up' : 'fa fa-chevron-down'));
                     }
                 );
