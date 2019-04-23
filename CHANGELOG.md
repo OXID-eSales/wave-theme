@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Fix "Brands" slider size when no brands available [PR-32](https://github.com/OXID-eSales/wave-theme/pull/32)
+- Fix "sBackgroundPosVertical" config variable constraints [PR-33](https://github.com/OXID-eSales/wave-theme/pull/33)
 
 ### Changed
 
