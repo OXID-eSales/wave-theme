@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Use relative path to load font files [#0006954](https://bugs.oxid-esales.com/view.php?id=6954) [PR-30](https://github.com/OXID-eSales/wave-theme/pull/30)
+- Add space above Log Out button [PR-34](https://github.com/OXID-eSales/wave-theme/pull/34)
 
 ## [1.1.0] -  2019-04-12
 
