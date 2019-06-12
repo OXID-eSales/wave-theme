@@ -320,8 +320,6 @@
                 </div>
             [{/if}]
 
-            [{assign var="oSession" value=$oConfig->getSession()}]
-
             [{block name="details_productmain_productlinksselector"}]
                 [{block name="details_productmain_productlinks"}]
                     <ul class="list-unstyled details-action-links">
