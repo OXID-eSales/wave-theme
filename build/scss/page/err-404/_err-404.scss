@@ -1,0 +1,81 @@
+.err-404 {
+	.gears-box {
+		background: transparent url('../../img/404/board.png') top center no-repeat;
+		width: 551px;
+		height: 514px;
+		float: right;
+		position: relative;
+		overflow: hidden;
+
+		.paper-overlay {
+			background: transparent url('../../img/404/paper_crack.png') top left no-repeat;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+		}
+
+		.gear-rotate {
+			width: 280px;
+			height: 280px;
+			position: absolute;
+			z-index: 5;
+
+			-webkit-animation: rotate 10s linear infinite;
+			-moz-animation: rotate 10s linear infinite;
+			animation: rotate 10s linear infinite;
+			&.reverse {
+				-webkit-animation-name: rerotate 10s linear infinite;
+				-moz-animation-name: rerotate 10s linear infinite;
+				animation: rerotate 10s linear infinite;
+			}
+		}
+	}
+}
+
+/* rotate */
+@-moz-keyframes rotate {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes rotate {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* rerotate */
+@-moz-keyframes rerotate {
+	from {
+		-moz-transform: rotate(360deg);
+	}
+	to {
+		-moz-transform: rotate(0deg);
+	}
+}
+@-webkit-keyframes rerotate {
+	from {
+		-webkit-transform: rotate(360deg);
+	}
+	to {
+		-webkit-transform: rotate(0deg);
+	}
+}
+@keyframes rerotate {
+	from {
+		transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+	}
+}
