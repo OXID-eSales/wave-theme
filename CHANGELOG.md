@@ -4,10 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.1.1] -  Unreleased
+## [1.2.0] -  Unreleased
 
 ### Added
-
+- New blocks:
+  - `form/fieldset/user_shipping.tpl`  
+    - form_user_shipping_address_actions
+    - form_user_shipping_address_edit_action
+    - form_user_shipping_address_delete_action
+    
 ### Fixed
 - Fix "Brands" slider size when no brands available [PR-32](https://github.com/OXID-eSales/wave-theme/pull/32)
 - Fix "sBackgroundPosVertical" config variable constraints [PR-33](https://github.com/OXID-eSales/wave-theme/pull/33)
