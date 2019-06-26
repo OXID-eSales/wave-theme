@@ -30,18 +30,24 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <div class="card">
                                 <div class="card-body">
+                                    [{block name="form_user_shipping_address_actions"}]
                                     [{if $address->isSelected()}]
+                                        [{block name="form_user_shipping_address_edit_action"}]
                                         <button class="btn btn-warning btn-sm hasTooltip float-right dd-action dd-edit-shipping-address edit-button"
                                                 title="[{oxmultilang ident="CHANGE"}]">
                                             <i class="fas fa-pencil-alt"></i>
                                         </button>
+                                        [{/block}]
+                                        [{block name="form_user_shipping_address_delete_action"}]
                                         <button class="btn btn-danger btn-sm hasTooltip float-right dd-action dd-delete-shipping-address edit-button"
                                                 title="[{oxmultilang ident="DD_DELETE"}]"
                                                 data-toggle="modal"
                                                 data-target="#delete_shipping_address_[{$smarty.foreach.shippingAdresses.iteration}]">
                                             <i class="fa fa-trash"></i>
                                         </button>
+                                        [{/block}]
                                     [{/if}]
+                                    [{/block}]
                                     [{include file="widget/address/shipping_address.tpl" delivadr=$address}]
                                 </div>
                                 <div class="card-footer" >
