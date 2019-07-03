@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fix selectlists select functionality in product details [PR-37](https://github.com/OXID-eSales/wave-theme/pull/37)
 - Do not use deprecated getSession of Base class
 - Fix HTML syntax error in oxaddress__oxfname req [PR-41](https://github.com/OXID-eSales/wave-theme/pull/41)
+- Fix wrong translations and icon in 404 and offline pages [PR-38](https://github.com/OXID-eSales/wave-theme/pull/38)
 
 ### Changed
 - Use relative path to load font files [#0006954](https://bugs.oxid-esales.com/view.php?id=6954) [PR-30](https://github.com/OXID-eSales/wave-theme/pull/30)

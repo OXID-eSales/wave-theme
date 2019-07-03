@@ -15,12 +15,12 @@
 
                 <p>
                     [{oxmultilang ident="DD_ERR_404_START_TEXT"}]<br>
-                    <a href="[{$oViewConf->getHomeLink()}]" class="btn btn-outline-dark" title="[{oxmultilang ident="DD_ERR_404_START_BUTTON"}]">[{oxmultilang ident="CNC_ERR_404_START_BUTTON"}]</a>
+                    <a href="[{$oViewConf->getHomeLink()}]" class="btn btn-outline-dark" title="[{oxmultilang ident="DD_ERR_404_START_BUTTON"}]">[{oxmultilang ident="DD_ERR_404_START_BUTTON"}]</a>
                 </p>
 
                 <p>
                     [{oxmultilang ident="DD_ERR_404_CONTACT_TEXT"}]<br>
-                    <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=contact"}]" class="btn btn-outline-dark" title="[{oxmultilang ident="DD_ERR_404_CONTACT_BUTTON"}]">[{oxmultilang ident="CNC_ERR_404_CONTACT_BUTTON"}]</a>
+                    <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=contact"}]" class="btn btn-outline-dark" title="[{oxmultilang ident="DD_ERR_404_CONTACT_BUTTON"}]">[{oxmultilang ident="DD_ERR_404_CONTACT_BUTTON"}]</a>
                 </p>
             </div>
             <div class="col-md-6">
