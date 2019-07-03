@@ -53,14 +53,23 @@ module.exports = function (grunt) {
                 }
             }
         },
-        concat: {
-            js: {
-                options: {
-                    separator: ';\n',
-                    sourcemap: false
-                },
+        postcss: {
+            options: {
+                processors: [
+                    require('autoprefixer')({browsers: ['last 2 versions', 'ie 11']})
+                ]
+            },
+            dist: {
+                src: '<%= project.out %><%= project.theme %>/src/css/styles.css'
+            }
+        },
+        uglify: {
+            options: {
+                sourceMap: true
+            },
+            my_target: {
                 files: {
-                    '<%= project.out %><%= project.theme %>/src/js/javascript.js': [
+                    '<%= project.out %><%= project.theme %>/src/js/script.min.js': [
                         '<%= project.dev %>node_modules/jquery/dist/jquery.min.js',
                         '<%= project.dev %>build/vendor/jquery-ui/js/jquery-ui.js',
                         '<%= project.dev %>node_modules/popper.js/dist/umd/popper.min.js',
@@ -74,28 +83,6 @@ module.exports = function (grunt) {
                         '<%= project.dev %>build/js/pages/details.js',
                         '<%= project.dev %>build/js/pages/review.js',
                         '<%= project.dev %>build/js/pages/start.js'
-                    ]
-                }
-            }
-        },
-        postcss: {
-            options: {
-                processors: [
-                    require('autoprefixer')({browsers: ['last 2 versions', 'ie 11']})
-                ]
-            },
-            dist: {
-                src: '<%= project.out %><%= project.theme %>/src/css/styles.css'
-            }
-        },
-        uglify: {
-            options: {
-                sourcemap: true
-            },
-            my_target: {
-                files: {
-                    '<%= project.out %><%= project.theme %>/src/js/script.min.js': [
-                        '<%= project.out %><%= project.theme %>/src/js/javascript.js'
                     ]
                 }
             }
@@ -145,10 +132,9 @@ module.exports = function (grunt) {
             js: {
                 files: [
                     '<%= project.dev %>build/js/*.js',
-                    '<%= project.out %><%= project.theme %>/src/js/js/**/*.js'
                 ],
                 tasks:
-                    ['concat:js', 'uglify'],
+                    ['uglify'],
                 options:
                     {
                         spawn: false,
@@ -193,7 +179,6 @@ module.exports = function (grunt) {
         'postcss',
         'combine_mq',
         'cssmin',
-        'concat:js',
         'uglify',
         'clean',
         'watch'

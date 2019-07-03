@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - form_user_shipping_address_edit_action
     - form_user_shipping_address_delete_action
 - Add stoken parameter to remove voucher link
+- Add js sourcemaps [PR-40](https://github.com/OXID-eSales/wave-theme/pull/40)
     
 ### Fixed
 - Fix "Brands" slider size when no brands available [PR-32](https://github.com/OXID-eSales/wave-theme/pull/32)
