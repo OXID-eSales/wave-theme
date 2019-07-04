@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - form_user_shipping_address_actions
     - form_user_shipping_address_edit_action
     - form_user_shipping_address_delete_action
+  - `widget/footer/services.tpl`
+    - footer_services_cart
 - Add stoken parameter to remove voucher link
 - Add js sourcemaps [PR-40](https://github.com/OXID-eSales/wave-theme/pull/40)
     
