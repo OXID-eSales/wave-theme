@@ -392,6 +392,14 @@ $(function () {
                 $('#private-sales-login button.submitButton').attr("disabled", "disabled");
             }
         });
+
+        /* *********************************
+         * Fix for form validation
+         * *********************************/
+        $('input.form-control, textarea.form-control, select.form-control').each(function() {
+            $(this).unbind(["keyup", "focus", "blur", "click", "keydown", "keypress"].join(".validation ") + ".validation");
+        });
+
     }
 );
 
