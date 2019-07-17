@@ -413,7 +413,7 @@
               var errorsFound = [];
 
               $.each(validators, function (validatorType, validatorTypeArray) {
-                if (value || value.length || (params && params.includeEmpty) || (!!settings.validatorTypes[validatorType].blockSubmit && params && !!params.submitting)) {
+                if (value || value.length || (params && params.includeEmpty) || (!!settings.validatorTypes[validatorType].blockSubmit)) {
                   $.each(validatorTypeArray, function (i, validator) {
                     if (settings.validatorTypes[validatorType].validate($this, value, validator)) {
                       errorsFound.push(validator.message);
