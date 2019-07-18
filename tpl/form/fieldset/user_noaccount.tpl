@@ -1,6 +1,6 @@
 <div class="form-group [{if $aErrors.oxuser__oxusername}]oxInValid[{/if}]">
     [{block name="user_noaccount_email"}]
-        <label class="control-label col-lg-3 req">[{oxmultilang ident="EMAIL_ADDRESS"}]</label>
+        <label class="control-label col-lg-3 req" for="userLoginName">[{oxmultilang ident="EMAIL_ADDRESS"}]</label>
         <div class="col-lg-9">
             <input id="userLoginName" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_email" type="email" name="lgn_usr" value="[{$oView->getActiveUsername()}]">
             <div class="help-block">
