@@ -274,7 +274,7 @@ $(function () {
                 oMoreLinkElem.className = 'dropdown moreLinks nav-item';
 
                 oMoreLinkAElem.className = 'dropdown-toggle nav-link';
-                oMoreLinkAElem.innerHTML = 'Mehr <i class="fa fa-angle-down"></i>';
+                oMoreLinkAElem.innerHTML = oWave.i18n.NAV_MORE + ' <i class="fa fa-angle-down"></i>';
                 oMoreLinkAElem.setAttribute('data-toggle', 'dropdown');
 
                 oMoreLinkUlElem.className = 'dropdown-menu';
