@@ -83,7 +83,7 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-dark" data-dismiss="modal">[{oxmultilang ident="DD_MINIBASKET_CONTINUE_SHOPPING"}]</button>
                                 <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=basket"}]" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="[{oxmultilang ident="DISPLAY_BASKET"}]">
-                                    <i class="fa fa-shopping-cart"></i>
+                                    <i class="fa fa-shopping-cart"></i> [{oxmultilang ident="DISPLAY_BASKET"}]
                                 </a>
                             </div>
                             [{/block}]
