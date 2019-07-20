@@ -10158,6 +10158,9 @@ body {
   background-image: none;
   border-color: #dee2e6; }
 
+span.badge:empty {
+  display: none !important; }
+
 .currencies-menu .dropdown-item {
   font-size: .75rem; }
   .currencies-menu .dropdown-item.active, .currencies-menu .dropdown-item.selected, .currencies-menu .dropdown-item:hover {
