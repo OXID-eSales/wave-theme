@@ -102,13 +102,17 @@ $(function () {
 
         // leere Suche verhindern
         $('#searchSubmit').click(function (e) {
+            $('#searchParam').val($('#searchParam').val().trim());
             if ($('#searchParam').val().length > 0) {
                 $('#searchForm').submit();
             }
         });
         $('#searchParam').keydown(function (e) {
-            if ( (e.keyCode === 13) && ($('#searchParam').val().length === 0) ) {
-               e.preventDefault();
+            if (e.keyCode === 13) {
+                $('#searchParam').val($('#searchParam').val().trim());
+                if ($('#searchParam').val().length === 0) {
+                    e.preventDefault();
+                }
             }
         });
 
