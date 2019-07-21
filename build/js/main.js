@@ -126,6 +126,13 @@ $(function () {
                 if ($window.width() >= 760) {
                     $(e).addClass('show');
                     $(this).children('.dropdown-menu').addClass('show');
+                    var $elRight = ($(this).children('.dropdown-menu').offset().left + $(this).children('.dropdown-menu').width());
+                    var $winWidth = $(window).outerWidth();
+                    if ($elRight > $winWidth) {
+                        $(this).children('.dropdown-menu').css({
+                            'left': $winWidth - $elRight - 15,
+                        });
+                    }
                 }
             }
         ).on('mouseleave', '.nav-item.dropdown', function (e) {
