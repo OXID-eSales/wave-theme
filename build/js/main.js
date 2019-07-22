@@ -271,10 +271,10 @@ $(function () {
                     oMoreLinkAElem = document.createElement('a'),
                     oMoreLinkUlElem = document.createElement('ul');
 
-                oMoreLinkElem.className = 'dropdown moreLinks nav-item';
+                oMoreLinkElem.className = 'dropdown moreLinks';
 
-                oMoreLinkAElem.className = 'dropdown-toggle nav-link';
-                oMoreLinkAElem.innerHTML = oWave.i18n.NAV_MORE + ' <i class="fa fa-angle-down"></i>';
+                oMoreLinkAElem.className = 'dropdown-toggle';
+                oMoreLinkAElem.innerHTML = 'Mehr <span class="caret"></span>';
                 oMoreLinkAElem.setAttribute('data-toggle', 'dropdown');
 
                 oMoreLinkUlElem.className = 'dropdown-menu';
@@ -299,8 +299,6 @@ $(function () {
                     iNavItemsWidth += $this.outerWidth();
 
                     if (iNavItemsWidth > iMainNavWidth) {
-                        $this.attr('class', 'dropdown-item');
-                        $this.find('.nav-link').attr('class', 'dropdown-link');
                         aMoreLinkElems.push($this);
                     }
                 }

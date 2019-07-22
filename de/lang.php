@@ -43,7 +43,6 @@ $aLang = array(
     // Header
     'SEARCH_TITLE'                                          => 'Suchbegriff eingeben...',
     'SEARCH_SUBMIT'                                         => 'Suchen',
-    'NAV_MORE'                                              => 'Mehr',
 
     // Footer
     'FOOTER_NEWSLETTER_INFO'                                => 'Die neuesten Produkte und die besten Angebote per E-Mail, damit Ihr nichts mehr verpasst.',
