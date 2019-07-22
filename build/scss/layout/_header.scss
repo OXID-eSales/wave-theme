@@ -280,6 +280,19 @@
       }
     }
   }
+
+  .dropdown-toggle > .badge {
+    background: $brand-secondary;
+    color: $white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 8px;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    padding: 2px 0 0;
+  }
 }
 
 .fixed-header {
@@ -318,10 +331,23 @@
 
   &-link {
     color: $primary;
+    position: relative;
 
     &:hover {
       color: $secondary;
       text-decoration: none;
     }
+
+    > .badge {
+      background: $brand-secondary;
+      color: $white;
+      position: absolute;
+      top: -3px;
+      right: -5px;
+      font-size: 8px;
+      border-radius: 50%;
+      width: 13px;
+      height: 13px;
+      padding: 2px 0 0;    }
   }
 }
