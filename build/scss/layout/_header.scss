@@ -274,6 +274,10 @@
       .moreLinks > .nav-link::after {
         display: none;
       }
+
+      .moreLinks .dropdown-menu .fa-angle-down {
+        display: none;
+      }
     }
   }
 }
