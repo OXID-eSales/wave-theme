@@ -287,7 +287,7 @@ $(function () {
                 $oMoreLinks = $(oMoreLinkElem);
             }
 
-            var iMainNavWidth = $oMainNav.width(),
+            var iMainNavWidth = $oMainNav.width() - $('#navbarSupportedContent > .fixed-header-actions').width(),
                 $oNavItems = $oNavList.find('> li').not('.moreLinks'),
                 iNavItemsWidth = 0,
                 aMoreLinkElems = [];
