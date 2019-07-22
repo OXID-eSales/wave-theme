@@ -279,7 +279,7 @@
     border-radius: 50%;
     width: 13px;
     height: 13px;
-    padding: 3px 0 0;
+    padding: 2px 0 0;
   }
 }
 
@@ -326,9 +326,16 @@
       text-decoration: none;
     }
 
-    .badge {
-      right: -5px;
+    > .badge {
+      background: $brand-secondary;
+      color: $white;
+      position: absolute;
       top: -3px;
-    }
+      right: -5px;
+      font-size: 8px;
+      border-radius: 50%;
+      width: 13px;
+      height: 13px;
+      padding: 2px 0 0;    }
   }
 }
