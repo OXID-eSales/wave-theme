@@ -9,6 +9,7 @@
             DD_FORM_VALIDATION_POSITIVENUMBER: "[{oxmultilang ident="DD_FORM_VALIDATION_POSITIVENUMBER"}]",
             DD_FORM_VALIDATION_NEGATIVENUMBER: "[{oxmultilang ident="DD_FORM_VALIDATION_NEGATIVENUMBER"}]",
             DD_FORM_VALIDATION_REQUIRED:       "[{oxmultilang ident="DD_FORM_VALIDATION_REQUIRED"}]",
-            DD_FORM_VALIDATION_CHECKONE:       "[{oxmultilang ident="DD_FORM_VALIDATION_CHECKONE"}]"
+            DD_FORM_VALIDATION_CHECKONE:       "[{oxmultilang ident="DD_FORM_VALIDATION_CHECKONE"}]",
+            NAV_MORE:                          "[{oxmultilang ident="MORE"}]"
         };
 </script>
