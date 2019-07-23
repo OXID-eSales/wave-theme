@@ -4,13 +4,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.2.1] -  Unreleased
+## [1.3.0] -  Unreleased
+
+### Added
+- Added missing for- and id-Attributes to many lines [PR-48](https://github.com/OXID-eSales/wave-theme/pull/48) 
+in: 
+  - user_billing.tpl
+  - user_shipping.tpl
+  - newsletter.tpl
+  - user_account.tpl
+  - user_noaccount.tpl
+- Added missing help-block-Elements to salutations in user_billing.tpl and user_shipping.tpl [PR-48](https://github.com/OXID-eSales/wave-theme/pull/48)
+
+### Changed
+### Deprecated
 
 ### Removed
 - Remove not used scripts.min.js [PR-42](https://github.com/OXID-eSales/wave-theme/pull/42)
 
 ### Fixed
 - Do not show badge circle if its empty
+- Fixed for- and id-Attribute of oxuser__oxsal in user_billing.tpl [PR-48](https://github.com/OXID-eSales/wave-theme/pull/48)
+- Fixed the bootstrap offset classes in newsletter.tpl [PR-48](https://github.com/OXID-eSales/wave-theme/pull/48)
+
+### Security
 
 ## [1.2.0] -  2019-07-16
 
@@ -64,6 +81,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 1.0.0 -  2019-01-21
 
+[1.3.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.0...HEAD
 [1.2.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.0.0...v1.0.1
