@@ -30,6 +30,7 @@ in:
 - Fixed for- and id-Attribute of oxuser__oxsal in user_billing.tpl [PR-48](https://github.com/OXID-eSales/wave-theme/pull/48)
 - Fixed the bootstrap offset classes in newsletter.tpl [PR-48](https://github.com/OXID-eSales/wave-theme/pull/48)
 - Use sStartPageListDisplayType setting in Top seller start page block [PR-57](https://github.com/OXID-eSales/wave-theme/pull/57)
+- Fix removal of items from basket on pressing Enter [#0007008](https://bugs.oxid-esales.com/view.php?id=7008) [PR-47](https://github.com/OXID-eSales/wave-theme/pull/47)
 
 ### Security
 
