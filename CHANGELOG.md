@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.2.1] -  Unreleased
 
+### Removed
+- Remove not used scripts.min.js [PR-42](https://github.com/OXID-eSales/wave-theme/pull/42)
+
 ### Fixed
 - Do not show badge circle if its empty
 
