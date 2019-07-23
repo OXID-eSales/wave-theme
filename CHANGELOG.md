@@ -21,6 +21,7 @@ in:
 
 ### Removed
 - Remove not used scripts.min.js [PR-42](https://github.com/OXID-eSales/wave-theme/pull/42)
+- Remove outdated econda keys from en translations [PR-52](https://github.com/OXID-eSales/wave-theme/pull/52)
 
 ### Fixed
 - Do not show badge circle if its empty
