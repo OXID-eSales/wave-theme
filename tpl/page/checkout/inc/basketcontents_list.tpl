@@ -182,15 +182,7 @@
                 </div>
 
                 <div class="row collapse mt-3" id="basketItem-[{$smarty.foreach.basketContents.iteration}]">
-                    <div class="col-3">
-                        [{block name="checkout_basketcontents_basketitem_removecheckbox"}]
-                            [{if $editable}]
-                                <input type="hidden" name="aproducts[[{$basketindex}]][remove]" id="aproducts_[{$basketindex}]_remove" value="0">
-                                <button type="submit" name="removeBtn" class="btn btn-sm btn-outline-danger" onclick="document.getElementById( 'aproducts_[{$basketindex}]_remove' ).value = '1';">&times; [{oxmultilang ident="REMOVE"}]</button>
-                            [{/if}]
-                        [{/block}]
-                    </div>
-                    <div class="col-9 col-md-3 offset-md-6">
+                    <div class="col-9 col-md-3 offset-md-6 order-2">
                         [{block name="checkout_basketcontents_basketitem_quantity"}]
                             [{* product quantity manager *}]
                             <div class="quantity">
@@ -226,6 +218,14 @@
                                     +[{$basketitem->getdBundledAmount()}]
                                 [{/if}]
                             </div>
+                        [{/block}]
+                    </div>
+                    <div class="col-3 order-1">
+                        [{block name="checkout_basketcontents_basketitem_removecheckbox"}]
+                            [{if $editable}]
+                                <input type="hidden" name="aproducts[[{$basketindex}]][remove]" id="aproducts_[{$basketindex}]_remove" value="0">
+                                <button type="submit" name="removeBtn" class="btn btn-sm btn-outline-danger" onclick="document.getElementById( 'aproducts_[{$basketindex}]_remove' ).value = '1';">&times; [{oxmultilang ident="REMOVE"}]</button>
+                            [{/if}]
                         [{/block}]
                     </div>
                 </div>
