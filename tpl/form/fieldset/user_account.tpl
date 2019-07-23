@@ -19,7 +19,7 @@
 </div>
 <div class="form-group row[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
     [{block name="user_account_confirmpwd"}]
-        <label class="col-lg-3 req">[{oxmultilang ident="CONFIRM_PASSWORD"}]</label>
+        <label class="col-lg-3 req" for="userPasswordConfirm">[{oxmultilang ident="CONFIRM_PASSWORD"}]</label>
         <div class="col-lg-9">
             <input id="userPasswordConfirm" class="form-control textbox js-oxValidate js-oxValidate_notEmpty js-oxValidate_length js-oxValidate_match" type="password" name="lgn_pwd2" value="[{$lgn_pwd2}]" required="required">
             <div class="help-block"></div>
