@@ -1,4 +1,3 @@
-[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 
 [{capture assign="sValidationJS"}]
     [{strip}]
