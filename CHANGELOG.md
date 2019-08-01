@@ -36,6 +36,7 @@ in:
 - Fix removal of items from basket on pressing Enter [#0007008](https://bugs.oxid-esales.com/view.php?id=7008) [PR-47](https://github.com/OXID-eSales/wave-theme/pull/47)
 - Fix compare list remove link on details page [#0006979](https://bugs.oxid-esales.com/view.php?id=6979) [PR-59](https://github.com/OXID-eSales/wave-theme/pull/59)
 - Fix first error field message disappearing right after validation [PR-45](https://github.com/OXID-eSales/wave-theme/pull/45)
+- Fix More button and children in menu [PR-50](https://github.com/OXID-eSales/wave-theme/pull/50)
 
 ### Security
 
