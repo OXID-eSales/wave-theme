@@ -397,7 +397,7 @@ $(function () {
          * Fix for form validation
          * *********************************/
         $('input.form-control, textarea.form-control, select.form-control').each(function() {
-            $(this).unbind(["keyup", "focus", "blur", "click", "keydown", "keypress"].join(".validation ") + ".validation");
+            $(this).unbind(["keyup", "focus", "blur", "click"].join(".validation ") + ".validation");
         });
 
     }
