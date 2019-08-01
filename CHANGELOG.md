@@ -37,6 +37,7 @@ in:
 - Fix compare list remove link on details page [#0006979](https://bugs.oxid-esales.com/view.php?id=6979) [PR-59](https://github.com/OXID-eSales/wave-theme/pull/59)
 - Fix first error field message disappearing right after validation [PR-45](https://github.com/OXID-eSales/wave-theme/pull/45)
 - Fix More button and children in menu [PR-50](https://github.com/OXID-eSales/wave-theme/pull/50)
+- Prevent main menu flyouts from protruding out of the viewport [PR-54](https://github.com/OXID-eSales/wave-theme/pull/54)
 
 ### Security
 
