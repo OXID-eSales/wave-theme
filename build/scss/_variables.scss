@@ -22,49 +22,49 @@
 // Theme Variables
 // --------------------------------------------------
 
-$font-family-base: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-size-base: 1rem;
-$line-height-base: 1.5;
+$font-family-base: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-size-base: 1rem !default;
+$line-height-base: 1.5 !default;
 
 //== Colors
 //
 //## Brand colors to use across Wave
 
-$fa-font-path : '../fonts/';
+$fa-font-path : '../fonts/' !default;
 
-$brand-primary:   #009EC0;
-$brand-secondary: #FC6621;
-$brand-tertiary: #fff;
+$brand-primary:   #009EC0 !default;
+$brand-secondary: #FC6621 !default;
+$brand-tertiary: #fff !default;
 
 // stylelint-disable
-$white:    #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #adb5bd;
-$gray-600: #6c757d;
-$gray-700: #495057;
-$gray-800: #333333;
-$gray-900: #212529;
-$black:    #000;
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #333333 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
 
-$gray-dark: $gray-800;
+$gray-dark: $gray-800 !default;
 
-$ox-border: $gray-200;
-$ox-header-border: $ox-border;
-$ox-footer-border: $ox-border;
+$ox-border: $gray-200 !default;
+$ox-header-border: $ox-border !default;
+$ox-footer-border: $ox-border !default;
 
-$ox-bg: $gray-100;
-$ox-header-bg: $ox-bg;
-$ox-footer-bg: $ox-bg;
+$ox-bg: $gray-100 !default;
+$ox-header-bg: $ox-bg !default;
+$ox-footer-bg: $ox-bg !default;
 
-$ox-color: $gray-600;
-$ox-footer-color: $ox-color;
-$ox-header-color: $ox-color;
+$ox-color: $gray-600 !default;
+$ox-footer-color: $ox-color !default;
+$ox-header-color: $ox-color !default;
 
-$primary:       $brand-primary;
-$secondary:     $brand-secondary;
+$primary:       $brand-primary !default;
+$secondary:     $brand-secondary !default;
 //$success:       $green !default;
 //$info:          $cyan !default;
 //$warning:       $yellow !default;
@@ -73,83 +73,83 @@ $secondary:     $brand-secondary;
 //$dark:          $gray-800 !default;
 
 
-$ox-container-base-background-color:    $white;
-$ox-container-header-background-color:  $ox-container-base-background-color;
-$ox-container-wrapper-background-color: $ox-container-base-background-color;
-$ox-footer-color-facebook:              #428BCA;
-$ox-footer-color-google-plus:           #d73d32;
-$ox-footer-color-twitter:               #1AB2E8;
-$ox-footer-color-youtube:               #CC181E;
-$ox-footer-color-blog:                  #333333;
+$ox-container-base-background-color:    $white !default;
+$ox-container-header-background-color:  $ox-container-base-background-color !default;
+$ox-container-wrapper-background-color: $ox-container-base-background-color !default;
+$ox-footer-color-facebook:              #428BCA !default;
+$ox-footer-color-google-plus:           #d73d32 !default;
+$ox-footer-color-twitter:               #1AB2E8 !default;
+$ox-footer-color-youtube:               #CC181E !default;
+$ox-footer-color-blog:                  #333333 !default;
 
-//$ox-footer-bg:                          #F2F2F2;
-//$ox-footer-border:                      #E7E7E7;
-//$ox-footer-color:                       #666666;
+//$ox-footer-bg:                          #F2F2F2 !default;
+//$ox-footer-border:                      #E7E7E7 !default;
+//$ox-footer-color:                       #666666 !default;
 
 
 //== Boxed layout
 //
 //## Variables to use across the boxed layout
 
-$ox-boxed-container-shadow: 0 5px 20px rgba( 0, 0, 0, 0.2 );
+$ox-boxed-container-shadow: 0 5px 20px rgba( 0, 0, 0, 0.2 ) !default;
 
 
 //== Home page
 
-$ox-start-section-margin-vertical:   50px;
-$ox-start-manufacturerslider-bg:     #F2F2F2;
-$ox-start-manufacturerslider-border: #E7E7E7;
+$ox-start-section-margin-vertical:   50px !default;
+$ox-start-manufacturerslider-bg:     #F2F2F2 !default;
+$ox-start-manufacturerslider-border: #E7E7E7 !default;
 
 
 //== Lists
 
-$ox-listitem-grid-row-margin-bottom:     30px;
-$ox-listitem-grid-picture-height:        190px;
-$ox-listitem-grid-picture-padding:       15px;
-$ox-listitem-grid-title-rows:            2;
+$ox-listitem-grid-row-margin-bottom:     30px !default;
+$ox-listitem-grid-picture-height:        190px !default;
+$ox-listitem-grid-picture-padding:       15px !default;
+$ox-listitem-grid-title-rows:            2 !default;
 
-$ox-listitem-infogrid-row-margin-bottom: 50px;
-$ox-listitem-infogrid-picture-height:    275px;
-$ox-listitem-infogrid-title-rows:        2;
+$ox-listitem-infogrid-row-margin-bottom: 50px !default;
+$ox-listitem-infogrid-picture-height:    275px !default;
+$ox-listitem-infogrid-title-rows:        2 !default;
 
-$ox-listfilter-bg:                       #F2F2F2;
-$ox-listfilter-border:                   #E7E7E7;
-$ox-listfilter-padding-horizontal:       15px;
-$ox-listfilter-padding-vertical:         10px;
-$ox-listfilter-margin-top:               15px;
+$ox-listfilter-bg:                       #F2F2F2 !default;
+$ox-listfilter-border:                   #E7E7E7 !default;
+$ox-listfilter-padding-horizontal:       15px !default;
+$ox-listfilter-padding-vertical:         10px !default;
+$ox-listfilter-margin-top:               15px !default;
 
 
 //== Main navbar
 
-$ox-mainnav-link-font-size: 1.2em;
-$ox-mainnav-link-font-weight: 200;
-$ox-mainnav-fixed-shadow: 0 0 3px rgba( 0, 0, 0, 0.2 );
+$ox-mainnav-link-font-size: 1.2em !default;
+$ox-mainnav-link-font-weight: 200 !default;
+$ox-mainnav-fixed-shadow: 0 0 3px rgba( 0, 0, 0, 0.2 ) !default;
 
 
 //== Minibasket
 
-$ox-shopping-bag-font-family:    $font-family-base;
-$ox-shopping-bag-font-size:      20px;
-$ox-shopping-bag-mini-font-size: 22px;
+$ox-shopping-bag-font-family:    $font-family-base !default;
+$ox-shopping-bag-font-size:      20px !default;
+$ox-shopping-bag-mini-font-size: 22px !default;
 
 
 //== Details page
 
-$ox-page-details-items-pager-border-bottom: #E7E7E7;
-$ox-page-details-product-title-font-size:   22px;
-$ox-page-details-rating-star-filled-color:  #F60;
-$ox-page-details-rating-star-empty-color:   #C7C7C7;
+$ox-page-details-items-pager-border-bottom: #E7E7E7 !default;
+$ox-page-details-product-title-font-size:   22px !default;
+$ox-page-details-rating-star-filled-color:  #F60 !default;
+$ox-page-details-rating-star-empty-color:   #C7C7C7 !default;
 
 
 //== Checkout (Global)
 
-$ox-checkout-steps-border-color: $brand-primary;
-$ox-checkout-steps-bg:           $ox-checkout-steps-border-color;
-$ox-checkout-steps-color:        #FFF;
-$ox-checkout-steps-active-bg:    $brand-secondary;
-$ox-checkout-steps-active-color: #FFF;
-$ox-checkout-steps-passed-bg:    #5cb85c;
-$ox-checkout-steps-passed-color: #FFF;
+$ox-checkout-steps-border-color: $brand-primary !default;
+$ox-checkout-steps-bg:           $ox-checkout-steps-border-color !default;
+$ox-checkout-steps-color:        #FFF !default;
+$ox-checkout-steps-active-bg:    $brand-secondary !default;
+$ox-checkout-steps-active-color: #FFF !default;
+$ox-checkout-steps-passed-bg:    #5cb85c !default;
+$ox-checkout-steps-passed-color: #FFF !default;
 
 
 //
@@ -162,48 +162,48 @@ $ox-checkout-steps-passed-color: #FFF;
 
 //## Headings
 
-$h1-font-size: 36px;
-$h2-font-size: 30px;
-$h3-font-size: 24px;
-$h4-font-size: 18px;
-$h5-font-size: 14px;
-$h6-font-size: 12px;
+$h1-font-size: 36px !default;
+$h2-font-size: 30px !default;
+$h3-font-size: 24px !default;
+$h4-font-size: 18px !default;
+$h5-font-size: 14px !default;
+$h6-font-size: 12px !default;
 
 
 //## Line Height
-$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
 
-$link-color:       $gray-dark;
-$link-hover-color: $brand-primary;
-$link-disabled-color: #C7C7C7;
+$link-color:       $gray-dark !default;
+$link-hover-color: $brand-primary !default;
+$link-disabled-color: #C7C7C7 !default;
 
 
 //== Navbar
 //
 //##
 
-$navbar-height:                    40px;
-$navbar-margin-bottom:             0;
-$navbar-border-radius:             0;
-$navbar-default-bg:                #FFF;
-$navbar-default-color:             $brand-primary;
-$navbar-default-link-active-bg:    transparent;
-$navbar-default-link-hover-bg:     $navbar-default-link-active-bg;
-$navbar-default-link-active-color: $brand-secondary;
-$navbar-default-link-hover-color:  $navbar-default-link-active-color;
+$navbar-height:                    40px !default;
+$navbar-margin-bottom:             0 !default;
+$navbar-border-radius:             0 !default;
+$navbar-default-bg:                #FFF !default;
+$navbar-default-color:             $brand-primary !default;
+$navbar-default-link-active-bg:    transparent !default;
+$navbar-default-link-hover-bg:     $navbar-default-link-active-bg !default;
+$navbar-default-link-active-color: $brand-secondary !default;
+$navbar-default-link-hover-color:  $navbar-default-link-active-color !default;
 
 
 //== Breadcrumbs
 //
 //##
 
-$breadcrumb-bg:                 transparent;
-$breadcrumb-active-color:       $brand-secondary;
-$breadcrumb-padding-horizontal: 0;
+$breadcrumb-bg:                 transparent !default;
+$breadcrumb-active-color:       $brand-secondary !default;
+$breadcrumb-padding-horizontal: 0 !default;
 
 //== Container Variable
 //
@@ -214,4 +214,4 @@ $container-max-widths: (
         md: 750px,
         lg: 970px,
         xl: 1170px
-);
+) !default;
