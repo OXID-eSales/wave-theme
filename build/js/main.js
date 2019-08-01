@@ -126,6 +126,13 @@ $(function () {
                 if ($window.width() >= 760) {
                     $(e).addClass('show');
                     $(this).children('.dropdown-menu').addClass('show');
+                    var $elRight = ($(this).children('.dropdown-menu').offset().left + $(this).children('.dropdown-menu').width());
+                    var $winWidth = $(window).outerWidth();
+                    if ($elRight > $winWidth) {
+                        $(this).children('.dropdown-menu').css({
+                            'left': $winWidth - $elRight - 15,
+                        });
+                    }
                 }
             }
         ).on('mouseleave', '.nav-item.dropdown', function (e) {
@@ -271,10 +278,10 @@ $(function () {
                     oMoreLinkAElem = document.createElement('a'),
                     oMoreLinkUlElem = document.createElement('ul');
 
-                oMoreLinkElem.className = 'dropdown moreLinks';
+                oMoreLinkElem.className = 'dropdown moreLinks nav-item';
 
-                oMoreLinkAElem.className = 'dropdown-toggle';
-                oMoreLinkAElem.innerHTML = 'Mehr <span class="caret"></span>';
+                oMoreLinkAElem.className = 'dropdown-toggle nav-link';
+                oMoreLinkAElem.innerHTML = oWave.i18n.NAV_MORE + ' <i class="fa fa-angle-down"></i>';
                 oMoreLinkAElem.setAttribute('data-toggle', 'dropdown');
 
                 oMoreLinkUlElem.className = 'dropdown-menu';
@@ -287,7 +294,7 @@ $(function () {
                 $oMoreLinks = $(oMoreLinkElem);
             }
 
-            var iMainNavWidth = $oMainNav.width(),
+            var iMainNavWidth = $oMainNav.width() - $('#navbarSupportedContent > .fixed-header-actions').width(),
                 $oNavItems = $oNavList.find('> li').not('.moreLinks'),
                 iNavItemsWidth = 0,
                 aMoreLinkElems = [];
@@ -299,6 +306,8 @@ $(function () {
                     iNavItemsWidth += $this.outerWidth();
 
                     if (iNavItemsWidth > iMainNavWidth) {
+                        $this.attr('class', 'dropdown-item');
+                        $this.find('.nav-link').attr('class', 'dropdown-link');
                         aMoreLinkElems.push($this);
                     }
                 }
@@ -392,6 +401,14 @@ $(function () {
                 $('#private-sales-login button.submitButton').attr("disabled", "disabled");
             }
         });
+
+        /* *********************************
+         * Fix for form validation
+         * *********************************/
+        $('input.form-control, textarea.form-control, select.form-control').each(function() {
+            $(this).unbind(["keyup", "focus", "blur", "click"].join(".validation ") + ".validation");
+        });
+
     }
 );
 

@@ -15,6 +15,7 @@ in:
   - user_account.tpl
   - user_noaccount.tpl
 - Added missing help-block-Elements to salutations in user_billing.tpl and user_shipping.tpl [PR-48](https://github.com/OXID-eSales/wave-theme/pull/48)
+- Added !default to all variables in variables.scss so it would be possible to overwrite them [PR-62](https://github.com/OXID-eSales/wave-theme/pull/62)
 
 ### Changed
 - Replaced the low-tech arrows in the pagination buttons with Font Awesome Icons [PR-51](https://github.com/OXID-eSales/wave-theme/pull/51)
@@ -34,6 +35,9 @@ in:
 - Use sStartPageListDisplayType setting in Top seller start page block [PR-57](https://github.com/OXID-eSales/wave-theme/pull/57)
 - Fix removal of items from basket on pressing Enter [#0007008](https://bugs.oxid-esales.com/view.php?id=7008) [PR-47](https://github.com/OXID-eSales/wave-theme/pull/47)
 - Fix compare list remove link on details page [#0006979](https://bugs.oxid-esales.com/view.php?id=6979) [PR-59](https://github.com/OXID-eSales/wave-theme/pull/59)
+- Fix first error field message disappearing right after validation [PR-45](https://github.com/OXID-eSales/wave-theme/pull/45)
+- Fix More button and children in menu [PR-50](https://github.com/OXID-eSales/wave-theme/pull/50)
+- Prevent main menu flyouts from protruding out of the viewport [PR-54](https://github.com/OXID-eSales/wave-theme/pull/54)
 
 ### Security
 
