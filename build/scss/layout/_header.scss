@@ -266,6 +266,18 @@
       &-link {
         color: $brand-primary;
       }
+
+      .moreLinks > .nav-link {
+        cursor: default;
+      }
+
+      .moreLinks > .nav-link::after {
+        display: none;
+      }
+
+      .moreLinks .dropdown-menu .fa-angle-down {
+        display: none;
+      }
     }
   }
 }
