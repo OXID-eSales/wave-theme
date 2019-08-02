@@ -21,7 +21,7 @@
                 file="form/fieldset/salutation.tpl"
                 name="editval[oxuser__oxsal]"
                 value=$editval.oxuser__oxsal
-                class="form-control selectpicker show-tick "
+                class="form-control show-tick "
                 required=$contactFormFields.salutation.isRequired
                 }]
             </div>
