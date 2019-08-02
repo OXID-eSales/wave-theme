@@ -6,14 +6,7 @@
             {
                 filter: function()
                 {
-                    if( $( '#shippingAddress' ).css( 'display' ) == 'block' )
-                    {
-                        return $(this).is(':visible, .selectpicker[required]');
-                    }
-                    else
-                    {
-                        return $(this).is(':visible, #addressForm .selectpicker[required]');
-                    }
+                    return $(this).is(':visible');
                 }
             }
         );
