@@ -226,8 +226,6 @@ $(function () {
             // Lazy Loading für Bilder
             $("img").unveil();
 
-            $(".selectpicker").selectpicker();
-
             // Globale Tooltip-Klasse
             $('.hasTooltip').tooltip({container: 'body'});
 
