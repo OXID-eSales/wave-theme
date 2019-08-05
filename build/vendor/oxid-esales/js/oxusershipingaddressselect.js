@@ -63,7 +63,6 @@
             $('#shippingAddressText').hide();
             $("select[name='deladr[oxaddress__oxcountryid]']").children("option").prop("selected", null);
             $("select[name='deladr[oxaddress__oxstateid]']").children('option[value=""]').prop("selected", "selected");
-            $( '#delCountrySelect' ).selectpicker('refresh');
         },
 
         /**
