@@ -1,12 +1,3 @@
-<div class="form-group row[{if $aErrors.oxuser__oxusername}] oxInValid[{/if}]">
-    [{block name="user_account_username"}]
-        <label class="col-lg-3 req" for="userLoginName">[{oxmultilang ident="EMAIL_ADDRESS"}]</label>
-        <div class="col-lg-9">
-            <input id="userLoginName" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_email" type="email" name="lgn_usr" value="[{$oView->getActiveUsername()}]" required="required">
-            <div class="help-block"></div>
-        </div>
-    [{/block}]
-</div>
 <div class="form-group row[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
     [{block name="user_account_password"}]
         <label class="col-lg-3 req" for="userPassword">[{oxmultilang ident="PASSWORD"}]</label>

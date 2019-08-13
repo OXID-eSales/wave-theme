@@ -21,7 +21,23 @@
         [{/strip}]
     [{/capture}]
 
+    [{capture assign="noRegistrationJS"}]
+        [{strip}]
+        $("#noRegistration").click(function () {
+            $("#passwordFields").toggle();
+            if ($("#noRegistration").prop("checked")) {
+                $("#registrationOption").val(1);
+                $("#userPassword").val('');
+                $("#userPasswordConfirm").val('');
+            } else {
+                $("#kontooption").val(3);
+            }
+        });
+        [{/strip}]
+    [{/capture}]
+
     [{oxscript add=$sValidationJS}]
+    [{oxscript add=$noRegistrationJS}]
 
     [{assign var="aErrors" value=$oView->getFieldValidationErrors()}]
 
@@ -31,7 +47,7 @@
                 [{$oViewConf->getHiddenSid()}]
                 [{$oViewConf->getNavFormParams()}]
                 <input type="hidden" name="cl" value="user">
-                <input type="hidden" name="option" value="3">
+                <input type="hidden" name="option" id="registrationOption" value="3">
                 [{if !$oxcmp_user->oxuser__oxpassword->value}]
                     <input type="hidden" name="fnc" value="createuser">
                 [{else}]
@@ -42,29 +58,32 @@
                 <input type="hidden" name="blshowshipaddress" value="1">
             </div>
 
-            [{block name="user_checkout_registration_next_step_top"}]
-                <div class="card bg-light cart-buttons">
-                    <div class="card-body">
-                        <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-outline-dark prevStep submitButton largeButton" id="userBackStepTop">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
-                    </div>
-                </div>
-            [{/block}]
-
             <div class="checkoutCollumns clear">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">[{oxmultilang ident="ACCOUNT_INFORMATION"}]</h3>
-                    </div>
-                    <div class="card-body">
-                        [{include file="form/fieldset/user_account.tpl"}]
-                    </div>
-                </div>
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">[{oxmultilang ident="BILLING_ADDRESS"}]</h3>
                     </div>
                     <div class="card-body">
                         [{include file="form/fieldset/user_billing.tpl" noFormSubmit=true blSubscribeNews=false blOrderRemark=true}]
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">[{oxmultilang ident="ACCOUNT_INFORMATION"}]</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="col-lg-9 offset-lg-3">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="noregistration" id="noRegistration"> [{oxmultilang ident="NO_REGISTRATION"}]
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="passwordFields">
+                            [{include file="form/fieldset/user_account.tpl"}]
+                        </div>
                     </div>
                 </div>
 
