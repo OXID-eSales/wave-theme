@@ -105,7 +105,11 @@
                         <div id="shippingAddress" [{if !$oView->showShipAddress()}]style="display: none;"[{/if}]>
                             [{include file="form/fieldset/user_shipping.tpl" noFormSubmit=true}]
                         </div>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <div class="card-body">
                         [{include file="form/fieldset/order_remark.tpl" blOrderRemark=true}]
 
                     </div>

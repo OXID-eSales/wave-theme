@@ -86,7 +86,7 @@
 <div id="shippingAddressForm" [{if $delivadr}]style="display: none;"[{/if}]>
     <div class="form-group">
         <label class="control-label col-lg-3[{if $oView->isFieldRequired(oxaddress__oxsal)}] req[{/if}]" for="deladr_oxaddress__oxsal">[{oxmultilang ident="TITLE"}]</label>
-        <div class="col-lg-2">
+        <div class="col-lg-9">
             [{include file="form/fieldset/salutation.tpl" name="deladr[oxaddress__oxsal]" value=$delivadr->oxaddress__oxsal->value value2=$deladr.oxaddress__oxsal class="form-control" id="deladr_oxaddress__oxsal"}]
             <div class="help-block"></div>
         </div>
