@@ -39,6 +39,7 @@ in:
 - Fix More button and children in menu [PR-50](https://github.com/OXID-eSales/wave-theme/pull/50)
 - Prevent main menu flyouts from protruding out of the viewport [PR-54](https://github.com/OXID-eSales/wave-theme/pull/54)
 - Ensure that variables are assigned for widget product list and listitems.
+- Add missing help-block elements for several billing/shipping address edit form fields [PR-64](https://github.com/OXID-eSales/wave-theme/pull/64)
 
 ### Security
 
