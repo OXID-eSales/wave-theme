@@ -25,7 +25,7 @@
             <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
                 <div class="content-box">
 
-                [{if $oView->getClassName() != "start" && !$blHideBreadcrumb}]
+                [{if $oView->getClassName() != "start" && !$blHideBreadcrumb && !$oView->getIsOrderStep()}]
                     [{block name="layout_breadcrumb"}]
                         [{include file="widget/breadcrumb.tpl"}]
                     [{/block}]
