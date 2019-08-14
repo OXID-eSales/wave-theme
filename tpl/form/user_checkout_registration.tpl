@@ -64,7 +64,7 @@
                         <h3 class="card-title">[{oxmultilang ident="BILLING_ADDRESS"}]</h3>
                     </div>
                     <div class="card-body">
-                        [{include file="form/fieldset/user_billing.tpl" noFormSubmit=true blSubscribeNews=false blOrderRemark=true}]
+                        [{include file="form/fieldset/user_billing.tpl" noFormSubmit=true blSubscribeNews=false blOrderRemark=true context="checkout"}]
                     </div>
                 </div>
                 <div class="card">
@@ -76,13 +76,13 @@
                             <div class="col-lg-9 offset-lg-3">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="noregistration" id="noRegistration"> [{oxmultilang ident="NO_REGISTRATION"}]
+                                        <input type="checkbox" name="noregistration" id="noRegistration"> [{oxmultilang ident="PURCHASE_WITHOUT_REGISTRATION"}]
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div id="passwordFields">
-                            [{include file="form/fieldset/user_account.tpl"}]
+                            [{include file="form/fieldset/user_account.tpl" context="checkout"}]
                         </div>
                     </div>
                 </div>
@@ -106,10 +106,18 @@
                             [{include file="form/fieldset/user_shipping.tpl" noFormSubmit=true}]
                         </div>
 
-                        [{include file="form/fieldset/order_remark.tpl" blOrderRemark=true}]
-
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">[{oxmultilang ident="WHAT_I_WANTED_TO_SAY"}]</h3>
+                    </div>
+                    <div class="card-body">
+                        [{include file="form/fieldset/order_remark.tpl" blOrderRemark=true}]
+                    </div>
+                </div>
+
             </div>
 
             [{oxscript add="$('#showShipAddress').change( function() { $('#shippingAddress').toggle($(this).is(':not(:checked)'));});"}]

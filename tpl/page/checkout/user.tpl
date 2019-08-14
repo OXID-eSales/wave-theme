@@ -3,14 +3,15 @@
 
     [{* ordering steps *}]
     [{include file="page/checkout/inc/steps.tpl" active=2}]
-
-    [{block name="user_checkout_registration_next_step_top"}]
-        <div class="card bg-light cart-buttons">
-            <div class="card-body">
-                <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-outline-dark prevStep submitButton largeButton" id="userBackStepTop">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
+    [{if !$oxcmp_user}]
+        [{block name="user_checkout_registration_next_step_top"}]
+            <div class="card bg-light cart-buttons">
+                <div class="card-body">
+                    <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-outline-dark prevStep submitButton largeButton" id="userBackStepTop">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
+                </div>
             </div>
-        </div>
-    [{/block}]
+        [{/block}]
+    [{/if}]
 
     <div class="row">
         [{if $oxcmp_user}]

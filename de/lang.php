@@ -109,7 +109,6 @@ $aLang = array(
 
     // Checkout
     'DD_BASKET_BACK_TO_SHOP'                                => 'zurück zum Shop',
-    'NO_REGISTRATION'                                       => 'Ich möchte kein Benutzerkonto anlegen',
 
     // E-Mails
     'DD_FOOTER_FOLLOW_US'                                   => 'Folgen Sie uns',
