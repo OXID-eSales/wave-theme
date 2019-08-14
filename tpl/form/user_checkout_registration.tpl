@@ -106,18 +106,10 @@
                             [{include file="form/fieldset/user_shipping.tpl" noFormSubmit=true}]
                         </div>
 
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">[{oxmultilang ident="WHAT_I_WANTED_TO_SAY"}]</h3>
-                    </div>
-                    <div class="card-body">
                         [{include file="form/fieldset/order_remark.tpl" blOrderRemark=true}]
+
                     </div>
                 </div>
-
             </div>
 
             [{oxscript add="$('#showShipAddress').change( function() { $('#shippingAddress').toggle($(this).is(':not(:checked)'));});"}]
