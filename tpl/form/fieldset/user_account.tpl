@@ -28,16 +28,3 @@
         </div>
     [{/block}]
 </div>
-[{block name="user_account_newsletter"}]
-    <div class="form-group row">
-        <div class="col-lg-9 offset-lg-3">
-            <input type="hidden" name="blnewssubscribed" value="0">
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" name="blnewssubscribed" value="1" [{if $oView->isNewsSubscribed()}]checked[{/if}]> [{oxmultilang ident="NEWSLETTER_SUBSCRIPTION"}]
-                </label>
-            </div>
-            <span class="help-block">[{oxmultilang ident="MESSAGE_NEWSLETTER_SUBSCRIPTION"}]</span>
-        </div>
-    </div>
-[{/block}]
