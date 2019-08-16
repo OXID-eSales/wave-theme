@@ -147,6 +147,7 @@
                 class="form-control"
                 id="invadr_oxuser__oxstateid"
             }]
+            <div class="help-block"></div>
         </div>
     </div>
 [{/block}]
