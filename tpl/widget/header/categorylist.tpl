@@ -21,9 +21,11 @@
                 <div class="collapse navbar-collapse navbar-main-collapse" id="navbarSupportedContent">
                     <ul id="navigation" class="navbar-nav nav">
                         [{block name="dd_widget_header_categorylist_navbar_list"}]
-                            <li class="nav-item[{if $homeSelected == 'true'}] active[{/if}]">
-                                <a class="nav-link" href="[{$oViewConf->getHomeLink()}]">[{oxmultilang ident="HOME"}]</a>
-                            </li>
+                            [{if $oViewConf->getViewThemeParam('blHomeLink')}]
+                                <li class="nav-item[{if $homeSelected == 'true'}] active[{/if}]">
+                                    <a class="nav-link" href="[{$oViewConf->getHomeLink()}]">[{oxmultilang ident="HOME"}]</a>
+                                </li>
+                            [{/if}]
 
                             [{foreach from=$oxcmp_categories item="ocat" key="catkey" name="root"}]
                                 [{if $ocat->getIsVisible()}]
