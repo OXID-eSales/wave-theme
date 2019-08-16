@@ -102,6 +102,7 @@ $aLang = array(
     'WIDGET_PRODUCT_RELATED_PRODUCTS_CROSSSELING_SUBHEADER' => 'Customers who viewed this product also viewed the following products.',
     'DETAILS_VPE_MESSAGE_1'                                 => "This product can only be ordered in packaging units of ",
     'DETAILS_VPE_MESSAGE_2'                                 => "",
+    'TO_CART_NOVARIANT'                                     => 'Choose a variant',
 
     // Modal basket
     'DD_MINIBASKET_MODAL_TABLE_PRICE'                       => 'Total',
