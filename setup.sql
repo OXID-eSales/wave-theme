@@ -82,6 +82,7 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (uuid(), 'theme:wave', 'bl_showWishlist', 'features', '', 8, NOW()),
 (uuid(), 'theme:wave', 'bl_showVouchers', 'features', '', 9, NOW()),
 (uuid(), 'theme:wave', 'bl_showGiftWrapping', 'features', '', 10, NOW()),
+(uuid(), 'theme:wave', 'bl_showPriceAlarm', 'features', '', 11, NOW()),
 (uuid(), 'theme:wave', 'blShowBirthdayFields', 'display', '', 14, NOW()),
 (uuid(), 'theme:wave', 'blShowFinalStep', 'display', '', 16, NOW()),
 (uuid(), 'theme:wave', 'sManufacturerIconsize', 'images', '', 6, NOW()),

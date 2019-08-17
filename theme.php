@@ -98,6 +98,18 @@ $aTheme = array(
             'value' => 1,
         ),
         array(
+            'group' => 'features',
+            'name'  => 'bl_showWishlist',
+            'type'  => 'bool',
+            'value' => 1,
+        ),
+        array(
+            'group' => 'features',
+            'name'  => 'bl_showPriceAlarm',
+            'type'  => 'bool',
+            'value' => 1,
+        ),
+        array(
             'group' => 'background',
             'name'  => 'blBackgroundAttachment',
             'type'  => 'bool',
