@@ -18,6 +18,7 @@ in:
 - Added !default to all variables in variables.scss so it would be possible to overwrite them [PR-62](https://github.com/OXID-eSales/wave-theme/pull/62)
 - Added the checkbox to enable/disable pricealarm tab in product id [PR-71](https://github.com/OXID-eSales/wave-theme/pull/71)
 - Checkbox "Show home link in navigation" added to theme settings [PR-70](https://github.com/OXID-eSales/wave-theme/pull/70)
+- Added a Hover message for disabled variant to Basket buttons [PR-69](https://github.com/OXID-eSales/wave-theme/pull/69)
 
 ### Changed
 - Replaced the low-tech arrows in the pagination buttons with Font Awesome Icons [PR-51](https://github.com/OXID-eSales/wave-theme/pull/51)
