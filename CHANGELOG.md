@@ -16,6 +16,7 @@ in:
   - user_noaccount.tpl
 - Added missing help-block-Elements to salutations in user_billing.tpl and user_shipping.tpl [PR-48](https://github.com/OXID-eSales/wave-theme/pull/48)
 - Added !default to all variables in variables.scss so it would be possible to overwrite them [PR-62](https://github.com/OXID-eSales/wave-theme/pull/62)
+- Added the checkbox to enable/disable pricealarm tab in product id [PR-71](https://github.com/OXID-eSales/wave-theme/pull/71)
 
 ### Changed
 - Replaced the low-tech arrows in the pagination buttons with Font Awesome Icons [PR-51](https://github.com/OXID-eSales/wave-theme/pull/51)
