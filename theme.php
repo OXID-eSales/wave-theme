@@ -152,6 +152,12 @@ $aTheme = array(
             'value' => 0,
         ),
         array(
+            'group' => 'display',
+            'name'  => 'blHomeLink',
+            'type'  => 'bool',
+            'value' => 1,
+        ),
+        array(
             'group' => 'googleanalytics',
             'name'  => 'blGAAnonymizeIPs',
             'type'  => 'bool',
