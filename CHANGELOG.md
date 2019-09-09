@@ -26,6 +26,7 @@ in:
 - Changed block ``user_account_newsletter`` in form/fieldset/user_account.tpl from inner form-group to outer form-group
 - Don't output the legal footer if oxstdfooter isn't there [PR-58](https://github.com/OXID-eSales/wave-theme/pull/58)
 - Don't display the "products per page" flyout if there's only one option in it. [PR-49](https://github.com/OXID-eSales/wave-theme/pull/49)
+- Made the modal minibasket look more like the flyout minibasket [PR-56](https://github.com/OXID-eSales/wave-theme/pull/56)
 
 ### Deprecated
 
