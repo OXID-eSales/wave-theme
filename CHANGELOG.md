@@ -25,6 +25,7 @@ in:
 - Replaced the low-tech arrows in the pagination buttons with Font Awesome Icons [PR-51](https://github.com/OXID-eSales/wave-theme/pull/51)
 - Changed block ``user_account_newsletter`` in form/fieldset/user_account.tpl from inner form-group to outer form-group
 - Don't output the legal footer if oxstdfooter isn't there [PR-58](https://github.com/OXID-eSales/wave-theme/pull/58)
+- Don't display the "products per page" flyout if there's only one option in it. [PR-49](https://github.com/OXID-eSales/wave-theme/pull/49)
 
 ### Deprecated
 
