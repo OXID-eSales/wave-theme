@@ -27,6 +27,7 @@ in:
 - Don't output the legal footer if oxstdfooter isn't there [PR-58](https://github.com/OXID-eSales/wave-theme/pull/58)
 - Don't display the "products per page" flyout if there's only one option in it. [PR-49](https://github.com/OXID-eSales/wave-theme/pull/49)
 - Made the modal minibasket look more like the flyout minibasket [PR-56](https://github.com/OXID-eSales/wave-theme/pull/56)
+- Trim whitespaces in the search query and prevent empty searches [PR-53](https://github.com/OXID-eSales/wave-theme/pull/53)
 
 ### Deprecated
 
