@@ -1,0 +1,29 @@
+#modalbasketFlyout {
+
+  margin-left: 15px;
+  margin-right: 15px;
+
+  .minibasket-img {
+    max-height: 50px;
+  }
+
+  .badge {
+    background-color: $secondary;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-weight: 500;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+  }
+
+  .countdown {
+    margin: 15px -15px 0;
+  }
+
+}
