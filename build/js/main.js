@@ -100,6 +100,22 @@ $(function () {
             }
         );
 
+        // leere Suche verhindern
+        $('#searchSubmit').click(function (e) {
+            $('#searchParam').val($('#searchParam').val().trim());
+            if ($('#searchParam').val().length > 0) {
+                $('#searchForm').submit();
+            }
+        });
+        $('#searchParam').keydown(function (e) {
+            if (e.keyCode === 13) {
+                $('#searchParam').val($('#searchParam').val().trim());
+                if ($('#searchParam').val().length === 0) {
+                    e.preventDefault();
+                }
+            }
+        });
+
         // Unveil beim Wechsel eines Tabs durchführen
         $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
                 $(this.getAttribute('href')).find('img').unveil();
