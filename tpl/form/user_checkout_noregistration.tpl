@@ -1,7 +1,6 @@
 [{assign var="aErrors" value=$oView->getFieldValidationErrors()}]
 
 [{block name="user_checkout_noregistration"}]
-    [{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 
     [{capture assign="sValidationJS"}]
         [{strip}]

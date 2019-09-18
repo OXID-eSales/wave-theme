@@ -1,4 +1,3 @@
-[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 
 <form class="js-oxValidate form-horizontal" action="[{$oViewConf->getSelfActionLink()}]" name="changepassword" method="post" novalidate="novalidate">
