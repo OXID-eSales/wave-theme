@@ -50,6 +50,7 @@ in:
 - Display netto prices in netto mode in quantity block [#0006811](https://bugs.oxid-esales.com/view.php?id=6811) [PR-65](https://github.com/OXID-eSales/wave-theme/pull/65)
 - Remove usages of broken Bootstrap selects [#0007007](https://bugs.oxid-esales.com/view.php?id=7007) [PR-63](https://github.com/OXID-eSales/wave-theme/pull/63)
 - Remove adjustements to default Bootstrap small button [PR-61](https://github.com/OXID-eSales/wave-theme/pull/61)
+- Remove duplicated integration of jqBootstrapValidation.min.js [PR-60](https://github.com/OXID-eSales/wave-theme/pull/60)
 
 ### Security
 
