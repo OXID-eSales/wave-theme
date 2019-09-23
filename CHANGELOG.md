@@ -51,6 +51,7 @@ in:
 - Remove usages of broken Bootstrap selects [#0007007](https://bugs.oxid-esales.com/view.php?id=7007) [PR-63](https://github.com/OXID-eSales/wave-theme/pull/63)
 - Remove adjustements to default Bootstrap small button [PR-61](https://github.com/OXID-eSales/wave-theme/pull/61)
 - Remove duplicated integration of jqBootstrapValidation.min.js [PR-60](https://github.com/OXID-eSales/wave-theme/pull/60)
+- Remove duplicated js includes in templates [PR-72](https://github.com/OXID-eSales/wave-theme/pull/72)
 
 ### Security
 
