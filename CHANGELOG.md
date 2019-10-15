@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.3.0] -  Unreleased
+## [1.3.0] - 2019-10-15
 
 ### Added
 - Added missing for- and id-Attributes to many lines [PR-48](https://github.com/OXID-eSales/wave-theme/pull/48) 
