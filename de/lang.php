@@ -21,7 +21,7 @@
 
 $sLangName = "Deutsch";
 
-$aLang = array(
+$aLang = [
     'charset'                                               => 'UTF-8',
 
     // Global
@@ -141,7 +141,7 @@ $aLang = array(
     'DD_SELECT_SALUTATION'                                  => 'Bitte auswählen',
 
     'DD_CATEGORY_RESET_BUTTON'                              => 'Zurücksetzen',
-);
+];
 
 /*
 [{ oxmultilang ident="GENERAL_YOUWANTTODELETE"}]
