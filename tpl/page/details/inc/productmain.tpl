@@ -117,7 +117,7 @@
             [{/block}]
 
             [{* article main info block *}]
-            <div class="details-information[{if $oManufacturer->oxmanufacturers__oxicon->value}] hasBrand[{/if}]"" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="details-information[{if $oManufacturer->oxmanufacturers__oxicon->value}] hasBrand[{/if}]" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
                     [{* additional info *}]
                     [{oxhasrights ident="SHOWARTICLEPRICE"}]
