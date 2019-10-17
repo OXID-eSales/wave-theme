@@ -76,7 +76,6 @@ module.exports = function (grunt) {
                         '<%= project.dev %>node_modules/bootstrap/dist/js/bootstrap.bundle.js',
                         '<%= project.dev %>build/vendor/jquery-unveil/js/jquery.unveil.js',
                         '<%= project.dev %>build/vendor/jquery-flexslider2/js/jquery.flexslider.js',
-                        '<%= project.dev %>build/vendor/bootstrap-select/js/bootstrap-select.js',
                         '<%= project.dev %>build/vendor/jquery-bootstrap-validation/js/jqBootstrapValidation.js',
                         '<%= project.dev %>build/js/main.js',
                         '<%= project.dev %>build/js/pages/compare.js',

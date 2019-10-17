@@ -21,7 +21,7 @@
 
 $sLangName = "Deutsch";
 
-$aLang = array(
+$aLang = [
     'charset'                                               => 'UTF-8',
 
     // Global
@@ -102,6 +102,7 @@ $aLang = array(
     'WIDGET_PRODUCT_RELATED_PRODUCTS_CROSSSELING_SUBHEADER' => 'Kunden die sich diesen Artikel angesehen haben, haben sich auch folgende Artikel angesehen.',
     'DETAILS_VPE_MESSAGE_1'                                 => 'Dieser Artikel kann nur in Verpackungseinheiten zu je',
     'DETAILS_VPE_MESSAGE_2'                                 => 'erworben werden.',
+    'TO_CART_NOVARIANT'                                     => 'Variante wählen',
 
     // Modal-Warenkorb
     'DD_MINIBASKET_MODAL_TABLE_PRICE'                       => 'Gesamtsumme',
@@ -140,7 +141,7 @@ $aLang = array(
     'DD_SELECT_SALUTATION'                                  => 'Bitte auswählen',
 
     'DD_CATEGORY_RESET_BUTTON'                              => 'Zurücksetzen',
-);
+];
 
 /*
 [{ oxmultilang ident="GENERAL_YOUWANTTODELETE"}]

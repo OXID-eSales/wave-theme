@@ -1,5 +1,3 @@
-[{oxscript include="js/pages/details.min.js" priority=10}]
-
 [{assign var="oConfig" value=$oViewConf->getConfig()}]
 [{assign var="oManufacturer" value=$oView->getManufacturer()}]
 [{assign var="aVariantSelections" value=$oView->getVariantSelections()}]
@@ -250,7 +248,7 @@
                                     <div class="input-group tobasket-input-group">
                                         <input id="amountToBasket" type="text" name="am" value="1" autocomplete="off" class="form-control">
                                         <div class="input-group-append">
-                                            <button id="toBasket" type="submit" [{if !$blCanBuy}]disabled="disabled"[{/if}] class="btn btn-primary submitButton"><i class="fa fa-shopping-cart"></i> [{oxmultilang ident="TO_CART"}]</button>
+                                            <button id="toBasket" type="submit" [{if !$blCanBuy}]disabled="disabled"[{/if}] class="btn btn-primary submitButton" data-disabledtext="[{oxmultilang ident="TO_CART_NOVARIANT"}]"><i class="fa fa-shopping-cart"></i> [{oxmultilang ident="TO_CART"}]</button>
                                         </div>
                                     </div>
                                 [{/if}]

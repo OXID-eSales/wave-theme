@@ -1,7 +1,6 @@
 [{capture append="oxidBlock_content"}]
     [{assign var="oConfig" value=$oViewConf->getConfig()}]
     [{assign var='rsslinks' value=$oView->getRssLinks()}]
-    [{oxscript include="js/pages/start.min.js"}]
 
     [{block name="start_welcome_text"}]
         [{oxifcontent ident="oxstartwelcome" object="oCont"}]

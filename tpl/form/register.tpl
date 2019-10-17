@@ -1,4 +1,3 @@
-[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 <form class="form-horizontal" action="[{$oViewConf->getSslSelfLink()}]" name="order" method="post" novalidate="novalidate">
     <div class="hidden">

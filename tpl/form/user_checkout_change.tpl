@@ -1,22 +1,14 @@
-[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 
 [{capture assign="sValidationJS"}]
     [{strip}]
-    $('input,select,textarea').not('[type=submit]').jqBootstrapValidation(
-        {
-            filter: function()
+        $('input,select,textarea').not('[type=submit]').jqBootstrapValidation(
             {
-                if( $( '#shippingAddress' ).css( 'display' ) == 'block' )
+                filter: function()
                 {
-                    return $(this).is(':visible, .selectpicker');
-                }
-                else
-                {
-                    return $(this).is(':visible, #addressForm .selectpicker');
+                    return $(this).is(':visible');
                 }
             }
-        }
-    );
+        );
     [{/strip}]
 [{/capture}]
 

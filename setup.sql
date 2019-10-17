@@ -69,6 +69,7 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(), 1, 'theme:wave', 'blFooterShowNews', 'bool', 0x07, NOW()),
 (uuid(), 1, 'theme:wave', 'sLogoFile', 'str', 0x942748b21d78ed91e41c4cb2b7, NOW()),
 (uuid(), 1, 'theme:wave', 'blFullwidthLayout', 'bool', '', NOW());
+(uuid(), 1, 'theme:wave', 'blHomeLink', 'bool', '', NOW());
 
 
 INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPING`, `OXVARCONSTRAINT`, `OXPOS`, `OXTIMESTAMP`) VALUES
@@ -82,6 +83,7 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (uuid(), 'theme:wave', 'bl_showWishlist', 'features', '', 8, NOW()),
 (uuid(), 'theme:wave', 'bl_showVouchers', 'features', '', 9, NOW()),
 (uuid(), 'theme:wave', 'bl_showGiftWrapping', 'features', '', 10, NOW()),
+(uuid(), 'theme:wave', 'bl_showPriceAlarm', 'features', '', 11, NOW()),
 (uuid(), 'theme:wave', 'blShowBirthdayFields', 'display', '', 14, NOW()),
 (uuid(), 'theme:wave', 'blShowFinalStep', 'display', '', 16, NOW()),
 (uuid(), 'theme:wave', 'sManufacturerIconsize', 'images', '', 6, NOW()),
@@ -136,6 +138,7 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (uuid(), 'theme:wave', 'sDeliveryDaysNotOnStock', 'googlets', '', 11, NOW()),
 (uuid(), 'theme:wave', 'blSliderShowImageCaption', 'images', '', 9, NOW()),
 (uuid(), 'theme:wave', 'blFullwidthLayout', 'display', '', 10, NOW()),
+(uuid(), 'theme:wave', 'blHomeLink', 'display', '', 11, NOW()),
 (uuid(), 'theme:wave', 'blFooterShowHelp', 'footer', '', 1, NOW()),
 (uuid(), 'theme:wave', 'blFooterShowLinks', 'footer', '', 2, NOW()),
 (uuid(), 'theme:wave', 'blFooterShowNewsletter', 'footer', '', 4, NOW()),

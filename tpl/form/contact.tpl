@@ -1,4 +1,3 @@
-[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 
 [{assign var="editval" value=$oView->getUserData()}]
@@ -21,7 +20,7 @@
                 file="form/fieldset/salutation.tpl"
                 name="editval[oxuser__oxsal]"
                 value=$editval.oxuser__oxsal
-                class="form-control selectpicker show-tick "
+                class="form-control show-tick "
                 required=$contactFormFields.salutation.isRequired
                 }]
             </div>

@@ -2,6 +2,43 @@
     [{assign var="blScrollable" value=true}]
 [{/if}]
 
+[{capture name="cartTable"}]
+    [{foreach from=$oxcmp_basket->getContents() name=miniBasketList item=_product}]
+        [{block name="widget_minibasket_product"}]
+            [{assign var="minibasketItemTitle" value=$_product->getTitle()}]
+            <div class="row minibasket-item-row">
+                <div class="[{if $_prefix == 'modal'}]col-4 col-sm-2[{else}]col-4[{/if}] minibasket-item-col text-center">
+                    <span class="badge">[{$_product->getAmount()}]</span>
+                    <a class="minibasket-link" href="[{$_product->getLink()}]" title="[{$minibasketItemTitle|strip_tags}]">
+                        <img class="minibasket-img" src="[{$_product->getIconUrl()}]" alt="[{$minibasketItemTitle|strip_tags}]"/>
+                    </a>
+                </div>
+                <div class="[{if $_prefix == 'modal'}]col-4 col-sm-7[{else}]col-4[{/if}] minibasket-item-col">
+                    <a class="minibasket-link" href="[{$_product->getLink()}]" title="[{$minibasketItemTitle|strip_tags}]">[{$minibasketItemTitle|strip_tags}]</a>
+
+                </div>
+                <div class="[{if $_prefix == 'modal'}]col-4 col-sm-3[{else}]col-4[{/if}] minibasket-item-col text-right">
+                    <span class="price">[{oxprice price=$_product->getPrice() currency=$currency}]</span>
+                </div>
+            </div>
+        [{/block}]
+    [{/foreach}]
+    <div class="row minibasket-total-row">
+        <div class="[{if $_prefix == 'modal'}]col-8 col-sm-9[{else}]col-8[{/if}] minibasket-total-col">
+            <strong>[{oxmultilang ident="TOTAL"}]</strong>
+        </div>
+        <div class="[{if $_prefix == 'modal'}]col-4 col-sm-3[{else}]col-4[{/if}] minibasket-total-col text-right">
+            <strong>
+                [{if $oxcmp_basket->isPriceViewModeNetto()}]
+                    [{oxprice price=$oxcmp_basket->getNettoSum() currency=$currency}]
+                [{else}]
+                    [{oxprice price=$oxcmp_basket->getBruttoSum() currency=$currency}]
+                [{/if}]
+            </strong>
+        </div>
+    </div>
+[{/capture}]
+
 [{block name="widget_minibasket"}]
     [{if $oxcmp_basket->getProductsCount()}]
         [{oxhasrights ident="TOBASKET"}]
@@ -25,54 +62,7 @@
                                 [{if $oxcmp_basket->getProductsCount()}]
                                     [{oxhasrights ident="TOBASKET"}]
                                         <div id="[{$_prefix}]basketFlyout" class="basketFlyout">
-                                            <div class="">
-                                                <table class="table table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>[{oxmultilang ident="PRODUCT"}]</th>
-                                                            <th class="text-right">[{oxmultilang ident="DD_MINIBASKET_MODAL_TABLE_PRICE"}]</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        [{foreach from=$oxcmp_basket->getContents() name=miniBasketList item=_product}]
-                                                            [{block name="widget_minibasket_product"}]
-                                                                [{assign var="minibasketItemTitle" value=$_product->getTitle()}]
-                                                                <tr>
-                                                                    <td>
-                                                                        <a href="[{$_product->getLink()}]" title="[{$minibasketItemTitle|strip_tags}]">
-                                                                            <span class="item">
-                                                                                [{if $_product->getAmount() > 1}]
-                                                                                    [{$_product->getAmount()}] &times;
-                                                                                [{/if}]
-                                                                                [{$minibasketItemTitle|strip_tags}]
-                                                                            </span>
-                                                                        </a>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                        <strong class="price">[{oxprice price=$_product->getPrice() currency=$currency}] *</strong>
-                                                                    </td>
-                                                                </tr>
-                                                            [{/block}]
-                                                        [{/foreach}]
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr>
-                                                            [{block name="widget_minibasket_total"}]
-                                                                <td><strong>[{oxmultilang ident="TOTAL"}]</strong></td>
-                                                                <td class="text-right">
-                                                                    <strong class="price">
-                                                                        [{if $oxcmp_basket->isPriceViewModeNetto()}]
-                                                                            [{oxprice price=$oxcmp_basket->getNettoSum() currency=$currency}]
-                                                                        [{else}]
-                                                                            [{oxprice price=$oxcmp_basket->getBruttoSum() currency=$currency}] *
-                                                                        [{/if}]
-                                                                    </strong>
-                                                                </td>
-                                                            [{/block}]
-                                                        </tr>
-                                                    </tfoot>
-                                                </table>
-                                            </div>
+                                            [{$smarty.capture.cartTable}]
                                             [{include file="widget/minibasket/countdown.tpl"}]
                                         </div>
                                     [{/oxhasrights}]
@@ -83,7 +73,7 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-dark" data-dismiss="modal">[{oxmultilang ident="DD_MINIBASKET_CONTINUE_SHOPPING"}]</button>
                                 <a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=basket"}]" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="[{oxmultilang ident="DISPLAY_BASKET"}]">
-                                    <i class="fa fa-shopping-cart"></i>
+                                    <i class="fa fa-shopping-cart"></i> [{oxmultilang ident="DISPLAY_BASKET"}]
                                 </a>
                             </div>
                             [{/block}]
@@ -102,40 +92,7 @@
                     [{block name="dd_layout_page_header_icon_menu_minibasket_table"}]
 
                     <div class="minibasket">
-                        [{foreach from=$oxcmp_basket->getContents() name=miniBasketList item=_product}]
-                            [{block name="widget_minibasket_product"}]
-                                [{assign var="minibasketItemTitle" value=$_product->getTitle()}]
-                                <div class="row minibasket-item-row">
-                                    <div class="col-4 minibasket-item-col text-center">
-                                        <span class="badge">[{$_product->getAmount()}]</span>
-                                        <a class="minibasket-link" href="[{$_product->getLink()}]" title="[{$minibasketItemTitle|strip_tags}]">
-                                            <img class="minibasket-img" src="[{$_product->getIconUrl()}]" alt="[{$minibasketItemTitle|strip_tags}]"/>
-                                        </a>
-                                    </div>
-                                    <div class="col-4 minibasket-item-col">
-                                        <a class="minibasket-link" href="[{$_product->getLink()}]" title="[{$minibasketItemTitle|strip_tags}]">[{$minibasketItemTitle|strip_tags}]</a>
-
-                                    </div>
-                                    <div class="col-4 minibasket-item-col text-right">
-                                        <span class="price">[{oxprice price=$_product->getPrice() currency=$currency}]</span>
-                                    </div>
-                                </div>
-                            [{/block}]
-                        [{/foreach}]
-                        <div class="row minibasket-total-row">
-                            <div class="col-8 minibasket-total-col">
-                                <strong>[{oxmultilang ident="TOTAL"}]</strong>
-                            </div>
-                            <div class="col-4 minibasket-total-col text-right">
-                                <strong>
-                                    [{if $oxcmp_basket->isPriceViewModeNetto()}]
-                                        [{oxprice price=$oxcmp_basket->getNettoSum() currency=$currency}]
-                                    [{else}]
-                                        [{oxprice price=$oxcmp_basket->getBruttoSum() currency=$currency}]
-                                    [{/if}]
-                                </strong>
-                            </div>
-                        </div>
+                        [{$smarty.capture.cartTable}]
                     </div>
 
                         <div class="clearfix">

@@ -63,6 +63,32 @@
       @include media-breakpoint-up(md) {
         width: 250px;
       }
+
+      #toBasket:disabled {
+        color: transparentize($white, .65);
+        cursor: not-allowed;
+          min-width: 12em;
+      }
+
+      #toBasket:disabled:before {
+        content: attr(data-disabledtext);
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: inherit;
+        color: $white;
+        padding: inherit;
+        opacity: 0;
+        transition: opacity .1s;
+      }
+
+      #toBasket:disabled:hover:before {
+        opacity: 1;
+      }
     }
   }
 
