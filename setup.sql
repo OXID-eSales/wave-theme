@@ -68,7 +68,7 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(), 1, 'theme:wave', 'blEmailsShowProductPictures', 'bool', '', NOW()),
 (uuid(), 1, 'theme:wave', 'blFooterShowNews', 'bool', 0x07, NOW()),
 (uuid(), 1, 'theme:wave', 'sLogoFile', 'str', 0x942748b21d78ed91e41c4cb2b7, NOW()),
-(uuid(), 1, 'theme:wave', 'blFullwidthLayout', 'bool', '', NOW());
+(uuid(), 1, 'theme:wave', 'blFullwidthLayout', 'bool', '', NOW()),
 (uuid(), 1, 'theme:wave', 'blHomeLink', 'bool', '', NOW());
 
 
