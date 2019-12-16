@@ -14,6 +14,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Removed unwanted quotation mark in ``productmain.tpl`` html [PR-73](https://github.com/OXID-eSales/wave-theme/pull/73)
 
+## [1.4.0] - Unreleased
+
+### Added
+- New blocks:
+  - `form/newsletter.tpl`  
+    - newsletter_form_fields
+    - newsletter_form_button
+
 ## [1.3.1] - 2019-11-15
 
 ### Added
@@ -122,7 +130,8 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
-[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.0...HEAD
+[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/b-1.x...HEAD
+[1.4.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.1...b-1.x
 [1.3.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.1.0...v1.2.0
