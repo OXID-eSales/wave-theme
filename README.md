@@ -4,6 +4,11 @@
 
 *Wave* is a responsive theme for all OXID eShop editions. Theme is built on the top of [Flow theme](https://github.com/OXID-eSales/flow_theme).
 
+## Branch Compatibility
+
+* master branch is compatible with OXID eShop unreleased b-6.x and up
+* b-1.x branch is compatible with OXID eShop compilation 6.1 and 6.2 
+
 ## Installation
 If you want to extend the theme you need to clone the repository (see section development) as some soures are ignored on composer installation. 
 
@@ -73,7 +78,7 @@ task while being in "wave" directory:
 
 If you are interested in contributing of some changes, Please read [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
 
-## Compatibility
+## Compatibility with modules
 
 1. Visual CMS
 - In the module settings you need to deacticvate the inclusion of Bootstrap and JQuery
