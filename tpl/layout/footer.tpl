@@ -96,15 +96,6 @@
                             </a>
                         </li>
                         [{/if}]
-                        [{if $oViewConf->getViewThemeParam('sGooglePlusUrl')}]
-                        <li class="social-links-item">
-                            <a target="_blank" class="social-links-link"
-                               rel="noopener"
-                               href="[{$oViewConf->getViewThemeParam('sGooglePlusUrl')}]">
-                                <i class="fab fa-google-plus-square"></i> <span>Google+</span>
-                            </a>
-                        </li>
-                        [{/if}]
                         [{if $oViewConf->getViewThemeParam('sTwitterUrl')}]
                         <li class="social-links-item">
                             <a target="_blank" class="social-links-link"
