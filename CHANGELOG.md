@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - `form/newsletter.tpl`  
     - newsletter_form_fields
     - newsletter_form_button
+  - ``user_account_password`` in ``tpl/form/forgotpwd_change_pwd.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
+  - ``user_account_password`` in ``tpl/form/user_password.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
 
 ## [1.3.1] - 2019-11-15
 
