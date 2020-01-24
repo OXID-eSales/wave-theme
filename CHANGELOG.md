@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [master] - Unreleased
+
+### Removed
+- Credit Card related blocks
+
 ## [2.0.0] - Unreleased
 
 ### Changed
@@ -13,9 +18,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Removed unwanted quotation mark in ``productmain.tpl`` html [PR-73](https://github.com/OXID-eSales/wave-theme/pull/73)
-
-### Removed
-- Credit Card
 
 ## [1.4.0] - Unreleased
 
@@ -135,7 +137,8 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
-[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/b-1.x...HEAD
+[master]: https://github.com/OXID-eSales/wave-theme/compare/b-2.x...HEAD
+[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/b-1.x...b-2.x
 [1.4.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.1...b-1.x
 [1.3.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.2.0...v1.3.0
