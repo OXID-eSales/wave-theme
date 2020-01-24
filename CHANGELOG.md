@@ -14,6 +14,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Removed unwanted quotation mark in ``productmain.tpl`` html [PR-73](https://github.com/OXID-eSales/wave-theme/pull/73)
 
+### Removed
+- Credit Card
+
 ## [1.4.0] - Unreleased
 
 ### Added
