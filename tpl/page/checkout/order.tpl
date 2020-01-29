@@ -195,20 +195,22 @@
                     [{/if}]
                 [{/block}]
 
-                [{if !$oView->isLowOrderPrice()}]
-                    <div id="orderAgbTop">
-                        <form action="[{$oViewConf->getSslSelfLink()}]" method="post" id="orderConfirmAgbTop">
-                            [{$oViewConf->getHiddenSid()}]
-                            [{$oViewConf->getNavFormParams()}]
-                            <input type="hidden" name="cl" value="order">
-                            <input type="hidden" name="fnc" value="[{$oView->getExecuteFnc()}]">
-                            <input type="hidden" name="challenge" value="[{$challenge}]">
-                            <input type="hidden" name="sDeliveryAddressMD5" value="[{$oView->getDeliveryAddressMD5()}]">
+                [{block name="checkout_order_agb"}]
+                    [{if !$oView->isLowOrderPrice()}]
+                        <div id="orderAgbTop">
+                            <form action="[{$oViewConf->getSslSelfLink()}]" method="post" id="orderConfirmAgbTop">
+                                [{$oViewConf->getHiddenSid()}]
+                                [{$oViewConf->getNavFormParams()}]
+                                <input type="hidden" name="cl" value="order">
+                                <input type="hidden" name="fnc" value="[{$oView->getExecuteFnc()}]">
+                                <input type="hidden" name="challenge" value="[{$challenge}]">
+                                <input type="hidden" name="sDeliveryAddressMD5" value="[{$oView->getDeliveryAddressMD5()}]">
 
-                            [{include file="page/checkout/inc/agb.tpl"}]
-                        </form>
-                    </div>
-                [{/if}]
+                                [{include file="page/checkout/inc/agb.tpl"}]
+                            </form>
+                        </div>
+                    [{/if}]
+                [{/block}]
 
                 <div id="orderEditCart">
                     <form action="[{$oViewConf->getSslSelfLink()}]" method="post">
