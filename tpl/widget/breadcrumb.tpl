@@ -9,8 +9,8 @@
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item[{if $smarty.foreach.breadcrumb.last}] active[{/if}]">
                             <a href="[{if $sCrum.link}][{$sCrum.link}][{else}]#[{/if}]" class="breadcrumb-link" title="[{$sCrum.title|escape:'html'}]" itemprop="item">
                                 <span itemprop="name">[{$sCrum.title}]</span>
-                                <meta itemprop="position" content="[{$smarty.foreach.breadcrumb.iteration}]" />
                             </a>
+                            <meta itemprop="position" content="[{$smarty.foreach.breadcrumb.iteration}]" />
                         </li>
                     [{/foreach}]
                 [{/block}]
