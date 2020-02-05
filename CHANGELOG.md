@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.0.0] - Unreleased
 
+### Added
+- New blocks:
+  - `page/list/list.tpl`
+    - page_list_listhead_title
+
 ### Changed
 - Updated the version of bootstrap from 4.1.3 to 4.3.1 [PR-75](https://github.com/OXID-eSales/wave-theme/pull/75) 
 - BC Break: block in ``tpl/email/plain/ordershopped.tpl`` renamed from ``email_html_ordershipped_shipmenttrackingurl`` to ``email_plain_ordershipped_shipmenttrackingurl`` [PR-73](https://github.com/OXID-eSales/wave-theme/pull/73)
