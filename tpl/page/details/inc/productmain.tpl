@@ -217,7 +217,8 @@
                                                 <span class="price-markup">*</span>
                                             [{/if}]
                                             <span class="d-none">
-                                                <span itemprop="price">[{oxprice price=$oPrice currency=$currency}]</span>
+                                                <span itemprop="price">[{$oPrice->getPrice()}]</span>
+                                                <span itemprop="priceCurrency">[{$currency->name}]</span>
                                             </span>
                                         </span>
                                     </label>
