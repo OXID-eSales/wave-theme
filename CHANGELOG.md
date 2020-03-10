@@ -4,11 +4,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [master] - Unreleased
-
-### Removed
-- Credit Card related blocks
-
 ## [2.0.0] - Unreleased
 
 ### Changed
@@ -21,6 +16,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Removed
 - Google+ related settings together with frontend and email template blocks [PR-81](https://github.com/OXID-eSales/wave-theme/pull/81)
+
+### Removed
+- Credit Card related blocks
 
 ## [1.4.0] - Unreleased
 
@@ -140,8 +138,7 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
-[master]: https://github.com/OXID-eSales/wave-theme/compare/b-2.x...HEAD
-[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/b-1.x...b-2.x
+[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/b-1.x...master
 [1.4.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.1...b-1.x
 [1.3.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.2.0...v1.3.0

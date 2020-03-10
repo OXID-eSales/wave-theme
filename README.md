@@ -7,7 +7,6 @@
 ## Branch Compatibility
 
 * master branch is compatible with OXID eShop compilation master
-* b-2.x branch is compatible with OXID eShop unreleased b-6.x
 * b-1.x branch is compatible with OXID eShop compilation 6.1 and 6.2
 
 ## Installation
