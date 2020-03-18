@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - newsletter_form_button
   - ``user_account_password`` in ``tpl/form/forgotpwd_change_pwd.tpl`` [Flow-PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
   - ``user_account_password`` in ``tpl/form/user_password.tpl`` [Flow-PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
+  - ``checkout_order_agb`` in ``tpl/page/checkout/order.tpl`` [PR-84](https://github.com/OXID-eSales/wave-theme/pull/84)
 
 ### Fixed
 - Fix price information structure by schema.org [PR-85](https://github.com/OXID-eSales/wave-theme/pull/85)
