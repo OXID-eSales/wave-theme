@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Fix price information structure by schema.org [PR-85](https://github.com/OXID-eSales/wave-theme/pull/85)
+- Use schema.org specification for breadcrumbs [PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
 
 ## [1.3.1] - 2019-11-15
 
