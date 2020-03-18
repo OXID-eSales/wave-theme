@@ -14,6 +14,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - ``user_account_password`` in ``tpl/form/forgotpwd_change_pwd.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
   - ``user_account_password`` in ``tpl/form/user_password.tpl`` [PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
 
+### Fixed
+- Fix price information structure by schema.org [PR-85](https://github.com/OXID-eSales/wave-theme/pull/85)
+
 ## [1.3.1] - 2019-11-15
 
 ### Added
