@@ -16,17 +16,16 @@
 
       .badge {
         background-color: $secondary;
-        position: absolute;
-        top: 3px;
-        right: 3px;
+        color: $white;
+        position: relative;
+        top: -2px;
         font-weight: 500;
         border-radius: 50%;
         width: 20px;
         height: 20px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
-        color: $white;
       }
     }
   }
