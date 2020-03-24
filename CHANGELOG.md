@@ -16,9 +16,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Removed
 - Google+ related settings together with frontend and email template blocks [PR-81](https://github.com/OXID-eSales/wave-theme/pull/81)
-
-### Removed
 - Credit Card related blocks
+- Remove Betanote
 
 ## [1.4.0] - Unreleased
 
