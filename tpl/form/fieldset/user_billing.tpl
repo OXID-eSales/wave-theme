@@ -192,7 +192,7 @@
     <div class="form-group row oxDate[{if $aErrors.oxuser__oxbirthdate}] text-danger[{/if}]">
         <label class="col-12 col-lg-3[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] req[{/if}]" for="oxDay">[{oxmultilang ident="BIRTHDATE"}]</label>
         <div class="col-3 col-lg-3">
-            <input id="oxDay" class="oxDay form-control" name="invadr[oxuser__oxbirthdate][day]" id="invadr_oxuser__oxbirthdate_day" type="text" maxlength="2" value="[{if $iBirthdayDay > 0}][{$iBirthdayDay}][{/if}]" placeholder="[{oxmultilang ident="DAY"}]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
+            <input id="oxDay" class="oxDay form-control" name="invadr[oxuser__oxbirthdate][day]" type="text" maxlength="2" value="[{if $iBirthdayDay > 0}][{$iBirthdayDay}][{/if}]" placeholder="[{oxmultilang ident="DAY"}]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
         </div>
         <div class="col-6 col-lg-3">
             <select class="oxMonth form-control" name="invadr[oxuser__oxbirthdate][month]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
