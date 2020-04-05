@@ -9,44 +9,42 @@
 
 [{* Google Analytics Page Tracking *}]
 [{assign var="sGATrackingId" value=$oViewConf->getViewThemeParam('sGATrackingId')}]
+[{assign var="blGAAnonymizeIPs" value=$oViewConf->getViewThemeParam('blGAAnonymizeIPs')}]
 [{if $oViewConf->getViewThemeParam('blUseGAPageTracker') && $sGATrackingId}]
-    <script>
+    [{oxscript add="
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', '[{$sGATrackingId}]');
-        [{* IP-Adressen anonymisieren *}]
-        [{if $oViewConf->getViewThemeParam('blGAAnonymizeIPs')}]
+        ga('create', '$sGATrackingId');
+        /* IP-Adressen anonymisieren */
+        if ('$blGAAnonymizeIPs' === '1') {
             ga('set', 'anonymizeIp', true);
-        [{/if}]
-        ga('send', 'pageview');
-    </script>
-[{/if}]
+        }
 
+        ga('send', 'pageview');
+    "}]
+[{/if}]
 [{* Google Analytics eCommerce Tracking *}]
 [{if $oViewConf->getViewThemeParam('blUseGAEcommerceTracking') && $sGATrackingId && $oViewConf->getTopActiveClassName() == 'thankyou'}]
     [{assign var="oOrder" value=$oView->getOrder()}]
 
     [{if $oOrder}]
-        [{if !$oViewConf->getViewThemeParam('blUseGAPageTracker')}]
-            <script>
+        [{capture name="script" }]
+            [{if !$oViewConf->getViewThemeParam('blUseGAPageTracker')}]
                 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
                 ga('create', '[{$sGATrackingId}]');
-                [{* IP-Adressen anonymisieren *}]
-                [{if $oViewConf->getViewThemeParam('blGAAnonymizeIPs')}]
+                /* IP-Adressen anonymisieren */
+                if ('$blGAAnonymizeIPs' === '1') {
                     ga('set', 'anonymizeIp', true);
-                [{/if}]
-            </script>
-        [{/if}]
+                }
+            [{/if}]
 
-
-        <script>
             ga( 'require', 'ecommerce' );
 
             ga( 'ecommerce:addTransaction', {
@@ -80,9 +78,11 @@
             [{/foreach}]
 
             ga('ecommerce:send' );
-        </script>
+        [{/capture}]
+        [{oxscript add=$smarty.capture.script}]
     [{/if}]
 [{/if}]
+[{oxscript}]
 
 [{* Google zertifizierte Händler *}]
 [{if $oViewConf->getViewThemeParam('blUseGoogleTS')}]
