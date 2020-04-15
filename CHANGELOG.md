@@ -18,6 +18,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Google+ related settings together with frontend and email template blocks [PR-81](https://github.com/OXID-eSales/wave-theme/pull/81)
 - Credit Card related blocks
 - Remove Betanote
+- Suggest (Recommend Product) feature:
+    - Templates:
+        - `email/html/suggest.tpl`
+        - `email/plain/suggest.tpl`
+        - `form/suggest.tpl`
+        - `page/info/suggest.tpl`
+    - Link in: `page/details/inc/productmania.tpl`
 
 ## [1.4.0] - Unreleased
 
