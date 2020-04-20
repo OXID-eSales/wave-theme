@@ -6,7 +6,7 @@
     var sBaseUrl = '[{$oViewConf->getSelfActionLink()}]';
     var sActCl = '[{$oViewConf->getTopActiveClassName()}]';
 [{/strip}]</script>
-
+[{block name="google_analytics"}]
 [{* Google Analytics Page Tracking *}]
 [{assign var="sGATrackingId" value=$oViewConf->getViewThemeParam('sGATrackingId')}]
 [{if $oViewConf->getViewThemeParam('blUseGAPageTracker') && $sGATrackingId}]
@@ -24,7 +24,8 @@
         ga('send', 'pageview');
     </script>
 [{/if}]
-
+[{/block}]
+[{block name="google_analytics_ecommerce"}]
 [{* Google Analytics eCommerce Tracking *}]
 [{if $oViewConf->getViewThemeParam('blUseGAEcommerceTracking') && $sGATrackingId && $oViewConf->getTopActiveClassName() == 'thankyou'}]
     [{assign var="oOrder" value=$oView->getOrder()}]
@@ -83,7 +84,7 @@
         </script>
     [{/if}]
 [{/if}]
-
+[{/block}]
 [{* Google zertifizierte Händler *}]
 [{if $oViewConf->getViewThemeParam('blUseGoogleTS')}]
     [{assign var="sGoogleVendorId" value=$oViewConf->getViewThemeParam('sGoogleVendorId')}]

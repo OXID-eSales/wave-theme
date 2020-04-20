@@ -14,6 +14,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - ``user_account_password`` in ``tpl/form/forgotpwd_change_pwd.tpl`` [Flow-PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
   - ``user_account_password`` in ``tpl/form/user_password.tpl`` [Flow-PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
   - ``checkout_order_agb`` in ``tpl/page/checkout/order.tpl`` [PR-84](https://github.com/OXID-eSales/wave-theme/pull/84)
+  - ``tpl/widget/dynscript.tpl``
+    - google_analytics [PR-88](https://github.com/OXID-eSales/wave-theme/pull/88)
+    - google_analytics_ecommerce [PR-88](https://github.com/OXID-eSales/wave-theme/pull/88)
 - Added a badge span to the counters at the header [PR-44](https://github.com/OXID-eSales/wave-theme/pull/44)
 
 ### Fixed
