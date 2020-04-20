@@ -31,7 +31,7 @@
     [{assign var="oOrder" value=$oView->getOrder()}]
 
     [{if $oOrder}]
-        [{capture name="script" }]
+        [{capture name="googleAnalyticsScript" }]
             [{if !$oViewConf->getViewThemeParam('blUseGAPageTracker')}]
                 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -40,7 +40,7 @@
 
                 ga('create', '[{$sGATrackingId}]');
                 /* IP-Adressen anonymisieren */
-                if ('$blGAAnonymizeIPs' === '1') {
+                if ('[{$blGAAnonymizeIPs}]' === '1') {
                     ga('set', 'anonymizeIp', true);
                 }
             [{/if}]
@@ -79,7 +79,7 @@
 
             ga('ecommerce:send' );
         [{/capture}]
-        [{oxscript add=$smarty.capture.script}]
+        [{oxscript add=$smarty.capture.googleAnalyticsScript}]
     [{/if}]
 [{/if}]
 [{oxscript}]
