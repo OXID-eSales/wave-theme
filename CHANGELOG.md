@@ -19,6 +19,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Google+ related settings together with frontend and email template blocks [PR-81](https://github.com/OXID-eSales/wave-theme/pull/81)
 - Credit Card related blocks
 - Remove Betanote
+- Suggest (Recommend Product) feature:
+    - Templates:
+        - `email/html/suggest.tpl`
+        - `email/plain/suggest.tpl`
+        - `form/suggest.tpl`
+        - `page/info/suggest.tpl`
+    - Link in: `page/details/inc/productmania.tpl`
 
 ## [1.4.0] - Unreleased
 
@@ -30,11 +37,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - ``user_account_password`` in ``tpl/form/forgotpwd_change_pwd.tpl`` [Flow-PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
   - ``user_account_password`` in ``tpl/form/user_password.tpl`` [Flow-PR-154](https://github.com/OXID-eSales/flow_theme/pull/154)
   - ``checkout_order_agb`` in ``tpl/page/checkout/order.tpl`` [PR-84](https://github.com/OXID-eSales/wave-theme/pull/84)
+  - ``tpl/widget/dynscript.tpl``
+    - google_analytics [PR-88](https://github.com/OXID-eSales/wave-theme/pull/88)
+    - google_analytics_ecommerce [PR-88](https://github.com/OXID-eSales/wave-theme/pull/88)
 - Added a badge span to the counters at the header [PR-44](https://github.com/OXID-eSales/wave-theme/pull/44)
 
 ### Fixed
 - Fix price information structure by schema.org [PR-85](https://github.com/OXID-eSales/wave-theme/pull/85)
 - Use schema.org specification for breadcrumbs [PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
+- Remove duplicate id of birthdate field [PR-86](https://github.com/OXID-eSales/wave-theme/pull/86)
 
 ## [1.3.1] - 2019-11-15
 

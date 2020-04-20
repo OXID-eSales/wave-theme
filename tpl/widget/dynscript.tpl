@@ -10,6 +10,8 @@
 [{* Google Analytics Page Tracking *}]
 [{assign var="sGATrackingId" value=$oViewConf->getViewThemeParam('sGATrackingId')}]
 [{assign var="blGAAnonymizeIPs" value=$oViewConf->getViewThemeParam('blGAAnonymizeIPs')}]
+
+[{block name="google_analytics"}]
 [{if $oViewConf->getViewThemeParam('blUseGAPageTracker') && $sGATrackingId}]
     [{oxscript add="
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -26,6 +28,9 @@
         ga('send', 'pageview');
     "}]
 [{/if}]
+[{/block}]
+
+[{block name="google_analytics_ecommerce"}]
 [{* Google Analytics eCommerce Tracking *}]
 [{if $oViewConf->getViewThemeParam('blUseGAEcommerceTracking') && $sGATrackingId && $oViewConf->getTopActiveClassName() == 'thankyou'}]
     [{assign var="oOrder" value=$oView->getOrder()}]
@@ -82,6 +87,7 @@
         [{oxscript add=$smarty.capture.googleAnalyticsScript}]
     [{/if}]
 [{/if}]
+[{/block}]
 [{oxscript}]
 
 [{* Google zertifizierte Händler *}]
