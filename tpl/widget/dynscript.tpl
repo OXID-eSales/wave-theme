@@ -12,82 +12,83 @@
 [{assign var="blGAAnonymizeIPs" value=$oViewConf->getViewThemeParam('blGAAnonymizeIPs')}]
 
 [{block name="google_analytics"}]
-[{if $oViewConf->getViewThemeParam('blUseGAPageTracker') && $sGATrackingId}]
-    [{oxscript add="
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    [{if $oViewConf->getViewThemeParam('blUseGAPageTracker') && $sGATrackingId}]
+        [{oxscript add="
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', '$sGATrackingId');
-        /* IP-Adressen anonymisieren */
-        if ('$blGAAnonymizeIPs' === '1') {
-            ga('set', 'anonymizeIp', true);
-        }
+            ga('create', '$sGATrackingId');
+            /* IP-Adressen anonymisieren */
+            if ('$blGAAnonymizeIPs' === '1') {
+                ga('set', 'anonymizeIp', true);
+            }
 
-        ga('send', 'pageview');
-    "}]
-[{/if}]
+            ga('send', 'pageview');
+        "}]
+    [{/if}]
 [{/block}]
 
 [{block name="google_analytics_ecommerce"}]
-[{* Google Analytics eCommerce Tracking *}]
-[{if $oViewConf->getViewThemeParam('blUseGAEcommerceTracking') && $sGATrackingId && $oViewConf->getTopActiveClassName() == 'thankyou'}]
-    [{assign var="oOrder" value=$oView->getOrder()}]
+    [{* Google Analytics eCommerce Tracking *}]
+    [{if $oViewConf->getViewThemeParam('blUseGAEcommerceTracking') && $sGATrackingId && $oViewConf->getTopActiveClassName() == 'thankyou'}]
+        [{assign var="oOrder" value=$oView->getOrder()}]
 
-    [{if $oOrder}]
-        [{capture name="googleAnalyticsScript" }]
-            [{if !$oViewConf->getViewThemeParam('blUseGAPageTracker')}]
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        [{if $oOrder}]
+            [{capture name="googleAnalyticsScript" }]
+                [{if !$oViewConf->getViewThemeParam('blUseGAPageTracker')}]
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-                ga('create', '[{$sGATrackingId}]');
-                /* IP-Adressen anonymisieren */
-                if ('[{$blGAAnonymizeIPs}]' === '1') {
-                    ga('set', 'anonymizeIp', true);
-                }
-            [{/if}]
-
-            ga( 'require', 'ecommerce' );
-
-            ga( 'ecommerce:addTransaction', {
-                'id': '[{$oOrder->oxorder__oxordernr->value}]',           // Transaction ID. Required.
-                'affiliation': '[{$oxcmp_shop->oxshops__oxname->value}]', // Affiliation or store name.
-                'revenue': '[{$oOrder->oxorder__oxtotalordersum->value}]', // Grand Total.
-                'shipping': '[{$oOrder->oxorder__oxdelcost->value}]',     // Shipping.
-                'tax': '[{math equation="x+y" x=$oOrder->oxorder__oxartvatprice1->value y=$oOrder->oxorder__oxartvatprice2->value}]' // Tax.
-            });
-
-            [{foreach from=$oOrder->getOrderArticles() item="oOrderArticle"}]
-                [{assign var="sArticleName" value=$oOrderArticle->oxorderarticles__oxtitle->value|cat:' '|cat:$oOrderArticle->oxorderarticles__oxselvariant->value}]
-                [{assign var="sCategoryName" value=""}]
-                [{assign var="oOrderArticlePrice" value=$oOrderArticle->getPrice()}]
-                [{assign var="oArticle" value=$oOrderArticle->getArticle()}]
-                [{if $oArticle}]
-                    [{assign var="oMainCategory" value=$oArticle->getCategory()}]
-                    [{if $oMainCategory}]
-                        [{assign var="sCategoryName" value=$oMainCategory->oxcategories__oxtitle->value}]
-                    [{/if}]
+                    ga('create', '[{$sGATrackingId}]');
+                    /* IP-Adressen anonymisieren */
+                    if ('[{$blGAAnonymizeIPs}]' === '1') {
+                        ga('set', 'anonymizeIp', true);
+                    }
                 [{/if}]
-                ga( 'ecommerce:addItem', {
-                    'id': '[{$oOrder->oxorder__oxordernr->value}]',                     // Transaction ID. Required.
-                    'name': '[{$sArticleName|trim}]',                                   // Product name. Required.
-                    'sku': '[{$oOrderArticle->oxorderarticles__oxartnum->value}]',      // SKU/code.
-                    'category': '[{$sCategoryName}]',                                   // Category or variation.
-                    'price': '[{$oOrderArticlePrice->getBruttoPrice()}]',               // Unit price.
-                    'quantity': '[{$oOrderArticle->oxorderarticles__oxamount->value}]', // Quantity.
-                    'currency': '[{$oOrder->oxorder__oxcurrency->value}]'               // local currency code.
-                });
-            [{/foreach}]
 
-            ga('ecommerce:send' );
-        [{/capture}]
-        [{oxscript add=$smarty.capture.googleAnalyticsScript}]
+                ga( 'require', 'ecommerce' );
+
+                ga( 'ecommerce:addTransaction', {
+                    'id': '[{$oOrder->oxorder__oxordernr->value}]',           // Transaction ID. Required.
+                    'affiliation': '[{$oxcmp_shop->oxshops__oxname->value}]', // Affiliation or store name.
+                    'revenue': '[{$oOrder->oxorder__oxtotalordersum->value}]', // Grand Total.
+                    'shipping': '[{$oOrder->oxorder__oxdelcost->value}]',     // Shipping.
+                    'tax': '[{math equation="x+y" x=$oOrder->oxorder__oxartvatprice1->value y=$oOrder->oxorder__oxartvatprice2->value}]' // Tax.
+                });
+
+                [{foreach from=$oOrder->getOrderArticles() item="oOrderArticle"}]
+                    [{assign var="sArticleName" value=$oOrderArticle->oxorderarticles__oxtitle->value|cat:' '|cat:$oOrderArticle->oxorderarticles__oxselvariant->value}]
+                    [{assign var="sCategoryName" value=""}]
+                    [{assign var="oOrderArticlePrice" value=$oOrderArticle->getPrice()}]
+                    [{assign var="oArticle" value=$oOrderArticle->getArticle()}]
+                    [{if $oArticle}]
+                        [{assign var="oMainCategory" value=$oArticle->getCategory()}]
+                        [{if $oMainCategory}]
+                            [{assign var="sCategoryName" value=$oMainCategory->oxcategories__oxtitle->value}]
+                        [{/if}]
+                    [{/if}]
+                    ga( 'ecommerce:addItem', {
+                        'id': '[{$oOrder->oxorder__oxordernr->value}]',                     // Transaction ID. Required.
+                        'name': '[{$sArticleName|trim}]',                                   // Product name. Required.
+                        'sku': '[{$oOrderArticle->oxorderarticles__oxartnum->value}]',      // SKU/code.
+                        'category': '[{$sCategoryName}]',                                   // Category or variation.
+                        'price': '[{$oOrderArticlePrice->getBruttoPrice()}]',               // Unit price.
+                        'quantity': '[{$oOrderArticle->oxorderarticles__oxamount->value}]', // Quantity.
+                        'currency': '[{$oOrder->oxorder__oxcurrency->value}]'               // local currency code.
+                    });
+                [{/foreach}]
+
+                ga('ecommerce:send' );
+            [{/capture}]
+            [{oxscript add=$smarty.capture.googleAnalyticsScript}]
+        [{/if}]
     [{/if}]
-[{/if}]
 [{/block}]
+
 [{oxscript}]
 
 [{* Google zertifizierte Händler *}]
