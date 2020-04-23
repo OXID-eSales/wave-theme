@@ -26,7 +26,6 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (md5(uuid()),	1,	'theme:wave',	'blUseGAPageTracker',	'bool',	'1', NOW()),
 (md5(uuid()),	1,	'theme:wave',	'sGATrackingId',	'str',	'', NOW()),
 (md5(uuid()),	1,	'theme:wave',	'sFacebookUrl',	'str',	'h', NOW()),
-(md5(uuid()),	1,	'theme:wave',	'sGooglePlusUrl', 'str', 'h', NOW()),
 (md5(uuid()),	1,	'theme:wave',	'sTwitterUrl',	'str',	'h', NOW()),
 (md5(uuid()),	1,	'theme:wave',	'sYouTubeUrl',	'str',	'h', NOW()),
 (md5(uuid()),	1,	'theme:wave',	'sBlogUrl',	'str',	'h', NOW()),
