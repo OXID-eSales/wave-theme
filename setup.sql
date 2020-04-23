@@ -95,7 +95,6 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (md5(uuid()), 'theme:wave', 'aNrofCatArticlesInGrid', 'display', '', 24, NOW()),
 (md5(uuid()), 'theme:wave', 'bl_showManufacturerSlider', 'display', '', 25, NOW()),
 (md5(uuid()), 'theme:wave', 'sFacebookUrl', 'footer', '', 0, NOW()),
-(md5(uuid()), 'theme:wave',	'sGooglePlusUrl', 'footer', '', 0, NOW()),
 (md5(uuid()), 'theme:wave', 'sTwitterUrl', 'footer', '', 0, NOW()),
 (md5(uuid()), 'theme:wave', 'sYouTubeUrl', 'footer', '', 0, NOW()),
 (md5(uuid()), 'theme:wave', 'sBlogUrl', 'footer', '', 0, NOW()),
