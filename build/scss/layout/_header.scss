@@ -2,7 +2,6 @@
 // Header
 // --------------------------------------------------
 // Import header modules
-@import '../widget/header/betanote';
 @import '../widget/header/categorylist';
 @import '../widget/header/cookienote';
 @import '../widget/header/currencies';
@@ -280,6 +279,17 @@
       }
     }
   }
+
+  .dropdown-toggle > .badge {
+    background: $brand-secondary;
+    color: $white;
+    position: absolute;
+    top: -3px;
+    right: -1px;
+    font-size: 10px;
+    border-radius: 50%;
+    padding: 2px 4px;
+  }
 }
 
 .fixed-header {
@@ -318,10 +328,23 @@
 
   &-link {
     color: $primary;
+    position: relative;
 
     &:hover {
       color: $secondary;
       text-decoration: none;
     }
+
+    > .badge {
+      background: $brand-secondary;
+      color: $white;
+      position: absolute;
+      top: -3px;
+      right: -5px;
+      font-size: 8px;
+      border-radius: 50%;
+      width: 13px;
+      height: 13px;
+      padding: 2px 0 0;    }
   }
 }

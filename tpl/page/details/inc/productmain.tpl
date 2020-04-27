@@ -217,7 +217,8 @@
                                                 <span class="price-markup">*</span>
                                             [{/if}]
                                             <span class="d-none">
-                                                <span itemprop="price">[{oxprice price=$oPrice currency=$currency}]</span>
+                                                <span itemprop="price">[{$oPrice->getPrice()}]</span>
+                                                <span itemprop="priceCurrency">[{$currency->name}]</span>
                                             </span>
                                         </span>
                                     </label>
@@ -327,15 +328,6 @@
                                 [{oxid_include_dynamic file="page/details/inc/compare_links.tpl" testid="" type="compare" aid=$oDetailsProduct->oxarticles__oxid->value anid=$oDetailsProduct->oxarticles__oxnid->value in_list=$oDetailsProduct->isOnComparisonList() page=$oView->getActPage() text_to_id="COMPARE" text_from_id="REMOVE_FROM_COMPARE_LIST"}]
                             </li>
                         [{/if}]
-
-
-                        [{if $oViewConf->getShowSuggest()}]
-                            <li>
-                                <a id="suggest" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=suggest" params="anid=`$oDetailsProduct->oxarticles__oxnid->value`"|cat:$oViewConf->getNavUrlParams()}]">[{oxmultilang ident="RECOMMEND"}]</a>
-                            </li>
-                        [{/if}]
-
-
                         [{if $oViewConf->getShowListmania()}]
                             <li>
                                 [{if $oxcmp_user}]
