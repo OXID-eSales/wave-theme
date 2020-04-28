@@ -1,7 +1,7 @@
 INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`, `OXVARVALUE`, `OXTIMESTAMP`) VALUES
 #Group display:
 md5(uuid()),	1,	'theme:wave',	'blFullwidthLayout',	'bool',	'', NOW()),
-md5(uuid()),	1,	'theme:wave',	'blHomeLink',	'bool',	'', NOW());
+md5(uuid()),	1,	'theme:wave',	'blHomeLink',	'bool',	'', NOW()),
 md5(uuid()),	1,	'theme:wave',	'bl_showManufacturerSlider',	'bool',	'1', NOW()),
 md5(uuid()),	1,	'theme:wave',	'sDefaultListDisplayType',	'select',	'', NOW()),
 md5(uuid()),	1,	'theme:wave',	'blShowListDisplayType',	'bool',	'1', NOW()),
@@ -79,7 +79,7 @@ md5(uuid()),	1,	'theme:wave',	'sShippingDaysNotOnStock',	'str',	'5', NOW()),
 md5(uuid()),	1,	'theme:wave',	'sDeliveryDaysOnStock',	'str',	'6', NOW()),
 md5(uuid()),	1,	'theme:wave',	'sDeliveryDaysNotOnStock',	'str',	'1', NOW()),
 md5(uuid()),	1,	'theme:wave',	'sShoppingLanguage',	'str',	'de', NOW()),
-md5(uuid()),	1,	'theme:wave',	'sShoppingCountry',	'str',	'', NOW()),
+md5(uuid()),	1,	'theme:wave',	'sShoppingCountry',	'str',	'', NOW());
 
 
 
@@ -138,7 +138,7 @@ md5(uuid()), 'theme:wave', 'bl_showGiftWrapping', 'features', '', 1506, NOW()),
 #Group footer:
 md5(uuid()), 'theme:wave', 'blFooterShowHelp', 'footer', '', 1601, NOW()),
 md5(uuid()), 'theme:wave', 'blFooterShowLinks', 'footer', '', 1602, NOW()),
-md5(uuid()), 'theme:wave', 'blFooterShowNews', 'footer', '', 1603, NOW());
+md5(uuid()), 'theme:wave', 'blFooterShowNews', 'footer', '', 1603, NOW()),
 md5(uuid()), 'theme:wave', 'blFooterShowNewsletter', 'footer', '', 1604, NOW()),
 md5(uuid()), 'theme:wave', 'blFooterShowNewsletterForm', 'footer', '', 1605, NOW()),
 md5(uuid()), 'theme:wave', 'sFacebookUrl', 'footer', '', 1606, NOW()),
@@ -165,7 +165,7 @@ md5(uuid()), 'theme:wave', 'sShippingDaysNotOnStock', 'googlets', '', 2006, NOW(
 md5(uuid()), 'theme:wave', 'sDeliveryDaysOnStock', 'googlets', '', 2007, NOW()),
 md5(uuid()), 'theme:wave', 'sDeliveryDaysNotOnStock', 'googlets', '', 2008, NOW()),
 md5(uuid()), 'theme:wave', 'sShoppingLanguage', 'googlets', '', 2009, NOW()),
-md5(uuid()), 'theme:wave', 'sShoppingCountry', 'googlets', '', 2010, NOW()),
+md5(uuid()), 'theme:wave', 'sShoppingCountry', 'googlets', '', 2010, NOW());
 
 
 
