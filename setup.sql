@@ -1,4 +1,5 @@
 INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`, `OXVARVALUE`, `OXTIMESTAMP`) VALUES
+#Group display:
 (uuid(),	1,	'theme:wave',	'blFullwidthLayout',	'bool',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'blHomeLink',	'bool',	'', NOW());
 (uuid(),	1,	'theme:wave',	'bl_showManufacturerSlider',	'bool',	'1', NOW()),
@@ -10,9 +11,11 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(),	1,	'theme:wave',	'iNewBasketItemMessage',	'select',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'blShowFinalStep',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'blShowBirthdayFields',	'bool',	'1', NOW()),
+#Group logo:
 (uuid(),	1,	'theme:wave',	'sLogoFile',	'str',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'sLogoWidth',	'str',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'sLogoHeight',	'str',	'', NOW()),
+#Group favicon:
 (uuid(),	1,	'theme:wave',	'sFaviconFile',	'str',	'favi', NOW()),
 (uuid(),	1,	'theme:wave',	'sFavicon16File',	'str',	'favi', NOW()),
 (uuid(),	1,	'theme:wave',	'sFavicon32File',	'str',	'favi', NOW()),
@@ -21,6 +24,7 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(),	1,	'theme:wave',	'sFavicon128File',	'str',	'favi', NOW()),
 (uuid(),	1,	'theme:wave',	'sFavicon512File',	'str',	'favi', NOW()),
 (uuid(),	1,	'theme:wave',	'sFaviconMSTileColor',	'str',	'', NOW()),
+#Group images:
 (uuid(),	1,	'theme:wave',	'sIconsize',	'str',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'sThumbnailsize',	'str',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'aDetailImageSizes',	'aarr',	'a', NOW()),
@@ -30,6 +34,7 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(),	1,	'theme:wave',	'sCatThumbnailsize',	'str',	'11', NOW()),
 (uuid(),	1,	'theme:wave',	'sManufacturerIconsize',	'str',	'100*100', NOW()),
 (uuid(),	1,	'theme:wave',	'blSliderShowImageCaption',	'bool',	'1', NOW()),
+#Group background:
 (uuid(),	1,	'theme:wave',	'sBackgroundColor',	'str',	'#C', NOW()),
 (uuid(),	1,	'theme:wave',	'blUseBackground',	'bool',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'sBackgroundPath',	'str',	'm', NOW()),
@@ -38,11 +43,13 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(),	1,	'theme:wave',	'sBackgroundPosVertical',	'select',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'sBackgroundRepeat',	'select',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'blBackgroundAttachment',	'bool',	'1', NOW()),
+#Group features:
 (uuid(),	1,	'theme:wave',	'bl_showCompareList',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'bl_showWishlist',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'bl_showListmania',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'bl_showVouchers',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'bl_showGiftWrapping',	'bool',	'1', NOW()),
+#Group footer:
 (uuid(),	1,	'theme:wave',	'blFooterShowHelp',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'blFooterShowLinks',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'blFooterShowNews',	'bool',	'1', NOW()),
@@ -52,13 +59,17 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(),	1,	'theme:wave',	'sTwitterUrl',	'str',	'h', NOW()),
 (uuid(),	1,	'theme:wave',	'sYouTubeUrl',	'str',	'h', NOW()),
 (uuid(),	1,	'theme:wave',	'sBlogUrl',	'str',	'h', NOW()),
+#Group contact:
 (uuid(),	1,	'theme:wave',	'sGoogleMapsAddr',	'str',	'', NOW()),
+#Group emails:
 (uuid(),	1,	'theme:wave',	'sEmailLogo',	'str',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'blEmailsShowProductPictures',	'bool',	'', NOW()),
+#Group googleanalytics:
 (uuid(),	1,	'theme:wave',	'sGATrackingId',	'str',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'blUseGAEcommerceTracking',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'blUseGAPageTracker',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'blGAAnonymizeIPs',	'bool',	'1', NOW()),
+#Group googlets:
 (uuid(),	1,	'theme:wave',	'blUseGoogleTS',	'bool',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'sGoogleVendorId',	'str',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'sPageLanguage',	'str',	'de', NOW()),
@@ -73,20 +84,23 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 
 
 INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPING`, `OXVARCONSTRAINT`, `OXPOS`, `OXTIMESTAMP`) VALUES
-(uuid(), 'theme:wave', 'blFullwidthLayout', 'display', '', 10, NOW()),
-(uuid(), 'theme:wave', 'blHomeLink', 'display', '', 11, NOW()),
-(uuid(), 'theme:wave', 'bl_showManufacturerSlider', 'display', '', 25, NOW()),
-(uuid(), 'theme:wave', 'sDefaultListDisplayType', 'display', 'infogrid|line|grid', 21, NOW()),
-(uuid(), 'theme:wave', 'blShowListDisplayType', 'display', '', 20, NOW()),
+#Group display:
+(uuid(), 'theme:wave', 'blFullwidthLayout', 'display', '', 101, NOW()),
+(uuid(), 'theme:wave', 'blHomeLink', 'display', '', 102, NOW()),
+(uuid(), 'theme:wave', 'bl_showManufacturerSlider', 'display', '', 103, NOW()),
+(uuid(), 'theme:wave', 'sDefaultListDisplayType', 'display', 'infogrid|line|grid', 104, NOW()),
+(uuid(), 'theme:wave', 'blShowListDisplayType', 'display', '', 105, NOW()),
 (uuid(), 'theme:wave', 'sStartPageListDisplayType', 'display', 'infogrid|line|grid', 22, NOW()),
 (uuid(), 'theme:wave', 'aNrofCatArticles', 'display', '', 23, NOW()),
 (uuid(), 'theme:wave', 'aNrofCatArticlesInGrid', 'display', '', 24, NOW()),
 (uuid(), 'theme:wave', 'iNewBasketItemMessage', 'display', '0|1|2|3', 17, NOW()),
 (uuid(), 'theme:wave', 'blShowFinalStep', 'display', '', 16, NOW()),
 (uuid(), 'theme:wave', 'blShowBirthdayFields', 'display', '', 14, NOW()),
+#Group logo:
 (uuid(), 'theme:wave', 'sLogoFile', 'logo', '', 0, NOW()),
 (uuid(), 'theme:wave', 'sLogoWidth', 'logo', '', 0, NOW()),
 (uuid(), 'theme:wave', 'sLogoHeight', 'logo', '', 0, NOW()),
+#Group favicon:
 (uuid(), 'theme:wave', 'sFaviconFile', 'favicons', '', 1, NOW()),
 (uuid(), 'theme:wave', 'sFavicon16File', 'favicons', '', 2, NOW()),
 (uuid(), 'theme:wave', 'sFavicon32File', 'favicons', '', 3, NOW()),
@@ -95,6 +109,7 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (uuid(), 'theme:wave', 'sFavicon128File', 'favicons', '', 6, NOW()),
 (uuid(), 'theme:wave', 'sFavicon512File', 'favicons', '', 7, NOW()),
 (uuid(), 'theme:wave', 'sFaviconMSTileColor', 'favicons', '', 8, NOW()),
+#Group images:
 (uuid(), 'theme:wave', 'sIconsize', 'images', '', 1, NOW()),
 (uuid(), 'theme:wave', 'sThumbnailsize', 'images', '', 2, NOW()),
 (uuid(), 'theme:wave', 'aDetailImageSizes', 'images', '', 5, NOW()),
@@ -104,6 +119,7 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (uuid(), 'theme:wave', 'sCatThumbnailsize', 'images', '', 3, NOW()),
 (uuid(), 'theme:wave', 'sManufacturerIconsize', 'images', '', 6, NOW()),
 (uuid(), 'theme:wave', 'blSliderShowImageCaption', 'images', '', 9, NOW()),
+#Group background:
 (uuid(), 'theme:wave', 'sBackgroundColor', 'background', '', 2, NOW()),
 (uuid(), 'theme:wave', 'blUseBackground', 'background', '', 1, NOW()),
 (uuid(), 'theme:wave', 'sBackgroundPath', 'background', '', 3, NOW()),
@@ -112,12 +128,14 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (uuid(), 'theme:wave', 'sBackgroundPosVertical', 'background', 'top|bottom|center', 6, NOW()),
 (uuid(), 'theme:wave', 'sBackgroundRepeat', 'background', 'no-repeat|repeat-x|repeat-y|repeat', 4, NOW()),
 (uuid(), 'theme:wave', 'blBackgroundAttachment', 'background', '', 8, NOW()),
+#Group features:
 (uuid(), 'theme:wave', 'bl_showCompareList', 'features', '', 6, NOW()),
 (uuid(), 'theme:wave', 'bl_showPriceAlarm', 'features', '', 11, NOW()),
 (uuid(), 'theme:wave', 'bl_showWishlist', 'features', '', 8, NOW()),
 (uuid(), 'theme:wave', 'bl_showListmania', 'features', '', 7, NOW()),
 (uuid(), 'theme:wave', 'bl_showVouchers', 'features', '', 9, NOW()),
 (uuid(), 'theme:wave', 'bl_showGiftWrapping', 'features', '', 10, NOW()),
+#Group footer:
 (uuid(), 'theme:wave', 'blFooterShowHelp', 'footer', '', 1, NOW()),
 (uuid(), 'theme:wave', 'blFooterShowLinks', 'footer', '', 2, NOW()),
 (uuid(), 'theme:wave', 'blFooterShowNews', 'footer', '', 6, NOW());
@@ -127,13 +145,17 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (uuid(), 'theme:wave', 'sTwitterUrl', 'footer', '', 0, NOW()),
 (uuid(), 'theme:wave', 'sYouTubeUrl', 'footer', '', 0, NOW()),
 (uuid(), 'theme:wave', 'sBlogUrl', 'footer', '', 0, NOW()),
+#Group contact:
 (uuid(), 'theme:wave', 'sGoogleMapsAddr', 'contact', '', 0, NOW()),
+#Group email:
 (uuid(), 'theme:wave', 'sEmailLogo', 'logo', '', 3, NOW()),
 (uuid(), 'theme:wave', 'blEmailsShowProductPictures', 'emails', '', 1, NOW()),
+#Group googleanalytics:
 (uuid(), 'theme:wave', 'sGATrackingId', 'googleanalytics', '', 0, NOW()),
 (uuid(), 'theme:wave', 'blUseGAEcommerceTracking', 'googleanalytics', '', 0, NOW()),
 (uuid(), 'theme:wave', 'blUseGAPageTracker', 'googleanalytics', '', 0, NOW()),
 (uuid(), 'theme:wave', 'blGAAnonymizeIPs', 'googleanalytics', '', 0, NOW()),
+#Group googlets:
 (uuid(), 'theme:wave', 'blUseGoogleTS', 'googlets', '', 1, NOW()),
 (uuid(), 'theme:wave', 'sGoogleVendorId', 'googlets', '', 2, NOW()),
 (uuid(), 'theme:wave', 'sPageLanguage', 'googlets', '', 5, NOW()),
