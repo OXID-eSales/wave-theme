@@ -45,6 +45,7 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (md5(uuid()),	1,	'theme:wave',	'blBackgroundAttachment',	'bool',	'1', NOW()),
 #Group features:
 (md5(uuid()),	1,	'theme:wave',	'bl_showCompareList',	'bool',	'1', NOW()),
+(md5(uuid()),	1,	'theme:wave',	'bl_showPriceAlarm',	'bool',	'1', NOW()),
 (md5(uuid()),	1,	'theme:wave',	'bl_showWishlist',	'bool',	'1', NOW()),
 (md5(uuid()),	1,	'theme:wave',	'bl_showListmania',	'bool',	'1', NOW()),
 (md5(uuid()),	1,	'theme:wave',	'bl_showVouchers',	'bool',	'1', NOW()),
