@@ -98,9 +98,9 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (md5(uuid()), 'theme:wave', 'blShowFinalStep', 'display', '', 1010, NOW()),
 (md5(uuid()), 'theme:wave', 'blShowBirthdayFields', 'display', '', 1011, NOW()),
 #Group logo:
-(md5(uuid()), 'theme:wave', 'sLogoFile', 'logo', '', 1102, NOW()),
-(md5(uuid()), 'theme:wave', 'sLogoWidth', 'logo', '', 1103, NOW()),
-(md5(uuid()), 'theme:wave', 'sLogoHeight', 'logo', '', 1104, NOW()),
+(md5(uuid()), 'theme:wave', 'sLogoFile', 'logo', '', 1101, NOW()),
+(md5(uuid()), 'theme:wave', 'sLogoWidth', 'logo', '', 1102, NOW()),
+(md5(uuid()), 'theme:wave', 'sLogoHeight', 'logo', '', 1103, NOW()),
 #Group favicon:
 (md5(uuid()), 'theme:wave', 'sFaviconFile', 'favicons', '', 1201, NOW()),
 (md5(uuid()), 'theme:wave', 'sFavicon16File', 'favicons', '', 1202, NOW()),
