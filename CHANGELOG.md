@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
         - `form/suggest.tpl`
         - `page/info/suggest.tpl`
     - Link in: `page/details/inc/productmania.tpl`
+- News feature
 
 ## [1.4.0] - Unreleased
 

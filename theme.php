@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of OXID eSales Wave theme.
  *
@@ -124,12 +125,6 @@ $aTheme = array(
         array(
             'group' => 'footer',
             'name'  => 'blFooterShowLinks',
-            'type'  => 'bool',
-            'value' => 1,
-        ),
-        array(
-            'group' => 'footer',
-            'name'  => 'blFooterShowNews',
             'type'  => 'bool',
             'value' => 1,
         ),

@@ -65,7 +65,6 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(),	1,	'theme:wave',	'blFooterShowNewsletter',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'blFooterShowNewsletterForm',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'blEmailsShowProductPictures',	'bool',	'', NOW()),
-(uuid(),	1,	'theme:wave',	'blFooterShowNews',	'bool',	'1', NOW()),
 (uuid(),	1,	'theme:wave',	'sLogoFile',	'str',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'blFullwidthLayout',	'bool',	'', NOW()),
 (uuid(),	1,	'theme:wave',	'blHomeLink',	'bool',	'', NOW());
@@ -140,5 +139,4 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (uuid(), 'theme:wave', 'blFooterShowLinks', 'footer', '', 2, NOW()),
 (uuid(), 'theme:wave', 'blFooterShowNewsletter', 'footer', '', 4, NOW()),
 (uuid(), 'theme:wave', 'blFooterShowNewsletterForm', 'footer', '', 5, NOW()),
-(uuid(), 'theme:wave', 'blEmailsShowProductPictures', 'emails', '', 1, NOW()),
-(uuid(), 'theme:wave', 'blFooterShowNews', 'footer', '', 6, NOW());
+(uuid(), 'theme:wave', 'blEmailsShowProductPictures', 'emails', '', 1, NOW());
