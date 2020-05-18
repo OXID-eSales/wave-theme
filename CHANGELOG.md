@@ -24,6 +24,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Use schema.org specification for breadcrumbs [PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
 - Remove duplicate id of birthdate field [PR-86](https://github.com/OXID-eSales/wave-theme/pull/86)
 
+### Renamed
+- Rename price alert/alarm to wished price
+
 ## [1.3.1] - 2019-11-15
 
 ### Added
