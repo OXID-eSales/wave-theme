@@ -3,7 +3,7 @@
 // Wave Theme
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,400,600,700');
 
-@import 'cust_styles/cust_variables.scss';
+@import 'custom/variables.scss';
 
 @import 'variables';
 
@@ -42,4 +42,4 @@
 @import 'widget/minibasket/minibasket';
 @import 'widget/sidebar/recommendation';
 
-@import 'cust_styles/cust_styles.scss';
+@import 'custom/styles.scss';
