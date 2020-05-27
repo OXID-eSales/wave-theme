@@ -1,5 +1,9 @@
+@charset 'utf-8';
+
 // Wave Theme
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,400,600,700');
+
+@import 'custom/variables.scss';
 
 @import 'variables';
 
@@ -37,3 +41,5 @@
 @import 'widget/reviews/reviews';
 @import 'widget/minibasket/minibasket';
 @import 'widget/sidebar/recommendation';
+
+@import 'custom/styles.scss';
