@@ -18,7 +18,7 @@
         [{/if}]
 
         <div class="card-body">
-            [{block name="order_agb_inner"}]
+            [{block name="checkout_order_agb_inner"}]
                 [{if !$oView->isActive('PsLogin')}]
                     [{if $oView->isConfirmAGBActive()}]
                         [{oxifcontent ident="oxrighttocancellegend" object="oContent"}]
