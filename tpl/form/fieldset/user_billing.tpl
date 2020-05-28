@@ -188,31 +188,33 @@
     </div>
 </div>
 
-[{if $oViewConf->showBirthdayFields()}]
-    <div class="form-group row oxDate[{if $aErrors.oxuser__oxbirthdate}] text-danger[{/if}]">
-        <label class="col-12 col-lg-3[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] req[{/if}]" for="oxDay">[{oxmultilang ident="BIRTHDATE"}]</label>
-        <div class="col-3 col-lg-3">
-            <input id="oxDay" class="oxDay form-control" name="invadr[oxuser__oxbirthdate][day]" type="text" maxlength="2" value="[{if $iBirthdayDay > 0}][{$iBirthdayDay}][{/if}]" placeholder="[{oxmultilang ident="DAY"}]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
+[{block name="form_user_billing_birthdate"}]
+    [{if $oViewConf->showBirthdayFields()}]
+        <div class="form-group row oxDate[{if $aErrors.oxuser__oxbirthdate}] text-danger[{/if}]">
+            <label class="col-12 col-lg-3[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] req[{/if}]" for="oxDay">[{oxmultilang ident="BIRTHDATE"}]</label>
+            <div class="col-3 col-lg-3">
+                <input id="oxDay" class="oxDay form-control" name="invadr[oxuser__oxbirthdate][day]" type="text" maxlength="2" value="[{if $iBirthdayDay > 0}][{$iBirthdayDay}][{/if}]" placeholder="[{oxmultilang ident="DAY"}]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
+            </div>
+            <div class="col-6 col-lg-3">
+                <select class="oxMonth form-control" name="invadr[oxuser__oxbirthdate][month]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
+                    <option value="" label="-">-</option>
+                    [{section name="month" start=1 loop=13}]
+                        <option value="[{$smarty.section.month.index}]" label="[{$smarty.section.month.index}]" [{if $iBirthdayMonth == $smarty.section.month.index}] selected="selected" [{/if}]>
+                            [{oxmultilang ident="MONTH_NAME_"|cat:$smarty.section.month.index}]
+                        </option>
+                    [{/section}]
+                </select>
+            </div>
+            <div class="col-3 col-lg-3">
+                <input id="oxYear" class="oxYear form-control" name="invadr[oxuser__oxbirthdate][year]" type="text" maxlength="4" value="[{if $iBirthdayYear}][{$iBirthdayYear}][{/if}]" placeholder="[{oxmultilang ident="YEAR"}]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
+            </div>
+            <div class="offset-lg-3 col-lg-9 col-12">
+                [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxbirthdate}]
+                <div class="help-block"></div>
+            </div>
         </div>
-        <div class="col-6 col-lg-3">
-            <select class="oxMonth form-control" name="invadr[oxuser__oxbirthdate][month]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
-                <option value="" label="-">-</option>
-                [{section name="month" start=1 loop=13}]
-                    <option value="[{$smarty.section.month.index}]" label="[{$smarty.section.month.index}]" [{if $iBirthdayMonth == $smarty.section.month.index}] selected="selected" [{/if}]>
-                        [{oxmultilang ident="MONTH_NAME_"|cat:$smarty.section.month.index}]
-                    </option>
-                [{/section}]
-            </select>
-        </div>
-        <div class="col-3 col-lg-3">
-            <input id="oxYear" class="oxYear form-control" name="invadr[oxuser__oxbirthdate][year]" type="text" maxlength="4" value="[{if $iBirthdayYear}][{$iBirthdayYear}][{/if}]" placeholder="[{oxmultilang ident="YEAR"}]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
-        </div>
-        <div class="offset-lg-3 col-lg-9 col-12">
-            [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxbirthdate}]
-            <div class="help-block"></div>
-        </div>
-    </div>
-[{/if}]
+    [{/if}]
+[{/block}]
 
 <div class="form-group row">
     <div class="offset-lg-3 col-lg-9 col-12">
