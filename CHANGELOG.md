@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - ``tpl/widget/dynscript.tpl``
     - google_analytics [PR-88](https://github.com/OXID-eSales/wave-theme/pull/88)
     - google_analytics_ecommerce [PR-88](https://github.com/OXID-eSales/wave-theme/pull/88)
+  - ``checkout_order_agb_inner`` in ``tpl/page/checkout/inc/agb.tpl`` [PR-101](https://github.com/OXID-eSales/wave-theme/pull/101)
 - Added a badge span to the counters at the header [PR-44](https://github.com/OXID-eSales/wave-theme/pull/44)
 
 ### Fixed
