@@ -12,6 +12,7 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(), 1, 'theme:wave', 'bl_showListmania', 'bool', 0x07, NOW()),
 (uuid(), 1, 'theme:wave', 'bl_showWishlist', 'bool', 0x07, NOW()),
 (uuid(), 1, 'theme:wave', 'bl_showVouchers', 'bool', 0x07, NOW()),
+(uuid(), 1, 'theme:wave', 'bl_showPriceAlarm', 'bool', 0x07, NOW()),
 (uuid(), 1, 'theme:wave', 'bl_showGiftWrapping', 'bool', 0x07, NOW()),
 (uuid(), 1, 'theme:wave', 'blShowBirthdayFields', 'bool', 0x07, NOW()),
 (uuid(), 1, 'theme:wave', 'blShowFinalStep', 'bool', 0x07, NOW()),
