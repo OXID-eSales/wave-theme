@@ -36,6 +36,7 @@
     "uglify": "^0.1.5"
   },
   "scripts": {
+    "start": "grunt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

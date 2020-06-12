@@ -54,24 +54,18 @@ Installation on ubuntu system:
 	sudo apt-get install -y nodejs
 	```
 
-2. Install ``grunt`` globally. Example:
-
-	```
-    sudo npm install -g grunt-cli
-    ```
-
-3. Go to "wave" theme's directory and install all related ``grunt`` plugins:
+2. Go to "wave" theme's directory and install all related ``grunt`` plugins:
 
 	```
     cd DOCUMENT_ROOT/Application/views/wave/
     npm install
     ```
 
-4. Now its possible to regenerate "wave" theme assets by running ``grunt`` default
+3. Now its possible to regenerate "wave" theme assets by running ``grunt`` default
 task while being in "wave" directory:
 
 	```
-	grunt
+	npm start
 	```
 
 ## Contributing
