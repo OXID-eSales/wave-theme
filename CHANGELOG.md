@@ -6,14 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.0.0] - Unreleased
 
+### Added
+- File ``build/scss/custom/styles.scss`` for easier splitting of custom and original styles [PR-96](https://github.com/OXID-eSales/wave-theme/pull/96)
+- File ``build/scss/custom/variables.scss`` for easier overwriting of default original variable values [PR-96](https://github.com/OXID-eSales/wave-theme/pull/96)
+
 ### Changed
 - Updated the version of bootstrap from 4.1.3 to 4.3.1 [PR-75](https://github.com/OXID-eSales/wave-theme/pull/75) 
 - BC Break: block in ``tpl/email/plain/ordershopped.tpl`` renamed from ``email_html_ordershipped_shipmenttrackingurl`` to ``email_plain_ordershipped_shipmenttrackingurl`` [PR-73](https://github.com/OXID-eSales/wave-theme/pull/73)
 - Decoded ``oxconfig`` insert queries in ``setup.sql``
 - Handle Google analytics scripts with oxscript [PR-87](https://github.com/OXID-eSales/wave-theme/pull/87)
+- In admin settings assigned 'e-mail-logo' to display group 'emails' [PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
 
 ### Fixed
 - Removed unwanted quotation mark in ``productmain.tpl`` html [PR-73](https://github.com/OXID-eSales/wave-theme/pull/73)
+- Improved readability of setup.sql and theme.php [PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
+- Remove dependency on a system wide installed grunt-cli [PR-102](https://github.com/OXID-eSales/wave-theme/pull/102)
 
 ### Removed
 - Google+ related settings together with frontend and email template blocks [PR-81](https://github.com/OXID-eSales/wave-theme/pull/81)
@@ -26,6 +33,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
         - `form/suggest.tpl`
         - `page/info/suggest.tpl`
     - Link in: `page/details/inc/productmania.tpl`
+- News feature
 
 ## [1.4.0] - Unreleased
 
@@ -40,12 +48,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - ``tpl/widget/dynscript.tpl``
     - google_analytics [PR-88](https://github.com/OXID-eSales/wave-theme/pull/88)
     - google_analytics_ecommerce [PR-88](https://github.com/OXID-eSales/wave-theme/pull/88)
+  - ``checkout_order_agb_inner`` in ``tpl/page/checkout/inc/agb.tpl`` [PR-101](https://github.com/OXID-eSales/wave-theme/pull/101)
+  - ``form_user_billing_birthdate`` in ``tpl/form/fieldset/user_billing.tpl`` [PR-99](https://github.com/OXID-eSales/wave-theme/pull/99)
 - Added a badge span to the counters at the header [PR-44](https://github.com/OXID-eSales/wave-theme/pull/44)
 
 ### Fixed
 - Fix price information structure by schema.org [PR-85](https://github.com/OXID-eSales/wave-theme/pull/85)
 - Use schema.org specification for breadcrumbs [PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
 - Remove duplicate id of birthdate field [PR-86](https://github.com/OXID-eSales/wave-theme/pull/86)
+- Fix align of text in basket delivery tax row [PR-100](https://github.com/OXID-eSales/wave-theme/pull/100)
+- Avoid empty row before subcategories list [PR-98](https://github.com/OXID-eSales/wave-theme/pull/98)
+- Add missing config bl_showPriceAlarm variable to setup.sql
+
+### Renamed
+- Rename price alert/alarm to wished price
 
 ## [1.3.1] - 2019-11-15
 

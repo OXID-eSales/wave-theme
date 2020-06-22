@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of OXID eSales Wave theme.
  *
@@ -67,7 +68,6 @@ $aLang = array(
     'SHOP_THEME_blFooterShowLinks'                  => 'Links-Link aktivieren',
     'SHOP_THEME_blFooterShowNewsletter'             => 'Newsletter-Link aktivieren',
     'SHOP_THEME_blFooterShowNewsletterForm'         => 'Newsletter-Formular aktivieren',
-    'SHOP_THEME_blFooterShowNews'                   => 'Neuigkeiten-Link aktivieren (im OXID eShop admin "Nachrichten" genannt)',
     'SHOP_THEME_bl_showGiftWrapping'                => 'Geschenkverpackungen aktivieren', //SHOP_CONFIG_SHOWGIFTWRAPPING
     'SHOP_THEME_bl_showVouchers'                    => 'Gutscheine aktivieren',           //SHOP_CONFIG_SHOWVOUCHERS
     'SHOP_THEME_bl_showWishlist'                    => 'Wunschzettel aktivieren',         //SHOP_CONFIG_SHOWWISHLIST
@@ -164,7 +164,7 @@ $aLang = array(
     'SHOP_THEME_sBackgroundSize_normal'             => 'Originalgröße behalten',
     'SHOP_THEME_blBackgroundAttachment'             => 'Soll das Hintergrundbild beim Scrollen stehen bleiben?',
     'SHOP_THEME_blHomeLink'                         => 'Startseiten-Link in der Navigation anzeigen?',
-    'SHOP_THEME_bl_showPriceAlarm'                  => 'Preisalarm aktivieren',
+    'SHOP_THEME_bl_showPriceAlarm'                  => 'Wunschpreis aktivieren',
 
     'SHOP_THEME_blUseGoogleTS'                      => 'Google Zertifizierte Händler benutzen',
     'SHOP_THEME_sGoogleVendorId'                    => 'Google Store-ID (Erforderlich)',

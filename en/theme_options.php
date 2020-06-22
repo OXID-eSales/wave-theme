@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of OXID eSales Wave theme.
  *
@@ -68,7 +69,6 @@ $aLang = array(
     'SHOP_THEME_blFooterShowLinks'                  => 'Use Links link',
     'SHOP_THEME_blFooterShowNewsletter'             => 'Use newsletter link',
     'SHOP_THEME_blFooterShowNewsletterForm'         => 'Use newsletter form',
-    'SHOP_THEME_blFooterShowNews'                   => 'Use news link',
     'SHOP_THEME_bl_showGiftWrapping'                => 'Use gift wrapping', //SHOP_CONFIG_SHOWGIFTWRAPPING
     'SHOP_THEME_bl_showVouchers'                    => 'Use vouchers', //SHOP_CONFIG_SHOWVOUCHERS
     'SHOP_THEME_bl_showWishlist'                    => 'Use gift registry', //SHOP_CONFIG_SHOWWISHLIST
@@ -166,7 +166,7 @@ $aLang = array(
     'SHOP_THEME_sBackgroundSize_normal'             => 'Keep original size',
     'SHOP_THEME_blBackgroundAttachment'             => 'Fix background while scrolling?',
     'SHOP_THEME_blHomeLink'                         => 'Show "Home" link in main navigation?',
-    'SHOP_THEME_bl_showPriceAlarm'                  => 'Use Pricealarm',
+    'SHOP_THEME_bl_showPriceAlarm'                  => 'Use wished price',
 
     'SHOP_THEME_blUseGoogleTS'                      => 'Use Google Trusted Stores',
     'SHOP_THEME_sGoogleVendorId'                    => 'Google Store-ID',
