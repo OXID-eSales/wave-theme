@@ -59,6 +59,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Fix align of text in basket delivery tax row [PR-100](https://github.com/OXID-eSales/wave-theme/pull/100)
 - Avoid empty row before subcategories list [PR-98](https://github.com/OXID-eSales/wave-theme/pull/98)
 - Add missing config bl_showPriceAlarm variable to setup.sql
+- Fix wrapping in order/shipping email on small viewport [Flow PR-158](https://github.com/OXID-eSales/flow_theme/pull/158)
 
 ### Renamed
 - Rename price alert/alarm to wished price
