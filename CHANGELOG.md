@@ -35,7 +35,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - Link in: `page/details/inc/productmania.tpl`
 - News feature
 
-## [1.4.0] - Unreleased
+## [1.4.0] - 2020-07-09
 
 ### Added
 - New blocks:
@@ -173,7 +173,7 @@ in:
 ## 1.0.0 -  2019-01-21
 
 [2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/b-1.x...master
-[1.4.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.1...b-1.x
+[1.4.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.1.0...v1.2.0
