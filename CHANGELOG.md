@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
         - `page/info/suggest.tpl`
     - Link in: `page/details/inc/productmania.tpl`
 - News feature
+- `setup.sql` file support and file itself
 
 ## [1.4.0] - 2020-07-09
 
