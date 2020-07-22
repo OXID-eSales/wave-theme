@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Fix price information structure by schema.org [PR-85](https://github.com/OXID-eSales/wave-theme/pull/85)
-- Use schema.org specification for breadcrumbs [PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
+- Use schema.org specification for breadcrumbs [#007080](https://bugs.oxid-esales.com/view.php?id=7080) [PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
 - Remove duplicate id of birthdate field [PR-86](https://github.com/OXID-eSales/wave-theme/pull/86)
 - Fix align of text in basket delivery tax row [PR-100](https://github.com/OXID-eSales/wave-theme/pull/100)
 - Avoid empty row before subcategories list [PR-98](https://github.com/OXID-eSales/wave-theme/pull/98)
