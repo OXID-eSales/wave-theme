@@ -169,7 +169,7 @@
                             </div>
                         [{/if}]
                     [{/block}]
-                </div>
+                
 
                 [{* selection lists *}]
                 [{block name="details_productmain_selectlists"}]
@@ -229,6 +229,7 @@
                             [{/block}]
                         [{/oxhasrights}]
                     [{/block}]
+                    </div>
                 </div>
 
                 <div class="tobasket">
