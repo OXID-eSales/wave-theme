@@ -37,6 +37,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - News feature
 - `setup.sql` file support and file itself
 
+## [1.4.1] - Unreleased
+
+### Fixed
+- Email validation regex [PR-103](https://github.com/OXID-eSales/wave-theme/pull/103)
+
 ## [1.4.0] - 2020-07-09
 
 ### Added
@@ -175,6 +180,7 @@ in:
 ## 1.0.0 -  2019-01-21
 
 [2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/b-1.x...master
+[1.4.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.4.0...b-1.x
 [1.4.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.2.0...v1.3.0
