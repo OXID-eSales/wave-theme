@@ -30,9 +30,10 @@
     [{assign var="oxuser__oxsal" value=$oxcmp_user->oxuser__oxsal->value}]
 [{/if}]
 <div class="form-group row">
-    <label class="col-lg-3[{if $oView->isFieldRequired(oxuser__oxsal)}] req[{/if}]" for="invadr_oxuser__oxsal">[{oxmultilang ident="TITLE"}]</label>
+    [{assign var="salutationRequired" value=$oView->isFieldRequired(oxuser__oxsal)}]
+    <label class="col-lg-3[{if $salutationRequired}] req[{/if}]" for="invadr_oxuser__oxsal">[{oxmultilang ident="TITLE"}]</label>
     <div class="col-lg-9">
-        [{include file="form/fieldset/salutation.tpl" name="invadr[oxuser__oxsal]" value=$oxuser__oxsal class="form-control" id="invadr_oxuser__oxsal"}]
+        [{include file="form/fieldset/salutation.tpl" name="invadr[oxuser__oxsal]" value=$oxuser__oxsal class="form-control" id="invadr_oxuser__oxsal" required=$salutationRequired}]
         <div class="help-block"></div>
     </div>
 </div>
