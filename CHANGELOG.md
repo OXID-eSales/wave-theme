@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Email validation regex [PR-103](https://github.com/OXID-eSales/wave-theme/pull/103)
+- Turn on validation on salutation field if required [PR-106](https://github.com/OXID-eSales/wave-theme/pull/106)
 
 ## [1.4.0] - 2020-07-09
 
