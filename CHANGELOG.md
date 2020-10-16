@@ -18,10 +18,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - In admin settings assigned 'e-mail-logo' to display group 'emails' [PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
 
 ### Fixed
-- Removed unwanted quotation mark in ``productmain.tpl`` html [PR-73](https://github.com/OXID-eSales/wave-theme/pull/73)
 - Improved readability of setup.sql and theme.php [PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
 - Remove dependency on a system wide installed grunt-cli [PR-102](https://github.com/OXID-eSales/wave-theme/pull/102)
-- Correction of Div due to schema.org offers [PR-105](https://github.com/OXID-eSales/wave-theme/pull/105)
 
 ### Removed
 - Google+ related settings together with frontend and email template blocks [PR-81](https://github.com/OXID-eSales/wave-theme/pull/81)
