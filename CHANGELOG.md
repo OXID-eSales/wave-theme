@@ -42,6 +42,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Email validation regex [PR-103](https://github.com/OXID-eSales/wave-theme/pull/103)
 - Turn on validation on salutation field if required [PR-106](https://github.com/OXID-eSales/wave-theme/pull/106)
+- Removed unwanted quotation mark in ``productmain.tpl`` html [PR-73](https://github.com/OXID-eSales/wave-theme/pull/73)
+- Correction of Div due to schema.org offers [PR-105](https://github.com/OXID-eSales/wave-theme/pull/105)
 
 ## [1.4.0] - 2020-07-09
 
