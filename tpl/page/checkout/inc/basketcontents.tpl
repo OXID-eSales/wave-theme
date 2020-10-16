@@ -11,7 +11,9 @@
     <input type="hidden" name="CustomError" value="basket">
 
     <div class="basket" id="basketcontents_list">
-        [{include file="page/checkout/inc/basketcontents_list.tpl"}]
+        [{block name="checkout_basketcontents_list"}]
+            [{include file="page/checkout/inc/basketcontents_list.tpl"}]
+        [{/block}]
     </div>
 
 </form>

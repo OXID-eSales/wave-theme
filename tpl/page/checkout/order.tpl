@@ -103,12 +103,14 @@
                                         </h3>
                                     </div>
                                     <div class="card-body">
-                                        [{assign var="oDelAdress" value=$oView->getDelAddress()}]
-                                        [{if $oDelAdress}]
-                                            [{include file="widget/address/shipping_address.tpl" delivadr=$oDelAdress}]
-                                        [{else}]
-                                            [{include file="widget/address/billing_address.tpl"}]
-                                        [{/if}]
+                                        [{block name="checkout_order_address_inner"}]
+                                            [{assign var="oDelAdress" value=$oView->getDelAddress()}]
+                                            [{if $oDelAdress}]
+                                                [{include file="widget/address/shipping_address.tpl" delivadr=$oDelAdress}]
+                                            [{else}]
+                                                [{include file="widget/address/billing_address.tpl"}]
+                                            [{/if}]
+                                        [{/block}]
                                     </div>
                                 </div>
                             </form>
