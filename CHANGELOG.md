@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Turn on validation on salutation field if required [PR-106](https://github.com/OXID-eSales/wave-theme/pull/106)
 - Removed unwanted quotation mark in ``productmain.tpl`` html [PR-73](https://github.com/OXID-eSales/wave-theme/pull/73)
 - Correction of Div due to schema.org offers [PR-105](https://github.com/OXID-eSales/wave-theme/pull/105)
+- Variantselector doesn't work in List View listitem_line in wave and flow [#0007163](https://bugs.oxid-esales.com/view.php?id=7163) [Flow-PR-162](https://github.com/OXID-eSales/flow_theme/pull/162)
 
 ## [1.4.0] - 2020-07-09
 
@@ -31,7 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Fix price information structure by schema.org [PR-85](https://github.com/OXID-eSales/wave-theme/pull/85)
-- Use schema.org specification for breadcrumbs [#007080](https://bugs.oxid-esales.com/view.php?id=7080) [PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
+- Use schema.org specification for breadcrumbs [#0007080](https://bugs.oxid-esales.com/view.php?id=7080) [PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
 - Remove duplicate id of birthdate field [PR-86](https://github.com/OXID-eSales/wave-theme/pull/86)
 - Fix align of text in basket delivery tax row [PR-100](https://github.com/OXID-eSales/wave-theme/pull/100)
 - Avoid empty row before subcategories list [PR-98](https://github.com/OXID-eSales/wave-theme/pull/98)

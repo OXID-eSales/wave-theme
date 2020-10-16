@@ -59,7 +59,7 @@
             [{/if}]
         </div>
 
-        <div class="row">
+        <div class="row listDetails">
             <div class="col-12 col-md-2">
                 <div class="picture">
                     [{block name="widget_product_listitem_line_picturebox"}]
