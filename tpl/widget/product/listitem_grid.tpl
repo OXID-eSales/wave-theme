@@ -73,6 +73,9 @@
                 </div>
             [{/block}]
 
+            [{block name="widget_product_listitem_infogrid_selections"}]
+
+            [{/block}]
             <div class="price text-center">
                 <div class="content">
                     [{block name="widget_product_listitem_grid_price"}]
