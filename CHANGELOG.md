@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.4.1] - Unreleased
+## [1.5.0] - Unreleased
+
+### Added
+- New blocks:
+    - `user_checkout_noregistration_shipping_address_body` in `tpl/form/user_checkout_noregistration.tpl` [PR-109](https://github.com/OXID-eSales/wave-theme/pull/109)
+    - `user_checkout_registration_shipping_address_body` in `tpl/form/user_checkout_registration.tpl` [PR-109](https://github.com/OXID-eSales/wave-theme/pull/109)
+    - `checkout_basketcontents_list` in `tpl/page/checkout/inc/basketcontents.tpl` [PR-109](https://github.com/OXID-eSales/wave-theme/pull/109)
+    - `checkout_basketcontents_basketitem_end` in `tpl/page/checkout/inc/basketcontents_list.tpl` [PR-109](https://github.com/OXID-eSales/wave-theme/pull/109)
+    - `checkout_order_address_inner` in `tpl/page/checkout/order.tpl` [PR-109](https://github.com/OXID-eSales/wave-theme/pull/109)
 
 ### Fixed
 - Email validation regex [PR-103](https://github.com/OXID-eSales/wave-theme/pull/103)
@@ -150,7 +158,7 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
-[1.4.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.4.0...b-1.x
+[1.5.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.4.0...b-1.x
 [1.4.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.2.0...v1.3.0
