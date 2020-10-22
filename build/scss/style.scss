@@ -43,17 +43,3 @@
 @import 'widget/sidebar/recommendation';
 
 @import 'custom/styles.scss';
-
-.articlevariant-icons-wrapper {
-  .dropdown-toggle {
-    width: 250px;
-    border: 1px solid #ccc;
-  }
-
-  .dropdown-menu {
-    a {
-      display: block;
-      padding: 3px 5px;
-    }
-  }
-}
