@@ -51,6 +51,8 @@
         </div>
     [{/block}]
 
+    [{block name="captcha_form"}][{/block}]
+
     [{block name="newsletter_form_button"}]
         <div class="form-group">
             <div class="offset-lg-2 col-lg-5">
