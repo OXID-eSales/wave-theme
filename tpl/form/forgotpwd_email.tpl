@@ -1,3 +1,4 @@
+[{oxscript include="js/libs/jqBootstrapValidation.min.js" priority=10}]
 [{oxscript add="$('input,select,textarea').not('[type=submit]').jqBootstrapValidation();"}]
 
 <p>
@@ -23,6 +24,9 @@
                        value="[{$oView->getActiveUsername()}]" class="form-control" required="required">
                 <p class="help-block"></p>
             </div>
+
+            [{block name="captcha_form"}][{/block}]
+
             <div class="form-group">
                 <button class="btn btn-primary submitButton" type="submit">[{oxmultilang ident="REQUEST_PASSWORD"}]</button>
             </div>
