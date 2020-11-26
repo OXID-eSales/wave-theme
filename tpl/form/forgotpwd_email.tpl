@@ -23,6 +23,9 @@
                        value="[{$oView->getActiveUsername()}]" class="form-control" required="required">
                 <p class="help-block"></p>
             </div>
+
+            [{block name="captcha_form"}][{/block}]
+
             <div class="form-group">
                 <button class="btn btn-primary submitButton" type="submit">[{oxmultilang ident="REQUEST_PASSWORD"}]</button>
             </div>
