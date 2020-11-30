@@ -105,6 +105,15 @@
                             </a>
                         </li>
                         [{/if}]
+                        [{if $oViewConf->getViewThemeParam('sInstagramUrl')}]
+                        <li class="social-links-item">
+                            <a target="_blank" class="social-links-link"
+                               rel="noopener"
+                               href="[{$oViewConf->getViewThemeParam('sInstagramUrl')}]">
+                                <i class="fab fa-instagram"></i> <span>Instagram</span>
+                            </a>
+                        </li>
+                        [{/if}]
                         [{if $oViewConf->getViewThemeParam('sTwitterUrl')}]
                         <li class="social-links-item">
                             <a target="_blank" class="social-links-link"

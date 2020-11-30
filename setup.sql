@@ -70,7 +70,8 @@ INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`
 (uuid(), 1, 'theme:wave', 'blFooterShowNews', 'bool', 0x07, NOW()),
 (uuid(), 1, 'theme:wave', 'sLogoFile', 'str', 0x942748b21d78ed91e41c4cb2b7, NOW()),
 (uuid(), 1, 'theme:wave', 'blFullwidthLayout', 'bool', '', NOW()),
-(uuid(), 1, 'theme:wave', 'blHomeLink', 'bool', '', NOW());
+(uuid(), 1, 'theme:wave', 'blHomeLink', 'bool', '', NOW()),
+(uuid(), 1, 'theme:wave', 'sInstagramUrl', 'str', '00D0E1AEEBD778FA49B315D46777B6B8D8734ED56C37452901', NOW());
 
 
 INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPING`, `OXVARCONSTRAINT`, `OXPOS`, `OXTIMESTAMP`) VALUES
@@ -146,3 +147,4 @@ INSERT INTO `oxconfigdisplay` (`OXID`, `OXCFGMODULE`, `OXCFGVARNAME`, `OXGROUPIN
 (uuid(), 'theme:wave', 'blFooterShowNewsletterForm', 'footer', '', 5, NOW()),
 (uuid(), 'theme:wave', 'blEmailsShowProductPictures', 'emails', '', 1, NOW()),
 (uuid(), 'theme:wave', 'blFooterShowNews', 'footer', '', 6, NOW());
+(uuid(), 'theme:wave', 'sInstagramUrl', 'footer', '', 0, NOW());
