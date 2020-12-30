@@ -310,7 +310,7 @@
                     [{block name="details_productmain_manufacturersicon"}]
                         <a href="[{$oManufacturer->getLink()}]" title="[{$oManufacturer->oxmanufacturers__oxtitle->value}]">
                             [{if $oManufacturer->oxmanufacturers__oxicon->value}]
-                                <img src="[{$oManufacturer->getIconUrl()}]" alt="[{$oManufacturer->oxmanufacturers__oxtitle->value}]">
+                                <img src="[{$oManufacturer->getIconUrl()}]" alt="[{$oManufacturer->oxmanufacturers__oxtitle->value}]" class="img-fluid">
                             [{/if}]
                         </a>
                         <span itemprop="brand" class="d-none">[{$oManufacturer->oxmanufacturers__oxtitle->value}]</span>
