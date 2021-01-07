@@ -33,6 +33,7 @@
         </form>
     [{else}]
         [{if $oView->getForgotEmail()}]
+            [{block name="forgot_email"}]
             <div class="alert alert-info">[{oxmultilang ident="PASSWORD_WAS_SEND_TO"}] [{$oView->getForgotEmail()}]</div>
             <div class="bar">
                 <form action="[{$oViewConf->getSelfActionLink()}]" name="forgotpwd" method="post">
@@ -45,6 +46,7 @@
                     </div>
                  </form>
              </div>
+             [{/block}]
         [{else}]
             [{include file="form/forgotpwd_email.tpl"}]
         [{/if}]
