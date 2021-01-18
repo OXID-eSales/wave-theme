@@ -48,7 +48,7 @@
         </div>
 [{/oxhasrights}]
 
-<div class="details-info" itemscope itemtype="http://schema.org/Product">
+<div class="details-info">
     <div class="row">
         <div class="col-12 col-md-4 details-col-left">
             [{* article picture with zoom *}]
@@ -97,7 +97,7 @@
 
             [{* article number *}]
             [{block name="details_productmain_artnumber"}]
-                <span class="small text-muted">[{oxmultilang ident="ARTNUM" suffix="COLON"}] [{$oDetailsProduct->oxarticles__oxartnum->value}]</span>
+                <span class="small text-muted" itemprop="sku" content="[{$oDetailsProduct->oxarticles__oxartnum->value}]">[{oxmultilang ident="ARTNUM" suffix="COLON"}] [{$oDetailsProduct->oxarticles__oxartnum->value}]</span>
             [{/block}]
 
             [{* ratings *}]
@@ -116,8 +116,10 @@
                 [{/oxhasrights}]
             [{/block}]
 
+            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
             [{* article main info block *}]
-            <div class="details-information[{if $oManufacturer->oxmanufacturers__oxicon->value}] hasBrand[{/if}]" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <div class="details-information[{if $oManufacturer->oxmanufacturers__oxicon->value}] hasBrand[{/if}]">
+                <span class="hidden" itemprop="url" content="[{$oDetailsProduct->getMainLink()}]"></span>
 
                 [{* additional info *}]
                 [{oxhasrights ident="SHOWARTICLEPRICE"}]
@@ -301,6 +303,7 @@
 
                 [{block name="details_productmain_social"}]
                 [{/block}]
+            </div>
             </div>
         </div>
 

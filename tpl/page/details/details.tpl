@@ -69,7 +69,7 @@
         </div>
 
         [{* RDFa offering*}]
-        <div class="details-product-info" id="productinfo">
+        <div class="details-product-info" id="productinfo" itemscope itemtype="http://schema.org/Product">
             [{include file="page/details/inc/fullproductinfo.tpl"}]
         </div>
     </div>
