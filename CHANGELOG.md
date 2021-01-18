@@ -10,8 +10,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add the autocomplete HTML attributes to most HTML input fields [PR-107](https://github.com/OXID-eSales/wave-theme/pull/107)
 - Sku and offer url microdata added [PR-108](https://github.com/OXID-eSales/wave-theme/pull/108)
 - New blocks:
-  - ``captcha_form`` in ``tpl/form/forgotpwd_email.tpl`` [Flow-PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
-  - ``captcha_form`` in ``tpl/form/newsletter.tpl`` [Flow-PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
+  - ``captcha_form`` in:
+    - ``tpl/form/forgotpwd_email.tpl`` [Flow-PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
+    - ``tpl/form/newsletter.tpl`` [Flow-PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
+  - in ``tpl/widget/product/list``:
+    - ``widget_product_list`` [PR-113](https://github.com/OXID-eSales/wave-theme/pull/113)
+    - ``widget_product_list_head`` [PR-113](https://github.com/OXID-eSales/wave-theme/pull/113)
+    - ``widget_product_list_item`` [PR-113](https://github.com/OXID-eSales/wave-theme/pull/113)
 
 ### Fixed
 - Reviews and avaialbility microdata fixed [PR-108](https://github.com/OXID-eSales/wave-theme/pull/108)
