@@ -15,7 +15,7 @@
         [{block name="user_account_password"}]
             <label class="col-sm-3">[{oxmultilang ident="NEW_PASSWORD"}]</label>
             <div class="col-md-9">
-                <input type="password" name="password_new" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_length js-oxValidate_match textbox">
+                <input type="password" name="password_new" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_length js-oxValidate_match textbox" autocomplete="new-password">
             </div>
             <p class="help-block"></p>
         [{/block}]
@@ -23,7 +23,7 @@
     <div class="form-group row[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
         <label class="col-md-3">[{oxmultilang ident="CONFIRM_PASSWORD"}]</label>
         <div class="col-md-9">
-            <input type="password" name="password_new_confirm" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_length js-oxValidate_match textbox">
+            <input type="password" name="password_new_confirm" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_length js-oxValidate_match textbox" autocomplete="new-password">
         </div>
         <p class="help-block"></p>
     </div>
