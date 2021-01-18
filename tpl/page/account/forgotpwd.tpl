@@ -33,18 +33,20 @@
         </form>
     [{else}]
         [{if $oView->getForgotEmail()}]
-            <div class="alert alert-info">[{oxmultilang ident="PASSWORD_WAS_SEND_TO"}] [{$oView->getForgotEmail()}]</div>
-            <div class="bar">
-                <form action="[{$oViewConf->getSelfActionLink()}]" name="forgotpwd" method="post">
-                    <div>
-                        [{$oViewConf->getHiddenSid()}]
-                        <input type="hidden" name="cl" value="start">
-                        <button id="backToShop" class="btn btn-primary submitButton largeButton" type="submit">
-                            <i class="fa fa-caret-left"></i> [{oxmultilang ident="BACK_TO_SHOP"}]
-                        </button>
-                    </div>
-                 </form>
-             </div>
+            [{block name="page_account_forgot_email_sent"}]
+                <div class="alert alert-info">[{oxmultilang ident="PASSWORD_WAS_SEND_TO"}] [{$oView->getForgotEmail()}]</div>
+                <div class="bar">
+                    <form action="[{$oViewConf->getSelfActionLink()}]" name="forgotpwd" method="post">
+                        <div>
+                            [{$oViewConf->getHiddenSid()}]
+                            <input type="hidden" name="cl" value="start">
+                            <button id="backToShop" class="btn btn-primary submitButton largeButton" type="submit">
+                                <i class="fa fa-caret-left"></i> [{oxmultilang ident="BACK_TO_SHOP"}]
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            [{/block}]
         [{else}]
             [{include file="form/forgotpwd_email.tpl"}]
         [{/if}]
