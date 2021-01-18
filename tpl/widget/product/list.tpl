@@ -25,31 +25,31 @@
     <div class="boxwrapper" id="boxwrapper_[{$listId}]">
         [{block name="widget_product_list_head"}]
             [{if $head}]
-            [{if $header == "light"}]
-                <div class="page-header">
-                    <span class="h3">[{$head}]</span>
+                [{if $header == "light"}]
+                    <div class="page-header">
+                        <span class="h3">[{$head}]</span>
 
-                    [{if $subhead}]
-                        <small class="subhead">[{$subhead}]</small>
-                    [{/if}]
-                </div>
-            [{else}]
-                <div class="page-header">
-                    <h2 class="h2">
-                        [{$head}]
-                        [{if $rsslink}]
-                            <a class="rss" id="[{$rssId}]" aria-label="RSS" href="[{$rsslink.link}]" target="_blank">
-                                <i class="fas fa-rss"></i>
-                            </a>
+                        [{if $subhead}]
+                            <small class="subhead">[{$subhead}]</small>
                         [{/if}]
-                    </h2>
+                    </div>
+                [{else}]
+                    <div class="page-header">
+                        <h2 class="h2">
+                            [{$head}]
+                            [{if $rsslink}]
+                                <a class="rss" id="[{$rssId}]" aria-label="RSS" href="[{$rsslink.link}]" target="_blank">
+                                    <i class="fas fa-rss"></i>
+                                </a>
+                            [{/if}]
+                        </h2>
 
-                    [{if $subhead}]
-                        <small class="subhead">[{$subhead}]</small>
-                    [{/if}]
-                </div>
+                        [{if $subhead}]
+                            <small class="subhead">[{$subhead}]</small>
+                        [{/if}]
+                    </div>
+                [{/if}]
             [{/if}]
-        [{/if}]
         [{/block}]
 
         [{if $products && !empty($products)}]
