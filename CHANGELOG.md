@@ -46,6 +46,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Reviews and avaialbility microdata fixed [PR-108](https://github.com/OXID-eSales/wave-theme/pull/108)
+- Fix manufacturer logo display in product ID, in case logo image configured to be big [PR-114](https://github.com/OXID-eSales/wave-theme/pull/114)
 
 ## [1.5.0] - 2020-11-09
 
