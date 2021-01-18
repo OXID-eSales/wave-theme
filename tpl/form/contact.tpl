@@ -38,6 +38,7 @@
                        maxlength="255"
                        value="[{$editval.oxuser__oxfname}]"
                        class="form-control"
+                       autocomplete="given-name"
                        [{if $contactFormFields.firstName.isRequired}]required="required"[{/if}] >
             </div>
         </div>
@@ -54,6 +55,7 @@
                        maxlength=255
                        value="[{$editval.oxuser__oxlname}]"
                        class="form-control"
+                       autocomplete="family-name"
                        [{if $contactFormFields.lastName.isRequired}]required="required"[{/if}]>
             </div>
         </div>
@@ -70,6 +72,7 @@
                        maxlength=255
                        value="[{$editval.oxuser__oxusername}]"
                        class="form-control"
+                       autocomplete="email"
                        [{if $contactFormFields.email.isRequired}]required="required"[{/if}]>
             </div>
         </div>
