@@ -107,6 +107,8 @@ $aLang = array(
     'HELP_SHOP_THEME_sBlogUrl'                      => 'E.g.: http://blog.oxid-esales.com',
     'SHOP_THEME_sYouTubeUrl'                        => 'YouTube Channel-URL',
     'HELP_SHOP_THEME_sYouTubeUrl'                   => 'E.g.: https://www.youtube.com/user/oxidesales',
+    'SHOP_THEME_sInstagramUrl'                      => 'Instagram Page-URL',
+    'HELP_SHOP_THEME_sInstagramUrl'                 => 'E.g.: https://www.instagram.com/oxid_esales/',
 
     'SHOP_THEME_sGoogleMapsAddr'                    => 'Your postal address',
     'HELP_SHOP_THEME_sGoogleMapsAddr'               => 'E.g.: OXID eSales AG, Bertoldstraße 48, 79098 Freiburg',
