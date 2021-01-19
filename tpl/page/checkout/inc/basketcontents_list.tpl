@@ -229,7 +229,7 @@
                         [{/block}]
                     </div>
                 </div>
-
+                [{block name="checkout_basketcontents_basketitem_end"}][{/block}]
                 <hr/>
             </li>
         [{/block}]

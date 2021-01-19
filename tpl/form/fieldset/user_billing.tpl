@@ -30,9 +30,10 @@
     [{assign var="oxuser__oxsal" value=$oxcmp_user->oxuser__oxsal->value}]
 [{/if}]
 <div class="form-group row">
-    <label class="col-lg-3[{if $oView->isFieldRequired(oxuser__oxsal)}] req[{/if}]" for="invadr_oxuser__oxsal">[{oxmultilang ident="TITLE"}]</label>
+    [{assign var="salutationRequired" value=$oView->isFieldRequired(oxuser__oxsal)}]
+    <label class="col-lg-3[{if $salutationRequired}] req[{/if}]" for="invadr_oxuser__oxsal">[{oxmultilang ident="TITLE"}]</label>
     <div class="col-lg-9">
-        [{include file="form/fieldset/salutation.tpl" name="invadr[oxuser__oxsal]" value=$oxuser__oxsal class="form-control" id="invadr_oxuser__oxsal"}]
+        [{include file="form/fieldset/salutation.tpl" name="invadr[oxuser__oxsal]" value=$oxuser__oxsal class="form-control" id="invadr_oxuser__oxsal" required=$salutationRequired}]
         <div class="help-block"></div>
     </div>
 </div>
@@ -40,7 +41,7 @@
 <div class="form-group row[{if $aErrors.oxuser__oxfname}] text-danger[{/if}]">
     <label class="col-lg-3[{if $oView->isFieldRequired(oxuser__oxfname)}] req[{/if}]" for="invadr_oxuser__oxfname">[{oxmultilang ident="FIRST_NAME"}]</label>
     <div class="col-lg-9">
-        <input class="form-control" type="text" maxlength="255" name="invadr[oxuser__oxfname]" id="invadr_oxuser__oxfname" value="[{if isset( $invadr.oxuser__oxfname )}][{$invadr.oxuser__oxfname}][{else}][{$oxcmp_user->oxuser__oxfname->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxfname)}] required=""[{/if}]>
+        <input class="form-control" type="text" maxlength="255" name="invadr[oxuser__oxfname]" id="invadr_oxuser__oxfname" autocomplete="billing given-name" value="[{if isset( $invadr.oxuser__oxfname )}][{$invadr.oxuser__oxfname}][{else}][{$oxcmp_user->oxuser__oxfname->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxfname)}] required=""[{/if}]>
         [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxfname}]
         <div class="help-block"></div>
     </div>
@@ -49,7 +50,7 @@
 <div class="form-group row[{if $aErrors.oxuser__oxlname}] text-danger[{/if}]">
     <label class="col-lg-3[{if $oView->isFieldRequired(oxuser__oxlname)}] req[{/if}]" for="invadr_oxuser__oxlname">[{oxmultilang ident="LAST_NAME"}]</label>
     <div class="col-lg-9">
-        <input class="form-control" type="text" maxlength="255" name="invadr[oxuser__oxlname]" id="invadr_oxuser__oxlname" value="[{if isset( $invadr.oxuser__oxlname )}][{$invadr.oxuser__oxlname}][{else}][{$oxcmp_user->oxuser__oxlname->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxlname)}] required=""[{/if}]>
+        <input class="form-control" type="text" maxlength="255" name="invadr[oxuser__oxlname]" id="invadr_oxuser__oxlname" autocomplete="billing family-name" value="[{if isset( $invadr.oxuser__oxlname )}][{$invadr.oxuser__oxlname}][{else}][{$oxcmp_user->oxuser__oxlname->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxlname)}] required=""[{/if}]>
         [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxlname}]
         <div class="help-block"></div>
     </div>
@@ -58,7 +59,7 @@
 <div class="form-group row[{if $aErrors.oxuser__oxcompany}] text-danger[{/if}]">
     <label class="col-lg-3[{if $oView->isFieldRequired(oxuser__oxcompany)}] req[{/if}]" for="invadr_oxuser__oxcompany">[{oxmultilang ident="COMPANY"}]</label>
     <div class="col-lg-9">
-        <input class="form-control" type="text" maxlength="255" name="invadr[oxuser__oxcompany]" id="invadr_oxuser__oxcompany" value="[{if isset( $invadr.oxuser__oxcompany )}][{$invadr.oxuser__oxcompany}][{else}][{$oxcmp_user->oxuser__oxcompany->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxcompany)}] required=""[{/if}]>
+        <input class="form-control" type="text" maxlength="255" name="invadr[oxuser__oxcompany]" id="invadr_oxuser__oxcompany" autocomplete="billing organization" value="[{if isset( $invadr.oxuser__oxcompany )}][{$invadr.oxuser__oxcompany}][{else}][{$oxcmp_user->oxuser__oxcompany->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxcompany)}] required=""[{/if}]>
         [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxcompany}]
         <div class="help-block"></div>
     </div>
@@ -77,7 +78,7 @@
 <div class="form-group row[{if $aErrors.oxuser__oxstreet}] text-danger[{/if}]">
     <label class="col-12 col-lg-3[{if $oView->isFieldRequired(oxuser__oxstreet) || $oView->isFieldRequired(oxuser__oxstreetnr)}] req[{/if}]" for="invadr_oxuser__oxstreet">[{oxmultilang ident="STREET_AND_STREETNO"}]</label>
     <div class="col-8 col-lg-6">
-        <input class="form-control" type="text" maxlength="255" name="invadr[oxuser__oxstreet]" id="invadr_oxuser__oxstreet" value="[{if isset( $invadr.oxuser__oxstreet )}][{$invadr.oxuser__oxstreet}][{else}][{$oxcmp_user->oxuser__oxstreet->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxstreet)}] required=""[{/if}]>
+        <input class="form-control" type="text" maxlength="255" name="invadr[oxuser__oxstreet]" id="invadr_oxuser__oxstreet" autocomplete="billing street-address" value="[{if isset( $invadr.oxuser__oxstreet )}][{$invadr.oxuser__oxstreet}][{else}][{$oxcmp_user->oxuser__oxstreet->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxstreet)}] required=""[{/if}]>
     </div>
     <div class="col-4 col-lg-3">
         <input class="form-control" type="text" maxlength="16" name="invadr[oxuser__oxstreetnr]" id="invadr_oxuser__oxstreetnr" value="[{if isset( $invadr.oxuser__oxstreetnr )}][{$invadr.oxuser__oxstreetnr}][{else}][{$oxcmp_user->oxuser__oxstreetnr->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxstreetnr)}] required=""[{/if}]>
@@ -92,10 +93,10 @@
 <div class="form-group row[{if $aErrors.oxuser__oxzip}] text-danger[{/if}]">
     <label class="col-12 col-lg-3[{if $oView->isFieldRequired(oxuser__oxzip) || $oView->isFieldRequired(oxuser__oxcity)}] req[{/if}]" for="invadr_oxuser__oxzip">[{oxmultilang ident="POSTAL_CODE_AND_CITY"}]</label>
     <div class="col-5 col-lg-3">
-        <input class="form-control" type="text" maxlength="16" name="invadr[oxuser__oxzip]" id="invadr_oxuser__oxzip" value="[{if isset( $invadr.oxuser__oxzip )}][{$invadr.oxuser__oxzip}][{else}][{$oxcmp_user->oxuser__oxzip->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxzip)}] required=""[{/if}]>
+        <input class="form-control" type="text" maxlength="16" name="invadr[oxuser__oxzip]" id="invadr_oxuser__oxzip" autocomplete="billing postal-code" value="[{if isset( $invadr.oxuser__oxzip )}][{$invadr.oxuser__oxzip}][{else}][{$oxcmp_user->oxuser__oxzip->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxzip)}] required=""[{/if}]>
     </div>
     <div class="col-7 col-lg-6">
-        <input class="form-control" type="text" maxlength="255" name="invadr[oxuser__oxcity]" id="invadr_oxuser__oxcity" value="[{if isset( $invadr.oxuser__oxcity )}][{$invadr.oxuser__oxcity}][{else}][{$oxcmp_user->oxuser__oxcity->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxcity)}] required=""[{/if}]>
+        <input class="form-control" type="text" maxlength="255" name="invadr[oxuser__oxcity]" id="invadr_oxuser__oxcity" autocomplete="billing locality" value="[{if isset( $invadr.oxuser__oxcity )}][{$invadr.oxuser__oxcity}][{else}][{$oxcmp_user->oxuser__oxcity->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxcity)}] required=""[{/if}]>
     </div>
     <div class="offset-lg-3 col-md-9 col-12">
         [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxzip}]
@@ -117,7 +118,7 @@
     <div class="form-group row[{if $aErrors.oxuser__oxcountryid}] text-danger[{/if}]">
         <label class="col-lg-3[{if $oView->isFieldRequired(oxuser__oxcountryid)}] req[{/if}]" for="invCountrySelect">[{oxmultilang ident="COUNTRY"}]</label>
         <div class="col-lg-9">
-            <select class="form-control" id="invCountrySelect" name="invadr[oxuser__oxcountryid]"[{if $oView->isFieldRequired(oxuser__oxcountryid)}] required=""[{/if}]>
+            <select class="form-control" id="invCountrySelect" name="invadr[oxuser__oxcountryid]"[{if $oView->isFieldRequired(oxuser__oxcountryid)}] required=""[{/if}] autocomplete="billing country">
                 <option value="">-</option>
                 [{assign var="blCountrySelected" value=false}]
                 [{foreach from=$oViewConf->getCountryList() item=country key=country_id}]
@@ -155,7 +156,7 @@
 <div class="form-group row[{if $aErrors.oxuser__oxfon}] text-danger"[{/if}]">
     <label class="col-lg-3[{if $oView->isFieldRequired(oxuser__oxfon)}] req[{/if}]" for="invadr_oxuser__oxfon">[{oxmultilang ident="PHONE"}]</label>
     <div class="col-lg-9">
-        <input class="form-control" type="text" maxlength="128" name="invadr[oxuser__oxfon]" id="invadr_oxuser__oxfon" value="[{if isset( $invadr.oxuser__oxfon )}][{$invadr.oxuser__oxfon}][{else}][{$oxcmp_user->oxuser__oxfon->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxfon)}] required=""[{/if}]>
+        <input class="form-control" type="text" maxlength="128" name="invadr[oxuser__oxfon]" id="invadr_oxuser__oxfon" value="[{if isset( $invadr.oxuser__oxfon )}][{$invadr.oxuser__oxfon}][{else}][{$oxcmp_user->oxuser__oxfon->value}][{/if}]"[{if $oView->isFieldRequired(oxuser__oxfon)}] required=""[{/if}] autocomplete="billing tel">
         [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxfon}]
         <div class="help-block"></div>
     </div>
@@ -193,10 +194,10 @@
         <div class="form-group row oxDate[{if $aErrors.oxuser__oxbirthdate}] text-danger[{/if}]">
             <label class="col-12 col-lg-3[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] req[{/if}]" for="oxDay">[{oxmultilang ident="BIRTHDATE"}]</label>
             <div class="col-3 col-lg-3">
-                <input id="oxDay" class="oxDay form-control" name="invadr[oxuser__oxbirthdate][day]" type="text" maxlength="2" value="[{if $iBirthdayDay > 0}][{$iBirthdayDay}][{/if}]" placeholder="[{oxmultilang ident="DAY"}]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
+                <input id="oxDay" class="oxDay form-control" name="invadr[oxuser__oxbirthdate][day]" type="text" maxlength="2" value="[{if $iBirthdayDay > 0}][{$iBirthdayDay}][{/if}]" placeholder="[{oxmultilang ident="DAY"}]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}] autocomplete="bday-day">
             </div>
             <div class="col-6 col-lg-3">
-                <select class="oxMonth form-control" name="invadr[oxuser__oxbirthdate][month]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
+                <select class="oxMonth form-control" name="invadr[oxuser__oxbirthdate][month]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}] autocomplete="bday-month">
                     <option value="" label="-">-</option>
                     [{section name="month" start=1 loop=13}]
                         <option value="[{$smarty.section.month.index}]" label="[{$smarty.section.month.index}]" [{if $iBirthdayMonth == $smarty.section.month.index}] selected="selected" [{/if}]>
@@ -206,7 +207,7 @@
                 </select>
             </div>
             <div class="col-3 col-lg-3">
-                <input id="oxYear" class="oxYear form-control" name="invadr[oxuser__oxbirthdate][year]" type="text" maxlength="4" value="[{if $iBirthdayYear}][{$iBirthdayYear}][{/if}]" placeholder="[{oxmultilang ident="YEAR"}]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}]>
+                <input id="oxYear" class="oxYear form-control" name="invadr[oxuser__oxbirthdate][year]" type="text" maxlength="4" value="[{if $iBirthdayYear}][{$iBirthdayYear}][{/if}]" placeholder="[{oxmultilang ident="YEAR"}]"[{if $oView->isFieldRequired(oxuser__oxbirthdate)}] required=""[{/if}] autocomplete="bday-year">
             </div>
             <div class="offset-lg-3 col-lg-9 col-12">
                 [{include file="message/inputvalidation.tpl" aErrors=$aErrors.oxuser__oxbirthdate}]

@@ -18,7 +18,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - In admin settings assigned 'e-mail-logo' to display group 'emails' [PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
 
 ### Fixed
-- Removed unwanted quotation mark in ``productmain.tpl`` html [PR-73](https://github.com/OXID-eSales/wave-theme/pull/73)
 - Improved readability of setup.sql and theme.php [PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
 - Remove dependency on a system wide installed grunt-cli [PR-102](https://github.com/OXID-eSales/wave-theme/pull/102)
 
@@ -34,8 +33,46 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
         - `page/info/suggest.tpl`
     - Link in: `page/details/inc/productmania.tpl`
 - News feature
+- `setup.sql` file support and file itself
 
-## [1.4.0] - Unreleased
+## [1.6.0] - Unreleased
+
+### Added
+- Add the autocomplete HTML attributes to most HTML input fields [PR-107](https://github.com/OXID-eSales/wave-theme/pull/107)
+- Sku and offer url microdata added [PR-108](https://github.com/OXID-eSales/wave-theme/pull/108)
+- New blocks:
+  - ``captcha_form`` in:
+    - ``tpl/form/forgotpwd_email.tpl`` [Flow-PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
+    - ``tpl/form/newsletter.tpl`` [Flow-PR-163](https://github.com/OXID-eSales/flow_theme/pull/163)
+  - in ``tpl/widget/product/list``:
+    - ``widget_product_list`` [PR-113](https://github.com/OXID-eSales/wave-theme/pull/113)
+    - ``widget_product_list_head`` [PR-113](https://github.com/OXID-eSales/wave-theme/pull/113)
+    - ``widget_product_list_item`` [PR-113](https://github.com/OXID-eSales/wave-theme/pull/113)
+  - ``salutation_options`` in ``tpl/form/fieldset/salutation.tpl`` [PR-112](https://github.com/OXID-eSales/wave-theme/pull/112)
+  - ``page_account_forgot_email_sent`` in ``tpl/page/account/forgotpwd.tpl`` [PR-115](https://github.com/OXID-eSales/wave-theme/pull/115)
+
+### Fixed
+- Reviews and avaialbility microdata fixed [PR-108](https://github.com/OXID-eSales/wave-theme/pull/108)
+- Fix manufacturer logo display in product ID, in case logo image configured to be big [PR-114](https://github.com/OXID-eSales/wave-theme/pull/114)
+
+## [1.5.0] - 2020-11-09
+
+### Added
+- New blocks:
+    - `user_checkout_noregistration_shipping_address_body` in `tpl/form/user_checkout_noregistration.tpl` [PR-109](https://github.com/OXID-eSales/wave-theme/pull/109)
+    - `user_checkout_registration_shipping_address_body` in `tpl/form/user_checkout_registration.tpl` [PR-109](https://github.com/OXID-eSales/wave-theme/pull/109)
+    - `checkout_basketcontents_list` in `tpl/page/checkout/inc/basketcontents.tpl` [PR-109](https://github.com/OXID-eSales/wave-theme/pull/109)
+    - `checkout_basketcontents_basketitem_end` in `tpl/page/checkout/inc/basketcontents_list.tpl` [PR-109](https://github.com/OXID-eSales/wave-theme/pull/109)
+    - `checkout_order_address_inner` in `tpl/page/checkout/order.tpl` [PR-109](https://github.com/OXID-eSales/wave-theme/pull/109)
+
+### Fixed
+- Email validation regex [PR-103](https://github.com/OXID-eSales/wave-theme/pull/103)
+- Turn on validation on salutation field if required [PR-106](https://github.com/OXID-eSales/wave-theme/pull/106)
+- Removed unwanted quotation mark in ``productmain.tpl`` html [PR-73](https://github.com/OXID-eSales/wave-theme/pull/73)
+- Correction of Div due to schema.org offers [PR-105](https://github.com/OXID-eSales/wave-theme/pull/105)
+- Variantselector doesn't work in List View listitem_line in wave and flow [#0007163](https://bugs.oxid-esales.com/view.php?id=7163) [Flow-PR-162](https://github.com/OXID-eSales/flow_theme/pull/162)
+
+## [1.4.0] - 2020-07-09
 
 ### Added
 - New blocks:
@@ -54,11 +91,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Fix price information structure by schema.org [PR-85](https://github.com/OXID-eSales/wave-theme/pull/85)
-- Use schema.org specification for breadcrumbs [PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
+- Use schema.org specification for breadcrumbs [#0007080](https://bugs.oxid-esales.com/view.php?id=7080) [PR-83](https://github.com/OXID-eSales/wave-theme/pull/83)
 - Remove duplicate id of birthdate field [PR-86](https://github.com/OXID-eSales/wave-theme/pull/86)
 - Fix align of text in basket delivery tax row [PR-100](https://github.com/OXID-eSales/wave-theme/pull/100)
 - Avoid empty row before subcategories list [PR-98](https://github.com/OXID-eSales/wave-theme/pull/98)
 - Add missing config bl_showPriceAlarm variable to setup.sql
+- Fix wrapping in order/shipping email on small viewport [Flow PR-158](https://github.com/OXID-eSales/flow_theme/pull/158)
 
 ### Renamed
 - Rename price alert/alarm to wished price
@@ -172,7 +210,9 @@ in:
 ## 1.0.0 -  2019-01-21
 
 [2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/b-1.x...master
-[1.4.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.1...b-1.x
+[1.6.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.5.0...b-1.x
+[1.5.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.4.0...v1.5.0
+[1.4.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.1.0...v1.2.0

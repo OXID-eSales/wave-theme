@@ -64,21 +64,23 @@
                         <h3 class="card-title">[{oxmultilang ident="SHIPPING_ADDRESS"}]</h3>
                     </div>
                     <div class="card-body">
-                        <div class="form-group">
-                            <div class="col-lg-9 offset-lg-3">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="blshowshipaddress" id="showShipAddress" [{if !$oView->showShipAddress()}]checked[{/if}] value="0"> [{oxmultilang ident="USE_BILLINGADDRESS_FOR_SHIPPINGADDRESS"}]
-                                    </label>
+                        [{block name="user_checkout_noregistration_shipping_address_body"}]
+                            <div class="form-group">
+                                <div class="col-lg-9 offset-lg-3">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="blshowshipaddress" id="showShipAddress" [{if !$oView->showShipAddress()}]checked[{/if}] value="0"> [{oxmultilang ident="USE_BILLINGADDRESS_FOR_SHIPPINGADDRESS"}]
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div id="shippingAddress"[{if !$oView->showShipAddress()}] style="display: none;"[{/if}]>
-                            [{include file="form/fieldset/user_shipping.tpl" noFormSubmit=true}]
-                        </div>
+                            <div id="shippingAddress"[{if !$oView->showShipAddress()}] style="display: none;"[{/if}]>
+                                [{include file="form/fieldset/user_shipping.tpl" noFormSubmit=true}]
+                            </div>
 
-                        [{include file="form/fieldset/order_remark.tpl" blOrderRemark=true}]
+                            [{include file="form/fieldset/order_remark.tpl" blOrderRemark=true}]
+                        [{/block}]
                     </div>
                 </div>
             </div>

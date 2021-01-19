@@ -795,7 +795,7 @@
 			validemail: {
 				name: "Validemail",
 				type: "regex",
-				regex: "^(.+?)\@(.+)\.(.+)$",
+				regex: "(.+?)\@(.+)[.](.+)",
 				message: oWave.i18n.DD_FORM_VALIDATION_VALIDEMAIL
 			},
 			passwordagain: {
