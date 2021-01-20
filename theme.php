@@ -429,6 +429,13 @@ $aTheme = array(
             'value' => 'https://wordpress.org',
             'position' => 1609,
         ),
+        array(
+            'group' => 'footer',
+            'name' => 'sInstagramUrl',
+            'type' => 'str',
+            'value' => 'https://www.instagram.com/',
+            'position' => 1610,
+        ),
         //Group contact:
         array(
             'group' => 'contact',
