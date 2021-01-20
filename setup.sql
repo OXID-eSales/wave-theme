@@ -1,3 +1,6 @@
+# This file is deprecated and will be removed in further versions.
+# Use theme.php for managing theme settings.
+
 INSERT INTO `oxconfig` (`OXID`, `OXSHOPID`, `OXMODULE`, `OXVARNAME`, `OXVARTYPE`, `OXVARVALUE`, `OXTIMESTAMP`) VALUES
 (uuid(), 1, 'theme:wave', 'sEmailLogo', 'str', 0x942748b21dc5aa40be4dbb4b05b4, NOW()),
 (uuid(), 1, 'theme:wave', 'sManufacturerIconsize', 'str', 0x07c4b144c7b838, NOW()),

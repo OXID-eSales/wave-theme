@@ -20,6 +20,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - ``salutation_options`` in ``tpl/form/fieldset/salutation.tpl`` [PR-112](https://github.com/OXID-eSales/wave-theme/pull/112)
   - ``page_account_forgot_email_sent`` in ``tpl/page/account/forgotpwd.tpl`` [PR-115](https://github.com/OXID-eSales/wave-theme/pull/115)
 
+### Deprecated
+- ``setup.sql`` file is deprecated.
+
 ### Fixed
 - Reviews and avaialbility microdata fixed [PR-108](https://github.com/OXID-eSales/wave-theme/pull/108)
 - Fix manufacturer logo display in product ID, in case logo image configured to be big [PR-114](https://github.com/OXID-eSales/wave-theme/pull/114)
