@@ -136,25 +136,33 @@
                     [{/if}]
                     <td>
                         <p>
-                            <b>[{$basketitem->getTitle()}]</b>
-                            [{if $basketitem->getChosenSelList()}]
-                                <ul>
-                                    [{foreach from=$basketitem->getChosenSelList() item=oList}]
-                                        <li style="padding: 3px;">[{$oList->name}] [{$oList->value}]</li>
-                                    [{/foreach}]
-                                </ul>
-                            [{/if}]
-                            [{if $basketitem->getPersParams()}]
-                                <ul>
-                                    [{foreach key=sVar from=$basketitem->getPersParams() item=aParam}]
-                                        <li style="padding: 3px;">[{$sVar}] : [{$aParam}]</li>
-                                    [{/foreach}]
-                                </ul>
-                            [{/if}]
+                            [{block name="email_html_order_cust_basketitem_title"}]
+                                <b>[{$basketitem->getTitle()}]</b>
+                            [{/block}]
+                            [{block name="email_html_order_cust_basketitem_sellist"}]
+                                [{if $basketitem->getChosenSelList()}]
+                                    <ul>
+                                        [{foreach from=$basketitem->getChosenSelList() item=oList}]
+                                            <li style="padding: 3px;">[{$oList->name}] [{$oList->value}]</li>
+                                        [{/foreach}]
+                                    </ul>
+                                [{/if}]
+                            [{/block}]
+                            [{block name="email_html_order_cust_basketitem_persparams"}]
+                                [{if $basketitem->getPersParams()}]
+                                    <ul>
+                                        [{foreach key=sVar from=$basketitem->getPersParams() item=aParam}]
+                                            <li style="padding: 3px;">[{$sVar}] : [{$aParam}]</li>
+                                        [{/foreach}]
+                                    </ul>
+                                [{/if}]
+                            [{/block}]
                             <br>
-                            <p>
-                                <b>[{oxmultilang ident="PRODUCT_NO" suffix="COLON"}] [{$basketproduct->oxarticles__oxartnum->value}]</b>
-                            </p>
+                            [{block name="email_html_order_cust_basketitem_artnum"}]
+                                <p>
+                                    <b>[{oxmultilang ident="PRODUCT_NO" suffix="COLON"}] [{$basketproduct->oxarticles__oxartnum->value}]</b>
+                                </p>
+                            [{/block}]
                             [{if $oViewConf->getShowGiftWrapping()}]
                                 [{assign var="oWrapping" value=$basketitem->getWrapping()}]
                                 <p>
@@ -175,37 +183,49 @@
                         </p>
                     </td>
                     <td align="right">
-                        <p>
-                            <b>[{if $basketitem->getFUnitPrice()}][{$basketitem->getFUnitPrice()}] [{$currency->sign}][{/if}]</b>
-                            [{if !$basketitem->isBundle()}]
-                                [{assign var=dRegUnitPrice value=$basketitem->getRegularUnitPrice()}]
-                                [{assign var=dUnitPrice value=$basketitem->getUnitPrice()}]
-                                [{if $dRegUnitPrice->getPrice() > $dUnitPrice->getPrice()}]
-                                <br><s>[{$basketitem->getFRegularUnitPrice()}]&nbsp;[{$currency->sign}]</s>
-                                [{/if}]
-                            [{/if}]
-                        </p>
-
-                        [{if $basketitem->aDiscounts}]
+                        [{block name="email_html_order_cust_basketitem_unitprice"}]
                             <p>
-                                <em>[{oxmultilang ident="DISCOUNT"}]
-                                    [{foreach from=$basketitem->aDiscounts item=oDiscount}]
-                                      <br>[{$oDiscount->sDiscount}]
-                                    [{/foreach}]
-                                </em>
+                                <b>[{if $basketitem->getFUnitPrice()}][{$basketitem->getFUnitPrice()}] [{$currency->sign}][{/if}]</b>
+                                [{if !$basketitem->isBundle()}]
+                                    [{assign var=dRegUnitPrice value=$basketitem->getRegularUnitPrice()}]
+                                    [{assign var=dUnitPrice value=$basketitem->getUnitPrice()}]
+                                    [{if $dRegUnitPrice->getPrice() > $dUnitPrice->getPrice()}]
+                                    <br><s>[{$basketitem->getFRegularUnitPrice()}]&nbsp;[{$currency->sign}]</s>
+                                    [{/if}]
+                                [{/if}]
                             </p>
-                        [{/if}]
-
-                        [{if $basketproduct->oxarticles__oxorderinfo->value}]
-                            [{$basketproduct->oxarticles__oxorderinfo->value}]
-                        [{/if}]
+                        [{/block}]
+                        [{block name="email_html_order_cust_basketitem_discounts"}]
+                            [{if $basketitem->aDiscounts}]
+                                <p>
+                                    <em>[{oxmultilang ident="DISCOUNT"}]
+                                        [{foreach from=$basketitem->aDiscounts item=oDiscount}]
+                                          <br>[{$oDiscount->sDiscount}]
+                                        [{/foreach}]
+                                    </em>
+                                </p>
+                            [{/if}]
+                        [{/block}]
+                        [{block name="email_html_order_cust_basketitem_orderinfo"}]
+                            [{if $basketproduct->oxarticles__oxorderinfo->value}]
+                                [{$basketproduct->oxarticles__oxorderinfo->value}]
+                            [{/if}]
+                        [{/block}]
                     </td>
                     <td align="right">
-                        <b>[{$basketitem->getAmount()}]</b>
+                        [{block name="email_html_order_cust_basketitem_amount"}]
+                            <b>[{$basketitem->getAmount()}]</b>
+                        [{/block}]
                     </td>
-                    <td align="right">[{$basketitem->getVatPercent()}]%</td>
                     <td align="right">
-                        <b>[{$basketitem->getFTotalPrice()}] [{$currency->sign}]</b>
+                        [{block name="email_html_order_cust_basketitem_vat"}]
+                            [{$basketitem->getVatPercent()}]%
+                        [{/block}]
+                    </td>
+                    <td align="right">
+                        [{block name="email_html_order_cust_basketitem_price"}]
+                            <b>[{$basketitem->getFTotalPrice()}] [{$currency->sign}]</b>
+                        [{/block}]
                     </td>
                 </tr>
             [{/block}]

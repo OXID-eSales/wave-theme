@@ -51,6 +51,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - ``widget_product_list_item`` [PR-113](https://github.com/OXID-eSales/wave-theme/pull/113)
   - ``salutation_options`` in ``tpl/form/fieldset/salutation.tpl`` [PR-112](https://github.com/OXID-eSales/wave-theme/pull/112)
   - ``page_account_forgot_email_sent`` in ``tpl/page/account/forgotpwd.tpl`` [PR-115](https://github.com/OXID-eSales/wave-theme/pull/115)
+  - in ``tpl/email/html/order_cust.tpl`` [PR-116](https://github.com/OXID-eSales/wave-theme/pull/116):
+    - ``email_html_order_cust_basketitem_title``
+    - ``email_html_order_cust_basketitem_sellist``
+    - ``email_html_order_cust_basketitem_persparams``
+    - ``email_html_order_cust_basketitem_artnum``
+    - ``email_html_order_cust_basketitem_unitprice``
+    - ``email_html_order_cust_basketitem_discounts``
+    - ``email_html_order_cust_basketitem_orderinfo``
+    - ``email_html_order_cust_basketitem_amount``
+    - ``email_html_order_cust_basketitem_vat``
+    - ``email_html_order_cust_basketitem_price``
+  - in ``tpl/email/plain/order_cust.tpl`` [PR-116](https://github.com/OXID-eSales/wave-theme/pull/116):
+    - ``email_plain_order_cust_title``
+    - ``email_plain_order_cust_sellist``
+    - ``email_plain_order_cust_persparams``
+    - ``email_plain_order_cust_orderinfo``
+    - ``email_plain_order_cust_unitprice``
+    - ``email_plain_order_cust_amount``
+    - ``email_plain_order_cust_vat``
+    - ``email_plain_order_cust_price``
 
 ### Deprecated
 - ``setup.sql`` file is deprecated.
