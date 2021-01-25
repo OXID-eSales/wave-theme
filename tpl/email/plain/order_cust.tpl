@@ -58,7 +58,7 @@
 
 [{block name="email_plain_order_cust_amount"}][{oxmultilang ident="QUANTITY"}] [{$basketitem->getAmount()}][{/block}]
 [{block name="email_plain_order_cust_vat"}][{oxmultilang ident="VAT"}] [{$basketitem->getVatPercent()}]%[{/block}]
-[{block name="email_plain_order_cust_price"}][{oxmultilang ident="TOTAL"}] [{$basketitem->getFTotalPrice()}] [{$currency->name}]
+[{block name="email_plain_order_cust_price"}][{oxmultilang ident="TOTAL"}] [{$basketitem->getFTotalPrice()}] [{$currency->name}][{/block}]
 [{/block}]
 [{/foreach}]
 ------------------------------------------------------------------
