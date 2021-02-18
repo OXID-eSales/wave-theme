@@ -34,6 +34,7 @@
 
             $("form.js-oxWidgetReload").submit( formSubmit );
             $("form.js-oxProductForm").submit( formSubmit );
+            checkVariantSelections();
         },
 
         /**
@@ -150,6 +151,16 @@
      */
     function preAjaxCaller() {
         $('#zoomModal').remove();
+    }
+
+    /**
+     * determines if after load the variant widget might need reload
+     */
+    function checkVariantSelections()
+    {
+        if ($("input[name^=varselid]", $("form.js-oxProductForm .selectorsBox")).length !== $("input[name^=varselid]", $("form.js-oxProductForm .hidden")).length) {
+            $(".js-oxWidgetReload").submit();
+        }
     }
 
     $.widget("ui.oxArticleVariant", oxArticleVariant );
