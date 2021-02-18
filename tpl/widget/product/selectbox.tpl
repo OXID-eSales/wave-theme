@@ -1,4 +1,8 @@
 [{assign var="oSelections" value=$oSelectionList->getSelections()}]
+[{assign var="blSingleSelectionSelectBox" value=false}]
+[{if count($oSelections) === 1}]
+    [{assign var="blSingleSelectionSelectBox" value=true}]
+[{/if}]
 
 [{if $oSelections}]
     <div class="form-group dropDown">
@@ -15,7 +19,9 @@
                         [{if $sFieldName == "sel"}]
                             [{oxmultilang ident="PLEASE_CHOOSE"}]
                         [{else}]
-                            [{$oSelectionList->getLabel()}] [{oxmultilang ident="CHOOSE_VARIANT"}]
+                            [{if !$blSingleSelectionSelectBox}]
+                                [{$oSelectionList->getLabel()}] [{oxmultilang ident="CHOOSE_VARIANT"}]
+                            [{/if}]
                         [{/if}]
                     </span>
                 [{/if}]
