@@ -36,7 +36,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - News feature
 - `setup.sql` file support and file itself
 
-## [1.6.0] - Unreleased
+## [1.6.1] - Unreleased
+
+### Fixed
+- Use getTitle from controller, but not actCategory, which is not always available [PR-120](https://github.com/OXID-eSales/wave-theme/pull/120)
+
+## [1.6.0] - 2021-03-12
 
 ### Added
 - Add the autocomplete HTML attributes to most HTML input fields [PR-107](https://github.com/OXID-eSales/wave-theme/pull/107)
@@ -76,7 +81,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - ``setup.sql`` file is deprecated.
 
 ### Fixed
-- Reviews and avaialbility microdata fixed [PR-108](https://github.com/OXID-eSales/wave-theme/pull/108)
+- Reviews and availability microdata fixed [PR-108](https://github.com/OXID-eSales/wave-theme/pull/108)
 - Fix manufacturer logo display in product ID, in case logo image configured to be big [PR-114](https://github.com/OXID-eSales/wave-theme/pull/114)
 
 ## [1.5.0] - 2020-11-09
@@ -234,7 +239,7 @@ in:
 ## 1.0.0 -  2019-01-21
 
 [2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/b-1.x...master
-[1.6.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.5.0...b-1.x
+[1.6.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.3.0...v1.3.1
