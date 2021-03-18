@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.6.1] - Unreleased
+
+### Fixed
+- Use getTitle from controller, but not actCategory, which is not always available [PR-120](https://github.com/OXID-eSales/wave-theme/pull/120)
+
 ## [1.6.0] - 2021-03-12
 
 ### Added
