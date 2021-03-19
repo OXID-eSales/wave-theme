@@ -1,5 +1,3 @@
-
-
 <div class="row">
     <div id="manufacturerSlider" class="manufacturer-slider col-sm boxwrapper">
         <div class="page-header">

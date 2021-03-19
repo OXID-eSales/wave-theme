@@ -40,6 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Use getTitle from controller, but not actCategory, which is not always available [PR-120](https://github.com/OXID-eSales/wave-theme/pull/120)
+- Fix multilang in errors_modal.tpl [PR-119](https://github.com/OXID-eSales/wave-theme/pull/119)
 
 ## [1.6.0] - 2021-03-12
 
