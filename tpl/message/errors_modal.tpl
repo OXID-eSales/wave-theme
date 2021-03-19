@@ -6,7 +6,7 @@
                     <span aria-hidden="true">×</span>
                     <span class="sr-only">[{oxmultilang ident="CLOSE"}]</span>
                 </button>
-                <h4 class="modal-title" id="basketModalLabel">Error</h4>
+                <h4 class="modal-title" id="basketModalLabel">[{oxmultilang ident="ERROR"}]</h4>
             </div>
             <div class="modal-body">
                 <div id="modalbasketFlyout" class="basketFlyout">
