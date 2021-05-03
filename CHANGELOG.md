@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Decoded ``oxconfig`` insert queries in ``setup.sql``
 - Handle Google analytics scripts with oxscript [PR-87](https://github.com/OXID-eSales/wave-theme/pull/87)
 - In admin settings assigned 'e-mail-logo' to display group 'emails' [PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
+- Removed checkout step 5 from the progress bar [PR-77](https://github.com/OXID-eSales/wave-theme/pull/77)
 
 ### Fixed
 - Improved readability of setup.sql and theme.php [PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)

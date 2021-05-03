@@ -64,15 +64,6 @@
             </li>
             [{*[{oxscript add="$('#orderStep').click( function() { $('#paymentNextStepBottom').click();return false;});"}]*}]
         [{/block}]
-
-        [{block name="checkout_steps_laststep"}]
-            <li class="col step step5[{if $active == 5}] activeLast [{else}] defaultLast [{/if}] last">
-                <div class="num">5</div>
-                <div class="text">
-                    [{oxmultilang ident="READY"}]
-                </div>
-            </li>
-        [{/block}]
     </ol>
     <div class="clearfix"></div>
     <div class="spacer"></div>
