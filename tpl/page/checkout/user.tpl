@@ -3,30 +3,35 @@
 
     [{* ordering steps *}]
     [{include file="page/checkout/inc/steps.tpl" active=2}]
-
-    [{block name="checkout_user_main"}]
-        [{if !$oxcmp_user && !$oView->getLoginOption()}]
-            [{include file="page/checkout/inc/options.tpl"}]
-        [{/if}]
-
-        [{block name="checkout_user_noregistration"}]
-            [{if !$oxcmp_user && $oView->getLoginOption() == 1}]
-                [{include file="form/user_checkout_noregistration.tpl"}]
-            [{/if}]
+    [{if !$oxcmp_user}]
+        [{block name="user_checkout_registration_next_step_top"}]
+            <div class="card bg-light cart-buttons">
+                <div class="card-body">
+                    <a href="[{oxgetseourl ident=$oViewConf->getBasketLink()}]" class="btn btn-outline-dark prevStep submitButton largeButton" id="userBackStepTop">[{oxmultilang ident="PREVIOUS_STEP"}]</a>
+                </div>
+            </div>
         [{/block}]
+    [{/if}]
 
-        [{block name="checkout_user_registration"}]
-            [{if !$oxcmp_user && $oView->getLoginOption() == 3}]
+    <div class="row">
+        [{if $oxcmp_user}]
+            [{block name="checkout_user_change"}]
+                <div class="col-12">
+                    [{include file="form/user_checkout_change.tpl"}]
+                </div>
+            [{/block}]
+        [{else}]
+            <div class="col-sm-4 order-sm-2">
+                [{block name="checkout_options_login"}]
+                    [{include file="form/login.tpl"}]
+                [{/block}]
+            </div>
+            <div class="col-sm-8 order-sm-1">
                 [{include file="form/user_checkout_registration.tpl"}]
-            [{/if}]
-        [{/block}]
+            </div>
+        [{/if}]
+    </div>
 
-        [{block name="checkout_user_change"}]
-            [{if $oxcmp_user}]
-                [{include file="form/user_checkout_change.tpl"}]
-            [{/if}]
-        [{/block}]
-    [{/block}]
     [{insert name="oxid_tracker" title=$template_title}]
 [{/capture}]
 

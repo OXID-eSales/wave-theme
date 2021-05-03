@@ -153,6 +153,17 @@
     </div>
 [{/block}]
 
+[{if $context == 'checkout'}]
+    <div class="form-group row[{if $aErrors.oxuser__oxusername}] oxInValid[{/if}]">
+        [{block name="user_account_username"}]
+            <label class="col-lg-3 req" for="userLoginName">[{oxmultilang ident="EMAIL_ADDRESS"}]</label>
+            <div class="col-lg-9">
+                <input id="userLoginName" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_email" type="email" name="lgn_usr" value="[{$oView->getActiveUsername()}]" required="required">
+                <div class="help-block"></div>
+            </div>
+        [{/block}]
+    </div>
+[{/if}]
 <div class="form-group row[{if $aErrors.oxuser__oxfon}] text-danger"[{/if}]">
     <label class="col-lg-3[{if $oView->isFieldRequired(oxuser__oxfon)}] req[{/if}]" for="invadr_oxuser__oxfon">[{oxmultilang ident="PHONE"}]</label>
     <div class="col-lg-9">
