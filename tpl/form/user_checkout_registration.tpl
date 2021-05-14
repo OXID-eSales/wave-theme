@@ -95,9 +95,10 @@
                                 </div>
                             </div>
 
-                        <div id="shippingAddress" [{if !$oView->showShipAddress()}]style="display: none;"[{/if}]>
-                            [{include file="form/fieldset/user_shipping.tpl" noFormSubmit=true}]
-                        </div>
+                            <div id="shippingAddress" [{if !$oView->showShipAddress()}]style="display: none;"[{/if}]>
+                                [{include file="form/fieldset/user_shipping.tpl" noFormSubmit=true}]
+                            </div>
+                        [{/block}]
                     </div>
                 </div>
 
