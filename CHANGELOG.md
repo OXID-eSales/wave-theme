@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Handle Google analytics scripts with oxscript [PR-87](https://github.com/OXID-eSales/wave-theme/pull/87)
 - In admin settings assigned 'e-mail-logo' to display group 'emails' [PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)
 - Removed checkout step 5 from the progress bar [PR-77](https://github.com/OXID-eSales/wave-theme/pull/77)
+- Simplify checkout step 2 (user registration) [PR-68](https://github.com/OXID-eSales/wave-theme/pull/68)
+  - Registration / no registration form is displayed all the time, right next to the "Already a customer" block
+  - "Purchase without registration" checkbox added, to differ between registration / no registration checkouts
+  - "Subscribe to the newsletter" and "Drop us a message" inputs are extracted to separate block
 
 ### Fixed
 - Improved readability of setup.sql and theme.php [PR-97](https://github.com/OXID-eSales/wave-theme/pull/97)

@@ -112,7 +112,7 @@ $aLang = [
     'DD_BASKET_BACK_TO_SHOP'                                => 'zurück zum Shop',
 
     // E-Mails
-    'DD_FOOTER_FOLLOW_US'                                    => 'Folgen Sie uns',
+    'DD_FOOTER_FOLLOW_US'                                   => 'Folgen Sie uns',
     'DD_FORGOT_PASSWORD_HEADING'                            => 'Passwort vergessen',
     'DD_INVITE_HEADING'                                     => 'Artikel-Empfehlung',
     'DD_INVITE_LINK'                                        => 'Link',

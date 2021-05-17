@@ -1,12 +1,14 @@
-<div class="form-group row[{if $aErrors.oxuser__oxusername}] oxInValid[{/if}]">
-    [{block name="user_account_username"}]
-        <label class="col-lg-3 req" for="userLoginName">[{oxmultilang ident="EMAIL_ADDRESS"}]</label>
-        <div class="col-lg-9">
-            <input id="userLoginName" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_email" type="email" name="lgn_usr" value="[{$oView->getActiveUsername()}]" required="required" autocomplete="username">
-            <div class="help-block"></div>
-        </div>
-    [{/block}]
-</div>
+[{if $context != 'checkout'}]
+    <div class="form-group row[{if $aErrors.oxuser__oxusername}] oxInValid[{/if}]">
+        [{block name="user_account_username"}]
+            <label class="col-lg-3 req" for="userLoginName">[{oxmultilang ident="EMAIL_ADDRESS"}]</label>
+            <div class="col-lg-9">
+                <input id="userLoginName" class="form-control js-oxValidate js-oxValidate_notEmpty js-oxValidate_email" type="email" name="lgn_usr" value="[{$oView->getActiveUsername()}]" required="required">
+                <div class="help-block"></div>
+            </div>
+        [{/block}]
+    </div>
+[{/if}]
 <div class="form-group row[{if $aErrors.oxuser__oxpassword}] oxInValid[{/if}]">
     [{block name="user_account_password"}]
         <label class="col-lg-3 req" for="userPassword">[{oxmultilang ident="PASSWORD"}]</label>
@@ -26,16 +28,3 @@
         </div>
     [{/block}]
 </div>
-[{block name="user_account_newsletter"}]
-    <div class="form-group row">
-        <div class="col-lg-9 offset-lg-3">
-            <input type="hidden" name="blnewssubscribed" value="0">
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" name="blnewssubscribed" value="1" [{if $oView->isNewsSubscribed()}]checked[{/if}]> [{oxmultilang ident="NEWSLETTER_SUBSCRIPTION"}]
-                </label>
-            </div>
-            <span class="help-block">[{oxmultilang ident="MESSAGE_NEWSLETTER_SUBSCRIPTION"}]</span>
-        </div>
-    </div>
-[{/block}]

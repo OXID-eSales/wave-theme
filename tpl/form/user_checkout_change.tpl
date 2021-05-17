@@ -107,6 +107,11 @@
                                 [{include file="form/fieldset/user_shipping.tpl" noFormSubmit=true onChangeClass='user'}]
                             </div>
                         [{/block}]
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
                         [{block name="user_checkout_shipping_feedback"}]
                             [{include file="form/fieldset/order_newsletter.tpl" blSubscribeNews=true}]
                             [{include file="form/fieldset/order_remark.tpl" blOrderRemark=true}]
