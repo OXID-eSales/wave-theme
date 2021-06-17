@@ -205,7 +205,7 @@
         [{/if}]
     </head>
 
-    <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]">
+    <body class="cl-[{$oView->getClassKey()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]">
 
     [{* Theme SVG icons block *}]
     [{block name="theme_svg_icons"}][{/block}]
