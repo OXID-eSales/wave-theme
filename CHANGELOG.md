@@ -40,6 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - Link in: `page/details/inc/productmania.tpl`
 - News feature
 - `setup.sql` file support and file itself
+- Remove `ajax_econda_recommendations.tpl` use econda module instead
 
 ## [1.6.1] - Unreleased
 
