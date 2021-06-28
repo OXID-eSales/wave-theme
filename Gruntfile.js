@@ -71,6 +71,7 @@ module.exports = function (grunt) {
                 files: {
                     '<%= project.out %><%= project.theme %>/src/js/script.min.js': [
                         '<%= project.dev %>node_modules/jquery/dist/jquery.min.js',
+                        '<%= project.dev %>build/js/jquery/patch.js',
                         '<%= project.dev %>build/vendor/jquery-ui/js/jquery-ui.js',
                         '<%= project.dev %>node_modules/popper.js/dist/umd/popper.min.js',
                         '<%= project.dev %>node_modules/bootstrap/dist/js/bootstrap.bundle.js',

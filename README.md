@@ -7,7 +7,7 @@
 ## Branch Compatibility
 
 * master branch is compatible with OXID eShop compilation master
-* b-1.x branch is compatible with OXID eShop compilation 6.1 and 6.2
+* b-1.x branch is compatible with OXID eShop compilation 6.1, 6.2 and 6.3
 
 ## Installation
 If you want to extend the theme you need to clone the repository (see section development) as some soures are ignored on composer installation. 
