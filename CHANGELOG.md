@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [2.0.0] - Unreleased
+## [2.0.0] - 2021-07-07
 
 ### Added
 - File ``build/scss/custom/styles.scss`` for easier splitting of custom and original styles [PR-96](https://github.com/OXID-eSales/wave-theme/pull/96)
@@ -246,7 +246,7 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
-[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/b-1.x...master
+[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.1...v2.0.0
 [1.6.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.4.0...v1.5.0
