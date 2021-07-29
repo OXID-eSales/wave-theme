@@ -209,7 +209,7 @@ $aTheme = array(
         array(
             'group' => 'images',
             'name' => 'aDetailImageSizes',
-            'type' => 'aarr',
+            'type' => 'arr',
             'value' => array(
                 'oxpic1' => '540*340',
                 'oxpic2' => '540*340',
