@@ -42,6 +42,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - `setup.sql` file support and file itself
 - Remove `ajax_econda_recommendations.tpl` use econda module instead
 
+## [1.6.2] - 2022-07-18
+
+### Fixed
+- CONTRIBUTING link
+
 ## [1.6.1] - 2021-07-07
 
 ### Fixed
@@ -246,7 +251,8 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
-[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.1...v2.0.0
+[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.2...v2.0.0
+[1.6.2]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.4.0...v1.5.0
