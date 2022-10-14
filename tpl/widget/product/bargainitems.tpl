@@ -1,15 +1,6 @@
 [{assign var="currency" value=$oView->getActCurrency()}]
 <div class="bargainitems list-container">
-    <h2 class="page-header">
-        [{oxmultilang ident="WEEK_SPECIAL"}]
-
-        [{assign var='rsslinks' value=$oView->getRssLinks()}]
-        [{if $rsslinks.bargainArticles}]
-            <small>
-                <a class="rss js-external" id="rssBargainProducts" href="[{$rsslinks.bargainArticles.link}]" title="[{$rsslinks.bargainArticles.title}]"><img src="[{$oViewConf->getImageUrl('rss.png')}]" alt="[{$rsslinks.bargainArticles.title}]"><span class="FXgradOrange corners glowShadow">[{$rsslinks.bargainArticles.title}]</span></a>
-            </small>
-        [{/if}]
-    </h2>
+    <h2 class="page-header">[{oxmultilang ident="WEEK_SPECIAL"}]</h2>
 
     <div class="row">
         [{assign var="iBargainArticlesCount" value=$oView->getBargainArticleList()|@count}]

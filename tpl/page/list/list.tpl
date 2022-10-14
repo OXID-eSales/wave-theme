@@ -27,15 +27,7 @@
         [{/if}]
 
         <div class="page-header">
-            [{assign var='rsslinks' value=$oView->getRssLinks()}]
-            <h1 class="h1">
-                [{$oView->getTitle()}]
-                [{if $rsslinks.activeCategory}]
-                    <a class="rss" id="rssActiveCategory" aria-label="RSS Current Category" href="[{$rsslinks.activeCategory.link}]" title="[{$rsslinks.activeCategory.title}]" target="_blank">
-                        <i class="fas fa-rss"></i>
-                    </a>
-                [{/if}]
-            </h1>
+            <h1 class="h1">[{$oView->getTitle()}]</h1>
         </div>
 
         [{assign var="oPageNavigation" value=$oView->getPageNavigation()}]
