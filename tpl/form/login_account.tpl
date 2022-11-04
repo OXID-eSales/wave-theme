@@ -33,11 +33,13 @@
                         <input id="loginUser" class="js-oxValidate js-oxValidate_notEmpty form-control" type="text" name="lgn_usr" role="loginUser" required="required" autocomplete="username">
                         <div class="help-block"></div>
                 </div>
-                <div class="form-group[{if $aErrors}] oxInValid[{/if}]">
-                    <label class="req">[{oxmultilang ident="PASSWORD"}]</label>
-                        <input id="loginPwd" class="js-oxValidate js-oxValidate_notEmpty form-control" type="password" name="lgn_pwd" role="loginPwd" required="required" autocomplete="current-password">
-                        <div class="help-block"></div>
-                </div>
+                [{block name="checkout_options_loginaccount_passwordfield"}]
+                    <div class="form-group[{if $aErrors}] oxInValid[{/if}]">
+                        <label class="req">[{oxmultilang ident="PASSWORD"}]</label>
+                            <input id="loginPwd" class="js-oxValidate js-oxValidate_notEmpty form-control" type="password" name="lgn_pwd" role="loginPwd" required="required" autocomplete="current-password">
+                            <div class="help-block"></div>
+                    </div>
+                [{/block}]
                 [{if $oView->showRememberMe()}]
                     <div class="form-group">
                         <div class="checkbox">
@@ -48,9 +50,11 @@
                     </div>
                 [{/if}]
 
-                <div class="form-group">
-                    <button id="loginButton" type="submit" class="btn btn-primary" role="loginButton">[{oxmultilang ident="LOGIN"}]</button>
-                </div>
+                [{block name="checkout_options_loginaccount_submitbutton"}]
+                    <div class="form-group">
+                        <button id="loginButton" type="submit" class="btn btn-primary" role="loginButton">[{oxmultilang ident="LOGIN"}]</button>
+                    </div>
+                [{/block}]
 
                 <div class="form-group">
                     <a id="forgotPasswordLink" href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=forgotpwd"}]" class="textLink">[{oxmultilang ident="FORGOT_PASSWORD"}]</a>
