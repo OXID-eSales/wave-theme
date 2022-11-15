@@ -47,6 +47,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - `setup.sql` file support and file itself
 - Remove `ajax_econda_recommendations.tpl` use econda module instead
 
+## [1.7.0] - 2022-11-15
+
+### Added
+- Template blocks on login form:
+  - `checkout_options_login_passwordfield` in `login.tpl`
+  - `checkout_options_loginaccount_passwordfield` in `login_account.tpl`
+  - `checkout_options_loginaccount_submitbutton` in `login_account.tpl`
+
 ## [1.6.2] - 2022-07-18
 
 ### Fixed
@@ -257,6 +265,7 @@ in:
 ## 1.0.0 -  2019-01-21
 
 [2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.2...v2.0.0
+[1.7.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.2...v1.7.0
 [1.6.2]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.5.0...v1.6.0
