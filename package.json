@@ -1,7 +1,7 @@
 {
   "name": "WaveTheme",
-  "version": "1.0.0",
-  "description": "Wave Theme is the official level up for flow theme",
+  "version": "2.0.0",
+  "description": "Wave is a responsive Smarty theme for all OXID eShop editions",
   "main": "index.js",
   "author": "c&c concepts and creations gmbh",
   "devDependencies": {
