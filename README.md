@@ -2,15 +2,16 @@
 
 ## General Information
 
-*Wave* is a responsive theme for all OXID eShop editions. Theme is built on the top of [Flow theme](https://github.com/OXID-eSales/flow_theme).
+*Wave* is a responsive Smarty theme for all OXID eShop editions.
+This theme replaces deprecated [Flow theme](https://github.com/OXID-eSales/flow_theme).
 
 ## Branch Compatibility
 
-* master branch is compatible with OXID eShop compilation master
-* b-1.x branch is compatible with OXID eShop compilation 6.1, 6.2 and 6.3
+* `b-7.0.x` is compatible with OXID eShop compilation `b-7.0.x`
+* `b-6.5.x` is compatible with OXID eShop compilation `b-6.5.x`
 
 ## Installation
-If you want to extend the theme you need to clone the repository (see section development) as some soures are ignored on composer installation. 
+If you want to extend the theme you need to clone the repository (see section development) as some sources are ignored on composer installation. 
 
 
 ### Step 1: Get the source code
@@ -77,18 +78,6 @@ task while being in "wave" directory:
 ## Contributing
 
 If you are interested in contributing of some changes, Please read [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
-
-## Compatibility with modules
-
-1. Visual CMS
-- In the module settings you need to deacticvate the inclusion of Bootstrap and JQuery
-- Compatible with visual CMS 3.3.0 (https://github.com/OXID-eSales/visual_cms_module/commit/75bc2a8f05cd8f2b76b6383eb6213c994494a6ee)
-
-2. PayPal module
-- The PayPal module contains in a tpl file a check for the theme id ```[{if $oViewConf->getActiveTheme()=='flow'}]``` which should be adjusted to wave
-
-3. B2B Edition
-- The B2B Edition contains in tpl files a check for the theme id ```[{if $oViewConf->getActiveTheme()=='flow'}]``` which should be adjusted to wave
 
 ## Issues
 

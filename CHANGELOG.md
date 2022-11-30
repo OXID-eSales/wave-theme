@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Switch from using Google Fonts API to self-hosted font files storage
 
+### Fixed
+- Bootstrap version in `package.json` set to v4.3.1
 
 ## [1.7.0] - 2022-11-15
 
