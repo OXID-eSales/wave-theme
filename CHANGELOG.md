@@ -251,6 +251,7 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
+[2.1.0]: https://github.com/OXID-eSales/wave-theme/compare/v2.0.0...b-6.5.x
 [2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.1...v2.0.0
 [1.6.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.5.0...v1.6.0
