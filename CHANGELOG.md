@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [2.1.0] - Unreleased
+## [2.1.0] - 2022-12-01
 
 ### Changed
 - Switch from using Google Fonts API to self-hosted font files storage
@@ -251,7 +251,7 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
-[2.1.0]: https://github.com/OXID-eSales/wave-theme/compare/v2.0.0...b-6.5.x
+[2.1.0]: https://github.com/OXID-eSales/wave-theme/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.1...v2.0.0
 [1.6.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.0...v1.6.1
 [1.6.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.5.0...v1.6.0
