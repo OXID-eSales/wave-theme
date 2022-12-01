@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 - RSS functionality
 
-## [2.1.0] - Unreleased
+## [2.1.0] - 2022-12-01
 
 ### Changed
 - Switch from using Google Fonts API to self-hosted font files storage
@@ -269,7 +269,7 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
-[2.1.0]: https://github.com/OXID-eSales/wave-theme/compare/v2.0.0...b-6.5.x
+[2.1.0]: https://github.com/OXID-eSales/wave-theme/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.2...v2.0.0
 [1.7.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.2...v1.7.0
 [1.6.2]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.1...v1.6.2
