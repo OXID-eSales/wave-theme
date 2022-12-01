@@ -49,7 +49,10 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    '<%= project.out %><%= project.theme %>/src/css/styles.min.css': ['<%= project.out %><%= project.theme %>/src/css/styles.css']
+                    '<%= project.out %><%= project.theme %>/src/css/styles.min.css': [
+                        '<%= project.dev %>/build/vendor/oxid-esales/css/font-face.css',
+                        '<%= project.out %><%= project.theme %>/src/css/styles.css'
+                    ]
                 }
             }
         },
@@ -145,6 +148,12 @@ module.exports = function (grunt) {
         copy: {
             fonts: {
                 files: [
+                    {
+                        expand: true,
+                        src: '*',
+                        cwd: '<%= project.dev %>/build/vendor/raleway/fonts/',
+                        dest: '<%= project.out %><%= project.theme %>/src/fonts/'
+                },
                     {
                         expand: true,
                         src: '*',
