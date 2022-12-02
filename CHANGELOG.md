@@ -9,11 +9,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 - RSS functionality
 
-## [2.1.0] - 2022-12-01
-
-### Changed
-- Switch from using Google Fonts API to self-hosted font files storage
-
 ## [2.0.0] - 2021-07-07
 
 ### Added
@@ -51,6 +46,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - News feature
 - `setup.sql` file support and file itself
 - Remove `ajax_econda_recommendations.tpl` use econda module instead
+
+## [1.8.0] - 2022-12-02
+
+### Changed
+- Switch from using Google Fonts API to self-hosted font files storage
+
+### Fixed
+- Bootstrap version in `package.json` set to v4.3.1
 
 ## [1.7.0] - 2022-11-15
 
@@ -269,8 +272,8 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
-[2.1.0]: https://github.com/OXID-eSales/wave-theme/compare/v2.0.0...v2.1.0
-[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.2...v2.0.0
+[2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.8.0...v2.0.0
+[1.8.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.2...v1.7.0
 [1.6.2]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.1...v1.6.2
 [1.6.1]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.0...v1.6.1
