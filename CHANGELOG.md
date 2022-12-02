@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 - RSS functionality
 
+### Changed
+- Use the recent minor version of Bootstrap 4
+
 ## [2.0.0] - 2021-07-07
 
 ### Added
@@ -272,6 +275,7 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
+[3.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v2.0.0...b-7.0.x
 [2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.8.0...v2.0.0
 [1.8.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.6.2...v1.7.0
