@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Use the recent minor version of Bootstrap 4
 
+### Fixed
+- In case of sAltImageUrl set, calculation of zoom image size is wrong [PR-123](https://github.com/OXID-eSales/wave-theme/pull/123)
+
 ## [2.0.0] - 2021-07-07
 
 ### Added
