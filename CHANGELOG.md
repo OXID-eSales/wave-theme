@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [3.0.1] - unreleased
 
+### Fixed
+- Revert the ``user_account_newsletter`` block movement to the ``user_account`` template. Previously, it caused the newsletter subscription option to be unavailable for the registration form, eventually breaking the registration process.
+
 ### Changed
 - License update
 
