@@ -30,7 +30,7 @@ $aTheme = [
     'title' => 'Wave',
     'description' => 'Wave is OXID`s official responsive theme based on the CSS framework Bootstrap 4.',
     'thumbnail' => 'theme.jpg',
-    'version' => '3.0.0',
+    'version' => '3.0.1',
     'author' => '<a href="https://www.oxid-esales.com" title="OXID eSales AG">OXID eSales AG</a>',
     'settings' => [
         //Group display:

@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.0.1] - unreleased
+## [3.0.1] - 2023-08-07
 
 ### Fixed
 - Revert the ``user_account_newsletter`` block movement to the ``user_account`` template. Previously, it caused the newsletter subscription option to be unavailable for the registration form, eventually breaking the registration process.
@@ -286,6 +286,7 @@ in:
 
 ## 1.0.0 -  2019-01-21
 
+[3.0.1]: https://github.com/OXID-eSales/wave-theme/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v2.0.0...v3.0.0
 [2.0.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.8.0...v2.0.0
 [1.8.0]: https://github.com/OXID-eSales/wave-theme/compare/v1.7.0...v1.8.0
